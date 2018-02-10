@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.protruly.music.ui.album.AlbumDetailFragment" >
+
+    <include layout="@layout/activity_album_list_header" />
+
+    <include layout="@layout/hb_album_list_item" />
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <hb.widget.HbListView
+            android:id="@+id/track_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scrollbars="none" />
+
+        <ImageView
+            android:id="@+id/hb_flying_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/hb_track_item_height"
+            android:layout_gravity="left"
+            android:background="@drawable/album_track_play_indicator"
+            android:contentDescription="@null"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</LinearLayout>

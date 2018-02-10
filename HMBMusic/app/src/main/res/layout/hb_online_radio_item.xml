@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="15dp" 
+    >
+
+    <ImageView
+        android:id="@+id/hb_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/hb_radio_constellation" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/hb_album_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/hb_artist_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#7d7d7d"
+            android:textSize="11sp" 
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+</LinearLayout>

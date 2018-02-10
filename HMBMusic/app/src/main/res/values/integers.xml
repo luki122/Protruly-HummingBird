@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="bet_height_offset">5</integer>
+    <integer name="page_scroll_position_offset">86</integer>
+    <integer name="change_color">51</integer>
+    <integer name="change_color_two">137</integer>
+
+</resources>

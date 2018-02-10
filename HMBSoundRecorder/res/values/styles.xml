@@ -1,0 +1,28 @@
+<resources>
+
+<!--    &lt;!&ndash; Base application theme. &ndash;&gt;
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>-->
+
+
+    <style name="SR.Theme.Light" parent="com.hb:Theme.Hb.Material.Light">
+        <item name="com.hb:windowLayoutStyle">@style/WindowStyle.Light</item>
+        <item name="android:toolbarStyle">@style/myToolbarStyle</item>
+    </style>
+
+    <style name="WindowStyle.Light" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">false</item>
+        <item name="com.hb:windowHasToolbar">true</item>
+        <!-- <item name="com.hb:windowLayout">@layout/screen_simple</item> -->
+        <item name="com.hb:toolbarOverlay">false</item>
+    </style>
+
+    <style name="myToolbarStyle" parent="com.hb:style/ToolbarStyle">
+
+    </style>
+
+</resources>

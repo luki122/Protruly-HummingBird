@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res/com.protruly.music"
+    android:id="@+id/song_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/song_itemheight" >
+
+    <RelativeLayout
+        android:id="@+id/hb_songlist_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/song_itemheight"
+        android:background="@color/transparent" >
+
+        <TextView
+            android:id="@+id/song_playicon"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/hb_artistitem_title_marginbottom"
+            android:layout_marginRight="@dimen/hb_artistitem_title_marginright"
+            android:layout_marginTop="@dimen/hb_artistitem_title_margintop"
+            android:layout_toRightOf="@id/song_playicon"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="@dimen/hb_artistitem_title_textsize" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/song_title"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/hb_artistitem_title_marginright"
+            android:layout_toRightOf="@id/song_playicon"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/hb_download_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="3dp"
+                android:src="@drawable/hb_download_ok"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/song_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/hb_item_song_size"
+                android:textSize="@dimen/hb_artistitem_album_textsize" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/hb_btn_recommend_download_parent"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <com.protruly.music.widget.RoundProgressBar
+                android:id="@+id/hb_btn_recommend_download"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginRight="@dimen/hb_albumIcon_marginright"
+                android:background="@drawable/hb_download_btn"
+                android_custom:roundMargin="3dp"
+                android_custom:roundProgressColor="@color/hb_download_cicrle"
+                android_custom:roundWidth="1dp" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_song_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/song_selected"
+        android:visibility="gone" />
+
+</FrameLayout>

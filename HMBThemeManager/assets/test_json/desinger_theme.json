@@ -1,0 +1,47 @@
+{
+  "retCode": 0,
+  "body": {
+    "pageNum": 0,
+    "totalNum": 4,
+    "theme": [
+      {
+        "id": "BZ122112",
+        "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+        "name": "扁平风青春版1",
+        "isCharge": 1,
+        "price": 12
+      },
+      {
+        "id": "BZ122113",
+        "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+        "name": "扁平风青春版2",
+        "isCharge": 1,
+        "price": 12
+      }
+    ,
+      {
+        "id": "BZ122114",
+        "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+        "name": "扁平风青春版3",
+        "isCharge": 1,
+        "price": 12
+      }
+    ,
+      {
+        "id": "BZ122115",
+        "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+        "name": "扁平风青春版4",
+        "isCharge": 1,
+        "price": 12
+      }
+    ,
+      {
+        "id": "BZ122116",
+        "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+        "name": "扁平风青春版5",
+        "isCharge": 1,
+        "price": 12
+      }
+    ]
+  }
+}

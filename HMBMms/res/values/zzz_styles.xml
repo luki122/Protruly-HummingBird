@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <style name="AppTheme" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="android:toolbarStyle">@style/ToolbarStyle</item>
+        <item name="com.hb:windowLayoutStyle">@style/WindowLayoutStyle.HasArrow</item>
+    </style>
+
+    <style name="Theme.Mms.HasArrow" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="android:statusBarColor">?android:attr/colorPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="com.hb:windowLayoutStyle">@style/WindowLayoutStyle.HasArrow</item>
+        <item name="com.hb:actionPositiveText">@string/select_all</item>
+        <item name="com.hb:actionNagativeText">@string/zzz_cancel</item>
+        <item name="android:toolbarStyle">@style/ToolbarStyle</item>
+    </style>
+
+    <!--<item name="com.hb:colorToolbarIcon">#FFAAAAAA</item>-->
+    <style name="Theme.Mms.NoArrow" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="android:statusBarColor">?android:attr/colorPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="com.hb:windowLayoutStyle">@style/WindowLayoutStyle.NoArrow</item>
+        <item name="com.hb:actionPositiveText">@string/select_all</item>
+        <item name="com.hb:actionNagativeText">@string/zzz_cancel</item>
+        <item name="android:toolbarStyle">@style/ToolbarStyle</item>
+    </style>
+
+    <style name="Theme.Hb.setting" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="android:statusBarColor">?android:attr/colorPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:toolbarStyle">@style/ToolbarStyle</item>
+        <item name="com.hb:windowLayoutStyle">@style/WindowLayoutStyle.HasArrow</item>
+    </style>
+
+    <!-- java code call {@link hb.app.Hb.ctivity.setTitle() -->
+    <style name="ToolbarStyle" parent="com.hb:style/ToolbarStyle">
+        <item name="com.hb:title">@string/app_label</item>
+    </style>
+
+    <!-- java code call @link hb.app.Hb.ctivity.showBackIcon(boolean show) -->
+    <style name="WindowLayoutStyle.HasArrow" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+    </style>
+
+    <!-- remove the back arrow -->
+    <style name="WindowLayoutStyle.NoArrow" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">false</item>
+    </style>
+
+    <style name="Theme.Mms.Fullscreen" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:windowLayoutStyle">@style/Style.Hb.ctivity.NoToolbar</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+    <style name="Style.Hb.ctivity.NoToolbar" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:windowHasToolbar">false</item>
+    </style>
+    <style name="Theme.Mms.Fullscreen.Translucent" parent="@style/Theme.Mms.Fullscreen">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="Theme.Mms.Fullscreen.Fade" parent="@style/Theme.Mms.Fullscreen">
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+       <item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="Theme.Mms.NoTitle" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:windowLayoutStyle">@style/Style.Hb.ctivity.NoToolbar</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="com.hb:windowHasToolbar">false</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <!--<style name="recipients_editor_tv_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/flowlayout_margin</item>
+        <item name="android:background">@drawable/zzz_recipients_editor_tv_bg</item>
+        <item name="android:textColor">#FF000000</item>
+        <item name="android:textSize">15dp</item>
+    </style>-->
+</resources>

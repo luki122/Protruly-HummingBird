@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/cleanup_aniLay"
+        android:layout_width="@dimen/hmbprogressbar_width"
+        android:layout_height="@dimen/hmbprogressbar_height"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <com.hmb.manager.widget.HMBProgressBar
+            android:id="@+id/onekey_progressBar"
+            android:layout_width="@dimen/memory_big_chart_width"
+            android:layout_height="@dimen/memory_big_chart_height" app:hpb_title_size="60"
+            android:layout_centerInParent="true" >
+        </com.hmb.manager.widget.HMBProgressBar>
+    </RelativeLayout>
+
+</RelativeLayout>

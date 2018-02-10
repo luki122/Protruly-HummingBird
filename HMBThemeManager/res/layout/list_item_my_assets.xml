@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    xmlns:app="http://schemas.android.com/apk/res/com.hb.thememanager">
+
+    <com.hb.thememanager.views.IconFastEntry
+        android:id="@+id/user_theme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray_light"
+            app:srcHeight="48dp"
+            app:srcWidth="48dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:src="@drawable/ic_user_page_theme"
+        	android:text="@string/text_user_theme" />
+    
+    <com.hb.thememanager.views.IconFastEntry
+        android:id="@+id/user_wallpaper"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray_light"
+            app:srcHeight="48dp"
+            app:srcWidth="48dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:src="@drawable/ic_user_page_wallpaper"
+        	android:text="@string/text_user_wallpaper"/>
+    
+    <com.hb.thememanager.views.IconFastEntry
+        android:id="@+id/user_ringtong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray_light"
+            app:srcHeight="48dp"
+            app:srcWidth="48dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:src="@drawable/ic_user_page_ringing"
+        	android:text="@string/text_user_ringtong"/>
+
+    <com.hb.thememanager.views.IconFastEntry
+        android:id="@+id/user_font"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray_light"
+            app:srcHeight="48dp"
+            app:srcWidth="48dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:src="@drawable/ic_user_page_font"
+        	android:text="@string/text_user_font"/>
+    
+</LinearLayout>
+

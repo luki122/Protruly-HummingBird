@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:id="@+id/pinned_header_list_layout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="true"
+        android:paddingTop="@dimen/hb_list_padding_top_or_bottom"
+        android:scrollbars="vertical" />
+
+    <TextView
+        android:id="@+id/mSearchZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:minHeight="24dp"
+        android:paddingTop="83dip"
+        android:textColor="@color/hb_no_contacts_text_color"
+        android:textSize="@dimen/hb_no_contacts_text_size"
+        android:visibility="gone" />
+
+</LinearLayout>

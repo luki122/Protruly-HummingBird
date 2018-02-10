@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Gallery">
+        <attr name="android:galleryItemBackground" />
+    </declare-styleable>
+    <declare-styleable name="custom_lyricView">
+
+        <attr name="lyric_lineGap" format="reference|dimension" />
+        <attr name="lyric_positionOffset" format="dimension" />
+        <attr name="lyric_textSize" format="reference|dimension" />
+        <attr name="lyric_textLength" format="dimension" />
+        <attr name="lyric_textColor" format="reference|color" />
+        <attr name="lyric_textColor_focus" format="reference|color" />
+        <attr name="lyric_textColor_focus_read" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="custom_sidebar">
+        <attr name="siderbar_marginBottom" format="reference|integer" />
+        <attr name="siderbar_fontBottom" format="reference|integer" />
+        <attr name="siderbar_marginTop" format="reference|integer" />
+    </declare-styleable>
+    <declare-styleable name="hb_RoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundMargin" format="dimension"></attr>
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+    <string-array name="tab_widget_title">
+        <item>@string/my_music</item>
+        <item>@string/find_music</item>
+    </string-array>
+
+</resources>

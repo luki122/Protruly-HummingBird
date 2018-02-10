@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/cache_listLayout"
+        android:layout_width="wrap_content" android:layout_above="@+id/bottomCacheLin"
+        android:layout_height="wrap_content" android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <ExpandableListView
+            android:id="@+id/cacheList"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:childDivider="@color/item_line_color"
+            android:dividerHeight="1px"
+            android:gravity="center"
+            android:listSelector="#00000000"
+            android:scrollbars="none" >
+        </ExpandableListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cache_main_null"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rb_listLayout"
+        android:layout_gravity="center"  
+        android:layout_marginTop="150dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/cache_null_imageview"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/bg_app_null" />
+
+        <TextView
+            android:id="@+id/cache_null_text"
+            android:layout_width="fill_parent"
+            android:layout_height="24dp" android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/rubblish_null_message"
+            android:textColor="#FFE0E0E0"
+            android:textSize="@dimen/small_text_size" />
+    </LinearLayout>
+    
+
+    <LinearLayout
+        android:id="@+id/bottomCacheLin"
+        android:layout_width="fill_parent"
+        android:layout_height="74dp" 
+        android:layout_alignParentBottom="true"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/forceCacheCleanBtn" 
+            android:layout_width="180dip"
+            android:layout_height="40dip"
+            android:background="@drawable/clean_button_selector"
+            android:gravity="center"
+            android:text="@string/clean_btn_message"
+            android:textColor="@color/white" android:foreground="#00000000"
+            android:textSize="16.0dp" >
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

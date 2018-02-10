@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+
+    <LinearLayout
+        android:id="@+id/rating_bar"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="11dp"
+        android:gravity="right"
+    />
+
+    <ProgressBar
+        android:theme="@style/Theme.ThemeManager.SecondPage.CommentList.ProgressBar"
+        android:id="@+id/progress"
+        android:layout_width="91dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/rating_bar"
+        android:layout_centerVertical="true"
+        android:max="100"
+        style="?android:attr/progressBarStyleHorizontal"
+    />
+
+
+    <TextView
+        android:id="@+id/percent"
+        style="@style/TextAppearance.CommentListPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/progress"
+        android:gravity="right"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="23dp"
+        />
+
+</merge>

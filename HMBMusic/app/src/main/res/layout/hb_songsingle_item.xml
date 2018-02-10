@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res/com.android.music"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/song_itemheight" > -->
+  <merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:android_custom="http://schemas.android.com/apk/res/com.protruly.music" >
+
+    <RelativeLayout
+        android:id="@+id/hb_item_content"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/song_itemheight"
+        android:background="@color/transparent"
+        android:paddingLeft="12dp" >
+
+        <ImageView
+            android:id="@+id/song_playicon"
+            android:layout_width="43.3dp"
+            android:layout_height="43.3dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/default_music_icon" />
+
+        <View
+            android:layout_width="43.3dp"
+            android:layout_height="43.3dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circle_image" />
+
+        <TextView
+            android:id="@+id/song_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5.0dp"
+            android:layout_marginRight="38dp"
+            android:layout_marginTop="11.0dp"
+            android:layout_toRightOf="@id/song_playicon"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/song_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/song_title"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="38dp"
+            android:layout_toRightOf="@id/song_playicon"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/hb_item_song_size"
+            android:textSize="10sp" />
+
+        <com.protruly.music.widget.HBRoundProgressBar
+            android:id="@+id/hb_btn_recommend_download"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/hb_albumIcon_marginright"
+            android:background="@drawable/hb_download_btn"
+            android_custom:roundMargin="3dp"
+            android_custom:roundProgressColor="@color/hb_download_cicrle"
+            android_custom:roundWidth="1dp" 
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/iv_song_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/song_selected" />
+
+</merge>

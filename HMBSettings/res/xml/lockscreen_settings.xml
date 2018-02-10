@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2010 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/lockscreen_settings">
+
+    <PreferenceCategory
+        android:key="key_security_password"
+        android:title="@string/security_password_header" />
+
+        <PreferenceScreen
+            android:key="key_security_password_and_fingerprint"
+            android:fragment="com.android.settings.fingerprint.FingerprintSettings$FingerprintSettingsFragment"
+            android:title="@string/security_passwork_and_fingerprint" />
+
+    <PreferenceCategory
+        android:key="key_security_lockscreen"
+        android:title="@string/security_lockscreen_header" />
+
+        <PreferenceScreen
+            android:key="key_security_info_in_lockscreen"
+            android:title="@string/owner_info_settings_title" />
+
+        <com.android.settings.CustomListPreference
+            android:shouldDisableView="true"
+            android:key="key_security_screen_timeout"
+            android:widgetLayout="@layout/preference_widget_next_page_hb"
+            android:title="@string/screen_timeout"
+            android:summary="@string/screen_timeout_summary"
+            android:persistent="false"
+            android:entries="@array/screen_timeout_entries"
+            android:entryValues="@array/screen_timeout_values" />
+
+
+        <SwitchPreference
+            android:shouldDisableView="true"
+            android:key="doze"
+            android:title="@string/doze_title"
+            android:summary="@string/doze_summary"
+            android:persistent="false" />
+
+</PreferenceScreen>

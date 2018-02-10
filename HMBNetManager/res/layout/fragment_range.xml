@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/lay_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/range_item_index_height"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_all_reject"
+            style="?android:attr/textAppearanceListItemSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/all_reject_margin_right"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:text="@string/all_reject"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:textColor="@color/color_range_title" />
+
+        <ImageView
+            android:id="@+id/imv_app_index"
+            android:layout_width="2dp"
+            android:layout_height="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/imv_app_index_margin_left"
+            android:background="@color/color_range_title"
+            android:scaleType="center" />
+
+        <TextView
+            android:id="@+id/tv_app_list"
+            style="?android:attr/textAppearanceListItemSecondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/app_list_margin_left"
+            android:layout_toRightOf="@id/imv_app_index"
+            android:text="@string/app_list" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/lay_empty_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/orient_app_main_top"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+        android:paddingStart="?android:attr/listPreferredItemPaddingStart">
+
+        <ImageView
+            android:id="@+id/imv_empty"
+            android:layout_width="@dimen/range_app_empty_icon_width"
+            android:layout_height="@dimen/range_app_empty_icon_height"
+            android:scaleType="center"
+            android:src="@drawable/empty_app" />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/range_app_empty_info_top"
+            android:text="@string/range_empty_app"
+            android:layout_marginLeft="@dimen/range_app_empty_info_margin_left"
+            android:layout_marginRight="@dimen/range_app_empty_info_margin_left"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"
+            android:textSize="@dimen/btn_correct_text_size"
+            android:textColor="@color/color_net_info" />
+    </LinearLayout>
+
+
+    <hb.widget.recycleview.RecyclerView
+        android:id="@+id/recycler_add_orient_app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lay_tab"
+        android:listSelector="@drawable/my_ripple"
+        android:orientation="vertical"
+        hb:reverseLayout="false" />
+    <!--hb:layoutManager="@string/recycler_view_linearlayout_manager"-->
+</RelativeLayout>

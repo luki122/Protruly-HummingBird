@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Note</string>
+    <string name="action_share">Share</string>
+    <string name="action_delete">Delete</string>
+
+    <string name="note_edit">Edit Note</string>
+    <string name="note_delete">Delete this note?</string>
+    <string name="note_loading">Loading&#8230;</string>
+    <string name="note_sharing">Sharing&#8230;</string>
+    <string name="note_preset_content">Welcome to use the note</string>
+    <string name="permission_denied">Storage permission is denied</string>
+    <string name="image_copying">Image is copying&#8230;</string>
+    <string name="image_delete">Delete this image?</string>
+    <string name="title_images">[<xliff:g id="NUM_OF_IMAGE">%d</xliff:g> images]</string>
+    <string name="length_exceed_limit">Word\'s count exceed limit</string>
+    <string name="image_count_exceed_limit">Only allowed 10 images</string>
+
+    <string name="item_note_time">M/dd hh:mm</string>
+    <string name="cancel">cancel</string>
+    <string name="select_all">select all</string>
+    <string name="cancel_select_all">取消全选</string>
+    <string name="set_top">置顶</string>
+    <string name="cancel_set_top">取消置顶</string>
+    <string name="title_selected_count">已选择<xliff:g id="COUNT_OF_SELECTED">%d</xliff:g>项</string>
+    <string name="deleting">Deleting...</string>
+    <string name="sticking">Sticking...</string>
+    <string name="canceling_stick">Canceling...</string>
+</resources>

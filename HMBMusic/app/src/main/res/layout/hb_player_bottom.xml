@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:gravity="bottom" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/hb_currenttime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.6"
+                    android:paddingLeft="16dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp" />
+
+
+                <SeekBar
+                    android:id="@+id/hb_progress"
+                    style="@style/HB_SeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/hb_totaltime"
+                    android:layout_toRightOf="@+id/hb_currenttime"
+                    android:thumbOffset="10dp" />
+
+                <TextView
+                    android:id="@+id/hb_totaltime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:alpha="0.6"
+                    android:paddingRight="16dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="29dp"
+                android:orientation="horizontal" >
+
+                <ImageButton
+                    android:id="@+id/hb_shuffle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="17dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/hb_repeat_all" />
+
+                <com.protruly.music.model.OTAMainPageFrameLayout
+                    android:id="@+id/hb_prev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="45dp"
+                    android:layout_toRightOf="@+id/hb_shuffle"
+                    android:background="@drawable/hb_prev" />
+
+                <com.protruly.music.model.OTAMainPageFrameLayout
+                    android:id="@+id/hb_pause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <com.protruly.music.model.OTAMainPageFrameLayout
+                    android:id="@+id/hb_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="45dp"
+                    android:layout_toLeftOf="@+id/hb_play_list"
+                    android:background="@drawable/hb_next" />
+                <ImageButton
+                    android:id="@+id/hb_play_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="17dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/hb_playsong_list_btn"/>
+                <ImageButton
+                    android:id="@+id/hb_love"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="17dp"
+                    android:background="@android:color/transparent"
+                    android:layout_toRightOf="@+id/hb_play_list"
+                    android:src="@drawable/hb_play_love"
+                    android:visibility="gone"/>
+
+
+                <!-- android:src="@drawable/hb_love_status" -->
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="45dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/img_note1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@drawable/hb_note1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_note2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:src="@drawable/hb_note2"
+                android:visibility="gone" />
+        </LinearLayout>
+    </FrameLayout>
+
+</merge>

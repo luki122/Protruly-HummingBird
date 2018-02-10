@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">錄音机</string>
+    <string name="record">錄音</string>
+    <string name="pause">暫停</string>
+    <string name="resume">繼續</string>
+    <string name="mark">打點</string>
+    <string name="list">列表</string>
+    <string name="finish">完成</string>
+    <string name="time">00:00</string>
+
+    <string name="recording">正在錄音</string>
+    <string name="record_pause">錄音暫停</string>
+    <string name="know_message">知道了</string>
+    <string name="record_notice">提示</string>
+    <string name="message_low_power">電量不足，請補充電量以啓用錄音功能</string>
+    <string name="message_low_space">存儲空間不足，暫停使用錄音功能</string>
+    <string name="giveup_the_record">是否放棄本次錄音？</string>
+    <string name="not_mark_in_one_mimute">標記不能太過頻繁</string>
+    <string name="low_power_save_record_file">低電量停止錄音，自動保存文件</string>
+    <string name="low_space_save_record_file">低內存停止錄音，自動保存文件</string>
+    <string name="record_channals_is_used">錄音通道被佔用，請先關閉使用音頻設備的應用再重試</string>
+    <string name="record_not_reach_five_seconds">最短錄音時間爲５秒，否則不予保存</string>
+    <string name="record_file_saved">%s已保存</string>
+    <string name="record_reach_two_hours">錄音不能超過２小時,自動保存</string>
+    <string name="max_mark_fifty">最多可以打50個標記</string>
+    <!--shenqianfeng add begin -->
+    <string name="clip_activity_title">剪辑</string>
+    <string name="clip_activity_save">保存</string>
+    <string name="input_file_name">请输入文件名</string>
+    <string name="clipping">剪輯中...</string>
+    <!--shenqianfeng add end -->
+
+
+    <string name="new_record">新錄音</string>
+
+    <string name="mark_button">標記</string>
+    <string name="edit_button">編輯</string>
+    <string name="delete_button">刪除</string>
+
+    <string name="action_menu_delete">删除</string>
+    <string name="cancel">取消</string>
+    <string name="action_mode_select_all_text">全選</string>
+    <string name="action_mode_unselect_all_text">全不選</string>
+    <string name="zero_item">已選中%d項</string>
+    <plurals name="selected_item_count_format">
+        <item quantity="zero">已選中%d項</item>
+        <item quantity="one">已選中%d項</item>
+        <item quantity="other">已選中%d項</item>
+    </plurals>
+    <string name="Mon">星期一</string>
+    <string name="Tue">星期二</string>
+    <string name="Wed">星期三</string>
+    <string name="Thu">星期四</string>
+    <string name="Fri">星期五</string>
+    <string name="Sat">星期六</string>
+    <string name="Sun">星期天</string>
+    <string name="is_too_long">文件名過長！</string>
+    <string name="confirm_hiden_file_create">首字符“.”的文件或文件夾可能會被隱藏，是否繼續創建</string>
+    <string name="is_empty">文件名不能爲空！</string>
+    <string name="is_invide">文件名無效！</string>
+    <string name="is_dot">文件名不能以點命名</string>
+    <string name="is_same_name">文件名已存在，請重新輸入！</string>
+    <string name="rename_success">重命名成功！</string>
+    <string name="rename_fail">重命名失敗！</string>
+    <string name="no_space">空間不足！</string>
+    <string name="rename">重命名</string>
+    <string name="share">分享</string>
+    <string name="delete">删除</string>
+    <string name="delete_success">删除成功！</string>
+    <string name="delete_fail">删除失败！</string>
+    <string name="delete_pl">批量删除</string>
+    <string name="delete_select_warn">批量刪除選中的錄音文件？</string>
+    <string name="delete_mark_warm">删除標記</string>
+    <string name="delete_selected_mark_warm">删除當前標記</string>
+    <string name="delete_all_mark_warm">删除全部標記</string>
+    <string name="marked_fast_warn">標記不能太過頻繁！</string>
+    <string name="marked_size_warn">標記數量已達上限！</string>
+    <string name="justnow">剛剛</string>
+    <string name="today">今天</string>
+    <string name="yesturday">昨天</string>
+    <string name="inthreedays">三天內</string>
+    <string name="spk_outdoor_menu">外放</string>
+    <string name="spk_hear_menu">聽筒</string>
+    <string name="spk_bluetooth_menu">藍牙</string>
+    <string name="slid_warn">向上滑動解鎖</string>
+    <string name="select_warn">請選擇文件！</string>
+    <string name="bluetooth_disable_warn">請先確保藍牙鏈接成功！</string>
+    <string name="play_speeker">揚聲器播放！</string>
+    <string name="play_recevier">聽筒播放！</string>
+    <string name="play_bluetooth">藍牙播放！</string>
+    <string name="play_mode_setFailed">切換失敗！</string>
+    <string name="FormatDate_Y_M_d">"yyyy年MM月dd日"</string>
+    <string name="FormatDate_M_d">"MM月dd日"</string>
+    <string name="FormatDate_M_d_w">"MM月dd日 EEEE"</string>
+
+
+
+
+</resources>

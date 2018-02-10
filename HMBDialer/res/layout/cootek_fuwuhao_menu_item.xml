@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/fuwuhao_menu_item_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/cootek_fuwuhao_yp_guide_bg"
+        android:gravity="center"
+        android:textColor="@color/grey_700"
+        android:textSize="@dimen/fuwuhao_basic_text_size_6" />
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@drawable/listitem_divider_fg" />
+</LinearLayout>

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+
+    <item
+        android:id="@+id/go_to_online"
+        android:showAsAction="always"
+        android:title="@string/go_to_online"
+        />
+
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+        <item android:id="@+id/spk_choose_menu_list"
+              android:icon="@drawable/icon_spk_outdoor"
+              android:showAsAction="always">
+
+                <!-- 二级菜单 -->
+                <menu>
+                        <item android:id="@+id/spk_outdoor_menu" android:title="@string/spk_outdoor_menu"
+                            android:icon="@drawable/icon_spk_outdoor">
+                        </item>
+                        <item android:id="@+id/spk_hear_menu" android:title="@string/spk_hear_menu"
+                            android:icon="@drawable/icon_spk_hear">
+                        </item>
+                        <item android:id="@+id/spk_bluetooth_menu" android:title="@string/spk_bluetooth_menu"
+                            android:icon="@drawable/icon_spk_bluetooth">
+                        </item>
+                </menu>
+        </item>
+</menu>

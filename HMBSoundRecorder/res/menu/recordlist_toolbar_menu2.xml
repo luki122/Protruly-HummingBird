@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/spk_choose_menu_one"
+        android:icon="@drawable/icon_spk_outdoor"
+        android:showAsAction="always"/>
+</menu>

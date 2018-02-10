@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.protruly.music"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="14dp">
+            <ImageView
+                android:id="@+id/lyric_hb_voice_set"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:src="@drawable/hb_voice_set"/>
+            <SeekBar
+                android:id="@+id/lyric_hb_voice_progress"
+                style="@style/HB_Voice_SeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="24dp"
+                android:layout_marginLeft="13dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:layout_toRightOf="@+id/lyric_hb_voice_set"
+                android:thumbOffset="0dp" />
+
+        </RelativeLayout>
+
+        <com.protruly.music.widget.HBScrollView
+            android:id="@+id/lyric_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:clickable="true"
+            android:layout_marginTop="1dp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center" >
+
+                <com.protruly.music.widget.HBLyricView
+                    android:id="@+id/lyric_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    custom:lyric_lineGap="37dp"
+                    custom:lyric_textColor="#80FFFFFF"
+                    custom:lyric_textColor_focus="#80FFFFFF"
+                    custom:lyric_textColor_focus_read="#FFFFFFFF"
+                    custom:lyric_textSize="14sp" />
+            </LinearLayout>
+        </com.protruly.music.widget.HBScrollView>
+
+        <ImageView
+            android:id="@+id/lrc_image_blur1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:visibility="gone"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/hb_back_bg"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</FrameLayout>

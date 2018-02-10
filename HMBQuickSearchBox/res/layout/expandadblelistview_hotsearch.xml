@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.quicksearchbox.hotsearch.HotSearchView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/driver_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/suggestion_group_color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        style="@style/HotSearchHeader"
+        android:layout_below="@+id/driver_line_1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="@dimen/hotsearch_hearder_padding"
+        android:text="@string/hot_search"/>
+
+    <ImageView
+        android:id="@+id/hotsearch_refrush"
+        style="@style/HotSearchHeader"
+        android:layout_below="@+id/driver_line_1"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="@dimen/hotsearch_hearder_padding"
+        android:src="@drawable/ic_hotsearch_refresh"
+        android:text="@string/hot_search_refresh"/>
+
+    <ImageView
+        android:id="@+id/driver_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/hotsearch_refrush"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:background="@color/suggestion_group_color"/>
+
+    <RelativeLayout
+        android:id="@+id/hotsearch_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/driver_line_2">
+
+        <TextView
+            android:id="@+id/hotsearch_text1"
+            style="@style/HotSearchItem"
+            android:layout_marginStart="@dimen/hotsearch_item_padding"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:id="@+id/hotsearch_text2"
+            style="@style/HotSearchItem"
+            android:layout_marginEnd="@dimen/hotsearch_item_padding"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:id="@+id/hotsearch_text3"
+            style="@style/HotSearchItem"
+            android:layout_alignLeft="@id/hotsearch_text1"
+            android:layout_below="@id/hotsearch_text1"/>
+        <TextView
+            android:id="@+id/hotsearch_text4"
+            style="@style/HotSearchItem"
+            android:layout_alignLeft="@id/hotsearch_text2"
+            android:layout_below="@id/hotsearch_text2"/>
+        <TextView
+            android:id="@+id/hotsearch_text5"
+            style="@style/HotSearchItem"
+            android:layout_alignLeft="@id/hotsearch_text1"
+            android:layout_below="@id/hotsearch_text3"/>
+        <TextView
+            android:id="@+id/hotsearch_text6"
+            style="@style/HotSearchItem"
+            android:layout_alignLeft="@id/hotsearch_text2"
+            android:layout_below="@id/hotsearch_text4"/>
+    </RelativeLayout>
+</com.android.quicksearchbox.hotsearch.HotSearchView>

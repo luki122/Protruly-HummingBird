@@ -1,0 +1,72 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 23
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = ['res']
+            main.java.srcDirs = ['src']
+            manifest.srcFile 'AndroidManifest.xml'
+            assets.srcDirs = ['assets']
+        }
+    }
+
+    signingConfigs {
+        debug {
+            File strFile = new File("keystore/debug.keystore")
+            storeFile file(strFile)
+        }
+    }
+
+    signingConfigs {
+//        debug {
+//            signingConfig signingConfigs.debug
+//        }
+//        release {
+//            File strFile = new File("sign/debug.keystore")
+//            storeFile file(strFile)
+//            keyAlias "platform"
+//        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:cardview-v7:24.+'
+    compile 'com.android.support:support-v4:24.+'
+    compile 'com.android.support:appcompat-v7:24.+'
+    compile 'com.android.support:support-v13:24.+'
+    provided files('libs/hb-framework-sdk.jar')
+    provided files('libs/framework.jar')
+    provided files('tms/tms.jar')
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ <bool name="def_power_hangup">false</bool>
+<bool name="def_vibrate_active">false</bool>
+<bool name="def_flash_ringing">false</bool>
+<bool name="def_smart_ringer">false</bool>
+<bool name="def_overturn_to_mute">false</bool>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.com.protruly.filemanager.globalsearch.PinnedSectionListView
+        android:id="@+id/storage_path_list"
+        android:visibility="visible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:cacheColorHint="@android:color/transparent"
+        android:fastScrollEnabled="false"/>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <include android:id="@id/empty_view" android:visibility="gone" layout="@layout/empty_view_layout" />
+        <include android:id="@id/loading_view" android:visibility="gone" layout="@layout/loading_view_layout" />
+        <include android:id="@id/file_list_area" android:visibility="gone" layout="@layout/list_detail_layout" />
+        <hb.view.menu.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            hb:menu="@menu/edit_bottom_navigation_menu"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</RelativeLayout>

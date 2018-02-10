@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="hb_quickdial_item_style">
+        <item name="android:background">@drawable/hb_quickdial_settings_item_background_shape</item>
+        <item name="android:layout_width">@dimen/hb_quickdial_settings_item_width</item>
+        <item name="android:layout_height">@dimen/hb_quickdial_settings_item_height</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingLeft">@dimen/hb_quickdial_settings_item_padding_left</item>
+        <item name="android:paddingRight">@dimen/hb_quickdial_settings_item_padding_right</item>
+        <item name="android:paddingTop">@dimen/hb_quickdial_settings_item_padding_top</item>
+        <item name="android:paddingBottom">@dimen/hb_quickdial_settings_item_padding_bottom</item>
+        <item name="android:gravity">left</item>
+    </style>
+
+    <style name="hb_quickdial_name_style">
+        <item name="android:layout_width">@dimen/hb_quickdial_settings_item_inner_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/hb_quickdial_settings_item_name_textcolor</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="hb_quickdial_number_style">
+        <item name="android:layout_width">@dimen/hb_quickdial_settings_item_inner_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:textColor">@color/hb_quickdial_settings_item_text_textcolor</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="hb_quickdial_text_style">
+        <item name="android:layout_width">@dimen/hb_quickdial_settings_item_inner_width</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:textColor">@color/hb_quickdial_settings_item_text_textcolor</item>
+        <item name="android:singleLine">true</item>
+    </style>
+   
+
+</resources>

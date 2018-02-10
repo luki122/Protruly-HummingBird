@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<!-- add by lmx begin -->
+    <string name="hb_contactSavedNoNameError_Toast">Name cannot empty</string>
+    <string name="hb_contactSavedNoNumberError_Toast">Number cannot empty</string>
+    
+    
+    <string name="hb_contact_import">Import</string>
+    <string name="hb_sim_to_phone">Import from SIM</string>
+    <string name="hb_sim0_to_phone">Import from SIM1</string>
+    <string name="hb_sim1_to_phone">Import from SIM2</string>
+    <string name="hb_sd_to_phone">Import from internal storage</string>
+    <string name="hb_external_sd_to_phone">Import from SD card</string>
+    <string name="hb_sd_to_phone_subtitle">Import vCard files from internal storage to phone contacts</string>
+    <string name="hb_external_sd_to_phone_subtitle">Import vCard files from SD card to phone contacts</string>
+    
+    <string name="hb_contact_export">Export</string>
+    <string name="hb_phone_to_sim">Export to SIM</string>
+    <string name="hb_phone_to_sim0">Export to SIM1</string>
+    <string name="hb_phone_to_sim1">Export to SIM2</string>
+    <string name="hb_phone_to_sd">Export to internal storage</string>
+    <string name="hb_phone_to_external_sd">Export to SD card</string>
+    <string name="hb_delete_sim_contacts">删除SIM卡联系人(for test)</string>
+    <string name="hb_part_delete_sim_contacts">删除10条SIM卡联系人(for test)</string>
+    <string name="hb_phone_to_sd_subtitle">Export phone contacts to vCard file on internal storage</string>
+    <string name="hb_phone_to_external_sd_subtitle">Export phone contacts to vCard file on SD card</string>
+    
+    <string name="sim1">SIM1 card</string>
+    <string name="sim2">SIM2 card</string>
+    <string name="remove_all_call_log">Clear calllogs</string>
+
+    <!-- <string name="hb_preference_accounts">帐户</string> -->
+    <string name="hb_preference_contactio">Import/Export contacts</string>
+    <string name="hb_preference_accounts">Accounts</string>
+    <string name="hb_preference_distinct">Merge Contacts</string>
+    
+    <string name="hb_header_company_entry">Company</string>
+    <string name="hb_header_title_entry">Title</string>
+    <string name="black_remove_all">Clear blacklist</string>
+    <string name="black_add">Add to blacklist</string>
+    
+    <string name="no_contact_selected">Please select contacts</string>
+    <string name="slide_contact_deleted">Deleted</string>
+    <string name="can_not_add_start_contact">最多添加十位星标联系人</string>
+    
+    <string name="hb_recent_calls">Recents</string>
+    <string name="hb_all_calls">All calllogs</string>
+
+    <string name="callDetailsDurationFormat"><xliff:g id="minutes" example="42">%s</xliff:g> min <xliff:g id="seconds" example="28">%s</xliff:g> sec</string>
+    <string name="callDetailsShortDurationFormat"><xliff:g id="seconds" example="28">%s</xliff:g> sec</string>
+    <string name="hb_pickerNewContactHeader">New contact</string> 
+<!-- add by lmx end -->
+</resources>

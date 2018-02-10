@@ -1,0 +1,46 @@
+{
+    "retCode": 0,
+    "body": {
+	"specialId": 12,
+	"pageNum": 1,
+		"totalNum":1,
+	"resource": [
+		    {
+				"id": "BZ122112",
+				"icon": "http://img2.imgtn.bdimg.com/it/u=3763763706,854132004&fm=11&gp=0.jpg",
+				"name": "扁平风青春版",
+				"downloadUrl": "http://img2.imgtn.bdimg.com/it/u=3763763706,854132004&fm=11&gp=0.jpg",
+				"putawayStatus": 1
+		    },
+		{
+			"id": "BZ122113",
+			"icon": "http://img3.imgtn.bdimg.com/it/u=2687491294,3610150563&fm=26&gp=0.jpg",
+			"name": "扁平风青春版",
+			"downloadUrl": "http://img3.imgtn.bdimg.com/it/u=2687491294,3610150563&fm=26&gp=0.jpg",
+			"putawayStatus": 1
+		},
+		{
+			"id": "BZ122114",
+			"icon": "http://img4.imgtn.bdimg.com/it/u=205511828,2817753980&fm=26&gp=0.jpg",
+			"name": "扁平风青春版",
+			"downloadUrl": "http://img4.imgtn.bdimg.com/it/u=205511828,2817753980&fm=26&gp=0.jpg",
+			"putawayStatus": 1
+		},
+		{
+			"id": "BZ122115",
+			"icon": "http://img0.imgtn.bdimg.com/it/u=1037968638,1073019384&fm=26&gp=0.jpg",
+			"name": "扁平风青春版",
+			"downloadUrl": "http://img0.imgtn.bdimg.com/it/u=1037968638,1073019384&fm=26&gp=0.jpg",
+			"putawayStatus": 1
+		},
+		{
+			"id": "BZ122116",
+			"icon": "http://img0.imgtn.bdimg.com/it/u=2773330155,305797587&fm=26&gp=0.jpg",
+			"name": "扁平风青春版",
+			"downloadUrl": "http://img0.imgtn.bdimg.com/it/u=2773330155,305797587&fm=26&gp=0.jpg",
+			"putawayStatus": 1
+		}
+
+		]
+    }
+}

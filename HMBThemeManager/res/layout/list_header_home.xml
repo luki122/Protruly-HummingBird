@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.hb.thememanager.views.BannerView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_view_height" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/fast_entry_bar_height"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.hb.thememanager.views.IconFastEntry
+            android:id="@+id/icon_rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:src="@drawable/rank"
+            android:text="@string/text_icon_rank" />
+
+        <com.hb.thememanager.views.IconFastEntry
+            android:id="@+id/icon_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="69dp"
+            android:layout_marginRight="69dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:src="@drawable/category"
+            android:text="@string/text_icon_category" />
+
+        <com.hb.thememanager.views.IconFastEntry
+            android:id="@+id/icon_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:src="@drawable/topic"
+            android:text="@string/text_icon_topic" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.protruly.music"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#FF909090"/>
+
+        <com.protruly.music.widget.HBAnimationImageView
+            android:id="@+id/image_player_album"
+            android:layout_width="288dp"
+            android:layout_height="288dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/hb_animation_imageview_margintop"
+            android:scaleType="centerCrop" />
+
+        <com.protruly.music.widget.HBLyricSingleView
+            android:id="@+id/lyric_single_view"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/image_player_album"
+            android:layout_marginTop="30dp"
+            custom:lyric_lineGap="37dp"
+            custom:lyric_textColor="#80FFFFFF"
+            custom:lyric_textColor_focus="#80FFFFFF"
+            custom:lyric_textColor_focus_read="#FFFFFF"
+            custom:lyric_textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_player_anim"
+        android:layout_width="288dp"
+        android:layout_height="288dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/hb_animation_imageview_margintop"
+        android:scaleType="centerCrop" />
+
+</FrameLayout>

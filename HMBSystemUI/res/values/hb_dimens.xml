@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- hb tangjun add begin -->
+<resources>
+    <dimen name="quicksetting_panel_height_port">310dp</dimen>
+    <dimen name="quicksetting_panel_width_port">360dp</dimen>
+    
+     <dimen name="quicksetting_panel_height_land">360dp</dimen>
+    <dimen name="quicksetting_panel_width_land">343dp</dimen>
+    
+    <dimen name="quicksetting_background_height_port">1000dp</dimen>
+    <dimen name="quicksetting_background_width_land">1040dp</dimen>
+    
+    <dimen name="quicksetting_panel_distance">-50dp</dimen>
+    
+    <dimen name="quick_settings_tile_top_portrait">32.67dp</dimen>
+	<dimen name="quick_settings_tile_top_landscape">58.33dp</dimen>
+	<dimen name="quick_settings_tile_distance_portrait">15dp</dimen>
+	<dimen name="quick_settings_tile_distance_landscape">16dp</dimen>
+	<dimen name="quick_settings_brightnessview_distance_portrait">10dp</dimen>
+	<dimen name="quick_settings_brightnessview_distance_landscape">35dp</dimen>
+	
+	<dimen name="quick_settings_pulldown_view_height_port">40dp</dimen>
+	<dimen name="quick_settings_pulldown_view_width_port">150dp</dimen>
+	<dimen name="quick_settings_pulldown_view_height_land">150dp</dimen>
+	<dimen name="quick_settings_pulldown_view_width_land">40dp</dimen>
+	<dimen name="quick_settings_pulldown_view_marginbottom_port">275dp</dimen>
+	<dimen name="quick_settings_pulldown_view_marginright_land">308dp</dimen>
+    <!-- add by chenhl start -->
+    <dimen name="hb_manager_margintop">80dp</dimen>
+    <dimen name="hb_manager_Height">48dp</dimen>
+    <dimen name="hb_notification_info_size">14sp</dimen>
+    <dimen name="hb_search_tips">12sp</dimen>
+    <dimen name="hb_message_box_size">16sp</dimen>
+    <dimen name="hb_notification_height">640dp</dimen>
+    <dimen name="hb_network_text_size">13sp</dimen>
+    <dimen name="hb_shotview_padding_w">30dp</dimen>
+    <dimen name="hb_shotview_padding_h">26dp</dimen>
+    <dimen name="hb_notification_status_margin">12dp</dimen>
+    <!-- add by chenhl end -->
+  
+    <!-- ShenQianfeng add begin -->
+    <dimen name="hb_status_bar_wifi_icon_width">24dp</dimen>
+    <dimen name="hb_status_bar_no_sims_icon_width">24dp</dimen>
+    <dimen name="hb_status_bar_icon_spacing">1dp</dimen>
+    <dimen name="hmb_status_icon_size">16dp</dimen>
+    
+    
+    <dimen name="custom_battery_padding_left">2.3dp</dimen>
+    <dimen name="custom_battery_padding_top">2.67dp</dimen>
+    <dimen name="custom_battery_padding_right">3.3dp</dimen>
+    <dimen name="custom_battery_padding_bottom">2.67dp</dimen>
+    <dimen name="custom_battery_frame_border_width">1dp</dimen>
+    
+    <dimen name="custom_battery_stickout_width">1.3dp</dimen>
+    <dimen name="custom_battery_stickout_height">3dp</dimen>
+    <dimen name="custom_battery_stickout_corner_radius">0.67dp</dimen>
+    
+    <dimen name="custom_battery_indicator_padding_left">0.33dp</dimen>
+    <dimen name="custom_battery_indicator_padding_right">0.33dp</dimen>
+    <dimen name="custom_battery_indicator_padding_top">0.33dp</dimen>
+    <dimen name="custom_battery_indicator_padding_bottom">0.33dp</dimen>
+
+    <!-- The text size for battery level -->
+    <dimen name="status_bar_network_speed_text_size">13sp</dimen>
+    
+    <!-- ShenQianfeng add end -->
+    
+        <!-- hb: tangjun add for recents begin -->
+    <dimen name="hb_recent_task_item_height">@*android:dimen/thumbnail_height</dimen>
+    <dimen name="hb_recent_task_item_width">@*android:dimen/thumbnail_width</dimen>
+    <dimen name="hb_recent_task_item_normal_paddingleft">14dp</dimen>
+    <dimen name="hb_recent_task_item_last_paddingright">14dp</dimen>
+    <dimen name="hb_recent_task_item_normal_paddingright">0dp</dimen>
+    <dimen name="hb_recent_task_item_first_right_see_padding">65dp</dimen>
+    <dimen name="hb_recent_task_item_normal_paddingleft_land">14dp</dimen>
+    <dimen name="hb_recent_task_item_last_paddingright_land">14dp</dimen>
+    <dimen name="hb_recent_task_item_normal_paddingright_land">0dp</dimen>
+    <dimen name="hb_recent_task_item_first_right_see_padding_land">123dp</dimen>
+    <dimen name="hb_recent_task_item_width_land">@*android:dimen/thumbnail_height</dimen>
+    
+    <dimen name="hb_recents_task_view_application_icon_size">36dp</dimen>
+    
+    <dimen name="hb_recents_task_view_width_lanscape">596dp</dimen>
+    <dimen name="hb_clear_all_icon_marginbottom_landscape">20dp</dimen>
+    <dimen name="hb_clear_all_icon_marginbottom_portait">68dp</dimen>
+    <dimen name="hb_clear_all_icon_marginleft_landscape">-22dp</dimen>
+    <dimen name="hb_clear_all_icon_marginleft_portait">0dp</dimen>
+    
+    <integer name="clear_all_icon_anim_duration">30</integer>
+    <!-- hb: tangjun add for recents end -->
+    
+    <!-- add by wxue for VolumeDialog 20170511 start -->
+    <dimen name="hb_volume_dialog_margin">3dp</dimen>
+    
+    <dimen name="hb_battery_padding_left">0dp</dimen>
+    <dimen name="hb_battery_padding_top">0dp</dimen>
+    <dimen name="hb_battery_padding_right">0dp</dimen>
+    <dimen name="hb_battery_padding_bottom">0dp</dimen>
+    <dimen name="hb_battery_frame_border_width">2dp</dimen>
+    <dimen name="hb_battery_frame_corner_radius">5dp</dimen>
+    
+    <dimen name="hb_battery_stickout_width">24dp</dimen>
+    <dimen name="hb_battery_stickout_height">8dp</dimen>
+    <dimen name="hb_battery_stickout_corner_radius">3dp</dimen>
+    
+    <dimen name="hb_battery_indicator_padding_left">4dp</dimen>
+    <dimen name="hb_battery_indicator_padding_right">4dp</dimen>
+    <dimen name="hb_battery_indicator_padding_top">4dp</dimen>
+    <dimen name="hb_battery_indicator_padding_bottom">4dp</dimen>
+    <dimen name="hb_battery_indicator_corner_radius">5dp</dimen>
+    <!-- add by wxue for VolumeDialog 20170511 end -->
+</resources>
+<!-- hb tangjun add end -->

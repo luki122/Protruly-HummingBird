@@ -1,0 +1,19 @@
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="stick_list_item_bg">#eeeeee</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="editor_bg_color">#FFFFFFFF</color>
+    <color name="editor_bg_color_other">#FFF3F3F3</color>
+    <color name="editor_content_color">#FF000000</color>
+    <color name="editor_content_color_blue">#FF527DAE</color>
+    <color name="editor_content_color_green">#FF7AA44C</color>
+    <color name="editor_content_color_pink">#FFE17070</color>
+
+    <color name="home_text_color">#FFF8BD3F</color>
+    <color name="home_text_color_blue">#FF527DAE</color>
+    <color name="home_text_color_green">#FF7AA44C</color>
+    <color name="home_text_color_pink">#FFE17070</color>
+
+</resources>

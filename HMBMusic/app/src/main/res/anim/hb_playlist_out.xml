@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--
+    位移效果
+    fromXDelta="0%p" 指的x轴是相对于父控件从父控件的x=0出开始位移
+    fromYDelta="0%p" 指的y轴是相对于父控件从父控件的y=0出开始位移
+    toXDelta="100%p" 指的x轴是相对于父控件到达父控件的x=100的位置即x轴在屏幕的终点
+    toYDelta="100%p" 指的y轴是相对于父控件到达父控件的y=100的位置即x轴在屏幕的终点
+
+    -->
+
+    <scale
+        android:duration="250"
+        android:pivotX="100%"
+        android:pivotY="100%"
+        android:fromXScale="1.0"
+        android:toXScale="0.0"
+        android:fromYScale="1.0"
+        android:toYScale="0.0" />
+</set>

@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="24dp" >
+
+    <hb.widget.HbEditText
+        android:id="@+id/hb_edit_playlist_name"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@drawable/hb_create_playlist_input_bg"
+        android:hint="@string/hb_input_playlist_name"
+        android:maxLength="12"
+        android:paddingLeft="7dp"
+        android:singleLine="true"
+        android:gravity="bottom"
+        android:inputType="text"
+        android:paddingBottom="3dp"
+        android:textColor="#444444"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/hb_input_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="7dp"
+        android:contentDescription="@null"     
+        android:paddingBottom="10dp"   
+        android:src="@drawable/hb_input_delete_btn" />
+
+</RelativeLayout>

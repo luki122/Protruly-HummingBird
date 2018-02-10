@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/cootek_voip_c2c_invite_d" android:state_enabled="false" />
+    <item android:drawable="@drawable/cootek_voip_c2c_invite_n" />
+
+</selector>

@@ -1,0 +1,532 @@
+{
+  "retCode":0,
+  "body": {
+    "pageNum":0,
+    "hotrecommend":[
+      {
+        "recommendId": 0,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT122113",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122114",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 0
+          },
+          {
+            "id": "ZT122115",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122116",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      },
+      {
+        "recommendId": 1,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT122117",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122118",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122119",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221110",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      },
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT1221111",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221112",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 0
+          },
+          {
+            "id": "ZT1221113",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221114",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT1221115",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221116",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221117",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221118",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT1221119",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221120",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221121",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221122",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT1221123",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221124",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221125",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221126",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT1221127",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221128",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221129",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221130",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT1221131",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221132",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221133",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221134",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT1221135",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221136",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221137",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221138",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT1221139",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221140",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221141",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221142",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT1221143",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221144",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221145",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT1221146",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT122113",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122114",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122115",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122116",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT122113",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122114",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122115",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122116",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT122113",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122114",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122115",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122116",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+    ,
+      {
+        "recommendId": 2,
+        "name": "Pure",
+        "resource": [
+          {
+            "id": "ZT122113",
+            "icon": "http://attach.bbs.miui.com/forum/201707/27/220214u035eexg3txduzaw.jpg",
+            "name": "Pure1",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122114",
+            "icon": "http://attach.bbs.miui.com/forum/201707/28/105547fy9kil292llyq3j9.jpg",
+            "name": "Pure2",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122115",
+            "icon": "http://img3.duitang.com/uploads/item/201502/19/20150219152600_SiNAv.png",
+            "name": "Pure3",
+            "isCharge": 1,
+            "price": 12
+          },
+          {
+            "id": "ZT122116",
+            "icon": "http://pic1.win4000.com/mobile/8/5976b97d05585.jpg",
+            "name": "Pure4",
+            "isCharge": 1,
+            "price": 12
+          }
+        ]
+      }
+
+    ]
+  }
+}
+

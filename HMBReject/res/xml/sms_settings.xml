@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_sms_reject_title" >
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="black_reject"
+        android:summary="@string/sms_black_reject_summary"
+        android:title="@string/sms_black_reject_title" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="smart_reject"
+        android:summary="@string/sms_cloud_reject_summary"
+        android:title="@string/sms_cloud_reject_title" />
+    
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="keyword_reject"
+        android:title="@string/sms_keyword_reject_title" />
+
+    <PreferenceScreen
+        android:persistent="false"
+        android:title="@string/sms_keyword_reject_list_title" >
+        <intent android:action="com.hb.reject.keywords" />
+    </PreferenceScreen>
+
+</PreferenceScreen>

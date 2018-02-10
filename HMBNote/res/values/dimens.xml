@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_view_size">32dp</dimen>
+    <dimen name="editor_padding_top">12dp</dimen>
+    <dimen name="editor_padding_left">16dp</dimen>
+    <dimen name="editor_content_size">16sp</dimen>
+    <dimen name="editor_title_size">24sp</dimen>
+    <dimen name="editor_subtitle_size">20sp</dimen>
+</resources>

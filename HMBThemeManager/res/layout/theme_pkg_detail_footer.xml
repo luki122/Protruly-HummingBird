@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/theme_detail_name_bar_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/theme_detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.ThemeDetailTitle"
+        />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/gray"
+        />
+
+        <TextView
+            android:id="@+id/theme_detail_designer"
+            android:layout_width="wrap_content"
+            android:textAppearance="@style/TextAppearance.ThemeDetailUserName"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <RatingBar
+            android:id="@+id/theme_detail_rating"
+            style="?attr/ratingBarStyleNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+        />
+
+        <TextView
+            android:id="@+id/theme_detail_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.ThemeDetailTitle"
+            android:layout_marginLeft="10dp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/theme_detail_size"
+            style="@style/TextAppearance.ThemeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/theme_detail_download_time"
+            style="@style/TextAppearance.ThemeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/theme_detail_desc_title"
+        style="@style/TextAppearance.ThemeDetailSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:text="@string/theme_detail_desc_title" />
+
+    <com.hb.thememanager.views.ExpandableTextView
+        android:id="@+id/theme_detail_description"
+        style="@style/TextAppearance.ThemeDetailDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentTextColor="@color/gray_light"
+        app:contentTextSize="@dimen/topic_detail_page_bannerdes_content_size"
+        app:maxCollapsedLines="3"
+    />
+
+
+
+    <TextView
+        android:id="@+id/theme_detail_comment_title"
+        style="@style/TextAppearance.ThemeDetailSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/theme_detail_comment_title" />
+    <LinearLayout
+        android:id="@+id/theme_detail_comments_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+    >
+        <!-- show empty view if doesn't has comments -->
+    </LinearLayout>
+    <ViewStub
+        android:id="@+id/theme_detail_designer_themes_stub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/theme_detail_designer_themes"
+        android:layout="@layout/theme_detail_designer_themes"
+    />
+</LinearLayout>
+            
+            

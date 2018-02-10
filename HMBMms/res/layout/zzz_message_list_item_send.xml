@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<!-- hummingbird add by tangyisen for  hb style 2017.3.28 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mmsapp="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/msg_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="end"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/date_sim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="28dp"
+        android:orientation="horizontal"
+        android:gravity="end|center_vertical" >
+        <TextView
+            android:id="@+id/date_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#3D000000"
+            android:textSize="12sp" />
+        <ImageView
+            android:id="@+id/sim_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:visibility="gone"/>
+        <View
+            android:id="@+id/date_sim_space"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/mms_body_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="end"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/list_item_check_box"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone" />
+        <com.android.mms.ui.ZzzMmsParentLinearLayout android:id="@+id/mms_layout_view_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toStartOf="@id/list_item_check_box"
+            android:background="@drawable/zzz_ic_compose_message_send_sim1_bubble"
+            android:paddingStart="12dp"
+            android:paddingBottom="6dp"
+            android:paddingTop="7dp"
+            android:paddingEnd="20dp"
+            android:gravity="start">
+            <com.android.mms.ui.ZzzMessageItemTextView
+                android:id="@+id/text_view_buttom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="224dp"
+                android:padding = "0dp"
+                android:layout_marginBottom="3dp"
+                android:textSize="16sp"
+                android:textColor="#DE000000"
+                android:autoLink="all"
+                android:linksClickable="true"
+                android:visibility="gone"/>
+
+            <ViewStub android:id="@+id/mms_layout_view_stub"
+                android:layout="@layout/zzz_mms_layout_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="6dp"/>
+        </com.android.mms.ui.ZzzMmsParentLinearLayout>
+        
+    </RelativeLayout>
+
+    <!--panel_content can make view_stub-->
+    <LinearLayout
+        android:id="@+id/panel_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
+        android:orientation="horizontal"
+        android:gravity="bottom|end" >
+        <TextView
+            android:id="@+id/group_send_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#3D000000"
+            android:text="@string/sms_group_summary"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/group_send_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#FF77C926"
+            android:text="@string/sms_group_show"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <!--if failed resend,the textcolor will be #FFFF607C-->
+        <TextView
+            android:id="@+id/send_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="12dp"
+            android:textColor="#3D000000"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/failed_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="#FFFF607C"
+            android:textSize="12sp"
+            android:text="@string/message_item_sent_failed"
+            android:visibility="gone"/>
+        <View
+            android:id="@+id/panel_content_space"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+    </LinearLayout>
+</LinearLayout>

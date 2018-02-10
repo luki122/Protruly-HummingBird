@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/hb_rb_category"
+            android:layout_width="fill_parent"
+            android:layout_height="33dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/hb_rb_song"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/hb_netserch_bg"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="@string/song"
+                android:textColor="@color/hb_netsearch_category_textcolor"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/hb_search_split" />
+
+            <RadioButton
+                android:id="@+id/hb_rb_artist"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/hb_netserch_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/singer"
+                android:textColor="@color/hb_netsearch_category_textcolor"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/hb_search_split" />
+
+            <RadioButton
+                android:id="@+id/hb_rb_album"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/hb_netserch_bg"
+                android:button="@null"
+                android:gravity="center"
+                android:text="@string/hb_albums"
+                android:textColor="@color/hb_netsearch_category_textcolor"
+                android:textSize="15sp" />
+        </RadioGroup>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/line2" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/hb_id_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hb_no_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/hb_search_none"
+        android:visibility="gone" />
+
+    <include
+        android:layout_gravity="bottom"
+        layout="@layout/listview_footer" />
+
+</FrameLayout>

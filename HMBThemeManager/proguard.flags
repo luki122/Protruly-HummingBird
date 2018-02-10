@@ -1,0 +1,16 @@
+# Keep all Fragments in this package, which are used by reflection.
+
+#-keepnames class * com.hb.thememanager.job.ImageLoaderModule
+-keep public class * implements  com.bumptech.glide.module.GlideModule
+-keep public class  com.hb.thememanager.model.Advertising
+-keep public class * extends com.hb.thememanager.http.response.ThemeResponse
+-keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
+    **[] $VALUES;
+    public *;
+}
+-keep class com.bumptech.** {
+    *;
+}
+-keep class com.tencent.mm.sdk.** {
+   *;
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/bottom_gap"
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/fuwuhao_item_date"
+            android:layout_width="86dp"
+            android:layout_height="20dp"
+            android:background="@drawable/cootek_fuwuhao_item_date_bg"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fuwuhao_basic_text_size_6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_weight="1"
+        android:background="@drawable/cootek_publicnumber_widget_bg"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fuwuhao_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/fuwuhao_title_color"
+            android:textSize="@dimen/fuwuhao_basic_text_size_4" />
+
+        <TextView
+            android:id="@+id/fuwuhao_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/fuwuhao_description_color"
+            android:textSize="@dimen/fuwuhao_basic_text_size_6" />
+
+        <LinearLayout
+            android:id="@+id/fuwuhao_item_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"></LinearLayout>
+
+        <TextView
+            android:id="@+id/fuwuhao_subscription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/fuwuhao_sub_description_color" />
+
+        <View
+            android:id="@+id/fuwuhao_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fuwuhao_message_divider_height"
+            android:layout_margin="10dp"
+            android:background="@drawable/fuwuhao_divider_line" />
+
+        <LinearLayout
+            android:id="@+id/fuwuhao_more_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fuwuhao_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="17dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:gravity="center_vertical"
+                android:text="@string/fuwuhao_more_string"
+                android:textColor="@color/fuwuhao_more_color"
+                android:textSize="@dimen/fuwuhao_basic_text_size_6" />
+
+            <TextView
+                android:id="@+id/fuwuhao_more_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="17dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:gravity="right"
+                android:text="@string/fuwuhao_i_string"
+                android:textColor="#999"
+                android:textSize="@dimen/fuwuhao_basic_text_size_2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+</LinearLayout>

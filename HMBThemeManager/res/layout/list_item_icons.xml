@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/icon_drawable"
+        android:layout_width="@dimen/wallpaper_preview_icon_size"
+        android:layout_height="@dimen/wallpaper_preview_icon_size"
+        />
+
+    <TextView
+        android:id="@+id/icon_name"
+        style="@style/TextAppearance.WallpaperPreviewIcon"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="6dp"
+        android:lines="1"
+        android:textSize="12sp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

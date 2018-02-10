@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (C) 2014 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="confirm_ok">確定</string>
+    <string name="confirm_cancel">取消</string>
+    <string name="confirm_delete">刪除</string>
+    <string name="app_name">主題商店</string>
+    <string name="action_settings">設置</string>
+    <string name="local_theme">主題</string>
+    <string name="delete">刪除</string>
+    <string name="theme_detail_designer">作者:<xliff:g id="designer">%1$s</xliff:g></string>
+    <string name="theme_detail_size">大小:<xliff:g id="size">%1$s</xliff:g></string>
+    <string name="theme_detail_description">簡介:<xliff:g id="description">%1$s</xliff:g></string>
+    <string name="download_state_apply">立即使用</string>
+    <string name="download_state_applied">正在使用</string>
+    <string name="msg_apply_theme">正在應用主題......</string>
+    <string name="statu_apply_theme_failed">主題應用失敗</string>
+	<string name="msg_select_theme_applied">當前主題已應用</string>
+	<string name="default_theme_name">黑金傳奇</string>
+	<string name="default_theme_description">簡約大氣，轻薄不累赘</string>
+	<string name="default_theme_designer">保千里</string>
+    <string name="empty_text">設計師們還在準備資源，請耐心等待</string>
+	    <!-- msg for load local theme -->
+    <string name="msg_load_theme_fail">主題加載失敗</string>
+    <string name="msg_load_theme_exists">主題已存在</string>
+    <string name="msg_load_theme_error">主題包解析錯誤，請檢查主題包結構</string>
+    
+    <!-- Wallpaper String -->
+     <string name="title_wallpaper">桌面壁紙</string>
+     <string name="title_lockscreen_wallpaper">鎖屏壁紙</string>
+     <string name="desktop_wallpaper_entry_title">桌面</string>
+    <string name="lockscreen_wallpaper_entry_title">鎖屏</string>
+    <string name="vr_wallpaper_entry_title">VR壁紙</string>
+    
+    <!-- Theme type Title -->
+    <string name="theme_wallpaper_title">壁紙</string>
+    <string name="set_wallpaper_title">壁紙裁剪</string>
+    <string name="wallpaper_crop_done">選擇</string>
+        <!-- Setting Wallpaper -->
+    <string name="image_loading">正在加載壁紙...</string>
+    <string name="image_too_small">所選的壁紙分辨率低，不適合設置爲壁紙</string>
+    <string name="image_load_failed">壁紙加載失敗</string>
+     <string name="wallpaper_set_success">壁紙設置成功</string>
+    <string name="wallpaper_set_failed">設置失敗，壁紙可能已損壞</string>
+    <string name="wallpaper_setting">正在設置壁紙...</string>
+    <string name="set_wallpaper_dialog_title">壁紙</string>
+    <string name="msg_select_wallpaper_applied">壁紙應用成功</string>
+    <string name="msg_apply_wallpaper_fail">壁紙應用失敗</string>
+    <!-- wallpaper list title -->
+    <string name="wallpaper_list_title_desk">桌面壁紙</string>
+    <string name="wallpaper_list_title_lockscreen">鎖屏壁紙</string>
+    <string name="tab_title_theme">主题</string>
+    <string name="tab_title_wallpaper">壁紙</string>
+    <string name="tab_title_ringtong">鈴聲</string>
+    <string name="tab_title_font">字體</string>
+    <string name="text_icon_rank">排行</string>
+    <string name="text_rank">排行榜</string>
+    <string name="text_category">分類</string>
+     <string name="text_topic">專題</string>
+     <string name="text_user_center">個人中心</string>
+    <string name="text_icon_category">分類</string>
+    <string name="text_icon_topic">專題</string>
+    <string name="more">更多</string>
+    <!-- user center -->
+    <string name="text_user">用戶</string>
+    <string name="text_purchase_record">購買記錄</string>
+    <string name="text_user_feedback">意見反饋</string>
+    <string name="text_user_theme">我的主题</string>
+    <string name="text_user_wallpaper">我的壁紙</string>
+    <string name="text_user_ringtong">我的鈴聲</string>
+    <string name="text_user_font">我的字體</string>
+    <string name="text_user_login">立即登錄</string>
+    <string name="text_user_logining">正在登錄...</string>
+    <string name="msg_no_network">無網絡鏈接，點擊進行設置</string>
+    <string name="no_network">無網絡鏈接</string>
+    <string name="msg_no_wifi_setting">非wifi環境下使用流量下載</string>
+    <string name="msg_no_wifi_default_setting">已關閉</string>
+    <string name="msg_no_wifi_open">已開啟</string>
+    <string name="msg_open_mobile_network_download">檢測到您現在處於非WIFI環境，是否啓用移動流量下載</string>
+    <string name="msg_open_mobile_wizard">默認關閉，可在個人中心-設定中更改</string>
+    <string name="msg_about">關於</string>
+    <string name="msg_about_app">打令主題商店</string>
+    <string name="msg_about_version">版本號：1.0</string>
+    <string name="msg_about_msg1">歡迎各大設計公司入駐主题商店\n網址：http://designer.darling.cn</string>
+    <string name="msg_about_msg2">合作諮詢\n郵箱：yuy.li@protruly.com.cn</string>
+    <string name="msg_copy_right">Copyright © 2017\n深圳市保千裏電子有限公司</string>    
+    <string name="msg_open_mobile_download">請在個人中心-設定裏開啟流量下載或使用wifi下載</string>
+    <string name="open_network_download">開啓</string>
+    <!-- topic detail -->
+    <string name="topic_detail_test">测试</string>
+    <string name="topic_detail_ringtone_listener">試聽</string>
+    <string name="topic_detail_ringtone_setting">設為</string>
+    <string name="topic_detail_etv_expand">展開</string>
+    <string name="topic_detail_etv_collapse">收起</string>
+    <string name="theme_download_time_suffix">次下載</string>
+    <string name="theme_download_time_suffix_1">+次下載</string>
+    <string name="theme_detail_desc_title">主題詳情</string>
+    <string name="theme_detail_comment_title">主題評論</string>
+    <string name="comments_empty_tips">暫時還沒有評論～快來搶佔沙發吧</string>
+    <string name="add_comments">添加評論</string>
+    <string name="submit_comment">發佈</string>
+    <string name="add_comment_title">評論</string>
+    <string name="select_start_and_add_comment">選擇星級並添加評論: </string>
+    <string name="add_comment_hint">請輸入評論內容</string>
+    <string name="comment_tip_count">點擊查看全部評論(<xliff:g id="count">%1$s</xliff:g>)</string>
+    <string name="comment_post_time"><xliff:g id="count">%1$s</xliff:g> 分鐘前</string>
+    <!-- wallpaper detail -->
+    <string name="wallpaper_detail_save_wallpaper">保存壁紙</string>
+    <string name="wallpaper_detail_save_wallpaper_applied">已保存</string>
+    <string name="wallpaper_detail_set_wallpaper">設為壁紙</string>
+    <string name="wallpaper_detail_preview_wallpaper">預覽</string>
+    <string name="wallpaper_detail_wallpaper_loading">保存壁紙中，請稍後。</string>
+    <string name="no_network_cannot_load">無網絡連接，加載更多失敗。</string>
+    <string name="pic_load_error">圖片加載失敗，請刷新。</string>
+    <!-- pay dialog -->
+    <string name="pay_dialog_need_payment">需付款: </string>
+    <string name="pay_dialog_pay_alipay">支付寶</string>
+    <string name="pay_dialog_pay_wechat">微信支付</string>
+    <string name="pay_dialog_pay_now">去支付</string>
+    <string name="pay_dialog_pay_wechat_not_installed">未安裝</string>
+    <string name="pay_dialog_pay_title">購買<xliff:g id="title">%1$s</xliff:g></string>
+    <string name="pay_dialog_pay_price"> ¥<xliff:g id="price">%1$s</xliff:g></string>
+    <string name="pay_msg_no_wechat_client">沒有安裝微信客戶端</string>
+    <string name="pay_msg_wechat_client_low">當前微信版本過低</string>
+    
+    <string name="wallpaper_detail_popupwindow_cancel">取消</string>
+    <string name="wallpaper_detail_popupwindow_set_together">同時設爲鎖屏和桌面</string>
+    <string name="wallpaper_detail_popupwindow_set_walllpaper">設爲桌面</string>
+    <string name="wallpaper_detail_popupwindow_set_lockscreen">設爲鎖屏</string>
+    <string name="search_empty_text">暫無搜索結果</string>
+    <string name="activity_title_all_comments">全部評論</string>
+
+    <string name="search_history_label">搜索歷史</string>
+    <string name="try_theme">試用</string>
+    <string name="pay_for">¥ <xliff:g id="price">%1$s</xliff:g> 購買</string>
+    <string name="download">下載</string>
+    <string name="download_cancel">取消</string>
+    <string name="download_pause">暫停</string>
+    <string name="download_continue">繼續</string>
+    <string name="download_paused">已暫停</string>
+    <string name="download_downloading">正在下載 <xliff:g id="percent">%1$s</xliff:g></string>
+    <string name="downloaded">已下載</string>
+    <string name="paid">已購買</string>
+    <string name="tab_title_charge">付費</string>
+    <string name="tab_title_free">免費</string>
+    <string name="tab_title_new">新品</string>
+    <string name="tab_title_hot">熱門</string>
+    <string name="designer_theme_title">該作者其他作品</string>
+    <string name="theme_price_free">免費</string>
+    <string name="apply_now">立即使用</string>
+    
+    <string name="settoincallringtone">設為來電鈴聲</string>
+    <string name="settosmsringtone">設為通知鈴聲</string>
+    <string name="settoalarmringtone">設為鬧鐘鈴聲</string>	
+    <string name="downloadringtone">正在下載鈴聲，請稍等</string>
+    <string name="downloadringtonefail">下载铃声失败，请检查网络或者稍后再试</string>
+    <string name="setincallringtonesucc">設置電話鈴聲成功！</string>    
+    <string name="setinforingtonesucc">設置通知鈴聲成功！</string>        
+
+    <string name="not_paid">未購買</string>
+    <string name="has_new_version">可更新</string>
+    <string name="download_new_version">更新</string>
+    <string name="select_all">全選</string>
+    <string name="unselect_all">不全選</string>
+    <string name="cancel">取消</string>
+    <string name="select_number">已選<xliff:g id="count">%1$s</xliff:g>項</string>
+    <string name="delete_theme_title">刪除主題</string>
+    <string name="delete_theme_msg">是否刪除主題?</string>
+    <string name="delete_wallpaper_title">刪除壁紙</string>
+    <string name="delete_wallpaper_msg">確定要刪除所選壁紙嗎？</string>
+
+    <string name="tips_select_theme_to_delete">請先選擇需要删除的主題</string>
+    <string name="no_network_in_large_view">無網絡連接，請檢查網絡設定</string>
+    <string name="click_to_setup_network">點擊設定網絡</string>
+    <string name="request_fail">請求資源失敗</string>
+    <string name="click_to_refresh">點擊刷新</string>
+    <string name="loading">正在加載</string>
+    <string name="go_to_online">在線頁面</string>
+    <string name="empty_resource">設計師們正在準備資源，請耐心等待</string>
+    <string name="add_comments_success">評論添加成功</string>
+    <string name="add_comments_failure">評論添加失敗</string>
+    <string name="comment_time_now">剛剛</string>
+    <string name="comment_time_minute"><xliff:g id="minute">%1$s</xliff:g>分鐘前</string>
+    <string name="comment_time_hour"><xliff:g id="hour">%1$s</xliff:g>小時前</string>
+    <string name="download_onwaited">等待下載</string>
+    <string name="download_failed">下載失敗</string>
+    <string name="pay_failure">支付失敗</string>
+    <string name="pay_success">支付成功</string>
+    <string name="start_try_theme">開始試用選中資源</string>
+    <string name="end_try_theme">試用時間到，刪除試用資源</string>
+    <string name="feedback_commit">提交</string>
+    <string name="feedback_commit_succ">提交成功</string>
+    <string name="feedback_commit_fail">提交失败</string> 
+    <string name="feedback_commit_no_input">請輸入反饋意見！ </string>    
+    <string name="no_purchase_record">您還沒有相關記錄哦~</string>
+    <string name="add_comment_pay_tip">尚未購買，暫不能添加評論</string>
+    <string name="add_comment_download_tip">尚未下載，暫不能添加評論</string>
+    <string name="theme_applied">正在使用</string>
+        <string name="setup_success_title">恭喜，設定完成!</string>
+    <string name="setup_apply_theme">開始使用</string>
+    <string name="authorization_msg">
+        "歡迎使用打令主題商店。為了向您提供全方位的服務，需要使用到如下許可權：\n1、用戶端使用完全免費。在使用過程中會產生移動網絡或WLAN流量，具體流量資費請諮詢當地運營商\n2、讀寫SD卡數據。保護用戶隱私是打令主題商店用戶端的一項基礎政策，在用戶授權的情况下不承擔該應用任何方面的任何責任，包括但不限於其效能，知識產權，安全，支持，服務，內容及收費等，本軟件可能會收集用戶的應用軟體、地理位置、手機設備資訊等基本資訊。"
+    </string>
+    <string name="authorization_no_tips">不再提示</string>
+    <string name="tips_title">提示</string>
+    <string name="quit">退出</string>
+    <string name="no_tips">我知道了</string>
+    <string name="finish_try">結束試用(<xliff:g id="time_left">%1$s</xliff:g>)</string>
+    <string name="system_font_name">系統字體</string>
+    <string name="pay_when_no_network">無網絡，不能購買</string>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+ Copyright (C) 2008 The Android Open Source Project
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionName="v1.0.1.0103.3"
+    android:versionCode="170814001"
+    package="com.android.provision">
+
+    <original-package android:name="com.android.provision" />
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+    <uses-permission android:name="android.permission.STATUS_BAR"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_KEYGUARD_SECURE_STORAGE" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
+    <uses-permission android:name="android.permission.MANAGE_USERS" />
+    <uses-permission android:name="android.permission.BIND_DEVICE_ADMIN" />
+    <uses-permission android:name="android.permission.CRYPT_KEEPER" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.SHUTDOWN"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.MANAGE_FINGERPRINT" />
+
+    <application android:icon="@drawable/ic_launcher" >
+        <activity
+            android:name="DefaultActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Transparent">
+            <!--<intent-filter android:priority="1">
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name="com.android.provision.LanguageSettingsWizard"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize|mcc|mnc"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ProvisionFirstTheme">
+            <intent-filter android:priority="1">
+                <action android:name="android.intent.action.MAIN" />
+                <!--<action android:name="com.android.provision.ACTION_LANGUAGE_SETTING" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.android.provision.InfoActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize|mcc|mnc"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ProvisionTheme" />
+
+        <activity
+            android:name="com.android.provision.FinishActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize|mcc|mnc"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ProvisionTheme">
+            <intent-filter>
+                <action android:name="com.android.provision.FINISH" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.android.provision.TransferActivity"
+            android:configChanges="locale|keyboardHidden|orientation|screenSize|mcc|mnc"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/ProvisionTheme">
+            <intent-filter>
+                <action android:name="com.android.provision.TRANSFER" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="com.android.provision.ShutdownReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/my_ripple"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart">
+    <!--android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"-->
+
+
+    <hb.widget.CycleImageView
+        android:id="@+id/imv_logo"
+        android:layout_width="@dimen/item_logo_width"
+        android:layout_height="@dimen/item_logo_height"
+        android:layout_centerVertical="true"
+        android:src="@drawable/app_default"
+        android:scaleType="centerInside" />
+
+    <RelativeLayout
+        android:id="@+id/lay_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/lay_app_logo_margin_left"
+        android:layout_toRightOf="@id/imv_logo"
+        android:orientation="vertical"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+
+        <TextView
+            android:id="@+id/tv_orient_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="?android:attr/textAppearanceListItem" />
+        <CheckBox
+            android:id="@+id/ck_add"
+            android:layout_width="@dimen/add_icon_width"
+            android:layout_height="@dimen/add_icon_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="false"
+            android:background="@drawable/ck_box_selector"
+            android:button="@null" />
+        <Button
+            android:id="@+id/btn_remove"
+            android:layout_width="@dimen/add_icon_width"
+            android:layout_height="@dimen/add_icon_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_remove"
+            android:focusable="false"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lay_line"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_line_divider_height"
+        android:layout_alignLeft="@id/lay_right"
+        android:background="@color/color_item_line_divider"></View>
+</RelativeLayout>

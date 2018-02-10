@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:id="@+id/dialtacts_mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dialer_light"
+    android:clipChildren="false"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout
+        android:id="@+id/digits_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="64dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/hb_dialpad_digits_background_color"
+            android:clipChildren="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="?android:attr/listPreferredItemPaddingStart"
+            android:paddingRight="?android:attr/listPreferredItemPaddingEnd" >
+
+            <view
+                xmlns:ex="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/digits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                class="com.android.phone.common.dialpad.DigitsEditText"
+                android:background="@android:color/transparent"
+                android:cursorVisible="false"
+                android:focusableInTouchMode="true"
+                android:fontFamily="sans-serif"
+                android:freezesText="true"
+                android:gravity="center"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/dialpad_digits_adjustable_text_size"
+                android:textStyle="normal"
+                ex:resizing_text_min_size="@dimen/dialpad_digits_text_min_size" />
+
+            <TextView
+                android:id="@+id/area_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ff3dc66e"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_gravity="bottom"
+            android:background="#ffd4d4d4" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/dialtacts_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/digits_container"
+        android:clipChildren="false" >
+
+        <!-- The main contacts grid -->
+
+        <FrameLayout
+            android:id="@+id/dialtacts_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false" />
+    </FrameLayout>
+
+    <hb.widget.FloatingActionButton
+        android:id="@+id/floating_action_button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/hb_floating_action_button_margin_bottom"
+        hb:centerImage="@drawable/hb_dialtacts_activity_dial_fab_background_normal"
+        hb:size="normal" />
+
+    <hb.view.menu.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:maxHeight="50dp"
+        android:visibility="gone"
+        hb:menu="@menu/hb_calllog_bottombar_menu" />
+
+</RelativeLayout>

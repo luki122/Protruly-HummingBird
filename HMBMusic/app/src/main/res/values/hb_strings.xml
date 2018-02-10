@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- add by  20140428 start -->
+    <string name="my_music">My Music</string>
+    <string name="find_music">Discover</string>
+    <string name="song">Song</string>
+    <string name="singer">Artist</string>
+    <string name="folder">Folder</string>
+    <string name="new_singer">New Playlist</string>
+    <string name="my_favorite_songs">Favorite Songs</string>
+    <string name="recently_added_songs">Recently Added Songs</string>
+    <string name="search_for_singer">Search for a song or artist</string>
+    <string name="song_size"><xliff:g id="songsize">%d</xliff:g> song(s)</string>
+    <string name="hb_rename">Rename</string>
+    <string name="hb_delete_message">Are you sure you want to delete the entire playlist?</string>
+    <string name="hb_song_single">Playlist</string>
+    <string name="hb_num_songs_of_single"><xliff:g id="songs">%d</xliff:g> song(s)</string>
+    <string name="hb_add_playlist_song_num">Add (<xliff:g id="playlist_songs_add">%d</xliff:g>)</string>
+    <string name="hb_input_playlist_name">Enter playlist name</string>
+    <string name="hb_playlist_total_songs"><xliff:g id="playlist_total_songs">%d</xliff:g> song(s)</string>
+    <string name="hb_playlist_total_singer"><xliff:g id="playlist_total_singer">%d</xliff:g> artist(s)</string>
+    <string name="hb_playlist_total_fold"><xliff:g id="playlist_total_fold">%d</xliff:g> folder(s)</string>
+    <string name="hb_fold_num"><xliff:g id="foldnum">%s</xliff:g> folder(s), <xliff:g id="foldsongs">%s</xliff:g> song(s)</string>
+    <string name="hb_songs_to_remove"><xliff:g id="songs_to_remove">%d</xliff:g> song(s) removed</string>
+    <string name="hb_remove">Remove</string>
+    <string name="hb_remove_message">移除此首歌曲？</string>
+    <string name="hb_remove_num_message">移除所选的<xliff:g id="numsongs">%s</xliff:g>首歌曲？</string>
+    <string name="hb_ignor_scan">Ignore scanning</string>
+    <string name="hb_ignoer_scan_message">Are you sure you want to ignore scanning the folder?</string>
+    <string name="hb_not_scan_the_fold">This folder will no longer be scanned</string>
+    <string name="hb_playlist_no_songs">No song in this playlist</string>
+    <string name="hb_online_new_album">Hot Album</string>
+    <string name="hb_more">More</string>
+    <string name="hb_ranking">Ranking List</string>
+    <string name="hb_no_network">No Network</string>
+    <string name="hb_setting_network">Network Setting</string>
+    <string name="hb_network_error">Network Error</string>
+    <string name="hb_retry">Retry</string>
+    <string name="hb_collect_playlist">Favorite songlist</string>
+    <string name="hb_collect_playlist2">Favorite</string>
+    <string name="hb_collect_size"><xliff:g id="songsize">%d</xliff:g> songlist(s)</string>
+    <string name="hb_collect_time">yyyy.MM.dd</string>
+    <string name="hb_collect_show_time">Time: </string>
+    <string name="hb_download_manager">Downloading</string>
+    <string name="hb_player_share">Share</string>
+    <string name="hb_player_shareinfo">Share Song:</string>
+    <string name="player_albums">Album</string>
+    <string name="remove_download">Cancel</string>
+    <string name="hb_all_pause">All pause</string>
+    <string name="hb_all_download">Download</string>
+    <string name="hb_exit">Exit</string>
+    <string name="hb_exit_tips">Songs are being downloaded, whether to confirm exit？</string>
+    <string name="hb_no_songs">No Songs</string>
+    <string name="hb_no_singers">No Singers</string>
+    <string name="hb_no_playlist">No Playlist</string>
+    <string name="hb_no_download_task">No download task</string>
+    <string name="hb_add_playlist">Add</string>
+    <string name="hb_edit_playlist">Edit</string>
+    <string name="hb_delete_playlist">Delete</string>
+    <string name="hb_clear_search_history">Clear search history</string>
+    <string name="hb_search_lyric">Search lyric</string>
+    <string name="hb_search_lyric_name">Song:</string>
+    <string name="hb_search_lyric_artist">Artist:</string>
+    <string name="hb_now_playing">Play now</string>
+    <string name="hb_lyricsize">match <xliff:g id="lyricsize">%d</xliff:g> lyrics</string>
+    <string name="hb_search_img_size">match <xliff:g id="imgsize">%d</xliff:g> covers</string>
+    <string name="hb_is_ignored">Ignored</string>
+    <string name="hb_ignore">Ignore</string>
+    <string name="hb_all_regain">Resume</string>
+    <string name="hb_ignore_info">No ignored folder exist.You can ignore scanning folder by swiping left in the folder list.</string>
+    <string name="hb_regain">Regain</string>
+    <string name="hb_clean_space">Phone has enough free space, please clean up</string>
+    <string name="hb_modify_id3_info">Modify id3 info</string>
+    <string name="hb_baidu_version">Baidu Music all rights reserved</string>
+    <string name="player_sound">"Sound"</string>
+    <string name="hb_hifi">HI-FI</string>
+    <string name="hb_noise_down">Noise Reduction</string>
+    <string name="hb_match_sound">Headphone Match</string>
+    <string name="hb_defualt">Defualt</string>
+    <string name="hb_pop">Pop</string>
+    <string name="hb_live">Live</string>
+    <string name="hb_rock">Rock</string>
+    <string name="hb_bass">Bass</string>
+    <string name="hb_jazz">Jazz</string>
+    <string name="hb_electri">Electronic</string>
+    <string name="hb_classical">Classical</string>
+    <string name="hb_null">No</string>
+    <string name="hb_rock_headset">"IUNI&apos;s headphones for rock music"</string>
+    <string name="hb_iuni_twist_tone">"IUNI&apos;s headphones for music style changing"</string>
+    <string name="hb_iuni_roise_headset">"IUNI&apos;s headphones for noise canceling"</string>
+    <string name="hb_iuni_new_headset">IUNI倾音耳机</string>
+    <string name="hb_earpods">iPhone Earpods</string>
+    <string name="hb_akg450">AKG 450</string>
+    <string name="hb_urbeats">urBeats</string>
+    <string name="hb_headset_select">Headphone models</string>
+    <string name="hb_close_on_time">Timing off</string>
+    <string name="hb_not_open">Not open</string>
+    <string name="hb_10_min">After 10 minutes</string>
+    <string name="hb_15_min">After 15 minutes</string>
+    <string name="hb_30_min">After 30 minutes</string>
+    <string name="hb_45_min">After 45 minutes</string>
+    <string name="hb_60_min">After 60 minutes</string>
+
+    <string-array name="hb_time_choice">
+        <item>@string/hb_not_open</item>
+        <item>@string/hb_10_min</item>
+        <item>@string/hb_15_min</item>
+        <item>@string/hb_30_min</item>
+        <item>@string/hb_45_min</item>
+        <item>@string/hb_60_min</item>
+    </string-array>
+
+    <string name="hb_defualt_lyric">Defualt lyric</string>
+    <string name="hb_net_setting">Internet setting</string>
+    <string name="hb_only_connected_in_wifi">Wi-Fi only</string>
+    <string name="hb_close_wifi_tips">turn off the switch will cost your cellular data when you play or download the online songs.</string>
+    <string name="hb_continue_play_tips">Continue to play will turn off the Wi-Fi only mode and cost your cellular data.</string>
+    <string name="hb_continue_download_tips">Continue to download will turn off the Wi-Fi only mode and cost your cellular data.</string>
+    <string name="hb_flow_tips">Data notice</string>
+    <string name="xiam_radio">Xiami Radio</string>
+    <string name="radio">电台</string>
+    <string name="xing_zuo_info">夜空中最亮的星</string>
+    <string name="nian_dai_info">音乐里的时光机</string>
+    <string name="mood_info">懂你的阴晴圆缺</string>
+    <string name="style_info">每一面不同的你</string>
+    <!-- add by  20140428 end -->
+    <!-- ukiliu add 2014-07-30 begin -->
+    <string name="img_desc_tens_of_hour">Tens of Hour</string>
+    <string name="img_desc_units_of_hour">Units of Hour</string>
+    <string name="img_desc_tens_of_min">Tens of Minute</string>
+    <string name="img_desc_units_of_min">Units of Minute</string>
+    <string name="img_desc_time_splite"> : </string>
+    <!-- ukiliu add 2014-07-30 end -->
+    <string name="img_desc_album_cover">Album Pictures</string>
+    <string name="dialog_delete_track_con_message">Delete the song?</string>
+    <string name="dialog_delete_tracks_con_message">Delete the selected song?</string>
+    <string name="dialog_delete_album_con_message">Delete the album?</string>
+    <string name="dialog_delete_albums_con_message">Delete the selected album?</string>
+    <string name="num_albums_num_songs"><xliff:g id="numalbums">%s</xliff:g> albums, <xliff:g id="numsongs">%s</xliff:g> song(s)</string>
+    <string name="num_songs_of_album"><xliff:g id="numsongs">%s</xliff:g> Song(s)</string>
+    <string name="release_date_of_album">Release Time: <xliff:g id="releasedate">%s</xliff:g></string>
+    <string name="hb_baidu_permission">Baidu Music all rights reserved</string>
+    <string name="player_baidu_logo">Baidu Music</string>
+
+    <string name="open_fail">"open failed"</string>
+    <string name="song_name">"xxxx"</string>
+    <string name="song_album">"yyy.yyyy"</string>
+    <string name="currenttime">"0:00"</string>
+    <string name="totaltime">"03:10"</string>
+    <string name="loading_lyric">"loading the lyrics&#8230;"</string>
+    <string name="no_lyric">&quot;No lyric&quot;</string>
+    <string name="new_songlist">&quot;New Playlist&quot;</string>
+    <string name="songlist_cancel">&quot;Cancel&quot;</string>
+    <string name="songlist_ok">&quot;OK&quot;</string>
+    <string name="playlist_songs">&quot;Song&quot;</string>
+    <string name="playlist_artist">&quot;Artist&quot;</string>
+    <string name="playlist_files">&quot;Folder&quot;</string>
+    <string name="playlist_addsongs">&quot;Add Song&quot;</string>
+    <string name="playlist_selectsongs">&quot;<xliff:g id="SELECT_SONG">%d</xliff:g> songs selected&quot;</string>
+    <string name="player_songs">&quot;List&quot;</string>
+    <string name="player_downs">&quot;Down&quot;</string>
+    <string name="player_ringer">&quot;Ring&quot;</string>
+    <string name="player_nofile">&quot;File does not exist!&quot;</string>
+    <string name="player_filefailed">&quot;Failed. Please try again!&quot;</string>
+    <string name="player_failed">&quot;This format is not supported&quot;</string>
+    <string name="player_download_exist">"The song has downloaded."</string>
+    <string name="player_download_start">added to download list</string>
+    <string name="player_download_failed">Download false!</string>
+    <string name="remove_download_message">删除此下载任务？</string>
+    <string name="remove_download_num_message">删除所选%d项下载任务？</string>
+    <string name="search_failed">Search Error!</string>
+    <string name="play_failed_nofiles">No play files</string>
+    <string name="no_effects">No Effects!</string>
+    <string name="hb_share_failed">Share not finished!</string>
+    <string name="xlweibosdk_share_success">Share Success!</string>
+    <string name="xlweibosdk_share_failed">Share Failed!</string>
+    <string name="xlweibosdk_share_canceled">Share Cancled!</string>
+    <string name="xlweibosdk_not_support_api">Not Valid Support!</string>
+    <string name="xlweibosdk_token_format">Token：%1$s \nValid：%2$s</string>
+    <string name="xlweibosdk_token_existed">Token nValid!</string>
+    <string name="weibosdk_auth_success">OK</string>
+    <string name="weibosdk_auth_failed">Failed!</string>
+    <string name="weibosdk_auth_canceled">Canceled!</string>
+    <string name="hb_playerdialog_share">Share</string>
+    <string name="hb_wx_not_installed">Please install Wei Xin App!</string>
+
+
+    <string name="appwidget_songtitle">&quot;Song&quot;</string>
+    <string name="appwidget_artisttitle">Artist</string>
+    <string name="playmode">&quot;Shuffle&quot;</string>
+    <string name="action_titlenum">1</string>
+    <string name="delete">Delete</string>
+    <string name="deleteMessage_num">删除所选的<xliff:g id="numsongs">%s</xliff:g>首歌曲？</string>
+    <string name="deleteMessage">删除此歌曲？</string>
+    <string name="ok">OK</string>
+    <string name="search_hint_input">Search a song or artist</string>
+    <string name="search_hint_input2">Search a song, artist and album</string>
+    <string name="search_hint_input3">Search song</string>
+    <string name="search_hint_input4">Search artist</string>
+    <string name="selectAll">Select All</string>
+    <string name="addSong">Add to Playlist</string>
+    <string name="selectAllNot">Unselect All</string>
+    <string name="unknown_artist">Unknown Artist</string>
+    <string name="unknown">Unknown</string>
+    <string name="unknown_time">unknown</string>
+    <string name="menu_back">&quot;Back&quot;</string>
+    <string name="addsong_tomyplaylist"></string>
+    <string name="addsong_selectsongs">&quot;<xliff:g id="ADD_SELECTED_SONG">%d</xliff:g> songs selected&quot;</string>
+    <string name="delete_songfiles">Delete Song File</string>
+    <string name="menu_continue">Go ahead</string>
+    <string name="num_songs_and_album"><xliff:g id="numalbums">%s</xliff:g> album(s), <xliff:g id="numsongs">%s</xliff:g> song(s)</string>
+    <string name="number_track"><xliff:g id="numsongs">%s</xliff:g> song(s)</string>
+    <string name="number_track2"><xliff:g id="numsongs">%s</xliff:g> song(s)</string>
+    <string name="hb_recommend_playlist">Recommend Playlist</string>
+    <string name="unknown_track">unknown track</string>
+    <string name="hb_select_bitrate">select birate</string>
+    <string name="hb_all">All</string>
+    <string name="hb_cancel_collection">Remove </string>
+    <string name="hb_cancel_collection_message">Remove the songlist from the favorites?</string>
+    <string name="hb_collection_suceess">Added to the favorites!</string>
+    <string name="hb_status_url_not_found">No download link</string>
+    <string name="hb_search_result">Search resault</string>
+    <string name="hb_online_hot_songs">Hot songs</string>
+    <string name="num_songs_num_albums">total<xliff:g id="numalbums">%s</xliff:g>songs <xliff:g id="numsongs">%s</xliff:g>album</string>
+    <string name="hb_update_time">update time：<xliff:g id="releasedate">%s</xliff:g></string>
+    <string name="hb_search">Search</string>
+    <string name="hb_albums">Album</string>
+    <string name="hb_loading">"loading&#8230;"</string>
+    <string name="hb_netshare">Share</string>
+    <string name="hb_download_permission">Do not have permission to download</string>
+    <string name="hb_search_none">No search result</string>
+    <string name="hb_decription">Description</string>
+    <string name="hb_shutdown">Close</string>
+
+
+    <!-- 状态栏 -->
+    <string name="hb_notification_artist_album">&quot;<xliff:g id="ARTIST">%1$s</xliff:g>&quot;·&quot;<xliff:g id="ALBUM">%2$s</xliff:g>&quot;</string>
+    <string name="error_input_null">Input null character&#044;Rename failed&#033;</string>
+    <string name="error_input_exists">The song name has been entered&#044;Rename failed&#033;</string>
+    <string name="songs_is_shelves"> The song has been under the shelf</string>
+    <string name="error_no_storages">Memory does not exist&#044;Please choose another&#033;</string>
+    <string name="error_no_storages_space">The memory is full&#044;Please choose another&#033;</string>
+    <string name="this_phone">This machine&#040;%s&#041;</string>
+    <string name="hb_storage_setting">Storage settings</string>
+    <string name="sd">SD card&#040;%s&#041;</string>
+    <string name="donwlonging_warnning">After you change the path is being downloaded content is still stored in the path before&#044;after downloading the content will be saved to a new path&#046;</string>
+    <string name="hb_play_permission">Do not have permission to play</string>
+    <string name="hb_part_download_permission">版权原因，部分歌曲无法下载</string>
+    <string name="low_memory">Currently stored total is less than 30M&#044;please increase the storage!</string>
+    <string name="no_memory">当前存储已满&#044;下载停止！</string>
+    <string name="use_network_title">使用音乐&#044;需要允许以下权限</string>
+    <string name="use_network_msg_gprs">• 使用移动数据</string>
+    <string name="use_network_no_show">Do not prompt</string>
+    <string name="setting">setting</string>
+    <string name="net_continue">允许并继续</string>
+
+    <!-- add by wxue for lockactivity 20170918 start-->
+    <string name="hb_month_day_no_year">MMMMd</string>
+    <string name="hb_week_day">EEEE</string>
+    <string name="shake_play_next">shake and play the next song</string>
+    <string name="hb_music_unlock">Swipe up to unlock</string>
+    <!-- add by wxue for lockactivity 20170918 end -->
+</resources>

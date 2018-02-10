@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/hb_btn_playing"
+        android:icon="@drawable/song_playing"
+        android:title="@string/song_playing_title"
+        android:showAsAction="ifRoom"/>
+</menu>

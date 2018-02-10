@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ShenQianfeng add for clip activity Begin -->
+    <dimen name="clip_view_height">220dp</dimen>
+    <dimen name="clip_central_horizontal_line_height">0.1dp</dimen>
+
+    <dimen name="clip_amplitude_width">0.33dp</dimen>
+    <dimen name="clip_amplitude_gap_width">0.1dp</dimen>
+
+    <dimen name="clip_wave_form_draw_padding">20dp</dimen>
+
+    <dimen name="clip_touch_tolerance">15dp</dimen>
+    <dimen name="clip_triangle_indicator_height">6dp</dimen>
+    <dimen name="clip_triangle_indicator_top_margin">3dp</dimen>
+
+    <dimen name="clip_hold_still_threshold">1dp</dimen>
+
+    <!-- ShenQianfeng add for clip activity End -->
+</resources>

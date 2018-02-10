@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/preview_item"
+     android:layout_width="wrap_content"
+     android:layout_height="@dimen/preview_cell_height">
+    
+    <LinearLayout
+        android:id="@+id/preview_effects_linearLayout"
+        android:layout_width="@dimen/preview_effects_item_width"
+        android:layout_height="@dimen/preview_effects_item_height"
+        android:gravity="center"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+         >
+
+        <ImageView
+            android:id="@+id/preview_effects_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/preview_effects_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/preview_item_title_margin_top"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/preview_effects_item_title_textcolor"
+            android:textSize="@dimen/preview_effects_item_text_size" />
+    </LinearLayout>
+    <ImageView
+            android:id="@+id/preview_effects_checked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="@dimen/preview_effects_item_check_margin_bottom"
+            android:layout_marginRight="@dimen/preview_effects_item_check_margin_right"
+            android:src="@drawable/ic_check"
+            android:visibility="gone"/>
+</FrameLayout>

@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">SoundRecorder</string>
+    <!--liushitao-->
+    <string name="record">record</string>
+    <string name="pause">pause</string>
+    <string name="resume">resume</string>
+    <string name="mark">mark</string>
+    <string name="list">list</string>
+    <string name="finish">finish</string>
+    <string name="time">00:00</string>
+    <string name="recording">recording</string>
+    <string name="record_pause">record_pause</string>
+    <string name="know_message">know</string>
+    <string name="record_notice">record_notice</string>
+    <string name="message_low_power">message_low_power</string>
+    <string name="message_low_space">message_low_space</string>
+    <string name="giveup_the_record">giveup the record？</string>
+    <string name="not_mark_in_one_mimute">not_mark_in_one_mimute</string>
+    <string name="low_power_save_record_file">low_power_save_record_file</string>
+    <string name="low_space_save_record_file">low_space_save_record_file</string>
+    <string name="record_channals_is_used">"record_channals_is_used"</string>
+    <string name="record_file_saved">%s is saved.</string>
+    <string name="record_reach_two_hours">record_reach_two_hours</string>
+    <string name="record_not_reach_five_seconds">record_not_reach_five_seconds</string>
+    <string name="max_mark_fifty">max_mark_fifty</string>
+    <!--liushitao-->
+    <string name="new_record">new record</string>
+    <string name="time_show">00:00</string>
+
+    <string name="mark_button">Mark</string>
+    <string name="edit_button">Edit</string>
+    <string name="delete_button">Delete</string>
+
+    <string name="action_menu_delete">delete</string>
+    <string name="cancel">cancel</string>
+    <string name="action_mode_select_all_text">select all</string>
+    <string name="action_mode_unselect_all_text">select none</string>
+    <string name="zero_item">selected %d item</string>
+    <plurals name="selected_item_count_format">
+        <item quantity="zero">selected %d item</item>
+        <item quantity="one">selected %d item</item>
+        <item quantity="other">selected %d items</item>
+    </plurals>
+    <string name="Mon">Mon</string>
+    <string name="Tue">Tue</string>
+    <string name="Wed">Wed</string>
+    <string name="Thu">Thu</string>
+    <string name="Fri">Fri</string>
+    <string name="Sat">Sat</string>
+    <string name="Sun">Sun</string>
+    <string name="is_too_long">the name is too long！</string>
+    <string name="confirm_hiden_file_create">confirm hiden file create？</string>
+    <string name="is_empty">file name is empty！</string>
+    <string name="is_invide">file name is invide！</string>
+    <string name="is_dot">file name is dot</string>
+    <string name="is_same_name">the name is alreadly exist，please try again！</string>
+    <string name="rename_success">Rename success！</string>
+    <string name="rename_fail">Rename fail！</string>
+    <string name="no_space">No space！</string>
+    <string name="rename">Rename</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+    <string name="delete_success">Delete success！</string>
+    <string name="delete_fail">Delete fail！</string>
+    <string name="delete_pl">Batch Delete</string>
+    <string name="delete_select_warn">Delete the selected files？</string>
+    <string name="delete_mark_warm">Delete the mark</string>
+    <string name="delete_selected_mark_warm">Delete the mark</string>
+    <string name="delete_all_mark_warm">Delete all mark</string>
+    <string name="marked_fast_warn">Mark frequently！</string>
+    <string name="marked_size_warn">Marks is too much！</string>
+    <string name="justnow">Just now</string>
+    <string name="today">Today</string>
+    <string name="yesturday">Yesterday</string>
+    <string name="inthreedays">in three days</string>
+    <string name="spk_outdoor_menu">speaker</string>
+    <string name="spk_hear_menu">phone receiver</string>
+    <string name="spk_bluetooth_menu">bluetooth</string>
+    <string name="slid_warn">upward slide to unlock</string>
+    <string name="select_warn">please select file！</string>
+    <string name="bluetooth_disable_warn">bluetooth is not connected！</string>
+    <string name="play_speeker">speaker！</string>
+    <string name="play_recevier">phone receiver！</string>
+    <string name="play_bluetooth">bluetooth！</string>
+    <string name="play_mode_setFailed">change filed！</string>
+    <string name="formattime_">change filed！</string>
+    <string name="FormatDate_Y_M_d">"MMM d,yyyy"</string>
+    <string name="FormatDate_M_d">MMM d</string>
+    <string name="FormatDate_M_d_w">"EEE MMM d"</string>
+
+
+
+
+    <!--shenqianfeng add begin -->
+    <string name="clip_activity_title">Clip</string>
+    <string name="clip_activity_save">Save</string>
+    <string name="input_file_name">Please input file name</string>
+    <string name="clipping">Clipping...</string>
+
+
+
+    <!--shenqianfeng add end -->
+
+</resources>

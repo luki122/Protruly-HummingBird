@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:key="lay_sim_info">
+        <com.hb.netmanage.view.DataplanPreference android:key="data_plan_total"/>
+        <com.hb.netmanage.view.DataplanPreference android:key="sim_close_day" />
+        <SwitchPreference
+            android:key="free_data_state"
+            android:visibility="gone"
+            android:title="@string/data_free"></SwitchPreference>
+    </PreferenceCategory>
+    <PreferenceCategory android:key="lay_data_free">
+
+        <!--<hbdroid:key="data_free" />-->
+        <com.hb.netmanage.view.DataplanPreference android:key="data_free" />
+        <com.hb.netmanage.view.DataplanPreference android:key="sim_start_time" />
+        <com.hb.netmanage.view.DataplanPreference android:key="sim_end_time" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

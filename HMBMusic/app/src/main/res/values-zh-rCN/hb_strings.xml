@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+
+    <string name="my_music">我的音乐</string>
+    <string name="find_music">发现音乐</string>
+    <string name="song">歌曲</string>
+    <string name="singer">歌手</string>
+    <string name="folder">文件夹</string>
+    <string name="new_singer">新建歌单</string>
+    <string name="my_favorite_songs">我喜欢的歌曲</string>
+    <string name="recently_added_songs">最近添加的歌曲</string>
+    <string name="search_for_singer">搜索歌曲或歌手</string>
+    <string name="song_size"><xliff:g id="songsize">%d</xliff:g>首</string>
+    <string name="hb_rename">重命名</string>
+    <string name="hb_delete_message">删除此歌单？</string>
+    <string name="hb_song_single">歌单</string>
+    <string name="hb_num_songs_of_single">共<xliff:g id="songs">%d</xliff:g>首歌</string>
+    <string name="hb_add_playlist_song_num">添加 ( <xliff:g id="playlist_songs_add">%d</xliff:g> )</string>
+    <string name="hb_input_playlist_name">输入歌单名称</string>
+    <string name="hb_playlist_total_songs"><xliff:g id="playlist_total_songs">%d</xliff:g>首歌曲</string>
+    <string name="hb_playlist_total_singer"><xliff:g id="playlist_total_singer">%d</xliff:g>个歌手</string>
+    <string name="hb_playlist_total_fold"><xliff:g id="playlist_total_fold">%d</xliff:g>个文件夹</string>
+    <string name="hb_fold_num"><xliff:g id="foldnum">%s</xliff:g>个文件夹，共<xliff:g id="foldsongs">%s</xliff:g>首歌</string>
+    <string name="hb_songs_to_remove">已移除<xliff:g id="songs_to_remove">%d</xliff:g>首歌曲</string>
+    <string name="hb_remove">移除</string>
+    <string name="hb_remove_message">移除此首歌曲？</string>
+    <string name="hb_remove_num_message">移除所选的<xliff:g id="numsongs">%s</xliff:g>首歌曲？</string>
+    <string name="hb_ignor_scan">忽略扫描</string>
+    <string name="hb_ignoer_scan_message">您确定忽略扫描该文件夹吗？</string>
+    <string name="hb_not_scan_the_fold">将不再扫描该文件夹</string>
+    <string name="hb_playlist_no_songs">本歌单暂无歌曲</string>
+    <string name="hb_online_new_album">本周热门</string>
+    <string name="hb_more">更多</string>
+    <string name="hb_ranking">排行榜</string>
+    <string name="hb_no_network">无网络</string>
+    <string name="hb_setting_network">设置网络</string>
+    <string name="hb_network_error">网络链接异常或者无网络</string>
+    <string name="hb_retry">重试</string>
+    <string name="hb_collect_playlist">收藏歌单</string>
+    <string name="hb_collect_playlist2">收藏歌单</string>
+    <string name="hb_collect_size"><xliff:g id="songsize">%d</xliff:g>个</string>
+    <string name="hb_collect_time">yyyy 年 MM 月 dd 日</string>
+    <string name="hb_collect_show_time">收藏时间：</string>
+    <string name="hb_download_manager">正在下载</string>
+    <string name="hb_player_share">分享到</string>
+    <string name="hb_player_shareinfo">分享的歌曲:</string>
+    <string name="player_albums">专辑</string>
+    <string name="player_downs">下载</string>
+    <string name="remove_download">取消</string>
+    <string name="remove_download_message">删除此下载任务？</string>
+    <string name="remove_download_num_message">删除所选%d项下载任务？</string>
+    <string name="hb_all_pause">全部暂停</string>
+    <string name="hb_all_download">全部下载</string>
+    <string name="hb_exit">退出</string>
+    <string name="hb_exit_tips">歌曲正在下载，退出音乐？</string>
+    <string name="hb_no_songs">暂无歌曲</string>
+    <string name="hb_no_singers">暂无歌手</string>
+    <string name="hb_no_playlist">暂无歌单</string>
+    <string name="hb_no_download_task">暂无下载任务</string>
+    <string name="hb_add_playlist">添加歌曲</string>
+    <string name="hb_edit_playlist">编辑歌单</string>
+    <string name="hb_delete_playlist">删除歌单</string>
+    <string name="hb_clear_search_history">清空搜索记录</string>
+    <string name="hb_search_lyric">歌词搜索</string>
+    <string name="hb_search_lyric_name">歌曲名:</string>
+    <string name="hb_search_lyric_artist">歌手名:</string>
+    <string name="hb_now_playing">正在播放</string>
+    <string name="hb_lyricsize">为你匹配到<xliff:g id="lyricsize">%d</xliff:g>首歌词</string>
+    <string name="hb_search_img_size">为你匹配到<xliff:g id="imgsize">%d</xliff:g>张图片</string>
+    <string name="hb_is_ignored">已忽略</string>
+    <string name="hb_ignore">忽略</string>
+    <string name="hb_all_regain">全部恢复</string>
+    <string name="hb_ignore_info">暂无忽略扫描的文件，文件夹列表项左滑可对文件扫描进行忽略。</string>
+    <string name="hb_regain">恢复</string>
+    <string name="hb_clean_space">手机可用空间已不足，请及时清理。</string>
+    <string name="hb_modify_id3_info">修改id3信息</string>
+    <string name="hb_baidu_version">百度音乐 版权所属</string>
+    <string name="player_baidu_logo">百度音乐 版权所属</string>
+    <string name="player_sound">"音效"</string>
+    <string name="hb_noise_down">降噪</string>
+    <string name="hb_match_sound">个性化耳机音效匹配</string>
+    <string name="hb_null">通用</string>
+    <string name="hb_defualt">默认</string>
+    <string name="hb_pop">流行</string>
+    <string name="hb_live">现场</string>
+    <string name="hb_rock">摇滚</string>
+    <string name="hb_bass">低音</string>
+    <string name="hb_jazz">爵士</string>
+    <string name="hb_electri">电子</string>
+    <string name="hb_classical">古典</string>
+    <string name="hb_rock_headset">IUNI摇滚动力耳机</string>
+    <string name="hb_iuni_twist_tone">IUNI扭音耳机</string>
+    <string name="hb_iuni_roise_headset">IUNI降噪耳机</string>
+    <string name="hb_iuni_new_headset">IUNI倾音耳机</string>
+    <string name="hb_earpods">iPhone Earpods</string>
+    <string name="hb_akg450">AKG 450</string>
+    <string name="hb_urbeats">urBeats</string>
+    <string name="hb_headset_select">耳机型号</string>
+    <string name="hb_close_on_time">定时关闭</string>
+    <string name="hb_not_open">不开启</string>
+    <string name="hb_10_min">10分钟后</string>
+    <string name="hb_15_min">15分钟后</string>
+    <string name="hb_30_min">30分钟后</string>
+    <string name="hb_45_min">45分钟后</string>
+    <string name="hb_60_min">60分钟后</string>
+    <string name="hb_defualt_lyric">关闭歌词</string>
+    <string name="hb_share_failed">分享功能未完成</string>
+    <string name="hb_net_setting">网络设置</string>
+    <string name="hb_storage_setting">存储设置</string>
+    <string name="hb_only_connected_in_wifi">仅Wi-Fi下使用网络</string>
+    <string name="hb_close_wifi_tips">关闭仅Wi-Fi下联网，播放和下载歌曲会消耗你的数据流量。</string>
+    <string name="hb_continue_play_tips">继续播放会自动关闭仅Wi-Fi下联网模式，播放时会消耗你的数据流量</string>
+    <string name="hb_continue_download_tips">下载会自动关闭仅Wi-Fi下联网模式，下载时会消耗你的数据流量</string>
+    <string name="hb_flow_tips">流量提醒</string>
+    <string name="xiam_radio">虾米电台</string>
+    <string name="hb_hifi">hifi</string>
+
+
+    <string name="img_desc_tens_of_hour">小时的十位</string>
+    <string name="img_desc_units_of_hour">小时的个位</string>
+    <string name="img_desc_tens_of_min">分钟的十位</string>
+    <string name="img_desc_units_of_min">分钟的个位</string>
+    <string name="img_desc_time_splite"> : </string>
+
+    <string name="open_fail">"打开失败!"</string>
+    <string name="song_name">"xxxx"</string>
+    <string name="song_album">"yyy.yyyy"</string>
+    <string name="loading_lyric">"加载歌词中..."</string>
+    <string name="no_lyric">"暂无歌词"</string>
+    <string name="new_songlist">"新建歌单"</string>
+    <string name="songlist_cancel">"取消"</string>
+    <string name="songlist_ok">"确定"</string>
+    <string name="playlist_songs">"歌曲"</string>
+    <string name="playlist_artist">"歌手"</string>
+    <string name="playlist_files">"文件夹"</string>
+    <string name="playlist_addsongs">"添加歌曲"</string>
+    <string name="playlist_selectsongs">"已选取<xliff:g id="SELECT_SONG">%d</xliff:g>首歌曲"</string>
+    <string name="player_songs">"歌单"</string>
+    <string name="player_ringer">"铃声"</string>
+    <string name="player_nofile">"亲，不存在的文件!"</string>
+    <string name="player_filefailed">"亲，不小心失败了，请重新操作!"</string>
+    <string name="player_failed">"亲，该文件不支持操作"</string>
+    <string name="player_download_exist">"文件已经下载!"</string>
+    <string name="player_download_start">已加入下载队列!</string>
+    <string name="player_download_failed">下载失败!</string>
+    <string name="search_failed">搜索异常!</string>
+    <string name="play_failed_nofiles">"无可播放的音乐文件"</string>
+    <string name="no_effects">"没有音效"</string>
+    <string name="xlweibosdk_share_success">分享成功</string>
+    <string name="xlweibosdk_share_failed">分享失败</string>
+    <string name="xlweibosdk_share_canceled">取消分享</string>
+    <string name="xlweibosdk_not_support_api">微博客户端不支持 SDK 分享或微博客户端未安装或微博客户端是非官方版本。</string>
+    <string name="xlweibosdk_token_format">Token：%1$s \n有效期：%2$s</string>
+    <string name="xlweibosdk_token_existed">Token 仍在有效期内，无需再次登录。</string>
+    <string name="weibosdk_auth_success">授权成功</string>
+    <string name="weibosdk_auth_failed">授权失败</string>
+    <string name="weibosdk_auth_canceled">取消授权</string>
+    <string name="hb_playerdialog_share">分享</string>
+    <string name="hb_wx_not_installed">亲，您还未安装微信客户端!</string>
+
+    <string name="appwidget_songtitle">"歌曲"</string>
+    <string name="appwidget_artisttitle">歌手</string>
+    <string name="playmode">"随机播放"</string>
+    <string name="action_titlenum">1</string>
+    <string name="delete">删除</string>
+    <string name="deleteMessage_num">删除所选的<xliff:g id="numsongs">%s</xliff:g>首歌曲？</string>
+    <string name="deleteMessage">删除此歌曲？</string>
+    <string name="ok">确定</string>
+    <string name="search_hint_input">搜索歌曲或歌手</string>
+    <string name="search_hint_input2">搜索歌曲、歌手和专辑</string>
+    <string name="search_hint_input3">搜索歌曲</string>
+    <string name="search_hint_input4">搜索歌手</string>
+    <string name="selectAll">全选</string>
+    <string name="addSong">添加至歌单</string>
+    <string name="selectAllNot">反选</string>
+    <string name="unknown_artist">未知歌手</string>
+    <string name="unknown">未知</string>
+    <string name="unknown_time">未知</string>
+    <string name="menu_back">"返回"</string>
+    <string name="addsong_tomyplaylist"></string>
+    <string name="menu_continue">继续</string>
+    <string name="addsong_selectsongs">"已经选取 <xliff:g id="ADD_SELECTED_SONG">%d</xliff:g> 首歌曲"</string>
+    <string name="delete_songfiles">删除歌曲文件</string>
+    <string name="num_songs_and_album"><xliff:g id="numalbums">%s</xliff:g>张专辑 · <xliff:g id="numsongs">%s</xliff:g>首歌</string>
+    <string name="number_track">共<xliff:g id="numsongs">%s</xliff:g>首歌</string>
+    <string name="number_track2"><xliff:g id="numsongs">%s</xliff:g>首歌</string>
+    <string name="hb_recommend_playlist">推荐歌单</string>
+    <string name="unknown_track">未知歌曲</string>
+    <string name="hb_select_bitrate">清选择下载品质</string>
+    <string name="hb_all">全部</string>
+    <string name="hb_cancel_collection">取消收藏</string>
+    <string name="hb_cancel_collection_message">不再收藏此歌单？"</string>
+    <string name="hb_collection_suceess">收藏歌单成功！</string>
+    <string name="hb_status_url_not_found">下载地址不存在</string>
+    <string name="hb_search_result">搜索结果</string>
+    <string name="hb_search">搜索</string>
+    <string name="hb_online_hot_songs">热门歌曲</string>
+    <string name="num_songs_num_albums">共<xliff:g id="numalbums">%s</xliff:g>首歌 <xliff:g id="numsongs">%s</xliff:g>张专辑</string>
+    <string name="hb_albums">专辑</string>
+    <string name="hb_update_time">更新时间：<xliff:g id="releasedate">%s</xliff:g></string>
+    <string name="hb_loading">"加载中..."</string>
+    <string name="hb_netshare">分享歌单</string>
+    <string name="hb_download_permission">版权原因，歌曲无法下载</string>
+    <string name="hb_part_download_permission">版权原因，部分歌曲无法下载</string>
+    <string name="hb_baidu_permission">百度音乐 版权所属</string>
+    <string name="hb_search_none">无搜索结果</string>
+    <string name="hb_decription">歌单详情</string>
+    <string name="hb_shutdown">关闭</string>
+
+    <string name="img_desc_album_cover">专辑封面</string>
+    <string name="dialog_delete_track_con_message">你确定要删除该歌曲吗？</string>
+    <string name="dialog_delete_tracks_con_message">你确定要删除所选歌曲吗？</string>
+    <string name="dialog_delete_album_con_message">你确定要删除该专辑吗？</string>
+    <string name="dialog_delete_albums_con_message">你确定要删除所选专辑吗？</string>
+    <string name="num_albums_num_songs"><xliff:g id="numalbums">%s</xliff:g>张专辑，共<xliff:g id="numsongs">%s</xliff:g>首歌</string>
+    <string name="num_songs_of_album"><xliff:g id="numsongs">%s</xliff:g>首歌</string>
+    <string name="release_date_of_album">发行时间：<xliff:g id="releasedate">%s</xliff:g></string>
+
+    <string name="hb_notification_artist_album">"<xliff:g id="ARTIST">%1$s</xliff:g>"·"<xliff:g id="ALBUM">%2$s</xliff:g>"</string>
+    <string name="error_input_null">输入空字符，重命名失败&#033;</string>
+    <string name="error_input_exists">输入的歌单名已存在，重命名失败&#033;</string>
+
+    <string name="songs_is_shelves">歌曲已经下架</string>
+    <string name="error_no_storages">存储器不存在&#044;请选择其他&#033;</string>
+    <string name="error_no_storages_space">存储器已满&#044;请选择其他&#033;</string>
+    <string name="this_phone">本机&#040;%s&#041;</string>
+    <string name="sd">SD卡&#040;%s&#041;</string>
+    <string name="donwlonging_warnning">更改路径后正在下载内容仍保存在之前路径&#044;之后下载内容会保存到新路径&#046;</string>
+    <string name="hb_play_permission">抱歉&#044;版权原因&#044;歌曲无法播放</string>
+    <string name="low_memory">当前存储总量小于30M&#044;请及时加大存储!</string>
+    <string name="no_memory">当前存储已满&#044;下载停止！</string>
+    <string name="use_network_msg_gprs">• 使用移动数据</string>
+    <string name="use_network_no_show">不再提示</string>
+    <string name="setting">设置</string>
+    <string name="use_network_title">使用音乐&#044;需要允许以下权限</string>
+    <string name="net_continue">允许并继续</string>
+    <string name="song_playing_title">播放</string>
+    <string name="hb_playlist_repeatall">列表循环(%d)</string>
+    <string name="hb_playlist_repeatone">单曲循环</string>
+    <string name="hb_playlist_repeatradom">随机播放(%d)</string>
+    <!-- add by wxue 20170919 start -->
+    <string name="shake_play_next">摇一摇播放下一曲</string>
+    <string name="hb_music_unlock">上滑解锁</string>
+    <!-- add by wxue 20170919 end -->
+</resources>

@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hb.thememanager.MainActivity" >
+
+    <item
+        android:id="@+id/menu_delete_local_theme"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/confirm_delete"
+        />
+
+</menu>

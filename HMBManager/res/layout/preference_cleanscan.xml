@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:counter="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" 
+    android:layout_height="190dp" >
+
+    <RelativeLayout
+        android:id="@+id/counterLay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" >
+
+        <com.hmb.manager.widget.textconter.CounterView
+            android:id="@+id/textCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" counter:autoStart="false"
+            android:text="@string/default_size_counter"
+            android:textColor="@color/suffix_color"
+            android:textSize="36dp" />
+
+        <TextView
+            android:id="@+id/sufix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_toRightOf="@+id/textCounter"
+            android:text="@string/default_size_suffix"
+            android:textColor="@color/suffix_color"
+            android:textSize="@dimen/super_text_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textCounter"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/clean_size_notification"
+            android:textColor="@color/clean_nofitication_color"
+            android:textSize="@dimen/summary_text_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/memLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/counterLay"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" >
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="18dp"
+            android:max="200"
+            android:progress="0"
+            android:progressDrawable="@drawable/progressbarb"
+            android:secondaryProgress="0" />
+
+        <RelativeLayout
+            android:id="@+id/memTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" android:layout_gravity="center"  android:gravity="center_vertical"
+            android:layout_below="@+id/progressBar"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/mem_used_image"
+                android:layout_width="10dp"
+                android:layout_height="10dip"
+                android:layout_gravity="center"
+                android:scaleType="center"
+                android:src="@drawable/mem_used" />
+
+            <TextView
+                android:id="@+id/mem_used_text"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/mem_used_image"
+                android:text="@string/mem_used"
+                android:textSize="@dimen/tinyc_text_size" />
+
+            <ImageView
+                android:id="@+id/mem_can_clean_image"
+                android:layout_width="10dp"
+                android:layout_height="10dip"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/mem_used_text"
+                android:scaleType="center"
+                android:src="@drawable/mem_clean_up" />
+
+            <TextView
+                android:id="@+id/mem_can_clean_text"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/mem_can_clean_image"
+                android:text="@string/mem_can_clean"
+                android:textSize="@dimen/tinyc_text_size" />
+
+            <TextView
+                android:id="@+id/total_text"
+                android:layout_width="104dp" 
+                android:layout_height="wrap_content" android:gravity="right"
+                android:layout_marginLeft="140dp"
+                android:layout_toRightOf="@+id/mem_can_clean_text"
+                android:textSize="@dimen/tinyc_text_size" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/scanTextConter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="21dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tiny_text_size" />
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <color name="preview_navigation_bar_background">#26000000</color>
+    <color name="empty_directory_hint">#6c6c6c</color>
+    <color name="toolbar_title_color_in_preview">#dbffffff</color>
+    <color name="preview_action_bar_background">#33000000</color>
+    <color name="wallpaper_list_title_bg">#FFF4F4F4</color>
+    <color name="wallpaper_preview_ic_name_color">#b3ffffff</color>
+    
+    <color name="user_page_more_divider_color">#17000000</color>
+    <color name="user_page_setting_item_divider_color">#29000000</color>
+    
+    <color name="topic_detail_etv_color">#FF06C012</color>
+    <color name="theme_home_list_divider_color">#FFF4F4F4</color>
+     <color name="topic_item_text_color">#DE000000</color>
+     <color name="item_selected_mask_color">#33000000</color>
+    <color name="wallpaper_detail_vertical_line_black">#33000000</color>
+    <color name="wallpaper_detail_vertical_line_white">#33ffffff</color>
+    <color name="wallpaper_detail_button_text_color_white">#fff</color>
+    <color name="wallpaper_detail_popup_divider_color">#1a000000</color>
+    <color name="wallpaper_detail_bg_white">#fff</color>
+    <color name="wallpaper_detail_bg_black">#000</color>
+    <color name="wallpaper_detail_cover">#77000000</color>
+    <color name="gray">#61000000</color>
+    <color name="gray_light">#8A000000</color>
+    <color name="rating_bar_tint">#3d000000</color>
+    <color name="divider_color">#3D000000</color>
+    <color name="colorControllNormal">#FFCBCBCB</color>
+    
+    <color name="ringtone_setto_text">#FF06C012</color>
+    <color name="ringtone_setto_list_div">#1A000000</color>
+    <color name="rotate_text_background_for_pay">#FFBD0FE1</color>
+    <color name="rotate_text_background_for_update">#FFF6A623</color>
+    
+    <color name="white">#ffffffff</color>
+    
+    <color name="civ_border_color">#ffffffff</color>
+    <color name="civ_fill_color">#ffffffff</color>
+
+    <color name="image_border_color">#29000000</color>
+    <color name="comment_start_level_color">#FFF5A623</color>
+
+    <color name="btn_apply_text_color_normal">@com.hb:color/material_green_light</color>
+    <color name="btn_apply_text_color_disable">@color/gray</color>
+    <color name="home_tab_title_text_color">#DE000000</color>
+
+</resources>

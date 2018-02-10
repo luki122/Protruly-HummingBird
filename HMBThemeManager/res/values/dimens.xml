@@ -1,0 +1,157 @@
+<resources>
+
+    <!--the refresh list dimens-->
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="local_theme_list_padding_top">20dp</dimen>
+    <dimen name="local_theme_list_padding_left">20dp</dimen>
+    <dimen name="local_theme_list_padding_right">20dp</dimen>
+    <dimen name="local_theme_list_item_height">271dp</dimen>
+    <dimen name="local_theme_list_title_margin_top">8dp</dimen>
+    <dimen name="theme_detail_padding_both_side">20dp</dimen>
+    <dimen name="theme_detail_padding_top">23dp</dimen>
+    <!-- Theme detail images -->
+    <dimen name="theme_detail_preview_img_height">400dp</dimen>
+    <dimen name="font_detail_preview_img_height">220dp</dimen>
+    <dimen name="theme_detail_preview_img_margin_bottom">8dp</dimen>
+    <dimen name="theme_detail_preview_img_width">225dp</dimen>
+    <dimen name="theme_detail_preview_img_margin_left">12dp</dimen>
+    <!-- Theme detail option button -->
+    <dimen name="theme_detail_preview_option_btn_width">114dp</dimen>
+    <dimen name="theme_detail_preview_option_btn_height">48dp</dimen>
+    <dimen name="theme_detail_preview_option_btn_margin_bottom">12dp</dimen>
+    <dimen name="local_theme_action_menu_height">48dp</dimen>
+    <dimen name="wallpaper_entry_height">256dp</dimen>
+    <dimen name="wallpaper_entry_parent_padding">24dp</dimen>
+    <dimen name="wallpaper_entry_item_space">24dp</dimen>
+    <dimen name="wallpaper_list_item_space_h">8dp</dimen>
+    <dimen name="size_local_wallpaper_item_height">185dp</dimen>
+    <dimen name="size_local_wallpaper_item_width">104dp</dimen>
+ <dimen name="size_vr_wallpaper_item_height">104dp</dimen>
+    <dimen name="vr_wallpaper_list_item_space_h">16dp</dimen>
+	<dimen name="size_local_theme_pkg_item_height">179.6dp</dimen>
+    <dimen name="size_local_theme_fonts_item_height">96dp</dimen>
+        <dimen name="size_image_item_default_width">52dp</dimen>
+    <dimen name="size_image_item_default_height">92.5dp</dimen>
+    <!-- Time Widget -->
+    <dimen name="time_widget_date_margin_top">10dp</dimen>
+
+    <!-- OptionButton -->
+    <dimen name="wallpaper_preview_option_btn_margin_bottom">75dp</dimen>
+    <!-- Wallpaper preview icons -->
+    <dimen name="wallpaper_preview_index_margin_top">16dp</dimen>
+    <dimen name="wallpaper_preview_bottom_icon_margin_top">60dp</dimen>
+    
+    <dimen name="navigation_bar_height">44dp</dimen>
+    <dimen name="wallpaper_crop_bottom_controls_height">92dp</dimen>
+    <dimen name="toolbar_height_with_transparent_statusbar">48dp</dimen>
+	<dimen name="wallpaper_preview_time_widget_margintop">50dp</dimen>
+	<dimen name="wallpaper_preview_time_widget_marginleft">24dp</dimen>
+	<dimen name="bottom_text_spacing_digital">0dp</dimen>
+	<dimen name="time_widget_clock_font_size">64sp</dimen>
+	<dimen name="widget_label_font_size">20sp</dimen>
+	<dimen name="wallpaper_entry_title_height">36dp</dimen>
+	<dimen name="wallpaper_list_title_bar_height">28dp</dimen>
+	<dimen name="wallpaper_list_padding">16dp</dimen>
+	<dimen name="wallpaper_grid_margin_top">16dp</dimen>
+	<dimen name="wallpaper_list_fab_margin">10dp</dimen>
+	<dimen name="wallpaper_list_applied_margin">8dp</dimen>
+	<dimen name="wallpaper_preview_icon_size">53.75dp</dimen>
+	<dimen name="wallpaper_preview_icon_spacing_h">25dp</dimen>
+	<dimen name="wallpaper_apply_btn_width">144dp</dimen>
+	<dimen name="wallpaper_apply_btn_height">36dp</dimen>
+	<dimen name="wallpaper_apply_btn_margin_bottom">56dp</dimen>
+	<dimen name="ic_toolbar_user_min_width">48dp</dimen>
+	<dimen name="home_theme_list_item_sh">10dp</dimen>
+	<dimen name="home_theme_list_item_sv">10dp</dimen>
+
+    <dimen name="banner_indicator_size">8dp</dimen>
+    <dimen name="banner_indicator_margin">10dp</dimen>
+    <dimen name="banner_view_height">144dp</dimen>
+    <dimen name="fast_entry_bar_height">80dp</dimen>
+    <dimen name="size_icon_fast_entry">32dp</dimen>
+    <dimen name="margin_top_fast_entry_text">1dp</dimen>
+    <dimen name="margin_top_fast_entry_bar">10dp</dimen>
+    
+    <dimen name="padding_left_home_theme_title">16dp</dimen>
+    <dimen name="padding_right_home_theme_title">10dp</dimen>
+    <dimen name="home_theme_list_item_height">170dp</dimen>
+    <dimen name="home_theme_list_item_covert_height">179.6dp</dimen>
+    <dimen name="home_theme_list_item_covert_width">101dp</dimen>
+    <dimen name="home_font_list_item_covert_height">96dp</dimen>
+    <dimen name="home_font_list_item_covert_width">158dp</dimen>
+    <dimen name="panel_no_network_height">36dp</dimen>
+    
+    <dimen name="user_page_user_icon_margintop">30dp</dimen>
+    <dimen name="user_page_user_login_message_padding">15dp</dimen>
+    <dimen name="user_page_more_padding">16dp</dimen>
+    <dimen name="user_page_more_divider_height">1px</dimen>
+    
+    <dimen name="topic_page_list_item_margin">7dp</dimen>
+    <dimen name="theme_detail_name_bar_height">27dp</dimen>
+    <dimen name="theme_detail_content_padding_bottom">48dp</dimen>
+    <dimen name="theme_list_item_name_margin_top">4.4dp</dimen>
+    <dimen name="topic_page_list_item_height">120dp</dimen>
+    <dimen name="topic_page_list_item_margin_bottom">12dp</dimen>
+    <dimen name="topic_page_list_item_padding">16dp</dimen>
+    <dimen name="topic_page_list_item_cover_round">6dp</dimen>
+    <dimen name="topic_page_list_item_content_title_marginleft">16dp</dimen>
+    <dimen name="topic_page_list_item_content_title_margintop">62dp</dimen>
+    <dimen name="topic_page_list_item_content_des_marginleft">16dp</dimen>
+    <dimen name="topic_page_list_item_content_title_size">20sp</dimen>
+    <dimen name="topic_page_list_item_content_des_size">12sp</dimen>
+    <dimen name="theme_designer_icon_size">36dp</dimen>
+    <dimen name="theme_home_list_divider_height">12dp</dimen>
+    <dimen name="theme_home_list_divider_width">12dp</dimen>
+    
+    <dimen name="topic_detail_page_list_item_font_covert_height">85dp</dimen>
+    <dimen name="topic_detail_page_list_item_ringtone_padding">7dp</dimen>
+    <dimen name="topic_detail_page_list_item_ringtone_textview_margintop">3dp</dimen>
+    <dimen name="topic_detail_page_list_item_ringtone_textview_marginright">7dp</dimen>
+    <dimen name="topic_detail_page_list_item_ringtone_textview_padding">5dp</dimen>
+    <dimen name="topic_detail_page_bannerdes_content_size">14sp</dimen>
+    <dimen name="topic_detail_des_textview_margintop">8dp</dimen>
+    <dimen name="topic_detail_des_textview_marginleft">16dp</dimen>
+    <dimen name="topic_detail_pic_space">12dp</dimen>
+    <dimen name="topic_detail_gridview_margintop">19dp</dimen>
+    
+    <dimen name="wallpaper_detail_button_radiu">18dp</dimen>
+    <dimen name="wallpaper_detail_vertical_line">1px</dimen>
+    <dimen name="wallpaper_detail_button_save_width">104dp</dimen>
+    <dimen name="wallpaper_detail_button_set_width">104dp</dimen>
+    <dimen name="wallpaper_detail_button_height">36dp</dimen>
+    <dimen name="wallpaper_detail_button_text_size">16sp</dimen>
+    <dimen name="wallpaper_detail_button_margin_bottom">56dp</dimen>
+
+    <dimen name="search_history_margin_left">5dp</dimen>
+    <dimen name="search_history_margin_right">5dp</dimen>
+    <dimen name="search_history_margin_bottom">10dp</dimen>
+
+    <dimen name="progress_bar_height_material">18dp</dimen>
+    <dimen name="download_btn_width">240dp</dimen>
+    <dimen name="download_btn_radius">50dp</dimen>
+    <dimen name="designer_theme_list_min_height">360dp</dimen>
+    <dimen name="download_progress_text_size">12dp</dimen>
+    
+    <dimen name="civ_border_width">0dp</dimen>
+    <dimen name="first_setup_page_paddingtop">66dp</dimen>
+    <dimen name="first_setup_page_title_margin_bottom">13dp</dimen>
+    <dimen name="first_setup_page_scroller_height">352dp</dimen>
+    <dimen name="first_setup_theme_name_margin_top">6dp</dimen>
+    <dimen name="first_setup_theme_name_margin_bottom">58dp</dimen>
+    <dimen name="first_setup_page_item_width">222dp</dimen>
+    <dimen name="first_setup_page_apply_btn_height">56dp</dimen>
+    <dimen name="first_setup_page_item_margin">24dp</dimen>
+    <dimen name="first_setup_page_margin_left">87dp</dimen>
+    <dimen name="first_setup_page_margin_right">50dp</dimen>
+
+    <dimen name="padding_top_theme_list">16dp</dimen>
+</resources>

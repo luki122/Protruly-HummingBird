@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/image_first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <hb.widget.ViewPager
+        android:id="@+id/wallpaper_preview_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ViewStub
+        android:id="@+id/wallpaper_preview_icons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@*android:dimen/navigation_bar_height"
+        android:layout="@layout/wallpaper_preview_icons" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="@dimen/wallpaper_preview_time_widget_marginleft"
+        android:layout_marginTop="@dimen/wallpaper_preview_time_widget_margintop"
+        layout="@layout/time_widget" />
+
+    <com.hb.thememanager.views.LocalWallpaperApplyButton
+        android:id="@+id/btn_wallpaper_apply"
+	android:textColor="?android:attr/colorControlActivated"
+	android:textSize="14sp"
+        android:layout_width="@dimen/wallpaper_apply_btn_width"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/wallpaper_apply_btn_height"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/wallpaper_apply_btn_margin_bottom"
+        android:background="@drawable/btn_wallpaper_apply_background" />
+
+</FrameLayout>

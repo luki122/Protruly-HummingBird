@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <hb.widget.toolbar.Toolbar
+        android:id="@+id/alarm_edit_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/left_button"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:text="@string/alarm_setting_cancel"
+                android:textSize="16sp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:textColor="@color/actionmode_btn_color"/>
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_new_alarm"
+                android:textSize="18sp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/lay_text_normal"/>
+            <TextView
+                android:id="@+id/right_button"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:text="@string/alarm_setting_commit"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="@color/actionmode_btn_color"/>
+        </RelativeLayout>
+    </hb.widget.toolbar.Toolbar>
+
+    <hb.widget.TimePicker
+        android:id="@+id/time_picker"
+        android:layout_height="219.1dp"
+        android:layout_width="match_parent"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:format12Hour="@string/world_clock_12_hours_format"
+        android:format24Hour="@string/clock_24_hours_format"
+        android:paddingTop="42dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/edit_clock_divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/label_setting"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/alarm_label"
+                android:textColor="@color/lay_text_normal"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/label_name"
+                android:layout_toRightOf="@id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/default_label"
+                android:gravity="center_vertical|right"
+                android:textColor="@color/edit_clock_text_grey"
+                android:drawableRight="@drawable/ic_next"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:maxEms="18"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/edit_clock_divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/ringtone_setting"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:id="@+id/ringtone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/alarm_ringtone"
+                android:textColor="@color/lay_text_normal"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/ringtone_name"
+                android:layout_toRightOf="@id/ringtone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/alarm_no_ringtone"
+                android:textColor="@color/edit_clock_text_grey"
+                android:gravity="center_vertical|right"
+                android:drawableRight="@drawable/ic_next"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:maxEms="18"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/edit_clock_divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/repeat_setting"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="@string/alarm_is_repeat"
+                android:textColor="@color/lay_text_normal"
+                android:gravity="center_vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/repeat_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/ring_only_once"
+                android:textColor="@color/edit_clock_text_grey"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/ic_next"
+                android:maxLines="1"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/edit_clock_divider_color" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

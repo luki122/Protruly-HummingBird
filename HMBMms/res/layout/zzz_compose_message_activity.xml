@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<!-- hummingbird add by tangyisen for  hb style 2017.3.28 -->
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+       android:layout_width="fill_parent"
+       android:layout_height="fill_parent"
+>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FFFFFFFF">
+
+        <!-- android:fitsSystemWindows="true" -->
+        <com.android.mms.ui.ZzzMmsToolbar
+                android:id="@+id/my_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?android:attr/actionBarSize"
+                android:layout_alignParentTop="true"
+                android:background="?android:attr/colorPrimary"
+                hb:navigationIcon="@com.hb:drawable/ic_toolbar_back" >
+        </com.android.mms.ui.ZzzMmsToolbar>
+
+        <hb.view.menu.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:maxHeight="50dp"
+                android:visibility="gone"
+                hb:itemTextColor="@drawable/zzz_menu_text_color_selector"
+                hb:menu="@menu/zzz_message_multi_select_menu" />
+
+        <!-- android:background="#FFFFFFFF" -->
+        <com.android.mms.ui.HeightChangedLinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/changed_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/bottom_navigation_view"
+                android:layout_below="@id/my_toolbar"
+                android:orientation="vertical">
+
+            <!-- android:background="#FFFFFFFF" -->
+            <com.android.mms.ui.ZzzFlowLayout
+                    android:id="@+id/recommend_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+            <!-- android:background="#FFFFFFFF" -->
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="bottom">
+
+                <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="top" >
+
+                    <view
+                            android:id="@+id/history"
+                            style="?android:attr/listViewWhiteStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            class="com.android.mms.ui.MessageListView"
+                            android:cacheColorHint="@android:color/white"
+                            android:divider="#FFFFFFFF"
+                            android:dividerHeight="24dp"
+                            android:fadingEdge="none"
+                            android:listSelector="#00000000"
+                            android:scrollbarAlwaysDrawVerticalTrack="false"
+                            android:scrollbarStyle="insideOverlay"
+                            android:smoothScrollbar="false"
+                            android:stackFromBottom="true"
+                            android:transcriptMode="normal"
+                            android:paddingBottom="24dp"
+                            android:paddingTop="24dp"
+                            android:visibility="gone" />
+                </FrameLayout>
+
+                <LinearLayout
+                        android:id="@+id/bottom_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                android:id="@+id/attachment_editor_scroll_view"
+                                android:layout_weight="1.0"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dip">
+                        <view class="com.android.mms.ui.AttachmentEditor"
+                              android:id="@+id/attachment_editor"
+                              android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical">
+
+                            <!-- file attachment view -->
+                            <ViewStub
+                                    android:id="@+id/file_attachment_view_stub"
+                                    android:layout="@layout/zzz_mms_contacts_attachment_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_marginTop="24dp"
+                                    android:layout_height="wrap_content" />
+
+                            <ViewStub android:id="@+id/image_attachment_view_stub"
+                                      android:layout="@layout/zzz_mms_image_attachment_view"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:layout_marginEnd="16dp"
+                                      android:layout_marginBottom="10dp"
+                                      android:layout_marginTop="24dp"/>
+
+                            <ViewStub android:id="@+id/video_attachment_view_stub"
+                                      android:layout="@layout/zzz_mms_video_attachment_view"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:layout_marginEnd="16dp"
+                                      android:layout_marginBottom="10dp"
+                                      android:layout_marginTop="24dp"/>
+
+                            <ViewStub android:id="@+id/audio_attachment_view_stub"
+                                      android:layout="@layout/zzz_mms_audio_attachment_view"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:layout_marginEnd="16dp"
+                                      android:layout_marginBottom="10dp"
+                                      android:layout_marginTop="24dp"/>
+
+                            <ViewStub android:id="@+id/slideshow_attachment_view_stub"
+                                      android:layout="@layout/zzz_mms_slideshow_attachment_view"
+                                      android:layout_width="match_parent"
+                                      android:layout_height="wrap_content"
+                                      android:layout_marginEnd="16dp"
+                                      android:layout_marginBottom="10dp"
+                                      android:layout_marginTop="24dp"/>
+                        </view>
+                    </ScrollView>
+
+                    <!-- android:background="#FFFFFFFF" -->
+                    <LinearLayout
+                            android:id="@+id/bottom_panel"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom" >
+                        <ImageButton
+                                android:id="@+id/add_attachment_first"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                android:layout_gravity="bottom"
+                                android:background="?android:attr/selectableItemBackgroundBorderless"
+                                android:contentDescription="@string/add_attachment"
+                                android:gravity="center"
+                                android:src="@drawable/zzz_ic_message_add_attachment" />
+
+                        <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginBottom="6dp"
+                                android:layout_marginTop="6dp"
+                                android:paddingStart="12dp"
+                                android:paddingEnd="6dp"
+                                android:background="@drawable/zzz_compose_content_editor_background"
+                                android:gravity="bottom" >
+                            <com.android.mms.ui.EnhanceEditText
+                                    android:id="@+id/embedded_text_editor"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1.0"
+                                    android:layout_marginEnd="6dp"
+                                    android:paddingTop="7dp"
+                                    android:paddingBottom="7dp"
+                                    android:scrollbars="none"
+                                    android:textSize="16sp"
+                                    android:hint="@string/ipmsg_sms_hint"
+                                    android:maxHeight="110dp"
+                                    android:textColor="#DE000000"
+                                    android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
+                                    android:imeOptions="actionDone|flagNoEnterAction"
+                                    android:maxLength="2048"
+                                    android:background="@null"
+                                    android:textCursorDrawable="@drawable/zzz_recipients_cursor_drawable"
+                            />
+                            <ImageView
+                                    android:id="@+id/swap_send_sim_card"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginBottom="6dp"
+                                    android:src="@drawable/zzz_ic_message_swap_sim1"
+                                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                                    android:visibility="gone" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                                android:id="@+id/button_with_counter"
+                                android:layout_width="56dp"
+                                android:layout_height="match_parent" >
+                            <TextView
+                                    android:id="@+id/text_counter"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:layout_marginTop="14dp"
+                                    android:textColor="#61000000"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            <ImageButton
+                                    android:id="@+id/send_button_sms"
+                                    style="?android:attr/borderlessButtonStyle"
+                                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                                    android:src="@drawable/zzz_ic_send_enable_icon"
+                                    android:layout_width="56dp"
+                                    android:layout_height="48dp"
+                                    android:layout_gravity="bottom"
+                                    android:gravity="center"
+                                    android:contentDescription="@string/send" />
+                            <!-- tangyisen fix bug 29dp to 32dp -->
+                            <TextView
+                                    android:id="@+id/mms_description_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="8sp"
+                                    android:layout_gravity="bottom|end"
+                                    android:layout_marginEnd="8dp"
+                                    android:layout_marginBottom="32dp"
+                                    android:text="@string/mms"
+                                    android:textColor="#FF64B111"
+                                    android:contentDescription="@string/send_mms"
+                                    android:visibility="gone" />
+                        </FrameLayout>
+                    </LinearLayout>
+                    <View
+                            android:id="@+id/attachment_divider"
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:background="#1F000000"
+                            android:visibility="gone" />
+                    <!-- the viewpager and child linearlayout has margin 9dp,so here set 7dp tmp -->
+                    <!-- android:background="#FFFFFFFF" -->
+                    <FrameLayout
+                            android:id="@+id/attachments_selector"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp"
+                            android:paddingBottom="7dp"
+                            android:paddingTop="7dp"
+                            android:visibility="gone" >
+
+                        <android.support.v4.view.ViewPager
+                                android:id="@+id/attachments_selector_pager"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.android.mms.ui.HeightChangedLinearLayout>
+    </RelativeLayout>
+</merge>

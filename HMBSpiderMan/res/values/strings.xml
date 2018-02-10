@@ -1,0 +1,26 @@
+<resources>
+
+    <string name="app_name">SpiderMan</string>
+    <string name="action_settings">Log系统工具</string>
+
+    <string name="log_switch">日志上传控制开关</string>
+    <string name="logcat_switch">logcat进程控制开关</string>
+    <string name="log_open">开</string>
+    <string name="log_close">关</string>
+    <string name="updatedata">更新数据按钮</string>
+    <string name="anr">模拟发送anr广播按钮</string>
+    <string name="JavaCrash">模拟发送JavaCrash广播按钮</string>
+    <string name="starttransmit">模拟向服务器传送log文件按钮</string>
+    <string name="settingpreferences">开启离线log按钮</string>
+
+    <string name="logpreferences">LogPreferences</string>
+    <string name="my_set">我的设置</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+    <string name="start">开始</string>
+    <string name="stop">停止</string>
+    <string name="clearallfile">删除文件</string>
+    <string name="aboutversion">关于版本</string>
+    <string name="mystorage">日志路径：/storage/emulated/0/proturlylog</string>
+
+</resources>

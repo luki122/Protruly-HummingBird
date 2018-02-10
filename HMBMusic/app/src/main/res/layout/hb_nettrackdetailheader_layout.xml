@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:splitMotionEvents="false" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:splitMotionEvents="false" >
+
+        <com.protruly.music.widget.HBMusicImageView
+            android:id="@+id/hb_recommend_topbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hb_recommend_toplayout_height"
+            android:layout_marginBottom="@dimen/hb_my_music_page_zoom_size"
+            android:layout_marginTop="@dimen/hb_my_music_page_zoom_size"
+            android:scaleType="centerCrop" />
+
+        <com.protruly.music.widget.HBMusicImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hb_recommend_toplayout_height"
+            android:layout_marginBottom="@dimen/hb_my_music_page_zoom_size"
+            android:layout_marginTop="@dimen/hb_my_music_page_zoom_size"
+            android:background="@drawable/hb_recomlsit_bottom_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/hb_netplaylist_bottombg"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/hb_splite_line" />
+
+            <LinearLayout
+                android:id="@+id/hb_headbar_menu"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/hb_playmode_height"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:id="@+id/hb_id_collection_song_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/hb_recommend_bg"
+                    android:clickable="true" >
+
+                    <Button
+                        android:id="@+id/hb_id_collection_song"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/hb_recommend_collection_btn"
+                        android:drawablePadding="6dp"
+                        android:gravity="center"
+                        android:text="@string/hb_collect_playlist2"
+                        android:textColor="@color/hb_nettrackbtn_text"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hb_vertical_line2" />
+
+                <FrameLayout
+                    android:id="@+id/hb_id_download_song_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/hb_recommend_bg"
+                    android:clickable="true"
+                    android:gravity="center" >
+
+                    <Button
+                        android:id="@+id/hb_id_download_song"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/hb_recommend_download_btn"
+                        android:drawablePadding="6dp"
+                        android:gravity="center"
+                        android:text="@string/hb_all_download"
+                        android:textColor="@color/hb_nettrackbtn_text"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hb_vertical_line2" />
+
+                <FrameLayout
+                    android:id="@+id/hb_id_share_single_parent"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/hb_recommend_bg"
+                    android:clickable="true" >
+
+                    <Button
+                        android:id="@+id/hb_id_share_single"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/hb_recommend_decription_btn"
+                        android:drawablePadding="6dp"
+                        android:gravity="center"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:text="@string/hb_decription"
+                        android:textColor="@color/hb_nettrackbtn_text"
+                        android:textSize="14sp" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45.3dp"
+        android:clickable="true"
+        android:paddingLeft="@dimen/hb_songlisttem_padding"
+        android:paddingRight="@dimen/hb_songlisttem_padding" >
+
+        <TextView
+            android:id="@+id/hb_recommend_play"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:drawablePadding="7dp"
+            android:drawableRight="@drawable/hb_album_btn_allplay"
+            android:gravity="center"
+            android:paddingRight="5.0dp"
+            android:text="@string/play_all"
+            android:textColor="@color/hb_randplay_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/hb_recommand_songnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#7d7d7d"
+            android:textSize="@dimen/hb_songnumber_textsize" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <cn.com.protruly.soundrecorder.lockscreen.RecordWaveView
+        android:id="@+id/record_surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:id="@+id/record_filename_tv"
+        android:layout_above="@id/record_surfaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/new_record"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/time_count_tv"
+        android:layout_above="@id/record_filename_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/time" />
+    <LinearLayout
+        android:id="@+id/mark_layout"
+        android:layout_below="@id/record_surfaceView"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="16.0dip">
+        <include android:id="@+id/mark_tip" layout="@layout/mark_text_layout" />
+        <!--android:layoutDirection="rtl"-->
+        <HorizontalScrollView
+            android:id="@+id/mark_list_view"
+            android:scrollbars="none"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:id="@+id/mark_list_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/mark_layout"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/start_buttom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/icon_record_start"/>
+
+        <Button
+        android:id="@+id/mark_buttom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_toLeftOf="@id/start_buttom"
+        android:background="@drawable/icon_record_mark" />
+
+        <Button
+            android:id="@+id/stop_buttom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/start_buttom"
+            android:background="@drawable/icon_record_finish"/>
+    </RelativeLayout>
+</RelativeLayout>
+

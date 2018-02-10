@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:gravity="center_vertical"
+	android:minHeight="@dimen/category_list_height_pic_and_video"
+	android:orientation="horizontal"
+	android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+	android:paddingStart="?android:attr/listPreferredItemPaddingStart" >
+
+	<ImageView
+		android:id="@*android:id/icon"
+		android:layout_width="@dimen/list_item_icon_width_for_pic_video"
+		android:layout_height="@dimen/list_item_icon_height_for_pic_video"
+		android:scaleType="fitXY"/>
+
+	<LinearLayout
+		android:layout_width="0px"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/list_item_text_margin"
+		android:layout_weight="1"
+		android:gravity="center_vertical"
+		android:orientation="vertical" >
+
+		<TextView android:id="@+id/file_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/list_first_line_text_style"/>
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+
+			<TextView android:id="@+id/file_size"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				style="@style/list_second_line_text_style"
+				/>
+
+			<TextView android:id="@+id/file_date"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				style="@style/list_second_line_text_style"
+				android:layout_marginStart="@dimen/list_item_size_text_left_margin"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>

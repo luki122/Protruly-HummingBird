@@ -1,0 +1,26 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/topic_detail_theme_cover"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_theme_list_item_covert_height"
+        android:scaleType="fitXY"
+        android:background="@drawable/img_loading" />
+    
+    <TextView 
+        android:id="@+id/topic_detail_theme_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.HomeListItemName"
+        android:layout_marginTop="@dimen/theme_list_item_name_margin_top" />
+    
+    <TextView android:id="@+id/topic_detail_theme_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.HomeListItemPrice" />
+	
+</LinearLayout>

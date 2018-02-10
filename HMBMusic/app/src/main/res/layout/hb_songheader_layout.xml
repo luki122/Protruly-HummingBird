@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="45.3dp"
+    android:id="@+id/hb_playmode_layout"
+    android:background="#ffffff"
+    android:paddingLeft="@dimen/song_padding"
+    android:paddingRight="@dimen/song_padding"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" 
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/tv_playmode"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:paddingRight="5.0dp"
+        android:text="@string/playmode"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:drawablePadding="7dp"
+        android:textColor="@color/hb_randplay_text"
+        android:drawableRight="@drawable/play_state" />
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/tv_songnumber"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:textColor="#7d7d7d"
+        android:gravity="right|center_vertical"
+        android:textSize="@dimen/hb_songnumber_textsize" >
+    </TextView>
+
+</LinearLayout>

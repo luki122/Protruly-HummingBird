@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:orientation="horizontal" >
+
+        <com.hb.thememanager.utils.CircleImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="31dp"
+            android:src="@drawable/kejiwang" />
+
+        <TextView
+            android:layout_width="240dp"
+            android:layout_height="54dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/feedback_comment"
+            android:textColor="@color/topic_item_text_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/theme_home_list_divider_color" />
+
+    <EditText
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="338dp"
+        android:gravity="start"
+        android:hint="@string/feedback_hint"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="12dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/feedback_commit"
+        android:layout_width="184dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/feedback_commit" 
+        style="@com.hb:style/Widget.Hb.Material.Button.Positive"/>
+
+</LinearLayout>

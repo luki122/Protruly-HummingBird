@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="PreferenceActivityTheme" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+        <item name="android:listDivider">@com.hb:drawable/list_divider_material_with_icon</item>
+    </style>
+
+</resources>

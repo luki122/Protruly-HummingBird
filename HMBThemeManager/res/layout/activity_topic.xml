@@ -1,0 +1,15 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+	<include layout="@layout/no_network_view_large"/>
+	<include layout="@layout/loading_progress" />
+    <com.hb.thememanager.views.ThemeListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    	android:layout_marginTop="@dimen/topic_page_list_item_padding"
+        android:scrollbars="@null"
+    	android:divider="@null" />
+
+</FrameLayout>

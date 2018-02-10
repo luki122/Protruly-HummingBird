@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    class="com.protruly.music.widget.TimeShowView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/iv_hour_tens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/hb_lock_screen_tens_margin_right"
+        android:contentDescription="@string/img_desc_tens_of_hour"
+        android:src="@drawable/num_0" />
+
+    <ImageView
+        android:id="@+id/iv_hour_units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/img_desc_units_of_hour"
+        android:src="@drawable/num_0" />
+
+    <ImageView
+        android:id="@+id/iv_splite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/hb_lock_screen_splite_margin_left"
+        android:layout_marginRight="@dimen/hb_lock_screen_splite_margin_right"
+        android:contentDescription="@string/img_desc_time_splite"
+        android:src="@drawable/spilt" />
+
+    <ImageView
+        android:id="@+id/iv_min_tens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/hb_lock_screen_tens_margin_right"
+        android:contentDescription="@string/img_desc_tens_of_min"
+        android:src="@drawable/num_0" />
+
+    <ImageView
+        android:id="@+id/iv_min_units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:contentDescription="@string/img_desc_units_of_min"
+        android:src="@drawable/num_0" />
+
+</LinearLayout>

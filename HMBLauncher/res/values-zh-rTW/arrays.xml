@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- cyl add for special effect  start -->
+    <string-array name="entries_effect_preference">
+        <item>經典</item>
+        <item>立方體</item>
+        <item>盒子</item> 
+        <item>百葉窗</item>  
+        <item>翻轉</item> 
+        <item>推拉門</item>
+        <item>上下浮動</item>
+        <item>層疊</item> 
+        <item>向上翻轉</item>
+        <item>向下翻轉</item> 
+    </string-array>
+<!-- cyl add for special effect  end -->
+</resources>

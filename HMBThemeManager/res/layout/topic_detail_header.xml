@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:background="@drawable/img_loading"
+        android:id="@+id/topic_detail_banner"
+        android:layout_height="@dimen/banner_view_height"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop" />
+
+    <com.hb.thememanager.views.ExpandableTextView
+        android:id="@+id/topic_detail_topic_des"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/topic_detail_des_textview_marginleft"
+        android:layout_marginStart="@dimen/topic_detail_des_textview_marginleft"
+        android:layout_marginTop="@dimen/topic_detail_des_textview_margintop"
+        android:layout_width="match_parent"
+        app:contentTextSize="@dimen/topic_detail_page_bannerdes_content_size"
+        app:maxCollapsedLines="3">
+    </com.hb.thememanager.views.ExpandableTextView>
+</LinearLayout>

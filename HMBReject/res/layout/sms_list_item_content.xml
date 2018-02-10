@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/twoline_height"
+    android:orientation="vertical"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:descendantFocusability="blocksDescendants"
+   >
+
+    <!-- style="@style/list_primary_text_style" -->
+
+    <TextView
+        android:id="@+id/sms_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:maxWidth="260dp"
+        android:singleLine="true"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="#DB000000"
+        android:textSize="16sp" />
+    
+        
+    <!-- style="@style/list_secondary_text_style" -->
+
+   
+
+    <!--
+         <CheckBox
+        android:id="@+id/sms_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/sms_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="17dip"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone" />
+    -->
+
+
+    <!-- style="@style/list_secondary2_text_style" -->
+
+  <CheckBox
+        android:id="@+id/list_item_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="4dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone" />
+  
+   <TextView
+        android:id="@+id/sms_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sms_title"
+        android:layout_toStartOf="@id/list_item_check_box"
+        android:layout_alignParentStart="true"
+        android:lineSpacingExtra="5dp"
+        android:layout_marginBottom="11dp"
+        android:maxLines="4"
+        android:ellipsize="end" 
+        android:maxWidth="300dp"
+        android:textColor="#66000000"
+        android:textSize="14sp" 
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        />
+   
+    <TextView
+        android:id="@+id/sms_date"
+        style="@style/list_secondary_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom = "@id/sms_title"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="12dp"
+        android:layout_toStartOf="@id/list_item_check_box"
+      />
+    
+ <ImageView
+        android:id="@+id/sim"
+        android:layout_width="8.67dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom = "@id/sms_title"
+        android:layout_marginTop="22dp"
+        android:layout_toStartOf="@id/list_item_check_box" 
+        android:focusable="false"
+        android:src="@drawable/svg_dial_card1" />
+    
+
+   <!--  <ImageView
+        android:id="@+id/mms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/sms_title"
+        android:layout_marginStart="7dp"
+        android:layout_toEndOf="@+id/sms_title"
+        android:src="@drawable/mms_flag"
+        android:visibility="gone" />
+
+   
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_toLeftOf="@id/sms_date"
+        android:visibility="invisible" >
+    </LinearLayout>
+   
+
+    <CheckBox
+        android:id="@+id/list_item_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="4dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone" /> -->
+
+</RelativeLayout>

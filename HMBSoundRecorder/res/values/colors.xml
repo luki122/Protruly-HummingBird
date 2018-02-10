@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!-- ShenQianfeng add for clip activity begin -->
+    <color name="clip_amplitude_bar_color">#FF4A4A4A</color>
+    <color name="clip_left_bar_color">#FFFF4546</color>
+    <color name="clip_right_bar_color">#FFFF4546</color>
+    <color name="play_position_bar_color">#FF06C012</color>
+    <color name="clip_black_mask">#2EB8E986</color>
+    <color name="clip_central_horizontal_line_color">#FF000000</color>
+    <color name="clip_upper_lower_line_color">#FFF28599</color>
+    <color name="clip_triangle_indicator_color">#FFF28599</color>
+    <!-- ShenQianfeng add for clip activity end -->
+
+</resources>

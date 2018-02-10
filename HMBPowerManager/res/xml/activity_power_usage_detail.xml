@@ -1,0 +1,20 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:key="header_parent">
+        <com.protruly.powermanager.powersave.fuelgauge.AppProgressPreference
+            android:key="app_progress"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="controls_parent"
+        android:title="@string/controls_subtitle"/>
+
+    <PreferenceCategory
+        android:key="details_parent"
+        android:title="@string/details_subtitle" />
+
+    <PreferenceCategory
+        android:key="packages_parent"
+        android:title="@string/packages_subtitle" />
+
+</PreferenceScreen>

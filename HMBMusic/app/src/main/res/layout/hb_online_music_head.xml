@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- <include
+        android:id="@+id/hb_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"        
+        layout="@layout/layout_search" /> -->
+        
+	<com.protruly.music.widget.HBSearchView
+	    android:id="@+id/hb_search"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+	
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="@dimen/hb_online_margintop"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="12dp" >
+
+        <com.protruly.music.widget.BannerViewPager
+            android:id="@+id/hb_id_banner"
+            android:layout_width="fill_parent"
+            android:layout_height="133dp" />
+
+        <com.protruly.music.widget.HBDotView
+            android:id="@+id/hb_dot_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/hb_id_banner"
+            android:layout_marginBottom="8dp"
+            android:gravity="center" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hb_online_music_mask" />
+    </RelativeLayout>
+
+</LinearLayout>

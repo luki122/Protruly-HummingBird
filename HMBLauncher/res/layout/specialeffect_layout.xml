@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.launcher3.specialeffectpreview.PreviewContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/special_effect__content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:visibility="visible">
+
+        <com.android.launcher3.pageindicators.PageIndicatorUnderline
+            android:id="@+id/special_effect_pagedIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/widget_pagedview_indicator"
+            android:layout_gravity="bottom"
+            android:animateLayoutChanges="true">
+        </com.android.launcher3.pageindicators.PageIndicatorUnderline>
+
+        <com.android.launcher3.specialeffectpreview.EffectPreviewPagedView
+            android:id="@+id/special_effect_paged_view_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            launcher:pageIndicator="@+id/special_effect_pagedIndicator"
+            android:layout_gravity="center_horizontal" />
+    </FrameLayout>
+
+        
+</com.android.launcher3.specialeffectpreview.PreviewContainer>

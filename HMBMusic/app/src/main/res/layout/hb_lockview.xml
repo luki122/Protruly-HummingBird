@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.protruly.music"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/lock_layout_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:id="@+id/lock_bg_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/lock_alpha_bg" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/lock_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="#00000000"
+        android:orientation="horizontal" >
+
+        <com.protruly.music.widget.TimeShowView
+            android:id="@+id/lock_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="74dp" />
+
+        <TextView
+            android:id="@+id/lock_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:layout_toRightOf="@id/lock_time"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/lock_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/lock_date"
+            android:layout_alignRight="@id/lock_date"
+            android:layout_below="@id/lock_date"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/lock_line"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@id/lock_time_layout"
+        android:layout_marginLeft="74dp"
+        android:layout_marginRight="74dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/lock_line" />
+
+    <RelativeLayout
+        android:id="@+id/lock_music_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lock_line"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/lock_music_line1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/lock_music_line2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lock_music_line1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:alpha="0.5"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lock_music_lrc"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_above="@+id/lock_play_control"
+        android:layout_marginBottom="56dp"
+        android:gravity="center" >
+
+        <com.protruly.music.widget.HBScrollView
+            android:id="@+id/lock_lyric_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="1dp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center" >
+
+                <com.protruly.music.widget.HBLyricView
+                    android:id="@+id/lock_lyric_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    custom:lyric_lineGap="26dp"
+                    custom:lyric_textColor="#ffffff"
+                    custom:lyric_textColor_focus="#ffffff"
+                    custom:lyric_textColor_focus_read="#0ec16f"
+                    custom:lyric_textSize="16dp" />
+            </LinearLayout>
+        </com.protruly.music.widget.HBScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lock_play_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="42dp"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/lock_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="70dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/hb_lock_pre" />
+
+        <ImageButton
+            android:id="@+id/lock_playpause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/lock_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="70dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/hb_lock_next" />
+    </RelativeLayout>
+
+</RelativeLayout>

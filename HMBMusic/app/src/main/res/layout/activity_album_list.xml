@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical" >
+    <!-- 
+    <include layout="@layout/sd_error" />
+     -->
+
+    <include layout="@layout/activity_album_list_header" />
+
+	<fragment 
+	    android:id="@+id/album_list"
+	    android:name="com.protruly.music.ui.album.AlbumListFragment"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    tools:context="com.protruly.music.AlbumListActivity"
+	    tools:layout="@layout/album_list_content" />
+
+</LinearLayout>

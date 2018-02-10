@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="font_labels">
+        <item>标题</item>
+        <item>小标题</item>
+        <item>正文</item>
+        <item>项目符号</item>
+        <item>短划线</item>
+    </string-array>
+
+    <string-array name="style_labels">
+        <item>白色</item>
+        <item>浅蓝</item>
+        <item>草绿</item>
+        <item>粉色</item>
+    </string-array>
+</resources>

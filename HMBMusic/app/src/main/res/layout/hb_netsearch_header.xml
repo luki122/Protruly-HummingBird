@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp" >
+
+        <ImageView
+            android:id="@+id/hb_netartist_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/hb_netartist_cicrle"
+            android:padding="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="13dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/hb_artist_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="#ff000000"
+                android:textSize="@dimen/hb_album_name_textsize" />
+
+            <TextView
+                android:id="@+id/hb_artist_songnumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="13dp"
+                android:layout_marginTop="6dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/hb_item_song_size"
+                android:textSize="@dimen/hb_album_numsongs_textsize" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/line2" />
+
+    <LinearLayout
+        android:id="@+id/album_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/hb_album_item_height"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/hb_ablum_tag"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="13dp"
+            android:paddingLeft="@dimen/hb_album_item_padding_left"
+            android:paddingRight="@dimen/hb_album_item_padding_left"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/hb_icon_flag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:src="@drawable/hb_online_recommend_playlist" />
+
+            <TextView
+                android:id="@+id/hb_icon_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_toRightOf="@id/hb_icon_flag"
+                android:text="@string/hb_albums"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/hb_more_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="4dp"
+                android:drawableRight="@drawable/hb_more"
+                android:gravity="center"
+                android:text="@string/hb_more"
+                android:textColor="@color/hb_more_button_clicked"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/hb_ablum_parent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/hb_album_item_height"
+            android:background="@drawable/hb_playlist_item_clicked"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/hb_album_item_padding_left"
+            android:paddingRight="@dimen/hb_album_item_padding_left" >
+
+            <RelativeLayout
+                android:layout_width="@dimen/hb_album_cover_width"
+                android:layout_height="@dimen/hb_album_cover_bg_height" >
+
+                <ImageView
+                    android:id="@+id/album_art"
+                    android:layout_width="@dimen/hb_album_cover_width"
+                    android:layout_height="@dimen/hb_album_cover_height"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/album_art_default"
+                    android:contentDescription="@string/img_desc_album_cover"
+                    android:scaleType="centerCrop" />
+
+                <ImageView
+                    android:id="@+id/album_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/img_desc_album_cover"
+                    android:src="@drawable/album_art_border" />
+
+                <ImageView
+                    android:id="@+id/play_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="@dimen/hb_album_play_icon_margin_bottom"
+                    android:layout_marginRight="@dimen/hb_album_play_icon_margin_right"
+                    android:src="@drawable/hb_album_play_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/hb_album_info_padding"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/album_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:paddingBottom="@dimen/hb_album_name_padding_bottom"
+                    android:singleLine="true"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/hb_album_name_textsize" />
+
+                <!-- The height is set to half the height of the parent, which is 64 dip -->
+
+                <TextView
+                    android:id="@+id/album_numtrack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:paddingBottom="@dimen/hb_album_numsongs_padding_bottom"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/hb_item_song_size"
+                    android:textSize="@dimen/hb_album_numsongs_textsize"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/album_release_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/hb_item_song_size"
+                    android:textSize="@dimen/hb_album_numsongs_textsize"
+                    android:visibility="visible" />
+            </LinearLayout>
+            <!-- The height is set to half the height of the parent, which is 64 dip -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/hb_separate"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/line2" />
+
+    <LinearLayout
+        android:id="@+id/hb_ablum_parent2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/hb_album_item_height"
+        android:background="@drawable/hb_playlist_item_clicked"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/hb_album_item_padding_left"
+        android:paddingRight="@dimen/hb_album_item_padding_left" >
+
+        <RelativeLayout
+            android:layout_width="@dimen/hb_album_cover_width"
+            android:layout_height="@dimen/hb_album_cover_bg_height" >
+
+            <ImageView
+                android:id="@+id/album_art"
+                android:layout_width="@dimen/hb_album_cover_width"
+                android:layout_height="@dimen/hb_album_cover_height"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/album_art_default"
+                android:contentDescription="@string/img_desc_album_cover"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/album_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/img_desc_album_cover"
+                android:src="@drawable/album_art_border" />
+
+            <ImageView
+                android:id="@+id/play_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/hb_album_play_icon_margin_bottom"
+                android:layout_marginRight="@dimen/hb_album_play_icon_margin_right"
+                android:src="@drawable/hb_album_play_icon"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/hb_album_info_padding"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/album_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingBottom="@dimen/hb_album_name_padding_bottom"
+                android:singleLine="true"
+                android:textColor="#ff000000"
+                android:textSize="@dimen/hb_album_name_textsize" />
+
+            <!-- The height is set to half the height of the parent, which is 64 dip -->
+
+            <TextView
+                android:id="@+id/album_numtrack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingBottom="@dimen/hb_album_numsongs_padding_bottom"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/hb_item_song_size"
+                android:textSize="@dimen/hb_album_numsongs_textsize"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/album_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/hb_item_song_size"
+                android:textSize="@dimen/hb_album_numsongs_textsize"
+                android:visibility="visible" />
+        </LinearLayout>
+        <!-- The height is set to half the height of the parent, which is 64 dip -->
+    </LinearLayout>
+
+    <View
+        android:id="@+id/hb_separate2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/line2" />
+
+    <RelativeLayout
+        android:id="@+id/hb_ablum_tag2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="14dp"
+        android:paddingLeft="@dimen/hb_album_item_padding_left"
+        android:paddingTop="13dp" >
+
+        <ImageView
+            android:id="@+id/hb_icon_flag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/hb_online_new_album" />
+
+        <TextView
+            android:id="@+id/hb_icon_name2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/hb_icon_flag2"
+            android:text="@string/hb_online_hot_songs"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

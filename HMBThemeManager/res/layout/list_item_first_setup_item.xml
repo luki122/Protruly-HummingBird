@@ -1,0 +1,6 @@
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/theme_item"
+    android:layout_width="@dimen/first_setup_page_item_width"
+    android:layout_height="match_parent"
+    android:paddingRight="@dimen/first_setup_page_item_margin"
+/>

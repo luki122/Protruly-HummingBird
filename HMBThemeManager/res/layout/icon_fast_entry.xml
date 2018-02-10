@@ -1,0 +1,16 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/size_icon_fast_entry"
+        android:layout_height="@dimen/size_icon_fast_entry" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_fast_entry_text"
+        android:textAppearance="@style/TextAppearance.HomeListTitle"
+        android:gravity="center_horizontal" />
+
+</merge>

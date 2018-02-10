@@ -1,0 +1,65 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:id="@+id/download_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+    >
+        <Button
+            style="@style/TextAppearance.ThemeApply"
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:text="@string/download_cancel"
+        />
+
+        <com.hb.thememanager.views.DownloadProgressBar
+            android:id="@+id/download_progress"
+            android:layout_width="@dimen/download_btn_width"
+            android:layout_height="wrap_content"
+            app:backgroundRadius="@dimen/download_btn_radius"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+        />
+
+        <Button
+            style="@style/TextAppearance.ThemeApply"
+            android:id="@+id/btn_download_option"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:text="@string/download_pause"
+        />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/option_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:showDividers="middle"
+        android:divider="@drawable/divider_vertical"
+        android:dividerPadding="16dp"
+        android:orientation="horizontal">
+        <Button
+            style="@style/TextAppearance.ThemeApply"
+            android:id="@+id/btn_apply"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/try_theme"
+        />
+
+        <Button
+            style="@style/TextAppearance.ThemeApply.Positive"
+            android:id="@+id/btn_pay_for"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/pay_for"
+        />
+    </LinearLayout>
+</merge>

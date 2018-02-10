@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- voice recorder -->
+    <string name="str_db_playlist_name">My recordings</string>
+    <string name="alert_device_error">Recording error</string>
+    <string name="ext_media_badremoval_notification_title">"SD card is not removed properly"</string>
+    <string name="error_sdcard_access">Unable to access SD card</string>
+    <string name="confirm_device_info_full">The contents of the memory card are full and the recording has been saved.</string>
+    <string name="confirm_save_info_saved">The recording has been saved</string>
+    <string name="confirm_save_info_saved_to">The recording has been saved to</string>
+    <string name="onscreenRecordText">Recording</string>
+    <string name="delete_record_item">Delete the recording selected</string>
+    <string name="delete_all_record_item">Delete all recordings</string>
+    <string name="unselect_all">Invert selection</string>
+    <string name="select_all">Select all</string>
+    <string name="cancel">Cancel</string>
+    <string name="selected_total_num">Selected <xliff:g id="total">%d</xliff:g> items</string>
+    <string name="no_call_record_history">No record</string>
+    <string name="call_record_detail_title">Recording details</string>
+    <string name="call_record_message_time">Time : </string>
+    <string name="call_record_message_size">File size：</string>
+    <string name="call_record_message_path">Path: phone storage/internal STORAGE/PhoneRecord/</string>
+    <string name="call_record_delete_title">Sure  to delete the selected recording?</string>
+    <string name="call_record_delete_all_title">Delete All record</string>
+    <string name="call_record_delete_message">Sure to delete the selected call recording(s)?</string>
+    <string name="call_record_delete_all_message">Sure to delete all call recording(s)?</string>
+    <string name="call_record">&quot;Call recording&quot;</string>
+    <string name="auto_record">&quot;Automatic recording&quot;</string>
+    <string name="record_history">&quot;History recording(s)&quot;</string>
+    <string name="record_close">Close</string>
+    <string name="record_all_contacts">&quot;All calls&quot;</string>
+    <string name="record_select_contact">&quot;Specify contacts&quot;</string>
+    <string name="auto_recording">&quot;Adding, please wait&quot;</string>
+    <string name="auto_recording_remove">&quot;Removing, please wait&quot;</string>
+
+    <!-- Menu item used to edit a specific contact -->
+    <string name="menu_editContact">Edit contacts</string>
+    <string name="clear_all">Clear</string>
+    <string name="end_call_waiting">Reject</string>
+    <string name="answer_call_waiting_hold">Hold and answer</string>
+    <string name="answer_call_waiting_hangup">Hangup and answer</string>
+    <string name="record_button_off">Start recording</string>
+    <string name="record_button_on">End recording</string>
+    <string name="endcall">End the call</string>
+    <string name="endcall_dtmf">End the call</string>
+    <string name="hide_dtmf">Hide the keyboard</string>
+    
+    <string-array name="auto_record_choices" translatable="false">
+        <item>@string/record_close</item>
+        <item>@string/record_all_contacts</item>
+        <item>@string/record_select_contact</item>
+    </string-array>
+    <string-array name="auto_record_values" translatable="false">
+        <item>"0"</item>
+        <item>"1"</item>
+        <item>"2"</item>
+    </string-array>
+    
+    <string name="mark_count">marked by <xliff:g id="COUNT">%s</xliff:g></string>
+    
+    <string name="hold_and_answer">HOLD CURRENT AND  ANSWER</string>
+    <string name="end_and_answer">END CURRENT AND ANSWER</string>
+    <string name="reject_waiting">Reject</string>
+    <string name="incall_app_label">InCallUI</string>
+    <string name="return_to_incall">Return to InCallScreen</string>
+    <string name="no_music_activity">No music application, please download music applications that can play amr format</string>
+     <!-- "Respond via SMS": Confirmation message shown after sending
+        a text response. [CHAR LIMIT=40] -->
+    <string name="respond_via_sms_confirmation_format">Message has been sent to <xliff:g id="phone_number">%s</xliff:g>.</string>
+    
+    <string name="mark_by_user">Marked by user as </string>
+    <string name="slide_delete_record_title">Sure to delete the selected recording ?</string>
+    <string name="delete">Delete</string>
+    
+    <string name="answer_hint">Slide right to answer</string>
+    <string name="add_contact_button_text">Contacts</string>
+    <string name="pop_answer_hint">Slide upward to ignore incoming calls </string>
+    <string name="tms_slogan">power by 腾讯手机管家</string>
+    <string name="sms_reject_invalid_number_toast">The call number is null and cannot be used for this operation !</string>
+    
+</resources>

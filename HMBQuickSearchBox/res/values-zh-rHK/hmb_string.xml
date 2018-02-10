@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tap_history">搜索記錄</string>
+    <string name="tap_expand">展開</string>
+    <string name="tap_shrink">收起</string>
+    <string name="list_view_foot_text">網頁搜索</string>
+    <string name="search_go_text">搜索</string>
+    <string name="clear_history_text">清除全部記錄</string>
+
+    <string name="corpus_label_global_new">應用、通訊錄、文件……</string>
+
+    <string name="hot_search">熱門搜索</string>
+    <string name="hot_search_refresh">刷新</string>
+    <string name="webview_loaderror_text">數據加載失敗</string>
+    <string name="webview_loaderror_reload_text">請檢查網絡，點擊重新加載</string>
+</resources>

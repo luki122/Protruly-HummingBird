@@ -1,0 +1,43 @@
+{
+  "retCode": "1",
+  "body": {
+    "type":[
+        {
+          "name": "简约",
+          "icon": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497499618440&di=d3b3e1ef6b2f330849cc2f9824e4d62f&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F12%2F41%2F19H58PICp6h_1024.jpg"
+        },
+        {
+          "name": "动漫",
+          "icon": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497499618440&di=d3b3e1ef6b2f330849cc2f9824e4d62f&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F12%2F41%2F19H58PICp6h_1024.jpg"
+        },
+        {
+          "name": "扁平",
+          "icon": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497499618440&di=d3b3e1ef6b2f330849cc2f9824e4d62f&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F12%2F41%2F19H58PICp6h_1024.jpg"
+        },
+        {
+          "name": "清新",
+          "icon": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497499618440&di=d3b3e1ef6b2f330849cc2f9824e4d62f&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F12%2F41%2F19H58PICp6h_1024.jpg"
+        },
+        {
+          "name": "美女",
+          "icon": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497499618440&di=d3b3e1ef6b2f330849cc2f9824e4d62f&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F12%2F41%2F19H58PICp6h_1024.jpg"
+        },
+        {
+          "name": "汽车",
+          "icon": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497499618440&di=d3b3e1ef6b2f330849cc2f9824e4d62f&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F12%2F41%2F19H58PICp6h_1024.jpg"
+        },
+        {
+          "name": "爱情",
+          "icon": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497499618440&di=d3b3e1ef6b2f330849cc2f9824e4d62f&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F12%2F41%2F19H58PICp6h_1024.jpg"
+        },
+        {
+          "name": "游戏",
+          "icon": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497499618440&di=d3b3e1ef6b2f330849cc2f9824e4d62f&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F12%2F41%2F19H58PICp6h_1024.jpg"
+        },
+        {
+          "name": "风景",
+          "icon": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497499618440&di=d3b3e1ef6b2f330849cc2f9824e4d62f&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F12%2F41%2F19H58PICp6h_1024.jpg"
+        }
+      ]
+  }
+}

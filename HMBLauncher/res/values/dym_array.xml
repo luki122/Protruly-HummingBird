@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+* Copyright (C) 2008 The Android Open Source Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="dym_weather_icon">
+        <item>dym_weather_sunny</item><!--weather type=0-->
+        <item>dym_weather_cloudy</item><!--weather type=1-->
+        <item>dym_weather_rain</item><!--weather type=2-->
+        <item>dym_weather_sunny</item><!--weather type=3-->
+        <item>dym_weather_thundershower</item><!--weather type=4-->
+        <item>dym_weather_hail</item><!--weather type=5-->
+        <item>dym_weather_sleet</item><!--weather type=6-->
+        <item>dym_weather_light_rain</item><!--weather type=7-->
+        <item>dym_weather_rain</item><!--weather type=8-->
+        <item>dym_weather_rain</item><!--weather type=9-->
+        <item>dym_weather_rain</item><!--weather type=10-->
+        <item>@null</item><!--weather type=11-->
+        <item>@null</item><!--weather type=12-->
+        <item>dym_weather_snow</item><!--weather type=13-->
+        <item>dym_weather_snow</item><!--weather type=14-->
+        <item>dym_weather_snow</item><!--weather type=15-->
+        <item>dym_weather_snow</item><!--weather type=16-->
+        <item>dym_weather_snow</item><!--weather type=17-->
+        <item>dym_weather_fog</item><!--weather type=18-->
+        <item>dym_weather_freezing_rain</item><!--weather type=19-->
+        <item>dym_weather_sandstorm</item><!--weather type=20-->
+        <item>@null</item><!--weather type=21-->
+        <item>@null</item><!--weather type=22-->
+        <item>@null</item><!--weather type=23-->
+        <item>@null</item><!--weather type=24-->
+        <item>@null</item><!--weather type=25-->
+        <item>@null</item><!--weather type=26-->
+        <item>@null</item><!--weather type=27-->
+        <item>@null</item><!--weather type=28-->
+        <item>dym_weather_sandstorm</item><!--weather type=29-->
+        <item>@null</item><!--weather type=30-->
+        <item>@null</item><!--weather type=31-->
+        <item>@null</item><!--weather type=32-->
+        <item>@null</item><!--weather type=33-->
+        <item>@null</item><!--weather type=34-->
+        <item>@null</item><!--weather type=35-->
+        <item>@null</item><!--weather type=36-->
+        <item>@null</item><!--weather type=37-->
+        <item>@null</item><!--weather type=38-->
+        <item>@null</item><!--weather type=39-->
+        <item>@null</item><!--weather type=40-->
+        <item>@null</item><!--weather type=41-->
+        <item>@null</item><!--weather type=42-->
+        <item>@null</item><!--weather type=43-->
+        <item>@null</item><!--weather type=44-->
+        <item>dym_weather_haze</item><!--weather type=45-->
+        <item>@null</item><!--weather type=46-->
+    </string-array>
+    <string-array name="dym_package_name">
+        <item>com.android.deskclock</item>
+        <item>com.android.calendar</item>
+        <item>com.moji.daling</item>
+    </string-array>
+
+<!-- cyl add for special effect  start -->
+    <string-array name="entries_effect_preference">
+        <item>Classic</item>
+        <item>Cube</item>
+        <item>Box</item> 
+        <item>Shutter</item>  
+        <item>Roll Over</item> 
+        <item>Sliding door</item>
+        <item>Floating</item>
+        <item>Cascade</item>  
+        <item>Roll Up</item>
+        <item>Roll Down</item>
+    </string-array>
+
+    <array name="effect_choose_img">
+        <item>@drawable/effect_horizontal</item>
+        <item>@drawable/effect_box_out</item>
+        <item>@drawable/effect_box_in</item>
+        <item>@drawable/effect_roll_window</item>
+        <item>@drawable/effect_roll_over</item>
+        <item>@drawable/effect_scale_int_out</item>
+        <item>@drawable/effect_random_switch</item>
+        <item>@drawable/effect_right_fade</item>
+        <item>@drawable/effect_roll_down</item>
+        <item>@drawable/effect_roll_up</item>
+    </array>
+
+    <string-array name="entryvalues_effect_preference">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item> 
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>  
+        <item>6</item> 
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>  
+    </string-array>  
+
+    <array name="editmode_effect_choose_img">
+        <item>@drawable/ic_effects_classic</item>
+        <item>@drawable/ic_effects_outside_box</item>
+        <item>@drawable/ic_effects_inside_box</item>
+        <item>@drawable/ic_effects_ishutters</item>
+        <item>@drawable/ic_effects_flip</item>
+        <item>@drawable/ic_effects_compression</item>
+        <item>@drawable/ic_effects_floating</item>
+        <item>@drawable/ic_effects_fading</item>
+        <item>@drawable/ic_effects_flip_up</item>
+        <item>@drawable/ic_effects_flip_down</item>
+    </array>
+<!-- cyl add for special effect  end -->
+</resources>

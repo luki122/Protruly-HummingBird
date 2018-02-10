@@ -1,0 +1,37 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/size_local_wallpaper_item_height"
+    android:maxHeight="@dimen/size_local_wallpaper_item_height"
+    android:minHeight="@dimen/size_local_wallpaper_item_height" >
+
+    <ImageView
+        android:id="@+id/wallpaper_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_local_wallpaper_item_height"
+        android:background="@drawable/img_loading"
+        />
+    
+    <CheckBox 
+        android:id="@+id/wallpaper_item_select_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="top|right"
+        android:clickable="false"
+        android:focusable="false"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="4dp"
+        />
+    
+    
+    <ImageView android:id="@+id/wallpaper_item_applied"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="@dimen/wallpaper_list_applied_margin"
+        android:layout_marginBottom="@dimen/wallpaper_list_applied_margin"
+        android:src="@drawable/ic_wallpaper_applied"
+        />
+
+</FrameLayout>

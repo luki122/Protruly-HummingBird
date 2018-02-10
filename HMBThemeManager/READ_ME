@@ -1,0 +1,29 @@
+										主题商店
+	一、主题商店功能
+		1、字体替换、包括本地字体替换和在线字体替换
+		2、壁纸替换，包括本地壁纸和在线壁纸
+				2.1、桌面壁纸
+				2.2、锁屏壁纸
+		3、铃声，包括本地铃声和在线铃声
+		4、主题包，包括系统内置主题包和在线主题包。
+	二、主题存放方式
+		1、字体
+			1.1、系统自带字体存放在system/fonts/
+			1.2、系统内置未使用的字体房子system/hummingbird/theme/fonts/
+		2、壁纸
+			2.1、系统内置桌面壁纸放在system/hummingbird/theme/wallpaper/desktop/
+			2.2、系统内置锁屏壁纸放在system/hummingbird/theme/wallpaper/lockscreen/
+			2.3、用户导入的壁纸放在sdcard/humming/wallpaper/desktop/
+			2.4、锁屏壁纸应用路径在data/hummingbird/theme/wallpaper/lockscreen/
+			
+   三、首页为HomePage,首页上显示的每一类的主题资源使用一个Fragment来处理，首页显示
+   			的Fragment父类为AbsHomeFragment,该类作为视图层，处理UI相关逻辑，实现了HomeView接口，
+   			业务逻辑相关的交给HomePresenter处理，对应的实现类分别为：
+   			1、HomeThemeFragment 主题包
+   			2、HomeWallpaperFragment 壁纸
+   			3、HomeRingTongFragment   铃声
+   			4、HomeFontFragment			字体
+
+   			
+   	四、网络请求，所有的网络请求需要继承自ThemeRequest抽象类，并实现request方法，在这个方法中
+   			去对自己的网络请求数据进行封装，从而减小分支语句便于管理和扩展

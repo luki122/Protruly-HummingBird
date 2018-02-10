@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/list_single_line_height"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <TextView
+        style="@style/CalendarLabelStyle"
+        android:drawableStart="@drawable/hb_label_custom"
+        android:drawablePadding="20dp"
+        android:text="@string/label_custom" />
+
+    <TextView
+        android:id="@+id/custom_label"
+        style="@style/TextAppearance.TextView_Title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="end|center_vertical"
+        android:text="@string/label_none" />
+</LinearLayout>

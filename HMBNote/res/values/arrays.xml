@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="font_labels">
+        <item>Title</item>
+        <item>Subtitle</item>
+        <item>Content</item>
+        <item>Bullet</item>
+        <item>UnderLine</item>
+    </string-array>
+
+    <string-array name="style_labels">
+        <item>White</item>
+        <item>Blue</item>
+        <item>Green</item>
+        <item>Pink</item>
+    </string-array>
+</resources>

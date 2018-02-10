@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize" 
+        android:background="?android:attr/colorPrimary"
+        >
+
+        <hb.widget.toolbar.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:title="@null" >
+
+            <ImageButton
+                android:id="@+id/toolbar_user_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_marginLeft="8dp"
+                android:minWidth="@dimen/ic_toolbar_user_min_width"
+                android:src="@com.hb:drawable/ic_contacts" />
+
+            <hb.widget.tab.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center_horizontal"
+                hb:tabTextColor="@color/home_tab_title_text_color"
+                hb:tabIndicatorWidth="12dp" />
+        </hb.widget.toolbar.Toolbar>
+
+        <hb.widget.toolbar.Toolbar
+            android:id="@+id/ringtone_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            hb:navigationIcon="@com.hb:drawable/ic_toolbar_back"
+            android:background="@color/white"
+            android:visibility="gone"
+            android:title="@null" >
+        </hb.widget.toolbar.Toolbar>
+    </FrameLayout>
+
+    <ViewStub
+        android:id="@+id/stub_panel_no_network"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/panel_no_network_height"
+        android:inflatedId="@+id/panel_no_network"
+        android:layout="@layout/panel_no_network" />
+
+    <hb.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </hb.widget.ViewPager>
+
+</LinearLayout>

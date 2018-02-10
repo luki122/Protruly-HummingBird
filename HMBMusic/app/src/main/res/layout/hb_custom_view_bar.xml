@@ -1,0 +1,41 @@
+<!--
+@author
+create time: 20140428
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_custom_view"
+    android:layout_width="match_parent"
+    android:layout_height="21dip"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/hb_actionbar_paddingleft" >
+
+    <hb.widget.HbTextView
+        android:id="@+id/id_my_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_music"
+        android:textColor="@color/hb_actionbar_text_1"
+        android:textSize="@dimen/hb_actionbar_text_size_1" />
+
+    <hb.widget.HbTextView
+        android:id="@+id/id_find_music"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_my_music"
+        android:layout_marginLeft="@dimen/hb_actionbar_text_2_paddingleft"
+        android:layout_toRightOf="@id/id_my_music"
+        android:text="@string/find_music"
+        android:textColor="@color/hb_actionbar_text_2"
+        android:textSize="@dimen/hb_actionbar_text_size_2" />
+
+    <ImageView
+        android:id="@+id/hb_baidu_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/id_find_music"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@id/id_find_music"
+        android:src="@drawable/xiamilogo_bottom" />
+
+</RelativeLayout>

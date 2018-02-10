@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- ic_mesage -->
+    <item
+        android:id="@+id/restoreSms"
+       android:title="@string/recover_sms_to_box">
+    </item>
+    <item
+        android:id="@+id/delSms"
+         android:title="@string/del">
+    </item>
+
+</menu>

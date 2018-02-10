@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hb_contacts_search_header_textview"
+    style="@style/hb_contacts_listview_header_for_star" />

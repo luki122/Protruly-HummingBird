@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/wifi_advanced_titlebar">
+
+    <PreferenceCategory
+        android:key="key_wlan_settings_category"
+        android:title="@string/wlan_settings">
+
+        <!-- android:dependency="enable_wifi" -->
+        <SwitchPreference
+            android:key="notify_open_networks"
+            android:order="0"
+            android:persistent="false"
+            android:summary="@string/wifi_notify_open_networks_summary"
+            android:title="@string/wifi_notify_open_networks" />
+
+        <com.android.settings.CustomListPreference
+            android:entries="@array/wifi_sleep_policy_entries"
+            android:entryValues="@array/wifi_sleep_policy_values"
+            android:key="sleep_policy"
+            android:order="1"
+            android:persistent="false"
+            android:title="@string/wifi_setting_sleep_policy_title" />
+
+        <com.android.settings.AppListSwitchPreference
+            android:shouldDisableView="true"
+            android:dialogTitle="@string/wifi_select_assistant_dialog_title"
+            android:key="wifi_assistant"
+            android:order="2"
+            android:persistent="false"
+            android:summary="@string/wifi_automatically_connect_summary"
+            android:title="@string/wifi_automatically_connect_title" />
+
+        <ListPreference
+            android:shouldDisableView="true"
+            android:entries="@array/wifi_frequency_band_entries"
+            android:entryValues="@array/wifi_frequency_band_values"
+            android:key="frequency_band"
+            android:order="3"
+            android:persistent="false"
+            android:summary="@string/wifi_setting_frequency_band_summary"
+            android:title="@string/wifi_setting_frequency_band_title" />
+
+        <Preference
+            android:key="mac_address"
+            android:order="4"
+            android:title="@string/wifi_advanced_mac_address_title" />
+
+        <Preference
+            android:key="current_ip_address"
+            android:order="5"
+            android:title="@string/wifi_advanced_ip_address_title" />
+
+        <Preference
+            android:key="install_credentials"
+            android:order="7"
+            android:persistent="false"
+            android:title="@string/wifi_install_credentials" />
+
+        <Preference
+            android:key="wifi_direct"
+            android:order="8"
+            android:persistent="false"
+            android:title="@string/wifi_menu_p2p" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:key="key_fast_safely_connect_category"
+        android:title="@string/fast_safely_connect_header">
+
+        <Preference
+            android:key="wps_push_button"
+            android:persistent="false"
+            android:title="@string/wifi_menu_wps_pbc" />
+
+        <Preference
+            android:key="wps_pin_entry"
+            android:persistent="false"
+            android:title="@string/wifi_menu_wps_pin" />
+    </PreferenceCategory>
+
+</PreferenceScreen>   

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:top="@dimen/widget_host_view_stroke_padding"
+    android:left="@dimen/widget_host_view_stroke_padding"
+    android:right="@dimen/widget_host_view_stroke_padding"
+    android:bottom="@dimen/widget_host_view_stroke_padding"
+>
+<shape>
+    <solid android:color="@null"  />
+    <corners android:topLeftRadius="@dimen/widget_host_view_stroke_radius"
+             android:topRightRadius="@dimen/widget_host_view_stroke_radius"
+             android:bottomRightRadius="@dimen/widget_host_view_stroke_radius"
+             android:bottomLeftRadius="@dimen/widget_host_view_stroke_radius"/>
+    <stroke android:width="@dimen/widget_host_view_stroke_width" android:color="#99ffffff"  />
+</shape>
+</item>
+</layer-list>

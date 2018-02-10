@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/img_loading">
+    
+    <ImageView
+        android:id="@+id/image_first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <hb.widget.ViewPager
+        android:id="@+id/wallpaper_detail_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+ 
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="@dimen/wallpaper_preview_time_widget_marginleft"
+        android:layout_marginTop="@dimen/wallpaper_preview_time_widget_margintop"
+        android:visibility="gone"
+        layout="@layout/time_widget" />
+    
+    <LinearLayout 
+        android:id="@+id/desk_wallpaper_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+	    <TextView 
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="30dp"
+	        android:layout_marginRight="30dp"
+	        android:layout_marginTop="70dp"
+	        android:background="@android:color/white"
+	        android:padding="5dp"
+	        android:hint="@string/default_theme_designer"
+	        android:drawableLeft="@com.hb:drawable/ic_search"
+	        />
+	    <com.hb.thememanager.views.PreviewIconGrid
+	        android:id="@+id/wallpaper_preview_icon_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="6.5dp"
+	        android:layout_marginRight="6.5dp"
+	        android:layout_marginTop="50dp"
+	        android:layout_centerHorizontal="true"
+	        android:numColumns="4"
+	        android:verticalSpacing="18dp" />
+    </LinearLayout>
+    
+    <com.hb.thememanager.views.WallpaperButton 
+        android:id="@+id/wallpaper_detail_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/wallpaper_detail_button_margin_bottom"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+    
+</RelativeLayout>
+

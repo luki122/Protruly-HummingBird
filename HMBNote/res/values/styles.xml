@@ -1,0 +1,71 @@
+<resources>
+
+    <style name="NoteTheme" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:windowLayoutStyle">@style/WindowStyle.Light</item>
+        <item name="android:windowLightNavigationBarAddLine">true</item>
+    </style>
+
+    <style name="WindowStyle.Light" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">false</item>
+        <item name="com.hb:windowHasToolbar">true</item>
+    </style>
+
+    <style name="ToolbarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?android:attr/actionBarSize</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="FrameLayoutStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="ImageViewStyle">
+        <item name="android:layout_width">@dimen/image_view_size</item>
+        <item name="android:layout_height">@dimen/image_view_size</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="ToolbarImageViewStyle" parent="ImageViewStyle">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
+    <style name="MenuDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimAmount">0.1</item>
+        <item name="android:windowAnimationStyle">@style/MenuAnimation</item>
+    </style>
+
+    <style name="MenuAnimation" parent="android:style/Animation">
+        <item name="android:windowEnterTransition">@anim/note_menu_enter</item>
+        <item name="android:windowExitTransition">@anim/note_menu_exit</item>
+    </style>
+
+    <style name="NoteActionModeItem">
+        <item name="android:textColor">@color/home_text_color</item>
+    </style>
+    <style name="NoteActionModeItemBlue">
+        <item name="android:textColor">@color/home_text_color_blue</item>
+    </style>
+    <style name="NoteActionModeItemGreen">
+        <item name="android:textColor">@color/home_text_color_green</item>
+    </style>
+    <style name="NoteActionModeItemPink">
+        <item name="android:textColor">@color/home_text_color_pink</item>
+    </style>
+
+    <style name="NoteBottomNavigationItem">
+        <item name="android:textColor">#80000000</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+</resources>

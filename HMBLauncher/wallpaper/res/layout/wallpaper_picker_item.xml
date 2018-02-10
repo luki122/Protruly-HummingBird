@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp">
+
+    <ImageView
+        android:id="@+id/wallpaper_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter" />
+
+    <ImageView
+        android:layout_width="@dimen/wallpaper_tile_status_size"
+        android:layout_height="@dimen/wallpaper_tile_status_size"
+        android:layout_gravity="right|bottom"
+        android:src="@drawable/tile_status" />
+</FrameLayout>

@@ -1,0 +1,48 @@
+<resources>
+
+    <dimen name="padding_large">16dp</dimen>
+
+    <dimen name="length_2dp">2dp</dimen>
+    <dimen name="length_4dp">4dp</dimen>
+    <dimen name="length_6dp">6dp</dimen>
+    <dimen name="length_8dp">8dp</dimen>
+    <dimen name="length_16dp">16dp</dimen>
+    <dimen name="length_20dp">20dp</dimen>
+    <dimen name="length_24dp">24dp</dimen>
+    <dimen name="length_25dp">25dp</dimen>
+    <dimen name="length_40dp">40dp</dimen>
+    <dimen name="length_42dp">42dp</dimen>
+    <dimen name="length_47dp">47dp</dimen>
+    <dimen name="length_50dp">50dp</dimen>
+    <dimen name="length_53dp">53dp</dimen>
+    <dimen name="length_70dp">70dp</dimen>
+    <dimen name="length_72dp">72dp</dimen>
+    <dimen name="length_84dp">84dp</dimen>
+    <dimen name="length_100dp">100dp</dimen>
+
+    <!--电量管理-->
+    <dimen name="power_header_view_length">285dp</dimen>
+    <dimen name="preference_app_progress_height">92dp</dimen>
+    <dimen name="preference_icon_margin_left">83.5dp</dimen>
+    <dimen name="preference_title_margin_left">15.5dp</dimen>
+    <dimen name="preference_layout_height">45dp</dimen>
+
+    <!--电量管理-->
+
+    <dimen name="listview_height">64dp</dimen>
+    <dimen name="listhead_left_right_margin">20dp</dimen>
+
+
+    <dimen name="small_text_size">14sp</dimen>
+    <dimen name="line_spacing_extra">10sp</dimen>
+    <dimen name="big_text_size">24sp</dimen>
+
+    <dimen name="big_button_text_size">20sp</dimen>
+
+    <dimen name="head_text_size">12sp</dimen>
+
+    <dimen name="list_title_size">16sp</dimen>
+    <dimen name="list_summary_size">12sp</dimen>
+
+    <dimen name="head_text_height">30dp</dimen>
+</resources>

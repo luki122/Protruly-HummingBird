@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/album_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/hb_album_item_height"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingRight="@dimen/hb_album_item_padding_left" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/hb_album_cover_width"
+        android:layout_height="@dimen/hb_album_cover_bg_height" >
+
+        <ImageView
+            android:id="@+id/album_art"
+            android:layout_width="@dimen/hb_album_cover_width"
+            android:layout_height="@dimen/hb_album_cover_height"
+            android:layout_alignParentBottom="true"
+            android:contentDescription="@string/img_desc_album_cover"
+            android:scaleType="centerCrop"
+            android:background="@drawable/album_art_default" />
+
+        <ImageView
+            android:id="@+id/album_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/img_desc_album_cover"
+            android:src="@drawable/album_art_border" />
+
+        <ImageView
+            android:id="@+id/play_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/hb_album_play_icon"
+            android:layout_marginBottom="@dimen/hb_album_play_icon_margin_bottom"
+            android:layout_marginRight="@dimen/hb_album_play_icon_margin_right" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/hb_album_info_padding"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/album_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="225dp"
+            android:paddingBottom="@dimen/hb_album_name_padding_bottom"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/hb_item_clicked_text"
+            android:textSize="@dimen/hb_album_name_textsize" />
+
+        <!-- The height is set to half the height of the parent, which is 64 dip -->
+
+        <TextView
+            android:id="@+id/album_numtrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/hb_album_list_item_clicked_textcolor"
+            android:textSize="@dimen/hb_album_numsongs_textsize"
+            android:visibility="visible" />
+		 
+        <TextView
+            android:id="@+id/album_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="@color/hb_album_list_item_clicked_textcolor"
+            android:textSize="@dimen/hb_album_numsongs_textsize"
+            android:visibility="gone" />
+           
+    </LinearLayout>
+    <!-- The height is set to half the height of the parent, which is 64 dip -->
+
+</LinearLayout>

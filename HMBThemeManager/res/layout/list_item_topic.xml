@@ -1,0 +1,45 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/topic_page_list_item_height"
+	    android:layout_marginBottom="@dimen/topic_page_list_item_margin_bottom"
+	    android:layout_marginLeft="@dimen/topic_page_list_item_padding"
+	    android:layout_marginRight="@dimen/topic_page_list_item_padding" >
+
+        <com.hb.thememanager.views.RoundRectImageView 
+	        android:id="@+id/topic_item_cover"
+		    android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:round="@dimen/topic_page_list_item_cover_round"
+	    	android:background="@drawable/topic_bg" 
+            />
+        
+	    <TextView 
+	        android:id="@+id/topic_item_text_title"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="@dimen/topic_page_list_item_content_title_margintop"
+	        android:layout_marginLeft="@dimen/topic_page_list_item_content_title_marginleft"
+	        android:textSize="@dimen/topic_page_list_item_content_title_size"
+	        android:textColor="@color/topic_item_text_color"
+	        android:visibility="gone"
+	        />
+	    <TextView 
+	        android:id="@+id/topic_item_text_des"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_below="@id/topic_item_text_title"
+	        android:layout_marginLeft="@dimen/topic_page_list_item_content_des_marginleft"
+	        android:textSize="@dimen/topic_page_list_item_content_des_size"
+	        android:textColor="@color/topic_item_text_color"
+	        android:visibility="gone"
+	        />
+
+	</RelativeLayout>
+
+</FrameLayout>

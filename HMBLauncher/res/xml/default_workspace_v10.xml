@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <appwidget
+        launcher:className="com.android.launcher3.appwidget.LauncherClock"
+        launcher:packageName="com.android.dlauncher"
+        launcher:screen="0"
+        launcher:spanX="4"
+        launcher:spanY="2"
+        launcher:x="0"
+        launcher:y="0">
+    </appwidget>
+    <!-- Hotseat -->
+    <include launcher:workspace="@xml/dw_phone_hotseat_10v"/>
+
+    <!-- Bottom row -->
+    <favorite launcher:packageName="com.moji.daling"
+    launcher:className="com.moji.mjweather.LauncherActivity" launcher:screen="0" launcher:x="0"
+    launcher:y="3" />
+    <favorite launcher:className="com.android.calendar.AllInOneActivity"
+              launcher:packageName="com.android.calendar" launcher:screen="0"
+              launcher:x="1" launcher:y="3"/>
+    <favorite launcher:className="com.android.deskclock.DeskClock"
+              launcher:packageName="com.android.deskclock" launcher:screen="0"
+              launcher:x="2" launcher:y="3"/>
+    <favorite launcher:className="com.android.settings.Settings"
+              launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="3"
+              launcher:y="3"/>
+    <favorite launcher:className="com.darling.appstore.MainActivity"
+              launcher:packageName="com.darling.appstore" launcher:screen="0"
+              launcher:x="0" launcher:y="4"/>
+    <favorite launcher:className="com.hmb.manager.MainActivity"
+              launcher:packageName="com.hmb.manager" launcher:screen="0" launcher:x="1"
+              launcher:y="4"/>
+    <favorite launcher:className="com.protruly.gallery3d.app.GalleryActivity"
+              launcher:packageName="com.protruly.gallery3d.app" launcher:screen="0"
+              launcher:x="2" launcher:y="4"/>
+    <favorite launcher:className="com.hb.lockscreenapp.MainActivity"
+              launcher:packageName="com.hb.lockscreenapp" launcher:screen="0"
+              launcher:x="3" launcher:y="4"/>
+    <favorite launcher:packageName="com.darling.dljysh" launcher:className="com.darling.dljysh.MainActivity"
+              launcher:screen="1" launcher:x="0" launcher:y="0" />
+    <favorite launcher:className="com.protruly.gallery3d.app.video.BQLMovieActivity"
+              launcher:packageName="com.protruly.gallery3d.app"
+              launcher:screen="1" launcher:x="1" launcher:y="0"/>
+    <favorite launcher:className="cn.com.protruly.filemanager.CategoryActivity"
+              launcher:packageName="cn.com.protruly.filemanager" launcher:screen="1"
+              launcher:x="2" launcher:y="0"/>
+    <favorite launcher:className="com.hmb.calculator2.HMBCalculator"
+              launcher:packageName="com.hmb.calculator2" launcher:screen="1"
+              launcher:x="3" launcher:y="0"/>
+    <favorite launcher:className="com.hb.thememanager.ui.HomePage"
+              launcher:packageName="com.hb.thememanager" launcher:screen="1"
+              launcher:x="0" launcher:y="1"/>
+    <favorite launcher:className="com.android.providers.downloads.ui.DownloadList"
+              launcher:packageName="com.android.providers.downloads"
+              launcher:screen="1" launcher:x="1" launcher:y="1"/>
+    <favorite launcher:className="com.tencent.qqlive.ona.activity.WelcomeActivity"
+              launcher:packageName="com.tencent.qqlive"
+              launcher:screen="1" launcher:x="2" launcher:y="1"/>
+    <favorite launcher:className="cn.wps.moffice.documentmanager.PreStartActivity"
+              launcher:packageName="cn.wps.moffice_eng"
+              launcher:screen="1" launcher:x="3" launcher:y="1"/>
+    <favorite launcher:className="com.autonavi.map.activity.SplashActivity"
+              launcher:packageName="com.autonavi.minimap" launcher:screen="1"
+              launcher:x="0" launcher:y="2"/>
+    <favorite launcher:className="com.tuniu.app.ui.homepage.LaunchActivity"
+              launcher:packageName="com.tuniu.app.ui" launcher:screen="1"
+              launcher:x="1" launcher:y="2"/>
+    <favorite
+        launcher:className="cn.com.protruly.vrbrowser.SplashActivity"
+        launcher:packageName="cn.com.protruly.vrbrowser"
+        launcher:screen="1"
+        launcher:x="3"
+        launcher:y="2" />
+    <folder
+        launcher:screen="1"
+        launcher:title="@string/default_folder"
+        launcher:x="2"
+        launcher:y="2"
+    >
+
+        <favorite launcher:className="com.douwong.xdel.activity.SplashActivity"
+                  launcher:packageName="com.douwong.xdel" launcher:screen="3"
+                  launcher:x="0" launcher:y="2"/>
+        <favorite launcher:className="com.zhilianbao.leyaogo.ui.activity.SplashActivity"
+                  launcher:packageName="com.zhilianbao.leyaogo"
+                  launcher:screen="3" launcher:x="1" launcher:y="1"/>
+        <favorite launcher:className="com.bql.esshopping.activity.SplashActivity"
+                  launcher:packageName="com.bql.esshopping" launcher:screen="3"
+                  launcher:x="2" launcher:y="1"/>
+    </folder>
+</favorites>

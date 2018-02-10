@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 360 86 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_container"
+    android:layout_width="match_parent"
+    android:layout_height="155.3dp"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="93.3dp"
+        android:background="#E6000000" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="17.3dp"
+            android:layout_marginTop="15dp" >
+
+            <LinearLayout
+                android:id="@+id/nameContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:maxWidth="185dp"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/sim_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/sim_icon_1"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/NumberAndArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameContainer"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:includeFontPadding="false"
+                    android:maxWidth="150dp"
+                    android:singleLine="true"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="230dp"
+                    android:layout_gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:textColor="#99FFFFFF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/photo_image"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/action_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="17.3dp"
+            android:layout_marginTop="15dp" >
+
+            <ImageButton
+                android:id="@+id/hangup"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:scaleType="centerInside"
+                android:src="@drawable/pop_reject_hb" />
+
+            <ImageButton
+                android:id="@+id/answer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="21.7dp"
+                android:background="#00000000"
+                android:scaleType="centerInside"
+                android:src="@drawable/pop_answer_hb" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/up_arrow" />
+    </RelativeLayout>
+
+    <TextView       
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6.7dp" 
+        android:includeFontPadding="false"
+        android:singleLine="true"
+        android:text="@string/pop_answer_hint"
+        android:textColor="#99FFFFFF"
+        android:visibility="gone"
+        android:textSize="12sp" />
+
+</LinearLayout>

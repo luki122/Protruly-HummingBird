@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="tag_digit_0">0</string>
+    <string name="tag_digit_1">1</string>
+    <string name="tag_digit_2">2</string>
+    <string name="tag_digit_3">3</string>
+    <string name="tag_digit_4">4</string>
+    <string name="tag_digit_5">5</string>
+    <string name="tag_digit_6">6</string>
+    <string name="tag_digit_7">7</string>
+    <string name="tag_digit_8">8</string>
+    <string name="tag_digit_9">9</string>
+
+    <string name="tag_point">.</string>
+
+    <string name="tag_po_and_ne">+/-</string>
+    <string name="tag_clear">C</string>
+    <string name="tag_del">del</string>
+
+    <string name="tag_div">÷</string>
+    <string name="tag_mul">×</string>
+    <string name="tag_sub">−</string>
+    <string name="tag_add">+</string>
+    <string name="tag_eq">=</string>
+
+    <string name="tag_sin">sin</string>
+    <string name="tag_cos">cos</string>
+    <string name="tag_tan">tan</string>
+    <string name="tag_log">log</string>
+    <string name="tag_1x">1x</string>
+    <string name="tag_x2">^2</string>
+    <string name="tag_x3">^3</string>
+    <string name="tag_xy">^</string>
+    <string name="tag_abs">abs</string>
+    <string name="tag_factorial">!</string>
+    <string name="tag_sqrt">√</string>
+    <string name="tag_sqrt_xy">^(1÷</string>
+    <string name="tag_pi">π</string>
+    <string name="tag_e">e</string>
+    <string name="tag_ex">e^</string>
+    <string name="tag_ln">ln</string>
+    <string name="tag_lparen">(</string>
+    <string name="tag_rparen">)</string>
+    <string name="tag_percent">%</string>
+    <string name="tag_ee">×10^</string>
+
+
+</resources>

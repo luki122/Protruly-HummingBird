@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Switch xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/switch_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:switchMinWidth="@dimen/switch_MinWidth"
+    android:textOff="@string/close"
+    android:textOn="@string/open"
+    android:thumb="@drawable/thumb"
+    android:track="@drawable/track" >
+</Switch>

@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "cn.com.protruly.filemanager"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
+        }
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['../src']
+            resources.srcDirs = ['../src']
+            aidl.srcDirs = ['../src']
+            res.srcDirs = ['../res']
+            assets.srcDirs = ['../assets']
+            manifest.srcFile = '../AndroidManifest.xml'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile files('../libs/hb-framework-sdk-classes.jar')
+    androidTestCompile 'com.android.support:support-annotations:19.1.0'
+    androidTestCompile 'com.android.support.test:runner:0.4.1'
+    androidTestCompile 'com.android.support.test:rules:0.4.1'
+    compile files('/home/sqf/HMBAndroidSourceCode_6/packages/apps/HMBFileManager/libs/hb-framework-sdk-classes.jar')
+    compile files('/home/sqf/HMBAndroidSourceCode_6/packages/apps/HMBFileManager/libs/com.ibm.icu_3.8.jar')
+    compile files('/home/sqf/HMBAndroidSourceCode_6/packages/apps/HMBFileManager/libs/pinyin4j-2.5.0.jar')
+    compile files('/media/sqf/Disk/SourceCode_K31/packages/apps/HMBFileManager/libs/hb-framework-sdk-classes.jar')
+}

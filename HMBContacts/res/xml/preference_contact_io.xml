@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="in_preference"
+        android:title="@string/hb_contact_import" >
+        <Preference
+            android:key="hb_sim_to_phone"
+            android:title="@string/hb_sim_to_phone" />
+        <Preference
+            android:key="hb_sd_to_phone"
+            android:summary="@string/hb_sd_to_phone_subtitle"
+            android:title="@string/hb_sd_to_phone" />
+        <Preference
+            android:key="hb_external_sd_to_phone"
+            android:summary="@string/hb_external_sd_to_phone_subtitle"
+            android:title="@string/hb_external_sd_to_phone" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="out_preference"
+        android:title="@string/hb_contact_export" >
+
+        <!--
+             <Preference
+            android:key="hb_phone_to_sim"
+            android:title="@string/hb_phone_to_sim" >
+        </Preference>
+        -->
+        <Preference
+            android:key="hb_phone_to_sd"
+            android:summary="@string/hb_phone_to_sd_subtitle"
+            android:title="@string/hb_phone_to_sd" />
+        <Preference
+            android:key="hb_phone_to_external_sd"
+            android:summary="@string/hb_phone_to_external_sd_subtitle"
+            android:title="@string/hb_phone_to_external_sd" />
+        <!--
+        <Preference
+            android:key="hb_delete_sim_contacts"
+            android:summary="@string/hb_delete_sim_contacts"
+            android:title="@string/hb_delete_sim_contacts" >
+        </Preference>
+        <Preference
+            android:key="hb_part_delete_sim_contacts"
+            android:summary="@string/hb_part_delete_sim_contacts"
+            android:title="@string/hb_part_delete_sim_contacts" >
+        </Preference>
+        -->
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="merge_preference"
+        android:title="@string/hb_merge_contacts" >
+        <Preference
+            android:key="hb_merge_contacts"
+            android:summary="@string/hb_merge_contacts_subtitle"
+            android:title="@string/hb_merge_contacts" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

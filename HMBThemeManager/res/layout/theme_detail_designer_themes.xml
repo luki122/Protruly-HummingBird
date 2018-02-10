@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <include layout="@layout/theme_list_title_bar"/>
+    <GridView
+        android:id="@+id/designer_theme_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:scrollbars="none"
+        android:horizontalSpacing="@dimen/theme_home_list_divider_width"
+        android:verticalSpacing="@dimen/theme_home_list_divider_height"
+    />
+
+</LinearLayout>

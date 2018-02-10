@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/hb_single_topframe"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:background="@drawable/hb_default_playlist_bg" >
+
+        <!--
+             <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="143dp"
+            android:gravity="bottom" >
+        -->
+
+        <LinearLayout
+            android:id="@+id/hb_single_rename_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="143dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:gravity="bottom" >
+
+            <TextView
+                android:id="@+id/hb_single_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="18.6sp" />
+
+            <ImageView
+                android:id="@+id/hb_single_rename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="2.5dp"
+                android:src="@drawable/hb_songlist_rename"
+                android:visibility="gone" />
+
+            <hb.widget.HbEditText
+                android:id="@+id/hb_single_rename_edit"
+                android:layout_width="193.3dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/hb_songlist_rename_bg"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:maxLength="12"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="1dp"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="18.6sp"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- </RelativeLayout> -->
+
+        <LinearLayout
+            android:id="@+id/hb_headbar_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@drawable/hb_netplaylist_bottombg"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@drawable/hb_splite_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45.3dp"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:id="@+id/hb_id_add_song"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/hb_recommend_bg"
+                    android:clickable="true" >
+
+                    <Button
+                        android:id="@+id/hb_id_add_song_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/hb_songlist_add_btn"
+                        android:drawablePadding="6dp"
+                        android:text="@string/hb_add_playlist"
+                        android:textColor="@color/hb_nettrackbtn_text"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hb_vertical_line2" />
+
+                <FrameLayout
+                    android:id="@+id/hb_id_eidt_song"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/hb_recommend_bg"
+                    android:clickable="true" >
+
+                    <Button
+                        android:id="@+id/hb_id_edit_song_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/hb_edit_songlist_btn"
+                        android:drawablePadding="6dp"
+                        android:text="@string/hb_edit_playlist"
+                        android:textColor="@color/hb_nettrackbtn_text"
+                        android:textSize="14sp" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hb_vertical_line2" />
+
+                <FrameLayout
+                    android:id="@+id/hb_id_delete_single"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/hb_recommend_bg"
+                    android:clickable="true" >
+
+                    <Button
+                        android:id="@+id/hb_id_delete_single_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:clickable="false"
+                        android:drawableLeft="@drawable/hb_songlist_delete_btn"
+                        android:drawablePadding="6dp"
+                        android:text="@string/hb_delete_playlist"
+                        android:textColor="@color/hb_nettrackbtn_text"
+                        android:textSize="14sp" />
+                </FrameLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/hb_play_header"
+        android:layout_width="match_parent"
+        android:layout_height="45.3dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/hb_songlisttem_padding"
+        android:paddingRight="@dimen/hb_songlisttem_padding" >
+
+        <Button
+            android:id="@+id/hb_id_play_single"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:drawablePadding="7dp"
+            android:drawableRight="@drawable/hb_album_btn_allplay"
+            android:gravity="center"
+            android:paddingRight="5.0dp"
+            android:text="@string/play_all"
+            android:textColor="@color/hb_randplay_text"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/hb_single_song_num"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:textColor="#7d7d7d"
+            android:textSize="@dimen/hb_songnumber_textsize" />
+    </LinearLayout>
+
+</LinearLayout>

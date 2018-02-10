@@ -1,0 +1,75 @@
+<!--
+  ~ Copyright (C) 2014 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+
+<!-- Extends FrameLayout -->
+<com.dui.systemui.statusbar.DuiNotificationOverflowContainer
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/notification_min_height"
+    android:focusable="true"
+    android:clickable="true"
+    >
+    <com.android.systemui.statusbar.NotificationBackgroundView android:id="@+id/backgroundNormal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <com.android.systemui.statusbar.NotificationBackgroundView android:id="@+id/backgroundDimmed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingEnd="24dp"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="24dp">
+        <ImageView
+            android:id="@+id/dui_id_box_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dui_ic_box"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/dui_id_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/hb_message_box_size"
+            android:textColor="#ffffffff"
+            android:text="@string/dui_notify_over_name"
+            android:layout_marginStart="12dp"
+            android:layout_toRightOf="@id/dui_id_box_icon"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dui_ic_outstretch"
+            android:layout_toRightOf="@id/dui_id_box"/>
+        <TextView
+            android:layout_below="@id/dui_id_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:textColor="#b3ffffff"
+            android:id="@+id/id_tile"
+            android:ellipsize="middle"
+            android:layout_toRightOf="@id/dui_id_box_icon"
+            android:layout_marginStart="12dp"/>
+    </RelativeLayout>
+</com.dui.systemui.statusbar.DuiNotificationOverflowContainer>

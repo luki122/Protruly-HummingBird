@@ -1,0 +1,60 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.com.mst:windowLayoutSt
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <!--<style name="AppTheme" parent="AppBaseTheme">-->
+        <!--&lt;!&ndash; All customizations that are NOT specific to a particular API-level can go here. &ndash;&gt;-->
+    <!--</style>-->
+
+    <!--<style name="WindowStyle.statusBar" parent="android:Theme.Light">-->
+        <!--<item name="android:windowTranslucentStatus">false</item>-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
+        <!--&lt;!&ndash; Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色 &ndash;&gt;-->
+        <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
+    <!--</style>-->
+
+    <style name="HbTheme.WithBackIcon" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:windowLayoutStyle">@style/WindowStyle.WithBackIcon</item>
+    </style>
+
+    <style name="WindowStyle.WithBackIcon" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+        <item name="android:listDivider">@com.hb:drawable/list_divider_material_with_icon</item>
+        <!--<item name="com.hb:windowHasToolbar">true</item>-->
+    </style>
+
+    <style name="HbTheme.NoSystem" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:windowLayoutStyle">@style/WindowStyle.NoSystem</item>
+    </style>
+    <style name="WindowStyle.NoSystem" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+        <item name="com.hb:windowHasToolbar">false</item>
+    </style>
+    <style name="myToolbarStyle" parent="@com.hb:style/ToolbarStyle">
+        <item name="android:colorPrimary">@android:color/primary_text_dark</item>
+    </style>
+
+    <style name="NotificationTitle" parent="android:TextAppearance.StatusBar.EventContent.Title" />
+
+    <style name="NotificationContent" parent="android:TextAppearance.StatusBar.EventContent" />
+
+    <!-- <style name="Theme.System.DialogStyle" parent="@style/DialogWindowTitle.DeviceDefault" /> -->
+    <style name="Theme.System.DialogStyle" parent="@android:style/Theme.Holo.Light.Dialog">
+
+　　        <item name="android:windowBackground">@android:color/transparent</item>
+　　        <item name="android:windowContentOverlay">@null</item>
+
+　　</style>
+
+</resources>

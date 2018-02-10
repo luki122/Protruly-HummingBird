@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/hb_no_network"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone" >
+
+    <ImageView
+        android:id="@+id/id_no_network_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="186dp"
+        android:contentDescription="@null"
+        android:src="@drawable/hb_no_network" />
+
+    <TextView
+        android:id="@+id/id_no_network_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_no_network_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="@string/hb_no_network"
+        android:textColor="#9e9e9e"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/id_no_network_button"
+        android:layout_width="248dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/id_no_network_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="@string/hb_setting_network"
+        android:textColor="@color/hb_no_network_button_text"
+        android:textSize="18sp" />
+
+</RelativeLayout>

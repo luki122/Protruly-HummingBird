@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:layout_alignParentBottom="true"
+    android:baselineAligned="false">
+
+    <FrameLayout style="@style/FrameLayoutStyle">
+
+        <ImageView
+            android:id="@+id/bill_view"
+            style="@style/ImageViewStyle"
+            android:src="@drawable/ic_menu_bill" />
+    </FrameLayout>
+
+    <FrameLayout style="@style/FrameLayoutStyle">
+
+        <ImageView
+            android:id="@+id/font_view"
+            style="@style/ImageViewStyle"
+            android:src="@drawable/ic_menu_font" />
+    </FrameLayout>
+
+    <FrameLayout style="@style/FrameLayoutStyle">
+
+        <ImageView
+            android:id="@+id/image_view"
+            style="@style/ImageViewStyle"
+            android:src="@drawable/ic_menu_camera" />
+    </FrameLayout>
+
+    <FrameLayout style="@style/FrameLayoutStyle">
+
+        <ImageView
+            android:id="@+id/style_view"
+            style="@style/ImageViewStyle"
+            android:src="@drawable/ic_menu_style" />
+    </FrameLayout>
+</LinearLayout>

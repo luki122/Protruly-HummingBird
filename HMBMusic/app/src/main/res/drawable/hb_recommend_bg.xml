@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/hb_recommend_bgdrawable" android:state_enabled="true" android:state_selected="true"/>
+    <item android:drawable="@drawable/hb_recommed_pressbg" android:state_enabled="true" android:state_pressed="true"/>
+    <item android:drawable="@drawable/hb_recommend_bgdrawable"/>
+
+</selector>

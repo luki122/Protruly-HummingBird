@@ -1,0 +1,111 @@
+<resources>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="com.hb:Theme.Hb.Material.Light">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:colorControlNormal">@color/colorControllNormal</item>
+    </style>
+
+    <style name="Theme.LocalTheme.Light" parent="AppTheme">
+        <item name="com.hb:windowLayoutStyle">@style/LocalThemeActivity.WindowToolbar</item>
+        <item name="android:toolbarStyle">@style/LocalThemeActivity.ToolbarStyle</item>
+        <item name="android:startWindowLayout">@layout/activity_starting</item>
+        <item name="android:ratingBarStyleSmall">@style/Widget.Material.RatingBar.Small</item>
+        <item name="ratingBarStyleNormal">@style/Widget.Material.RatingBar.Normal</item>
+        <item name="android:ratingBarStyle">@style/Widget.Material.RatingBar.Medium</item>
+	<item name="com.hb:actionPositiveText">@string/select_all</item>
+        <item name="com.hb:actionNagativeText">@string/cancel</item>
+    </style>
+
+    <style name="Theme.ThemeManager" parent="@com.hb:style/Theme.Hb.Material.Light"/>
+    
+    <style name="Theme.ThemeManager.PreviewImageTranslucent">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/WindowNoAnimationStyle</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.ThemeManager.PreviewImageTranslucent.Wallpaper">
+        <item name="android:windowBackground">?android:attr/colorBackground</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    
+    <style name="Theme.ThemeManager.Wallpaper.SetWallpaper"  parent="Theme.ThemeManager.PreviewImageTranslucent.Wallpaper">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.ThemeManager.Wallpaper.CropWallpaper"  parent="Theme.ThemeManager">
+        <item name="android:actionBarSize">@dimen/toolbar_height_with_transparent_statusbar</item>
+        <item name="com.hb:colorToolbarIcon">#ffffff</item>
+        <item name="android:toolbarStyle">@com.hb:style/ToolbarStyle</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/preview_action_bar_background</item>
+    </style>
+
+    <style name="Theme.ThemeManager.HomePage" >
+        <item name="com.hb:windowLayoutStyle">@style/HomePage.WindowToolbar</item>
+    </style>
+    
+    
+     <style name="Theme.ThemeManager.SecondPage" >
+         <item name="com.hb:windowLayoutStyle">@style/SecondPage.WindowToolbar</item>
+         <item name="android:ratingBarStyleSmall">@style/Widget.Material.RatingBar.Small</item>
+         <item name="ratingBarStyleNormal">@style/Widget.Material.RatingBar.Normal</item>
+         <item name="android:ratingBarStyle">@style/Widget.Material.RatingBar.Medium</item>
+    </style>
+
+    <style name="Theme.ThemeManager.SecondPage.CommentList" >
+        <item name="android:windowLightNavigationBarAddLine">true</item>
+    </style>
+
+    <style name="Theme.ThemeManager.SecondPage.CommentList.ProgressBar" >
+        <item name="android:colorControlActivated">@color/comment_start_level_color</item>
+    </style>
+
+    <style name="Theme.ThemeManager.SecondPage.AddComment" >
+        <item name="com.hb:windowLayoutStyle">@style/WindowLayoutAddComments</item>
+        <item name="com.hb:actionPositiveText">@string/submit_comment</item>
+        <item name="com.hb:actionNagativeText">@com.hb:string/cancel</item>
+        <item name="com.hb:title">@string/add_comment_title</item>
+        <item name="android:ratingBarStyle">@style/Widget.Material.RatingBar.Normal</item>
+    </style>
+
+
+
+    <style name="Theme.ThemeManager.SecondPage.ThemePkgDetail" >
+        <item name="com.hb:windowLayoutStyle">@style/SecondPage.WindowToolbar</item>
+        <item name="android:ratingBarStyleSmall">@style/Widget.Material.RatingBar.Small</item>
+        <item name="ratingBarStyleNormal">@style/Widget.Material.RatingBar.Normal</item>
+        <item name="android:ratingBarStyle">@style/Widget.Material.RatingBar.Medium</item>
+        <item name="android:windowLightNavigationBarAddLine">true</item>
+    </style>
+
+
+    <style name="Theme.ThemeManager.ringtone"  parent="com.hb:Theme.Hb.Material.Light">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        <item name="android:backgroundDimEnabled">true</item><!--背景变黑-->
+        <item name="android:backgroundDimAmount">0.5</item><!--背景变黑程度-->
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+    </style>
+
+    <style name="WallpaperSetDialog" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimStyle</item>
+    </style>
+    
+
+</resources>

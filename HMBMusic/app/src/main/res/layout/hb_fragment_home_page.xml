@@ -1,0 +1,6 @@
+
+
+<com.protruly.music.widget.HBViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/id_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />

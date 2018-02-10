@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/title_clean_optimize" >
+
+    <PreferenceCategory android:key="preference_clean_details" >
+
+        <com.hmb.manager.rubbishclean.CleanScannerPreference android:key="preference_clean_scanner" />
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:icon="@drawable/rubblish_file"
+        android:key="preference_rubblish"
+        android:title="@string/rubblish_clean_title" >
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/app_cache"
+        android:key="preference_app_cache"
+        android:title="@string/app_cache_clean_title" >
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/background_app"
+        android:key="preference_background_app"
+        android:title="@string/background_app_kill_title" >
+
+        <intent
+            android:targetClass="com.hmb.manager.rubbishclean.BackGroundAppActivity"
+            android:targetPackage="com.hmb.manager" />
+    </PreferenceScreen>
+
+</PreferenceScreen>

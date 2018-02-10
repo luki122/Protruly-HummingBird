@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	android:title="@string/safety_protection">
+
+	<PreferenceCategory android:key="header_parent">
+		<com.hmb.manager.qscaner.perference.ScannerPanelPreference android:key="preference_scanner_panel" />
+	</PreferenceCategory>
+
+	<PreferenceScreen
+		android:key="preference_not_official"
+		android:title="@string/safety_not_official"
+		android:icon="@drawable/qs_not_office">
+	</PreferenceScreen>
+
+	<PreferenceScreen
+		android:key="preference_viruses"
+		android:title="@string/safety_viruses"
+		android:icon="@drawable/qs_viruses">
+	</PreferenceScreen>
+
+	<PreferenceScreen
+		android:key="preference_pay_risks"
+		android:title="@string/safety_pay_risks"
+		android:icon="@drawable/qs_pay_risk">
+	</PreferenceScreen>
+
+	<PreferenceScreen
+		android:key="preference_stealaccount_risks"
+		android:title="@string/safety_stealaccount_risks"
+		android:icon="@drawable/qs_stealaccount_risk">
+	</PreferenceScreen>
+
+	<PreferenceScreen
+		android:key="preference_other_risks"
+		android:title="@string/safety_other_risks"
+		android:icon="@drawable/qs_network_risk">
+	</PreferenceScreen>
+
+	<!--<PreferenceScreen-->
+		<!--android:key="preference_plugins"-->
+		<!--android:title="@string/safety_plugins"-->
+		<!--android:icon="@drawable/battery_detail">-->
+	<!--</PreferenceScreen>-->
+
+</PreferenceScreen>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color><!--白色-->
+    <color name="black">#000000</color><!--白色-->
+
+    <color name="head_text">#8A000000</color>
+    <color name="head_text_bg">#FFF4F4F4</color>
+    <color name="list_title_text">#DE000000</color>
+    <color name="list_summary_text">#61000000</color>
+    <color name="line_color">#29000000</color>
+    <color name="preference_title_color">#FF525252</color>
+    <color name="preference_summary_color">#FF6E6E6E</color>
+    <color name="app_progress_summary_color">#8A000000</color>
+
+    <color name="colorPrimary">#06C012</color>
+    <color name="colorPowerCicle">#D7F5D9</color>
+    <color name="no_app_text">#FFE0E0E0</color>
+
+    <color name="menu_text_color">#FF06C012</color>
+
+</resources>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="confirm_ok">OK</string>
+    <string name="confirm_cancel">Cancel</string>
+    <string name="confirm_delete">Delete</string>
+    <string name="app_name">Theme Store</string>
+    <string name="action_settings">Settings</string>
+    <string name="local_theme">Theme</string>
+    <string name="delete">Delete</string>
+    <string name="theme_detail_designer">Designer:<xliff:g id="designer">%1$s</xliff:g></string>
+    <string name="theme_detail_size">Size:<xliff:g id="size">%1$s</xliff:g></string>
+    <string name="theme_detail_description">Description:<xliff:g id="description">%1$s</xliff:g></string>
+    <string name="download_state_apply">Apply</string>
+    <string name="download_state_applied">Applied</string>
+    <string name="msg_apply_theme">Applying theme......</string>
+    <string name="statu_apply_theme_failed">Apply theme failed</string>
+    <string name="msg_select_theme_applied">Current Theme Was Applied</string>
+	<string name="default_theme_name">Gold legend</string>
+    <string name="default_theme_description">HummingBird theme</string>
+    <string name="default_theme_designer">Protruly</string>
+    <string name="empty_directory_hint">Empty directory</string>
+    <string name="start_path_name">Device</string>
+    <string name="type_archive">Archive</string>
+    <string name="type_certificate">Certificate</string>
+    <string name="type_directory">Directory</string>
+    <string name="type_document">File</string>
+    <string name="type_drawing">Picture</string>
+    <string name="type_excel">Spreadsheet</string>
+    <string name="type_image">Image</string>
+    <string name="type_music">Music</string>
+    <string name="type_pdf">PDF document</string>
+    <string name="type_power_point">Presentation</string>
+    <string name="type_word">Document</string>
+    <string name="more">More</string>
+    <string name="empty_text">Have no data</string>
+
+    <!-- msg for load local theme -->
+    <string name="msg_load_theme_fail">Load theme fail</string>
+    <string name="msg_load_theme_exists">Target theme was loaded</string>
+    <string name="msg_load_theme_error">Load theme error,please check file of this theme</string>
+    <!-- Wallpaper String -->
+    <string name="title_wallpaper">Desktop Wallpaper</string>
+    <string name="title_lockscreen_wallpaper">LockScreen Wallpaper</string>
+    <string name="desktop_wallpaper_entry_title">Desktop</string>
+    <string name="lockscreen_wallpaper_entry_title">LockScreen</string>
+    <string name="vr_wallpaper_entry_title">VR Wallpaper</string>
+    
+    <!-- Theme type Title -->
+    <string name="theme_wallpaper_title">Wallpaper</string>
+    <string name="set_wallpaper_title">Wallpaper Crop</string>
+    <string name="wallpaper_crop_done">Done</string>
+    <!-- Setting Wallpaper -->
+    <string name="image_loading">Loading picture...</string>
+    <string name="image_too_small">Sorry, the pixel of the selected picture is too low and not suitable to be set as a wallpaper.</string>
+    <string name="image_load_failed">Picture failed to load, please reselect a picture</string>
+    <string name="wallpaper_set_success">Successfully set. The wallpaper has been replaced.</string>
+    <string name="wallpaper_set_failed">Failed to set.The picture is missing or damaged.</string>
+    <string name="wallpaper_setting">Setting wallpaper...</string>
+    <string name="set_wallpaper_dialog_title">Wallpaper</string>
+    <string name="msg_select_wallpaper_applied">Current Wallpaper is applied</string>
+    <string name="msg_apply_wallpaper_fail">Apply Wallpaper fail</string>
+    <!-- wallpaper list title -->
+    <string name="wallpaper_list_title_desk">Desktop Wallpaper</string>
+    <string name="wallpaper_list_title_lockscreen">LockScreen Wallpaper</string>
+    <string name="tab_title_theme">Theme</string>
+    <string name="tab_title_wallpaper">Wallpaper</string>
+    <string name="tab_title_ringtong">RingTong</string>
+    <string name="tab_title_font">Font</string>
+    <string name="text_icon_rank">Rank</string>
+    <string name="text_rank">Rank</string>
+    <string name="text_category">Category</string>
+    <string name="text_topic">Topic</string>
+    <string name="text_user_center">User Center</string>
+    <string name="text_icon_category">Category</string>
+    <string name="text_icon_topic">Topic</string>
+    <!-- user center -->
+    <string name="text_user">User</string>
+    <string name="text_purchase_record">Purchase Record</string>
+    <string name="text_user_feedback">Feedback</string>
+    <string name="text_user_theme">My Theme</string>
+    <string name="text_user_wallpaper">My Wallpaper</string>
+    <string name="text_user_ringtong">My RingTone</string>
+    <string name="text_user_font">My Font</string>
+    <string name="text_user_login">Login</string>
+    <string name="text_user_logining">Logining...</string>
+    <string name="msg_no_network">No Network,Click to setup</string>
+    <string name="no_network">No Network</string>
+    <string name="msg_no_wifi_setting">Use of traffic download in non WiFi environment</string>
+    <string name="msg_no_wifi_default_setting">closed</string>
+    <string name="msg_no_wifi_open">opened</string>
+    <string name="msg_open_mobile_network_download">Current network is not WIFI,Confirm to download with mobile network</string>
+    <string name="msg_open_mobile_wizard">Closed default,config in User Center-> Settings</string>
+    <string name="msg_about">About</string>
+    <string name="msg_about_app">打令主题商店</string>
+    <string name="msg_about_version">版本号：1.0</string>
+    <string name="msg_about_msg1">欢迎各大设计公司入驻主题商店\n网址：http://designer.darling.cn</string>
+    <string name="msg_about_msg2">合作咨询\n邮箱：yuy.li@protruly.com.cn</string>
+    <string name="msg_copy_right">Copyright © 2017\n深圳市保千里电子有限公司</string>
+    <string name="msg_open_mobile_download">請在個人中心-設定裏開啟流量下載或使用wifi下載</string>
+    <string name="open_network_download">Open</string>
+    <!-- topic detail -->
+    <string name="topic_detail_test">test-test</string>
+    <string name="theme_download_time_suffix_1">+</string>
+    <string name="theme_download_time_suffix"></string>
+    <string name="theme_detail_desc_title">Theme Description</string>
+    <string name="theme_detail_comment_title">Theme Comments</string>
+    <string name="comments_empty_tips">No Comments</string>
+    <string name="add_comments">Add Comments</string>
+    <string name="submit_comment">Submit</string>
+    <string name="add_comment_title">Comment</string>
+    <string name="select_start_and_add_comment">Select Start,Input Comment: </string>
+    <string name="add_comment_hint">Enter your comment</string>
+    <string name="comment_tip_count">Show All Comments(<xliff:g id="count">%1$s</xliff:g>)</string>
+    <string name="comment_post_time"><xliff:g id="count">%1$s</xliff:g> minutes ago</string>
+    <!-- wallpaper detail -->
+    <string name="wallpaper_detail_save_wallpaper">save</string>
+    <string name="wallpaper_detail_save_wallpaper_applied">saved</string>
+    <string name="wallpaper_detail_set_wallpaper">setting</string>
+    <string name="wallpaper_detail_preview_wallpaper">preview</string>
+    <string name="wallpaper_detail_wallpaper_loading">Save wallpaper, please wait a moment.</string>
+    <string name="no_network_cannot_load">Network offline, unable to load more.</string>
+    <string name="pic_load_error">Picture loading failed. Please refresh.</string>
+    <!-- pay dialog -->
+    <string name="pay_dialog_need_payment">payment: </string>
+    <string name="pay_dialog_pay_alipay">Alipay</string>
+    <string name="pay_dialog_pay_wechat">Wechat payment</string>
+    <string name="pay_dialog_pay_now">Pay</string>
+    <string name="pay_dialog_pay_wechat_not_installed">Not installed</string>
+    <string name="pay_dialog_pay_title">Buy <xliff:g id="title">%1$s</xliff:g></string>
+    <string name="pay_dialog_pay_price"> ¥<xliff:g id="price">%1$s</xliff:g></string>
+    <string name="pay_msg_no_wechat_client">No WeChat client installed</string>
+    <string name="pay_msg_wechat_client_low">The current version of WeChat is too low.</string>
+    <!-- String for test -->
+    <string name="theme_detail_desc_test"> 文字描述文字描述文字描述文字描述文字描述文字描述文字文
+字描述文字描述文字描述文字描述文字描述描述文字描述文字
+文字描述文字描述文字描述文字描述文字描述文字描述文
+文字描述文字描述文字描述文字描述文字描述文字描述文字文
+字描述文字描述文字描述文字描述文字描述描述文字描述文字
+文字描述文字描述文字描述文字描述文字描述文字描述文</string>
+    <string name="time_test">7 minutes ago</string>
+    <string name="topic_detail_ringtone_listener">listener</string>
+    <string name="topic_detail_ringtone_setting">setting</string>
+    <string name="topic_detail_etv_expand">expand</string>
+    <string name="topic_detail_etv_collapse">collapse</string>
+    
+    <string name="wallpaper_detail_popupwindow_cancel">cancel</string>
+    <string name="wallpaper_detail_popupwindow_set_together">desktop and lockscreen</string>
+    <string name="wallpaper_detail_popupwindow_set_walllpaper">set desktop</string>
+    <string name="wallpaper_detail_popupwindow_set_lockscreen">set lockscreen</string>
+    <string name="search_empty_text">No search results</string>
+    <string name="activity_title_all_comments">All Comments</string>
+
+    <string name="search_history_label">History</string>
+    <string name="message_delete_search_history">Delete or not?</string>
+    <string name="try_theme">Try</string>
+    <string name="pay_for">¥ <xliff:g id="price">%1$s</xliff:g>Pay</string>
+    <!-- download state text -->
+    <string name="download">Download</string>
+    <string name="download_cancel">Cancel</string>
+    <string name="download_pause">Pause</string>
+    <string name="download_continue">Continue</string>
+    <string name="download_paused">Paused</string>
+    <string name="download_downloading">Downloading <xliff:g id="percent">%1$s</xliff:g></string>
+    <string name="downloaded">Downloaded</string>
+    <string name="paid">Paid</string>
+    <string name="tab_title_charge">charge</string>
+    <string name="tab_title_free">free</string>
+    <string name="tab_title_new">new</string>
+    <string name="tab_title_hot">hot</string>
+    <string name="designer_theme_title">Designer themes</string>
+    <string name="theme_price_free">Free</string>
+    <string name="apply_now">Set</string>
+    
+    <string name="settoincallringtone">set as incall ringtone</string>
+    <string name="settosmsringtone">set as Information ringtone</string>
+    <string name="settoalarmringtone">set as alarm ringtone</string>
+    <string name="downloadringtone">Downloading</string>
+    <string name="downloadringtonefail">Download failed</string>
+    <string name="setincallringtonesucc">set incall ringtone success</string>
+    <string name="setinforingtonesucc">set info ringtone success</string>
+ 
+    <string name="not_paid">No Paid</string>
+    <string name="has_new_version">Update</string>
+    <string name="download_new_version">Upgrade</string>
+    <string name="select_all">Select All</string>
+    <string name="unselect_all">Unselect All</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_number">Select<xliff:g id="count">%1$s</xliff:g></string>
+    <string name="delete_theme_title">Delete Themes</string>
+    <string name="delete_theme_msg">Delete Selected Themes?</string>
+    <string name="delete_wallpaper_title">Delete Wallpaper</string>
+    <string name="delete_wallpaper_msg">Confirm to delete selected wallpapers</string>
+    <string name="tips_select_theme_to_delete">Please Select theme to delete</string>
+    <string name="no_network_in_large_view">Can\'t connect to the network</string>
+    <string name="click_to_setup_network">Click to Config network</string>
+    <string name="request_fail">Request Failure</string>
+    <string name="click_to_refresh">Click to refresh</string>
+    <string name="loading">Loading</string>
+    <string name="go_to_online">Online Page</string>
+    <string name="empty_resource">No Resources Found</string>
+    <string name="add_comments_success">Comment submit success</string>
+    <string name="add_comments_failure">Comment submit failure</string>
+    <string name="comment_time_now">Now</string>
+    <string name="comment_time_minute"><xliff:g id="minute">%1$s</xliff:g>minutes ago</string>
+    <string name="comment_time_hour"><xliff:g id="hour">%1$s</xliff:g>hours ago</string>
+    <string name="download_onwaited">Waitting</string>
+    <string name="download_failed">download failed</string>
+    <string name="pay_failure">Pay failure</string>
+    <string name="pay_success">Pay Success</string>
+    <string name="start_try_theme">Try to apply select theme</string>
+    <string name="end_try_theme">Try apply theme time up</string>
+    <string name="feedback_comment">hi，我是产品汪“柯基”，\n感谢您为我们的产品提供宝贵的建议和意见，\n我们珍惜您的每一个反馈~</string>
+    <string name="feedback_hint">请在这里填写您的建议或者意见~</string>
+    <string name="feedback_commit">commit</string>
+    <string name="feedback_commit_succ">commit success</string>
+    <string name="feedback_commit_fail">commit fail</string>
+    <string name="feedback_commit_no_input">please input feedback</string>
+    <string name="no_purchase_record">No records</string>
+    <string name="add_comment_pay_tip">Only can add comment for paid theme</string>
+    <string name="add_comment_download_tip">Only can add comment for downloaded theme</string>
+    <string name="theme_applied">Being Applied</string>
+      <string name="setup_success_title">Congratulations,Setup Finished</string>
+    <string name="setup_apply_theme">Finish Setup</string>
+    <string name="authorization_msg">
+        "欢迎使用打令主题商店。为了向您提供全方位的服务，需要使用到如下权限：\n
+        1、客户端使用完全免费。在使用过程中会产生移动网络或WLAN流量，具体流量资费请咨询当地运营商。\n
+        2、读写SD卡数据。保护用户隐私是打令主题商店客户端的一项基础政策，在用户授权的情况下不承担该应用任何方面的任何责任，包括但不限于其性能，知识产权，安全，支持，服务，内容及收费等，本软件可能会收集用户的应用软件、地理位置、手机设备信息等基本信息。"
+    </string>
+    <string name="authorization_no_tips">No Tips</string>
+    <string name="tips_title">Tips</string>
+    <string name="quit">Quit</string>
+    <string name="no_tips">I Get</string>
+    <string name="finish_try">Finish(<xliff:g id="time_left">%1$s</xliff:g>)</string>
+    <string name="system_font_name">System font</string>
+    <string name="pay_when_no_network">Can\'t pay when no network</string>
+</resources>

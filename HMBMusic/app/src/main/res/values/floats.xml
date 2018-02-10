@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="bet_width_offset" format="float" type="dimen">19.3</item> 
+</resources>

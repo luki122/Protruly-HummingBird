@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:custom="http://schemas.android.com/apk/res/com.protruly.music"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <hb.widget.HbListView
+            android:id="@+id/song_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:divider="@drawable/line2"
+            android:headerDividersEnabled="false"
+            android:scrollbars="none" />
+
+        <ImageView
+            android:id="@+id/hb_song_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:background="@drawable/song_selected"
+            android:divider="@drawable/line2"
+            android:headerDividersEnabled="false"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/song_hide_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/hb_songheader_layout"
+            android:clickable="false"
+            android:visibility="gone" />
+
+        <hb.widget.HbListView
+            android:id="@+id/hb_search_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:divider="@drawable/line2"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/dialog"
+            android:layout_width="@dimen/hb_letter_dialog"
+            android:layout_height="@dimen/hb_letter_dialog"
+            android:layout_gravity="center"
+            android:background="@drawable/song_tab"
+            android:gravity="center"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/hb_letter_size"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_sidebar"
+            android:layout_width="@dimen/hb_sidebar_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:clickable="true" />
+
+        <com.protruly.music.widget.SideBar
+            android:id="@+id/sidebar"
+            android:layout_width="@dimen/hb_sidebar_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:layout_marginBottom="@dimen/hb_sidebar_marginbottom"
+            android:layout_marginTop="60dp"
+            custom:siderbar_fontBottom="-5"
+            custom:siderbar_marginBottom="41"
+            custom:siderbar_marginTop="57" />
+
+        <com.protruly.music.widget.SideBar
+            android:id="@+id/sidebar2"
+            android:layout_width="@dimen/hb_sidebar_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center"
+            android:layout_marginBottom="69dp"
+            android:layout_marginTop="79dp"
+            android:visibility="gone"
+            custom:siderbar_fontBottom="-5"
+            custom:siderbar_marginBottom="2"
+            custom:siderbar_marginTop="79" />
+
+        <TextView
+            android:id="@+id/hb_no_songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/hb_no_songs"
+            android:visibility="gone" />
+    </FrameLayout>
+<!-- 
+</LinearLayout> -->

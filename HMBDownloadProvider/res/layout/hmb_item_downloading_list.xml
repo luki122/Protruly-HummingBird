@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/hb_item_padding_top" 
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/file_icon"
+        android:layout_width="@dimen/hb_item_icon_size"
+        android:layout_height="@dimen/hb_item_icon_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/hb_left_margin"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/downloading_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="6dip"
+        android:layout_marginBottom="13dip"
+        android:layout_toLeftOf="@+id/frame_layout"
+        android:layout_toRightOf="@id/file_icon"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/hb_item_filename_color"
+            android:textSize="@dimen/hb_item_filename_size" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressBackgroundTint="#3D000000"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginTop="5dp"
+            android:max="100" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dip" >
+
+            <TextView
+                android:id="@+id/current_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:singleLine="true"
+                android:textColor="@color/hb_item_speed_color"
+                android:textSize="@dimen/hb_item_speed_size" />
+
+            <TextView
+                android:id="@+id/down_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/hb_item_speed_color"
+                android:textSize="@dimen/hb_item_speed_size" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="48dip"
+        android:layout_height="48dip"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/hb_right_margin" >
+        
+        <LinearLayout
+            android:id="@+id/layout_download"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center">
+        <ImageView
+            android:id="@+id/img_download"
+            android:layout_width="24dip"
+            android:layout_height="24dip"
+            android:focusable="false"/>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/downloading_checkbox"
+            android:layout_width="24dip"
+            android:layout_height="24dip"
+            android:layout_gravity="center"
+            android:button="@drawable/hmb_checkbox_bg"
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/downloading_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:layout_alignLeft="@id/downloading_content"
+        android:layout_below="@id/downloading_content"
+        android:background="@color/hb_item_line_color"
+        android:visibility="gone" />
+
+</RelativeLayout>

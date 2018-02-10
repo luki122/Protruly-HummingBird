@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.protruly.spiderman.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/log_switch"
+            android:textSize="@dimen/text_size14"/>
+
+        <Switch
+            android:id="@+id/log_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textOff="@string/log_close"
+            android:textOn="@string/log_open" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/logcat_switch"
+            android:textSize="@dimen/text_size14"/>
+
+        <Switch
+            android:id="@+id/logcat_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textOff="@string/log_close"
+            android:textOn="@string/log_open" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/updatedata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/updatedata"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/anr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/anr"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/JavaCrash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/JavaCrash"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/starttransmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/starttransmit"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/settingpreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settingpreferences"
+        android:visibility="invisible" />
+
+</LinearLayout>

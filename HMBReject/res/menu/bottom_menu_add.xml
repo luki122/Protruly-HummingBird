@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb" >
+
+<!--     <item
+        android:id="@+id/no_reject_multi"
+        android:icon="@drawable/bottombar_icon_no_reject"
+        android:title="@string/release_reject">
+    </item> -->
+    <item
+        android:id="@+id/menu_add"
+        android:title="@android:string/ok" >
+    </item>
+
+</menu>

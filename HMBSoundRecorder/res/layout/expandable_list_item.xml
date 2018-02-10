@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+	          android:descendantFocusability="blocksDescendants"
+              android:orientation="vertical">
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="13dp"
+		android:layout_marginTop="11dp">
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginLeft="16dp"
+			android:layout_weight="1">
+			<!-- android:layout_weight="1"-->
+			<TextView
+				android:id="@+id/item_filename"
+				android:layout_width="wrap_content"
+				android:layout_height="24dp"
+				android:text="@string/app_name"
+				android:maxLines="1"
+				android:ellipsize="end"
+				android:textSize="16sp"
+				android:textColor="#de000000"
+				/>
+			<TextView
+				android:id="@+id/item_file_time_long"
+				android:layout_width="wrap_content"
+				android:layout_height="16dp"
+				android:text="@string/time_show"
+				android:textSize="12sp"
+				android:textColor="#8a000000"
+				/>
+		</LinearLayout>
+
+
+
+		<TextView
+			android:id="@+id/item_file_create_time"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/time_show"
+			android:layout_gravity="center_vertical"
+			android:textSize="16sp"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="12dp"
+			android:textColor="#ff7a7a7a"
+			/>
+
+
+		<CheckBox
+			android:id="@+id/item_file_checkbox"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_vertical"
+			android:layout_marginRight="12dp"
+			android:visibility="gone"
+			android:focusable="false"
+			android:clickable="false"
+			android:focusableInTouchMode="false"
+			/>
+		<!---->
+	</LinearLayout>
+
+
+	<LinearLayout
+		android:id="@+id/expandable"
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:layout_marginLeft="17dp"
+			android:layout_marginRight="17dp"
+			android:gravity="center_vertical">
+
+			<ImageButton
+				android:id="@+id/item_playview"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/icon_list_play"
+				android:scaleType="centerInside"
+				android:background="@null"/>
+
+				<TextView
+					android:id="@+id/item_file_timecount1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="10sp"
+					android:text="@string/time_show" />
+
+			    <cn.com.protruly.soundrecorder.recordlist.ScaleSeekBar
+				android:id="@+id/item_seekbar"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:layout_below="@id/item_file_timecount1"/>
+
+				<TextView
+					android:id="@+id/item_file_timecount2"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="10sp"
+					android:text="@string/time_show" />
+
+		</LinearLayout>
+
+
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:id = "@+id/item_gridscrollview">
+
+			<view
+				class = "cn.com.protruly.soundrecorder.recordlist.CustomView$TimeGridView"
+				android:id = "@+id/item_gridview"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:numColumns="4"
+				android:columnWidth="100dp"
+				android:stretchMode="spacingWidth"
+				android:verticalSpacing="15dp"
+				android:focusable="true" />
+
+		</ScrollView>
+
+<!--   <GridView
+
+				android:horizontalSpacing="10dp"
+				android:layout_marginLeft="15dp"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id = "@+id/item_gridview"
+                android:numColumns="4"
+                android:columnWidth="50dp"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:layout_marginLeft="15dp"
+                android:focusable="true"/>-->
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="9dp"
+			android:layout_marginBottom="13dp">
+			<Button
+				android:id="@+id/item_edit"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:background="@android:color/transparent"
+				android:textColor="@drawable/menu_clickable_color"
+				android:textSize="14sp"
+				android:focusable="true"
+				android:text="@string/edit_button"
+				android:visibility="invisible"/>
+			<Button
+				android:id="@+id/item_mark"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toLeftOf="@id/item_edit"
+				android:layout_marginRight="20dp"
+				android:text="@string/mark_button"
+                android:textColor="@drawable/menu_clickable_color"
+				android:textSize="14sp"
+				android:focusable="true"
+				android:background="@android:color/transparent" />
+			<Button
+				android:id="@+id/item_delete"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/item_edit"
+				android:layout_marginLeft="20dp"
+				android:text="@string/delete_button"
+				android:textColor="@drawable/menu_clickable_color"
+				android:textSize="14sp"
+				android:focusable="true"
+				android:background="@android:color/transparent"/>
+		</RelativeLayout>
+
+
+	</LinearLayout>
+
+
+</LinearLayout>

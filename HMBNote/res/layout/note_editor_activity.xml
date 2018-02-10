@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hb.note.ui.NoteEditorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <hb.widget.toolbar.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolbarStyle">
+
+        <include layout="@layout/note_editor_custom_toolbar" />
+    </hb.widget.toolbar.Toolbar>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/toolbar"
+        android:background="#33000000" />
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:gravity="center_horizontal"
+        android:paddingEnd="@dimen/editor_padding_left"
+        android:paddingStart="@dimen/editor_padding_left"
+        android:paddingTop="@dimen/editor_padding_top"
+        android:textColor="#4D000000"
+        android:textSize="12sp" />
+
+    <include
+        android:id="@+id/menu_view"
+        layout="@layout/note_editor_menu_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/menu_view"
+        android:layout_below="@id/time_view"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideOverlay">
+
+        <com.hb.note.ui.NoteEditText
+            android:id="@+id/content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/editor_bg_color"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="6dp"
+            android:maxLength="10000"
+            android:minLines="6"
+            android:paddingBottom="@dimen/editor_padding_top"
+            android:paddingEnd="@dimen/editor_padding_left"
+            android:paddingStart="@dimen/editor_padding_left"
+            android:paddingTop="@dimen/editor_padding_top"
+            android:textColor="@color/editor_content_color"
+            android:textSize="@dimen/editor_content_size" />
+    </ScrollView>
+</com.hb.note.ui.NoteEditorLayout>

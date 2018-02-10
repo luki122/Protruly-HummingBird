@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="statusbar_height">24dp</dimen>
+    <dimen name="toolbar_height">44dp</dimen>
+    <dimen name="toolbar_item_height">32dp</dimen>
+    <dimen name="toolbar_title_text_size">20sp</dimen>
+    <dimen name="toolbar_content_text_size">18sp</dimen>
+    <dimen name="month_header_height">33dp</dimen>
+    <dimen name="month_week_side_padding">12dp</dimen>
+    <dimen name="month_agenda_empty_padding">70dp</dimen>
+    <dimen name="list_item_padding">16dp</dimen>
+    <dimen name="list_two_lines_height">64dp</dimen>
+    <dimen name="list_single_line_height">56dp</dimen>
+    <dimen name="calendar_label_padding_start">8dp</dimen>
+
+</resources>

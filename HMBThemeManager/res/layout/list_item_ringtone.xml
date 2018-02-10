@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp" >
+
+    <TextView
+        android:id="@+id/theme_list_item_title"
+        style="@style/TextAppearance.Title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:textColor="@color/topic_item_text_color"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:layout_width="72dp"
+        android:layout_height="64dp" >
+
+        <CheckBox
+            android:id="@+id/theme_list_item_edit_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="28dp"
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/theme_list_item_use_as"
+            android:layout_width="44dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ringtone_background_material"
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false"
+            android:text="@string/topic_detail_ringtone_setting"
+            android:textColor="@color/ringtone_setto_textview_material"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:visibility="visible" />
+    </FrameLayout>
+
+</LinearLayout>

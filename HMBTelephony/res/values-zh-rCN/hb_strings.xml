@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="contact_xxport_title">联系人管理</string>
+    <string name="contact_xxport_summary">导入导出手机联系人</string>
+
+    <string name="black_title">黑名单</string>
+
+    <string name="reject_sms_title">拒接短信</string>
+    <string name="reject_sms_summary">编辑来电时的拒绝短信</string>
+
+    <string name="power_hangup_title">电源键挂断通话</string>
+    <string name="power_hangup_summary">电源键拒接或挂断电话</string>
+
+    <string name="vibrate_active_title">接听振动提示</string>
+    <string name="vibrate_active_summary">对方接通时手机振动提醒</string>
+
+    <string name="flash_ringing_title">来电闪光灯</string>
+    <string name="flash_ringing_summary">锁屏来电时，闪光灯闪烁提醒，注意低电量时该功能不会起作用</string>
+
+    <string name="smart_ringer_title">握起铃声减弱</string>
+    <string name="smart_ringer_summary">锁屏来电时，拿起手机铃声音量减少</string>
+    <string name="overturn_to_mute_title">翻转静音</string>
+
+  <string name="call_waiting_title">呼叫等待</string>
+
+  <string name="call_forward_title">呼叫转移</string>
+
+  <string name="speed_dial_title">快速拨号</string>
+
+    <string name="sub_1">SIM卡1</string>
+    <string name="sub_2">SIM卡2</string>
+    
+    <string name="basic_settings">基本设置</string>
+    
+    <string name="sim_switch_title">SIM卡启用</string>
+    <string name="edit_sim_name_title">编辑SIM卡名称</string>
+    <string name="edit_sim_number_title">编辑SIM卡号码</string>
+    <string name="enable_sim">启用</string>
+
+    <string name="hb_sim_setting_title">双卡和移动网络</string>
+    <string name="sims_list">SIM卡管理</string>
+    
+   <string name="default_call_slot"> 默认拨号</string>
+   <string name="default_sms_slot"> 默认短信</string>
+   <string name="default_data_slot"> 默认上网</string>
+   
+   <string name="mobile_data_title">移动数据</string>
+   <string name="data_roaming_title">数据漫游</string>
+   
+   <string name="hb_enhanced_4g_lte_mode_summary">高清语音通话</string>
+   <string name="hb_calls_title">默认拨号</string>
+   <string name="hb_cellular_data_title">默认上网</string>
+   <string name="data_dialog_title">数据业务</string>
+   <string name="data_dialog_message">插入SIM卡，是否开启网络?</string>
+   <string name="stk_title">sim卡程序</string>
+   <string name="empty_sim">输入不能为空</string>
+</resources>

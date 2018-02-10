@@ -1,0 +1,10 @@
+<com.hb.thememanager.views.ThemePreviewDonwloadButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/theme_detail_option_btn"
+    style="@style/TextAppearance.DetailPageOptionButton"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/theme_detail_preview_option_btn_height"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:showDividers="beginning"
+    android:divider="@drawable/list_divider"
+/>

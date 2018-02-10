@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="20dp"
+     >
+
+    <TextView
+        android:id="@+id/add_comment_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_start_and_add_comment"
+        android:layout_alignParentLeft="true"
+        style="@style/TextAppearance.AddCommentTip"
+    />
+
+    <RatingBar
+        android:id="@+id/comment_rating"
+        style="?android:attr/ratingBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/add_comment_tip"
+        android:layout_marginLeft="16dp"
+        android:layout_alignBottom="@id/add_comment_tip"
+        android:isIndicator="false"
+        android:stepSize="1"
+        android:numStars="5" />
+
+    <EditText
+        android:id="@android:id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|left"
+        android:layout_below="@id/add_comment_tip"
+        android:hint="@string/add_comment_hint"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:minHeight="100dp"
+        android:maxLength="120"
+        android:background="@null"
+    />
+
+
+
+</RelativeLayout>

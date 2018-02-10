@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">手机管家</string>
+
+    <!-- setting -->
+    <string name="app_setting">设置</string>
+    <string name="app_module_setting">各模块设置</string>
+    <string name="app_about_setting">关于</string>
+    <string name="app_setting_update_database">更新数据库</string>
+    <string name="app_setting_check_database">检测数据库…</string>
+    <string name="app_setting_updating_database">更新数据库…</string>
+    <string name="app_setting_update_no_network">未连接到网络</string>
+    <string name="app_setting_update_no_network_tips">连接WLAN或数据网络</string>
+    <string name="app_setting_dialog_tips">提示</string>
+    <string name="app_setting_update_mobile_network_tips">当前为数据网络，请确认是否继续？</string>
+    <string name="app_setting_update_network_error">网络错误</string>
+    <string name="app_setting_update_no_update">已经是最新版本</string>
+    <string name="app_setting_update_get_new_version">发现新版本</string>
+    <string name="app_setting_update_finished">更新完成</string>
+    <string name="app_setting_wlan_auto_update_db">WLAN自动更新数据库</string>
+    <string name="cancel">取消</string>
+    <string name="ok">确定</string>
+    <string name="app_setting_update_just">刚刚</string>
+    <string name="app_setting_update_time_format">yyyy年MM月dd日 HH:mm:ss</string>
+
+    <!-- permission control -->
+    <!-- empty text for ListView -->
+    <!-- permission control -->
+
+    <!-- safety protection -->
+    <string name="safety_protection">安全防护</string>
+    <string name="safety_not_official">恶意应用</string>
+    <string name="safety_pay_risks">支付风险</string>
+    <string name="safety_stealaccount_risks">账号风险</string>
+    <string name="safety_viruses">病毒木马</string>
+    <string name="safety_other_risks">其他风险</string>
+    <string name="safety_settings">设置</string>
+    <string name="safety_scan_mode">扫描模式</string>
+    <string name="safety_quick_scan_mode">快速扫描</string>
+    <string name="safety_full_scan_mode">全盘扫描</string>
+    <string name="safety_malicious_url_interception">恶意网址拦截</string>
+    <string name="safety_scanning">正在扫描</string>
+    <string name="safety_no_risk">无</string>
+    <string name="safety_result_safe">手机安全</string>
+    <string name="safety_result_risk" >"<xliff:g id="NUMBER">%1$d</xliff:g>个风险"</string>
+    <string name="safety_risk_tips">建议立即处理</string>
+
+    <string name="safety_quick_scanning">快速扫描中…</string>
+    <string name="safety_full_scanning">全盘扫描中…</string>
+
+    <string name="safety_not_official_app_summary">应用为非官方应用，文件携带病毒存在安全风险</string>
+    <string name="safety_pay_risks_app_summary">应用存在支付风险</string>
+    <string name="safety_tealaccount_risks_app_summary">应用存在盗号风险</string>
+    <string name="safety_viruses_app_summary">应用可能携带病毒</string>
+    <string name="safety_other_risks_app_summary">应用存在安全风险</string>
+
+    <string name="safety_not_official_file_summary">安装包为非官方应用安装包，文件携带病毒存在安全风险</string>
+    <string name="safety_pay_risks_file_summary">文件存在支付风险</string>
+    <string name="safety_tealaccount_risks_file_summary">文件存在盗号风险</string>
+    <string name="safety_viruses_file_summary">文件可能携带病毒</string>
+    <string name="safety_other_risks_file_summary">文件存在安全风险</string>
+
+    <string name="safety_recommend_uninstall">建议卸载</string>
+    <string name="safety_recommend_delete">建议删除</string>
+
+    <string name="safety_dialog_scan_mode_title">扫描模式</string>
+    <string name="safety_dialog_scan_mode_message">快速扫描:扫描关键位置，已安装软件\n全面扫描:同时扫描恶意文件及未安装应用，耗时较长</string>
+
+    <string name="safety_toast_delete_file_error">删除失败</string>
+
+    <string name="title_clean_optimize">清理加速</string>
+    <string name="title_privacy_manager">骚扰拦截</string>
+    <string name="title_secure_protect">安全防护</string>
+    <string name="title_usage_manager">流量管理</string>
+    <string name="title_app_manager">应用管理</string>
+    <string name="title_power_manager">电量管理</string>
+    <string name="one_key_optimize">一键优化</string>
+    <string name="rubblish_clean_title">垃圾文件</string>
+    <string name="uninstall_file_title">卸载残留</string>
+    <string name="unuseful_apk">多余安装包</string>
+    <string name="uninstalled_apk">未安装的安装包</string>
+    <string name="background_app_kill_title">后台软件</string>
+    <string name="app_cache_clean_title">应用缓存</string>
+    <string name="sanning">正在扫描</string>
+    <string name="clean_scanning">正在扫描:%s</string>
+    <string name="clean_size_notification">可清理</string>
+    <string name="bg_app_title">后台软件</string>
+    <string name="select_all">全选</string>
+    <string name="un_select_all">全不选</string>
+    <string name="app_force_stop">强制关闭(%s)</string>
+    <string name="app_force_stop_null">强制关闭</string>
+    <string name="app_kill_notification">提示</string>
+     <string name="app_kill_message">是否强制关闭应用，请确认是否继续?</string>
+    <string name="kill_app_result">清理内存%s</string>
+     <string name="bg_app_num_message">后台运行软件%s个</string>
+     <string name="rubblish_clean_result">清理垃圾%s</string>
+     <string name="cache_clean_result">清理缓存%s</string>
+    <string name="running_app_null_message">没有可操作内容</string>
+     <string name="rubblish_null_message">没有可操作内容</string>
+     <string name="clean_btn_message">立即清理</string>
+     <string name="clean_btn_size">立即清理%s</string>
+     <string name="clean_title_child">清理后不影响使用</string>
+     <string name="uninstall_apk_title_child">新版本或未安装</string>
+     <string name="unuseful_apk_title_child">旧版本或已安装</string>
+     <string name="scanning_finish">扫描完毕</string>
+     <string name="scanning_start">开始扫描...</string>
+     <string name="rubblish_clean_message">清理后数据无法再恢复，请确认是否继续?</string>
+     <string name="cache_data">应用缓存</string>
+     <string name="data_data">应用数据</string>
+    <string name="rubblish_unknow">未知垃圾</string>
+     <string name="apk_unknow_name">未知名</string>
+     <string name="default_size_suffix">KB</string>
+     <string name="default_size_counter">0.00</string>
+     <string name="mem_used">已用</string>
+     <string name="mem_can_clean">可清理</string>
+     <string name="onekey_systemcache_clean">清理系统缓存</string>
+     <string name="onekey_AvailInterMemory_clean">手机剩余空间</string>
+     <string name="onekey_sysrubblish_clean">清理系统垃圾</string>
+     <string name="onekey_sysmemory_clean">释放系统内存</string>
+     <string name="onekey_pwd_check">手机密码</string>
+     <string name="onekey_virtus_check">安全防护</string>
+     <string name="onekey_optimize_title">一键优化</string>
+     <string name="intern_memory_enough">充足</string>
+     <string name="intern_memory_less">不足</string>
+    <string name="result_hand_setting">手动项</string>
+      <string name="result_optimized">已优化项</string>
+      <string name="pwd_setting_title">设置密码，保护隐私</string>
+      <string name="pwd_setting_message">立即设置</string>
+      <string name="pwd_setting_opened">已开启</string>
+      <string name="phone_status_1">保持不错</string>
+      <string name="phone_status_2">建议优化提速</string>
+      <string name="phone_status_3">建议立即优化</string>
+      <string name="bar_scanning">扫描中...</string>
+      <string name="onekey_cleanspeed_ing">一键优化中...</string>
+      <string name="onekey_rubblish_cleaning">正在清理垃圾</string>
+      <string name="onekey_virtus_unscan_title">未进行安全检测</string>
+      <string name="onekey_virtus_unscan_message">有%s个风险</string>
+       <string name="onekey_virtus_scanned">已扫描</string>
+       <string name="onekey_system_nocache">没有缓存</string>
+       <string name="onekey_system_norubblish">已清理</string>
+        <string name="onekey_app_nokilled">已最优</string>
+       <string name="notification_text_autocheck">检测到%s垃圾文件，建议您进行清理!</string>
+       <string name="progress_dialog_loading">加载中...</string>
+</resources>

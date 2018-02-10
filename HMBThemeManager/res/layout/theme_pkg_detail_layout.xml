@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@android:id/list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/theme_detail_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:paddingBottom="@dimen/theme_detail_content_padding_bottom"
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:paddingTop="16dp"
+            android:orientation="vertical" >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/theme_detail_preview_img_height"
+                android:layout_marginBottom="@dimen/theme_detail_preview_img_margin_bottom"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/theme_pkg_detail_preview_scroller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
+            <include layout="@layout/theme_pkg_detail_footer" />
+            
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/btn_theme_pkg_option"/>
+
+    <include layout="@layout/loading_view_in_theme_detail"/>
+
+
+</RelativeLayout>

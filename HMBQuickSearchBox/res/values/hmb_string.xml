@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tap_history">search history</string>
+    <string name="tap_expand">expand</string>
+    <string name="tap_shrink">shrink</string>
+    <string name="list_view_foot_text">web search</string>
+    <string name="search_go_text">search</string>
+    <string name="clear_history_text">clear all history</string>
+
+    <string name="corpus_label_global_new">Apps,Contacts,Files...</string>
+
+    <!-- lijun add start -->
+    <string name="hot_search">Hot Search</string>
+    <string name="hot_search_refresh">Refresh</string>
+    <string name="webview_loaderror_text">data loaded failed</string>
+    <string name="webview_loaderror_reload_text">please check network connection add try again!</string>
+    <!-- lijun add end -->
+</resources>

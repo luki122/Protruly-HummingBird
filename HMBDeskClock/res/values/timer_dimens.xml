@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="timer_circle_size">200dp</dimen>
+    <dimen name="timer_circle_stroke_size">13dp</dimen>
+    <dimen name="timer_circle_text_size">40dp</dimen>
+    <dimen name="timer_circle_second_text_size">24dp</dimen>
+
+    <dimen name="timer_button_text_size">16sp</dimen>
+    <dimen name="timer_selector_text_size">40sp</dimen>
+    <dimen name="timer_sencond_text_size">24sp</dimen>
+    <dimen name="timer_label_text_size">12sp</dimen>
+
+    <dimen name="timer_notif_padding">12dp</dimen>
+    <dimen name="timer_notif_icon_size">40dp</dimen>
+    <dimen name="timer_notif_margin_left">52dp</dimen>
+</resources>
+

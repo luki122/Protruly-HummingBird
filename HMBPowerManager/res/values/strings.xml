@@ -1,0 +1,144 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Power management</string>
+
+    <string name="permission_access_powermanager">Access PowerManager private data.</string>
+
+    <!-- App Manager -->
+    <string name="app_manager">Application management</string>
+    <string name="auto_start">Autostart management</string>
+    <string name="lock_screen_clean">Lock screen cleaning</string>
+    <string name="permission_control">Permission management</string>
+    <string name="lock_screen_clean_summary">3 minutes after lock screen, automatic background cleaning for application process.</string>
+    <string name="no_user_app">No operables</string>
+    <string name="auto_start_summary"><xliff:g id="NUMBER">%1$d</xliff:g> apps boot auto start or background auto start</string>
+    <string name="app_menu_title_open">Enable all</string>
+    <string name="app_menu_title_close">Close All</string>
+    <string name="action_in_progress">Waiting…</string>
+
+    <string name="power_setting">Power Setting</string>
+    <string name="available_power">Usage time</string>
+    <string name="available_hours" >"<xliff:g id="HOURS">%1$d</xliff:g>hr<xliff:g id="MINUTES">%2$d</xliff:g>min"</string>
+    <string name="available_minutes" >"<xliff:g id="MINUTES">%1$d</xliff:g>m"</string>
+    <string name="low_power_mode">Low power mode</string>
+    <string name="not_low_power_mode">Not enabled</string>
+    <string name="in_low_power_mode">Start</string>
+    <string name="low_power_summary">Low power mode will turn off Bluetooth, GPS, WLAN hot spot, touch screen feedback, reduce automatic lock screen time and turn on vertical screen lock, reduce part of visual effects and performance, exit when with sufficient power.</string>
+    <string name="enter_low_power_mode">Start</string>
+    <string name="exit_low_power_mode">Exit</string>
+
+    <string name="power_usage_detail">Power consumption details</string>
+    <string name="power_detail_software">Software power consumption</string>
+    <string name="power_detail_hardware">Hardware power consumption</string>
+    <string name="power_consumption_percent">Power consumption ratio:&#160;</string>
+    <!-- Subtitle for application/subsystem details -->
+    <string name="details_subtitle">Usage details</string>
+    <!-- Subtitle for possible options -->
+    <string name="controls_subtitle">Adjust power use</string>
+    <!-- Subtitle for list of packages -->
+    <string name="packages_subtitle">Included packages</string>
+
+    <!-- Label for power consumed by the screen -->
+    <string name="power_screen">Screen</string>
+    <!-- Label for power consumed by the flashlight -->
+    <!-- Label for power consumed by the camera -->
+    <!-- Label for power consumed by Wi-Fi -->
+    <string name="power_wifi">Wi\u2011Fi</string>
+    <!-- Label for power consumed by Bluetooth -->
+    <string name="power_bluetooth">Bluetooth</string>
+    <!-- Label for power consumed by Cell idle -->
+    <string name="power_cell">Cell standby</string>
+    <!-- Label for power consumed by Calling -->
+    <string name="power_phone">Voice calls</string>
+    <!-- Label for power consumed when Idle -->
+    <string name="power_idle">Phone idle</string>
+
+    <!-- Main Settings screen setting option title for the item to take you to the location screen -->
+    <string name="location_settings_title">Location</string>
+    <!-- Label for app details action -->
+    <!-- Suggestion for exploring application info to stop or uninstall -->
+    <!-- [CHAR LIMIT=100] Suggestion for getting apps to consume less power due to GPS-->
+    <string name="battery_sugg_apps_gps">Select battery-saving mode</string>
+    <!-- Display settings -->
+    <string name="display_settings">Display</string>
+    <!-- Wifi Display settings. The title of the screen. [CHAR LIMIT=40] -->
+    <!-- Suggestion for reducing display power -->
+    <string name="battery_sugg_display">Reduce the screen brightness and/or screen timeout</string>
+    <!-- Used in the 1st-level settings screen to go to the 2nd-level settings screen  [CHAR LIMIT=20]-->
+    <string name="wifi_settings">Wi\u2011Fi</string>
+    <!-- Suggestion for wifi connectivity power drain -->
+    <string name="battery_sugg_wifi">Turn off Wi\u2011Fi when not using it or when it isn\u2019t available</string>    <string name="bluetooth_settings" >"蓝牙"</string>
+    <!-- Suggestion for bluetooth -->
+    <string name="battery_sugg_bluetooth_basic">Turn off Bluetooth when you aren\u2019t using it</string>    <string name="radio_controls_title" >"更多"</string>
+    <!-- Suggestion to switch to airplane mode to save power -->
+    <string name="battery_sugg_radio">Switch to airplane mode to save power in areas with no cell coverage</string>
+
+    <string name="percentage"><xliff:g id="NUMBER">%.0f</xliff:g>%%</string>
+    <string name="mah"><xliff:g id="NUMBER">%.2f</xliff:g> mAh</string>
+    <string name="battery_history_days" >"<xliff:g id="DAYS">%1$d</xliff:g>d <xliff:g id="HOURS">%2$d</xliff:g>h <xliff:g id="MINUTES">%3$d</xliff:g>m <xliff:g id="SECONDS">%4$d</xliff:g>s"</string>
+    <string name="battery_history_hours" >"<xliff:g id="HOURS">%1$d</xliff:g>h <xliff:g id="MINUTES">%2$d</xliff:g>m <xliff:g id="SECONDS">%3$d</xliff:g>s"</string>
+    <string name="battery_history_minutes" >"<xliff:g id="MINUTES">%1$d</xliff:g>m <xliff:g id="SECONDS">%2$d</xliff:g>s"</string>
+    <string name="battery_history_seconds">"<xliff:g id="SECONDS">%1$d</xliff:g>s"</string>
+    <string name="battery_history_days_no_seconds" >"<xliff:g id="DAYS">%1$d</xliff:g>d <xliff:g id="HOURS">%2$d</xliff:g>h <xliff:g id="MINUTES">%3$d</xliff:g>m"</string>
+    <string name="battery_history_hours_no_seconds" >"<xliff:g id="HOURS">%1$d</xliff:g>h <xliff:g id="MINUTES">%2$d</xliff:g>m"</string>
+    <string name="battery_history_minutes_no_seconds">"<xliff:g id="MINUTES">%1$d</xliff:g>m"</string>
+
+    <!-- Label for kernel threads in battery usage -->
+    <string name="process_kernel_label">Android OS</string>
+    <!-- Label for mediaserver process in battery usage -->
+    <string name="process_mediaserver_label">Mediaserver</string>
+    <!-- Label for dex2oat process in battery usage used for the optimization of one or more apps -->
+    <string name="process_dex2oat_label">App optimization</string>
+
+    <!-- Label for CPU usage time -->
+    <string name="usage_type_cpu">CPU total</string>
+    <!-- Label for CPU usage in foreground -->
+    <string name="usage_type_cpu_foreground">CPU foreground</string>
+    <!-- [CHAR LIMIT=25] Label for keeping device from sleeping -->
+    <string name="usage_type_wake_lock">Keep awake</string>
+    <!-- Label for GPS usage time -->
+    <string name="usage_type_gps">GPS</string>
+    <!-- [CHAR LIMIT=25] Label for WIFI usage time -->
+    <string name="usage_type_wifi_running">Wi\u2011Fi running</string>
+    <!-- Label for Phone usage time -->
+    <!-- Label for mobile network data sent [CHAR LIMIT=32] -->
+    <string name="usage_type_data_send">Mobile packets sent</string>
+    <!-- Label for mobile network data received [CHAR LIMIT=32] -->
+    <string name="usage_type_data_recv">Mobile packets received</string>
+    <!-- Label for mobile network radio active time [CHAR LIMIT=32] -->
+    <string name="usage_type_radio_active">Mobile radio active</string>
+    <!-- Label for Wi-Fi network data sent [CHAR LIMIT=32] -->
+    <string name="usage_type_data_wifi_send">Wi\u2011Fi packets sent</string>
+    <!-- Label for Wi-Fi network data received [CHAR LIMIT=32] -->
+    <string name="usage_type_data_wifi_recv">Wi\u2011Fi packets received</string>
+    <!-- Label for Audio usage time -->
+    <string name="usage_type_audio">Audio</string>
+    <!-- Label for Video usage time -->
+    <string name="usage_type_video">Video</string>
+    <!-- Label for Camera usage time -->
+    <string name="usage_type_camera">Camera</string>
+    <!-- Label for Flashlight usage time -->
+    <string name="usage_type_flashlight">Flashlight</string>
+    <!-- Label for time that a feature has been on -->
+    <string name="usage_type_on_time">Time on</string>
+    <!-- Label for time that there was no cell coverage -->
+    <string name="usage_type_no_coverage">Time without a signal</string>
+    <!-- Label for the total power capacity of the device's battery -->
+    <string name="usage_type_total_battery_capacity">Total battery capacity</string>
+    <!-- [CHAR_LIMIT=NONE] Label for amount of power use that was computed -->
+    <string name="usage_type_computed_power">Computed power use</string>
+    <!-- [CHAR_LIMIT=NONE] Label for amount of power use that was actually observed (though
+         the change in battery level) -->
+    <string name="usage_type_actual_power">Observed power use</string>
+
+    <!-- AlertDialog information string -->
+    <string name="cancel">Cancel</string>
+    <string name="ok">Confirm</string>
+    <string name="title_low_power">&lt;30% Power, whether to enter low power mode?</string>
+    <string name="title_super_power">&lt;10% Power, whether to enter low power mode?</string>
+    <string name="title_power_enough">Power Enough</string>
+
+    <!-- Forbit alarms -->
+    <string name="power_forbit_alarms">Align and Awake</string>
+    <string name="forbit_alarms_summary">CPU disables frequent wakeup when <xliff:g id="NUMBER">%1$d</xliff:g> application is idle</string>
+</resources>

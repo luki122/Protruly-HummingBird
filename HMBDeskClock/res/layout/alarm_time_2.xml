@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/alarm_item"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dc="http://schemas.android.com/apk/res-auto"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="30dp">
+
+    <!-- TODO~: flatten this layout using gridLayout which supports layout_weight as of 21 -->
+
+
+    <com.android.deskclock.widget.TextTime
+        android:id="@+id/digital_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/alarm_clock_time_color"
+        android:textSize="@dimen/alarm_time_font_size"
+        android:fontFamily="sans-serif-thin"
+        android:layout_marginTop="6.5dp"
+        dc:format12Hour="@string/world_clock_12_hours_format"
+        dc:format24Hour="@string/clock_24_hours_format" />
+
+    <hb.widget.Switch
+        android:id="@+id/onoff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_centerVertical="true"
+        android:theme="@com.hb:style/Theme.Hb.Material.Light"/>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:visibility="gone"/>
+
+
+    <FrameLayout
+        android:id="@+id/collapse_expand"
+        android:layout_below="@id/digital_clock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13.5dp">
+
+        <!-- M: Add layout_marginRight for EllipsizeLayout to avoid overlap with arrow view.-->
+        <com.android.deskclock.widget.EllipsizeLayout
+            android:id="@+id/summary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="54dp"
+            android:layout_marginRight="40dip"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="4dip"
+                android:textSize="12sp"
+                android:textColor="@color/notif_text_grey" />
+
+            <TextView
+                android:id="@+id/daysOfWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:textColor="@color/notif_text_grey" />
+
+            <TextView
+                android:id="@+id/tomorrowLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="none"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:textColor="@color/notif_text_grey" />
+
+        </com.android.deskclock.widget.EllipsizeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

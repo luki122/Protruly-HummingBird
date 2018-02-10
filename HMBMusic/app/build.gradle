@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.protruly.music"
+        minSdkVersion 23
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        compileOptions {
+            sourceCompatibility 1.8
+            targetCompatibility 1.8
+        }
+        jackOptions {
+            enabled true
+        }
+        multiDexEnabled true
+    }
+    useLibrary 'org.apache.http.legacy'
+    signingConfigs {
+        debug {
+            storeFile file('../key/platform.keystore')
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+        release {
+            storeFile file('../key/platform.keystore')
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.release
+        }
+        debug {
+            minifyEnabled false
+            zipAlignEnabled true
+            //signingConfig signingConfigs.debug
+        }
+    }
+
+//
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        disable 'MissingTranslation'
+    }
+
+    testOptions {
+        unitTests.all {
+            jvmArgs '-ea -noverify'
+        }
+    }
+
+}
+
+
+dependencies {
+    provided files('libs/framework.jar')
+    provided files('libs/hb-framework.jar')
+
+    provided files('libs/boas-sdk-v0.1.1.jar')
+    provided files('libs/fastjson-1.1.40.jar')
+    provided files('libs/imageloader-0.1.jar')
+    provided files('libs/libammsdk.jar')
+    provided files('libs/weiboSDKCore_3.1.2.jar')
+    compile 'org.apache.httpcomponents:httpclient:4.4-alpha1'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    provided 'junit:junit:4.12'
+}
+
+tasks.whenTaskAdded { task ->
+    if (task.name.contains('mockableAndroidJar')) {
+        task.enabled = false
+    }
+}
+

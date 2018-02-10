@@ -1,0 +1,87 @@
+package cn.com.protruly.soundrecorder.clip;
+
+import android.media.MediaExtractor;
+import android.media.MediaFormat;
+import android.media.MediaPlayer;
+
+import java.util.LinkedHashMap;
+
+import cn.com.protruly.soundrecorder.util.LogUtil;
+
+/**
+ * Created by sqf on 17-8-29.
+ */
+
+public class Mp3FileInfo {
+
+    private static final String TAG = "Mp3FileInfo";
+
+    private int mSoundTrackCount;
+    private int mSoundChannelCount;
+
+    private int mBitRate;
+    private int mSampleRate;
+
+    private long mFileSize;
+    private String mFilePath;
+    private String mMime;
+
+    private long mDuration;
+
+    private int mCurrentTrack;
+
+
+    private MediaFormat mMediaFormat;
+
+    public Mp3FileInfo(MediaExtractor extractor) {
+
+        LogUtil.i(TAG, "setDataSource .... mFilePath:" + mFilePath + " mFileSize:" + mFileSize);
+        mSoundTrackCount = extractor.getTrackCount();
+        LogUtil.i(TAG, "mSoundTrackCount:" + mSoundTrackCount);
+        if(mSoundTrackCount == 0) return;
+
+        String mime = "";
+        // find and select the first audio track present in the file.
+        int i = 0;
+        MediaFormat format = null;
+        for (i=0; i < mSoundTrackCount; i++) {
+            format = extractor.getTrackFormat(i);
+            mime = format.getString(MediaFormat.KEY_MIME);
+            LogUtil.i(TAG, "mime:" + mime);
+            if (mime.startsWith("audio/")) {
+                mCurrentTrack = i;
+                extractor.selectTrack(mCurrentTrack);
+                break;
+            }
+        }
+
+        mMediaFormat = format;
+        mMime = format.getString(MediaFormat.KEY_MIME);
+        mDuration = format.getLong(MediaFormat.KEY_DURATION);//in us
+        mSoundChannelCount = format.getInteger(MediaFormat.KEY_CHANNEL_COUNT);
+        mSampleRate = format.getInteger(MediaFormat.KEY_SAMPLE_RATE);
+        //mBitRate = format.getInteger(MediaFormat.KEY_BIT_RATE);
+
+        LogUtil.i(TAG, "mDuration:" + mDuration +
+                " mSampleRate:" + mSampleRate +
+                " mSoundTrackCount:" + mSoundTrackCount +
+                " mSoundChannelCount:" + mSoundChannelCount +
+                " mBitRate:" + mBitRate);
+    }
+
+    public long getDuration() {
+        return mDuration;
+    }
+
+    public String getMime() {
+        return mMime;
+    }
+
+    public int getCurrentTrack() {
+        return mCurrentTrack;
+    }
+
+    public MediaFormat getMediaFormat() {
+        return mMediaFormat;
+    }
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <com.android.mms.ui.ZzzMaxHeightScrollView
+        android:id="@+id/recipients_editor_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="11dp"
+        android:fillViewport="true"
+        android:maxHeight="98dp"
+        android:scrollbars="none" >
+        <!-- <com.android.mms.ui.ZzzRecipientsFlowLayout
+            android:id="@+id/recipients_editor_flow_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1" > -->
+        <com.android.mms.ui.ZzzRecipientsFlowLayout
+            android:id="@+id/recipients_editor_flow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+            <!-- android:minWidth="15dp" a hanzi width in normal textsize 
+            android:layout_marginTop="3.5dp"
+                android:paddingBottom="4.5dp"-->
+            <com.android.mms.ui.ZzzRecipientsAutoCompleteEditor
+                android:id="@+id/recipients_editor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/recipients_editor_max_width"
+                android:layout_marginEnd="5dp"
+                android:minWidth="@dimen/recipients_editor_min_width"
+                android:singleLine="true"
+                android:textSize="18sp"
+                android:layout_marginTop="1dp"
+                android:paddingBottom="3.5dp"
+                android:textCursorDrawable="@drawable/zzz_recipients_cursor_drawable"
+                android:hint="@string/to_hint"
+                android:textColor="#DE000000"
+                android:background="@null"
+                />
+        </com.android.mms.ui.ZzzRecipientsFlowLayout>
+    </com.android.mms.ui.ZzzMaxHeightScrollView>
+
+    <LinearLayout
+        android:id="@+id/recipients_viewer_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <com.android.mms.ui.ZzzCheckOverSizeTextView
+            android:id="@+id/recipients_viewer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textColor="#FF000000"
+            android:textSize="18sp" />
+
+        <!-- <TextView
+            android:id="@+id/recipients_viewer_counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/recipients_viewer"
+            android:paddingStart="10dp"
+            android:singleLine="true"
+            android:textColor="#FF000000"
+            android:textSize="15sp" /> -->
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/recipients_picker"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="top"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:src="@drawable/zzz_ic_message_recipients_editor_add_contacts" />
+</LinearLayout>

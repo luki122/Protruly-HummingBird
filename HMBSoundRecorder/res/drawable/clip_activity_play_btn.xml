@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true" android:drawable="@drawable/clip_activity_play"/>
+    <item android:state_enabled="false" android:drawable="@drawable/clip_activity_play_disabled"/>
+</selector>

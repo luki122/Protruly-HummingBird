@@ -1,0 +1,28 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical" >
+
+    <Button
+        android:id="@+id/id_all_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="11dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/hb_all_pause"
+        android:textColor="#ff000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/id_song_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="10dp"
+        android:textColor="#ff7d7d7d"
+        android:textSize="14sp" />
+
+</FrameLayout>

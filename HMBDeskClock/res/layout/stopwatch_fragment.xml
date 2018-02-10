@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.android.deskclock.stopwatch.SWCircleButtonsLayout
+        android:id="@+id/stopwatch_circle"
+        android:layout_marginTop="46dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_stopwatch">
+
+        <com.android.deskclock.stopwatch.SWCountingTimerView
+            android:id="@+id/stopwatch_time_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.android.deskclock.stopwatch.SWCircleTimerView
+            android:id="@+id/stopwatch_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null" />
+
+        <TextView
+            android:id="@+id/stopwatch_lap_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="137dp"/>
+
+    </com.android.deskclock.stopwatch.SWCircleButtonsLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_operation"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/stopwatch_circle"
+        android:paddingLeft="55dp"
+        android:paddingRight="55dp">
+
+        <TextView
+            android:id="@+id/tv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/bg_circle_red"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_circle_red"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_circle_green"
+            android:gravity="center"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/laps_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_operation"/>
+
+</RelativeLayout>

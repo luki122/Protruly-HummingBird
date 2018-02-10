@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/preference_app_progress_height">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/length_53dp"
+        android:layout_height="@dimen/length_53dp"
+        android:layout_marginLeft="@dimen/preference_icon_margin_left"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/list_title_size"
+        android:textColor="@color/list_title_text"
+        android:layout_alignTop="@+id/icon"
+        android:maxLines="1"
+        android:ellipsize="marquee"
+        android:layout_toRightOf="@id/icon"
+        android:layout_marginLeft="@dimen/preference_title_margin_left"
+        android:layout_marginRight="@dimen/length_16dp"/>
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/list_summary_size"
+        android:textColor="@color/app_progress_summary_color"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@id/icon"
+        android:layout_marginTop="@dimen/length_4dp"
+        android:layout_marginLeft="@dimen/preference_title_margin_left"
+        android:layout_marginRight="@dimen/length_47dp"/>
+
+</RelativeLayout>

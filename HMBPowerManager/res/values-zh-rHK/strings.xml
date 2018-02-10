@@ -1,0 +1,93 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">電源管理</string>
+
+    <string name="permission_access_powermanager">Access PowerManager private data.</string>
+
+    <!-- App Manager -->
+    <string name="app_manager">應用管理</string>
+    <string name="auto_start">自啟動管理</string>
+    <string name="lock_screen_clean">鎖屏清理</string>
+    <string name="permission_control">許可權管理</string>
+    <string name="lock_screen_clean_summary">手機鎖屏3分鐘，後臺自動清理應用行程</string>
+    <string name="no_user_app">沒有可操作內容</string>
+    <string name="auto_start_summary"><xliff:g id="NUMBER">%1$d</xliff:g>個應用開機自啟動、後臺自啟動</string>
+    <string name="app_menu_title_open">全部打開</string>
+    <string name="app_menu_title_close">全部關閉</string>
+    <string name="action_in_progress">操作進行中…</string>
+
+    <!-- Power setting -->
+    <string name="power_setting">电量管理</string>
+    <string name="available_power">剩餘可用</string>
+    <string name="available_hours" >"<xliff:g id="HOURS">%1$d</xliff:g>時<xliff:g id="MINUTES">%2$d</xliff:g>分"</string>
+    <string name="available_minutes" >"<xliff:g id="MINUTES">%1$d</xliff:g>分"</string>
+    <string name="low_power_mode">低電量模式</string>
+    <string name="not_low_power_mode">未開啟</string>
+    <string name="in_low_power_mode">已開啟</string>
+    <string name="low_power_summary"> 低電量模式將關閉藍牙，GPS，WLAN熱點，觸屏迴響，减少自動鎖屏時間並開啟豎屏鎖定，降低部分視覺效果與效能，手機電量充足時將自動退出此模式。</string>
+    <string name="enter_low_power_mode">立即啟動</string>
+    <string name="exit_low_power_mode">立即停用</string>
+
+    <string name="power_usage_detail">耗電詳情</string>
+    <string name="power_detail_software">軟件耗電</string>
+    <string name="power_detail_hardware">硬體耗電</string>
+    <string name="power_consumption_percent">耗電比例:&#160;</string>
+
+    <string name="details_subtitle" >"詳細使用情况"</string>
+    <string name="controls_subtitle" >"省電提示"</string>
+    <string name="packages_subtitle" >"包含的套裝軟體"</string>
+
+    <string name="power_screen" >"荧幕"</string>
+    <string name="power_wifi" >"WLAN"</string>
+    <string name="power_bluetooth" >"藍牙"</string>
+    <string name="power_cell" >"移動網絡待機"</string>
+    <string name="power_phone" >"語音通話"</string>
+    <string name="power_idle">"手機待機"</string>
+
+    <string name="location_settings_title" >"位置資訊"</string>
+    <string name="battery_sugg_apps_gps" >"選擇“節電”模式"</string>
+    <string name="display_settings" >"顯示"</string>
+    <string name="battery_sugg_display" >"降低荧幕亮度，縮短休眠延時"</string>
+    <string name="wifi_settings" >"WLAN"</string>
+    <string name="battery_sugg_wifi" >"未使用或無法使用WLAN網絡時將WLAN關閉"</string>
+    <string name="bluetooth_settings" >"藍牙"</string>
+    <string name="battery_sugg_bluetooth_basic" >"請在不使用藍牙功能時將其關閉"</string>
+    <string name="radio_controls_title" >"更多"</string>
+    <string name="battery_sugg_radio" >"不在訊號覆蓋範圍內時切換到飛行模式，以節約電量"</string>
+
+    <string name="process_kernel_label">Android OS</string>
+    <string name="process_mediaserver_label">媒體服務器</string>
+    <string name="process_dex2oat_label">App optimization</string>
+
+    <string name="usage_type_cpu" >"CPU總使用時間"</string>
+    <string name="usage_type_cpu_foreground" >"CPU（前臺）"</string>
+    <string name="usage_type_wake_lock" >"保持喚醒狀態"</string>
+    <string name="usage_type_gps" >"GPS"</string>
+    <string name="usage_type_wifi_running" >"WLAN運行時間"</string>
+    <string name="usage_type_data_send" >"發送的移動數据包"</string>
+    <string name="usage_type_data_recv" >"接收的移動數据包"</string>
+    <string name="usage_type_radio_active" >"移動無線裝置運行時間"</string>
+    <string name="usage_type_data_wifi_send" >"发送的WLAN数据包"</string>
+    <string name="usage_type_data_wifi_recv" >"接收的WLAN數据包"</string>
+    <string name="usage_type_audio" >"音訊"</string>
+    <string name="usage_type_video" >"視頻"</string>
+    <string name="usage_type_camera" >"相機"</string>
+    <string name="usage_type_flashlight">"運行時間"</string>
+    <string name="usage_type_on_time" >"运行时间"</string>
+    <string name="usage_type_no_coverage" >"無訊號時間"</string>
+    <string name="usage_type_total_battery_capacity" >"電池總容量"</string>
+    <string name="usage_type_computed_power" >"計算出的耗電量"</string>
+    <string name="usage_type_actual_power" >"觀察到的耗電量"</string>
+
+    <!-- AlertDialog information string -->
+    <string name="cancel">取消</string>
+    <string name="ok">確定</string>
+    <string name="title_low_power">電量不足30%，是否進入低電量模式？</string>
+    <string name="title_super_power">電量不足10%，是否進入低電量模式？</string>
+    <string name="title_power_enough">電量高於80%，即將退出低電量模式？</string>
+
+    <!-- Forbit alarms -->
+    <string name="power_forbit_alarms">對齊喚醒</string>
+    <string name="forbit_alarms_summary"><xliff:g id="NUMBER">%1$d</xliff:g>個應用待機時禁止CPU頻繁喚醒</string>
+    
+</resources>

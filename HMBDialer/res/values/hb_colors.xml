@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hb_quickdial_settings_item_text_textcolor">#ff7d7d7d</color>
+    <color name="hb_quickdial_settings_item_name_textcolor">#ff000000</color>
+</resources>

@@ -1,0 +1,194 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="LocalThemeActivity.WindowToolbar" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+    </style>
+    
+     <style name="SecondPage.WindowToolbar" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+    </style>
+    
+       <style name="HomePage.WindowToolbar" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:windowHasToolbar">false</item>
+    </style>
+
+    <style name="LocalThemeActivity.ToolbarStyle" parent="com.hb:style/ToolbarStyle">
+        <item name="com.hb:title">@string/local_theme</item>
+    </style>
+
+    <!--Rank bar -->
+    <style name="Widget.Material.RatingBar.Small" parent="android:Widget.Material.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/ratingbar_material_16</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+    </style>
+
+    <style name="Widget.Material.RatingBar.Medium" parent="android:Widget.Material.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/ratingbar_material_18</item>
+        <item name="android:minHeight">18dp</item>
+        <item name="android:maxHeight">18dp</item>
+    </style>
+
+    <style name="Widget.Material.RatingBar.Normal" parent="android:Widget.Material.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/ratingbar_material_24</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:maxHeight">24dp</item>
+    </style>
+    
+
+    <style name="TextAppearance" parent="@com.hb:style/TextAppearance.Hb.Material.Body1"></style>
+
+    <style name="TextAppearance.Title">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_light</item>
+    </style>
+
+    <style name="TextAppearance.ThemeDescription">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#61000000</item>
+    </style>
+
+    <style name="TextAppearance.DetailPageOptionButton">
+    </style>
+
+    <style name="TextAppearance.WallpaperDetailPopupText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#ff06c012</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="WindowNoAnimationStyle" />
+
+    <style name="TextAppearance.WallpaperEntryTitle" parent="@com.hb:style/TextAppearance.Hb.Material.Body2">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="TextAppearance.TimeWidget" parent="@com.hb:style/TextAppearance.Hb.Material.Medium" />
+
+    <style name="TextAppearance.TimeWidget.Time">
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+    <style name="TextAppearance.TimeWidget.Date">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.TimeWidget.Week">
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+    <style name="ActivityAnimationThemeList" parent="@com.hb:style/Animation.Hb.Material.Activity">
+         <item name="android:taskOpenEnterAnimation">@com.hb:anim/activity_open_enter</item>
+        <item name="android:taskOpenExitAnimation">@com.hb:anim/activity_open_exit</item>
+        <item name="android:taskCloseEnterAnimation">@com.hb:anim/activity_close_enter</item>
+        <item name="android:taskCloseExitAnimation">@com.hb:anim/activity_close_exit</item>
+        
+    </style>
+
+    <style name="TextAppearance.WallpaperPreviewIcon" parent="@com.hb:style/TextAppearance.Hb.Material.Caption">
+        <item name="android:textColor">@color/wallpaper_preview_ic_name_color</item>
+    </style>
+
+    <style name="TextAppearance.WallpaperApplyButton">
+        <item name="android:textColor">#CC000000</item>
+    </style>
+
+    <style name="TextApprearance.WallpaperListTitle" parent="@com.hb:style/TextAppearance.Hb.Material.Caption">
+        
+    </style>
+
+    <style name="TextAppearance.HomeListTitle">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.HomeListMore">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="TextAppearance.HomeListItemName">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="TextAppearance.HomeListItemPrice">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/gray_light</item>
+    </style>
+    <style name="TextAppearance.ThemeDetailTitle">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TextAppearance.ThemeDetailUserName">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="TextAppearance.ThemeDetailDescription">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_light</item>
+    </style>
+
+    <style name="TextAppearance.ThemeDetailSubTitle">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.ExpandableTextContent">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/gray_light</item>
+    </style>
+
+    <style name="TextAppearance.CommentListPercent">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#61000000</item>
+    </style>
+
+    <style name="TextAppearance.ThemeApply">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/btn_text_color_theme_apply</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="TextAppearance.ThemeApply.Positive">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/btn_text_color_theme_apply</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+    
+    <style name="TextAppearance.UserPage">
+        <item name="android:drawableEnd">@drawable/ic_arrow_right</item>
+        <item name="android:textColor">@color/topic_item_text_color</item>
+        <item name="android:paddingStart">@dimen/user_page_more_padding</item>
+        <item name="android:paddingTop">@dimen/user_page_more_padding</item>
+        <item name="android:paddingBottom">@dimen/user_page_more_padding</item>
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
+    <style name="TextAppearance.AddCommentTip">
+        <item name="android:textColor">@color/gray_light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Widget.ThemeApply.ProgressBar.Horizontal" parent="com.hb:Widget.Hb.Material.Light.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_theme_apply</item>
+        <item name="android:minHeight">18dip</item>
+        <item name="android:maxHeight">18dip</item>
+    </style>
+    <style name="WindowLayoutAddComments" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">false</item>
+    </style>
+
+    <style name="DialogAnimStyle">
+        <item name="android:windowEnterAnimation">@anim/slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_to_bottom</item>
+    </style>
+        <style name="TextAppearance.SetupSuccessTitle" parent="@com.hb:style/TextAppearance.Hb.Material.Body1">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="TextAppearance.SetupThemeName" parent="@com.hb:style/TextAppearance.Hb.Material.Body1">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+</resources>

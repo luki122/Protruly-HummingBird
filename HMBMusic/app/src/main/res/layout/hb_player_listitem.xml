@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/song_itemheight" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/song_itemheight"
+        android:orientation="vertical"
+        android:paddingLeft="12dp" >
+
+        <TextView
+            android:id="@+id/listitem_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="3.0dp"
+            android:layout_marginTop="11.0dp"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/listitem_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/listitem_title"
+            android:layout_gravity="center_vertical"
+            android:alpha="0.6"
+            android:ellipsize="marquee"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingBottom="3.0dp"
+            android:singleLine="true"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/listitem_playing"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/song_selected"
+        android:visibility="invisible" />
+
+</FrameLayout>

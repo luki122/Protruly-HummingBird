@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/preference_layout_height">
+
+    <ImageView
+        android:id="@+id/appIcon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginRight="@dimen/padding_large"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:textColor="@color/list_text_color"
+        android:textSize="@dimen/qscanner_detail_item_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/appIcon"
+        android:layout_marginRight="@dimen/padding_small"
+        android:layout_centerVertical="true"
+        android:ellipsize="marquee"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/appUninstall"
+        android:text="@string/safety_recommend_uninstall"
+        android:textSize="@dimen/qscanner_detail_summary_text_size"
+        android:textColor="@color/uninstall_app_text_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/button_margin_right"/>
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fuwuhao_menu_key_type" type="id" />
+    <item name="fuwuhao_menu_key_link" type="id" />
+    <item name="fuwuhao_menu_key_sub_menu" type="id" />
+    <item name="fuwuhao_menu_key_id" type="id" />
+</resources>

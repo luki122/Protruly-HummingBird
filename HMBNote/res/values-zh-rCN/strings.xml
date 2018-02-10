@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">便签</string>
+    <string name="action_share">分享</string>
+    <string name="action_delete">删除</string>
+
+    <string name="note_edit">编辑便签</string>
+    <string name="note_delete">删除此便签？</string>
+    <string name="note_loading">正在加载&#8230;</string>
+    <string name="note_sharing">正在分享&#8230;</string>
+    <string name="note_preset_content">欢迎使用保千里便签</string>
+    <string name="permission_denied">存储空间权限未打开</string>
+    <string name="image_copying">正在复制图片&#8230;</string>
+    <string name="image_delete">删除此图片？</string>
+    <string name="title_images">[<xliff:g id="NUM_OF_IMAGE">%d</xliff:g>张图片]</string>
+    <string name="length_exceed_limit">超过字数限制</string>
+    <string name="image_count_exceed_limit">最多允许10张图片</string>
+
+    <string name="item_note_time">M月dd日 hh:mm</string>
+    <string name="cancel">取消</string>
+    <string name="select_all">全选</string>
+    <string name="cancel_select_all">取消全选</string>
+    <string name="set_top">置顶</string>
+    <string name="cancel_set_top">取消置顶</string>
+    <string name="title_selected_count">已选择<xliff:g id="COUNT_OF_SELECTED">%d</xliff:g>项</string>
+    <string name="deleting">正在删除...</string>
+    <string name="sticking">正在置顶...</string>
+    <string name="canceling_stick">正在取消置顶...</string>
+</resources>

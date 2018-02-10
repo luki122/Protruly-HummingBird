@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:id="@+id/pinned_header_list_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/hb_search_view_include"
+        layout="@layout/hb_searchview_layout"
+        android:visibility="gone" />
+    <!--
+         Shown only when an Account filter is set.
+         - paddingTop should be here to show "shade" effect correctly.
+    -->
+    <!-- TODO: Remove the filter header. -->
+
+
+    <!-- <include layout="@layout/account_filter_header" /> -->
+
+    <view
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hb_search_view_include"
+        android:layout_marginRight="@dimen/hb_contact_listview_margin_right"
+        class="com.android.contacts.common.list.PinnedHeaderListView"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none" />
+
+    <com.android.dialer.widget.EmptyContentView
+        android:id="@+id/empty_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_below="@id/hb_search_view_include"
+        android:layout_marginTop="30dp"
+        android:visibility="gone" />
+
+    <hb.widget.HbIndexBar
+        android:id="@+id/index_bar"
+        android:layout_width="@dimen/index_bar_width"
+        android:layout_height="@dimen/hb_index_bar_height"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/index_bar_margin_right"
+        android:layout_marginTop="@dimen/index_bar_margin_top"
+        hb:balloonLeft="@dimen/index_bar_balloon_left"
+        hb:balloonTop="@dimen/index_bar_balloon_top"
+        hb:letterColor="@color/hb_indexbar_letter_color_selector" />
+
+    <!--
+         <hb.view.menu.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:maxHeight="50dp"
+        android:visibility="gone"
+        hb:menu="@menu/hb_contact_bottom_menu" />
+    -->
+
+</RelativeLayout>

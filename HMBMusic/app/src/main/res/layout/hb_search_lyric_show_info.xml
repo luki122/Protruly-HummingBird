@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/com.protruly.music"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:id="@+id/lyric_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <com.protruly.music.widget.HBSearchLyricView
+                android:id="@+id/lyric_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                custom:lyric_lineGap="30dp"
+                custom:lyric_textColor="#ff000000"
+                custom:lyric_textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/id_defualt_lyric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ff000000"
+        android:textSize="16sp"
+        android:visibility="gone" 
+        android:layout_centerInParent="true"
+        android:text="@string/hb_defualt_lyric"/>
+
+    <CheckBox
+        android:id="@+id/hb_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/hb_lyric_checked"
+        android:button="@null" />
+
+</RelativeLayout>

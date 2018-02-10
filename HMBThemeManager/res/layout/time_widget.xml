@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+**
+** Copyright 2009, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License")
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+
+<!-- This is a view that shows general status information in Keyguard. -->
+<com.hb.thememanager.views.TimeWidget 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/time_widget"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/clock_container_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|top"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/clock_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="@dimen/bottom_text_spacing_digital"
+            android:orientation="horizontal" >
+
+            <com.hb.thememanager.views.ClockView
+                android:id="@+id/clock_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/clock_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawablePadding="2dip"
+                    android:ellipsize="none"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/time_widget_clock_font_size" />
+
+                <TextView
+                    android:id="@+id/am_pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/clock_text"
+                    android:layout_marginStart="8dip"
+                    android:layout_toEndOf="@id/clock_text"
+                    android:textColor="#ffffffff"
+                    android:ellipsize="none"
+                    android:singleLine="true"
+                    android:textSize="12sp" />
+            </com.hb.thememanager.views.ClockView>
+        </LinearLayout>
+
+        <TextClock
+            android:id="@+id/date_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="left"
+            android:letterSpacing="0.15"
+            android:paddingLeft="7dp"
+            android:textAllCaps="true"
+            android:textColor="#ffffff" 
+            />
+    </LinearLayout>
+
+</com.hb.thememanager.views.TimeWidget>

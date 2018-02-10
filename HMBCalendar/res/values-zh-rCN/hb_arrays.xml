@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="description_labels">
+        <item>会议</item>
+        <item>火车</item>
+        <item>飞机</item>
+        <item>生日</item>
+        <item>纪念日</item>
+        <item>医疗</item>
+        <item>Party</item>
+        <item>吃饭</item>
+        <item>健身</item>
+        <item>喝水</item>
+    </string-array>
+
+    <string-array name="hb_reminder_minutes_labels">
+        <item>不提醒</item>
+        <item>正点提醒</item>
+        <item>提前5分钟</item>
+        <item>提前10分钟</item>
+        <item>提前30分钟</item>
+        <item>提前1小时</item>
+        <item>提前2小时</item>
+        <item>提前1天</item>
+    </string-array>
+
+    <string-array name="hb_week_start_day_labels">
+        <item>周日</item>
+        <item>周一</item>
+    </string-array>
+
+    <string-array name="day_labels">
+        <item>日</item>
+        <item>一</item>
+        <item>二</item>
+        <item>三</item>
+        <item>四</item>
+        <item>五</item>
+        <item>六</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/search_item_background_color"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:clickable="false">
+
+    <com.android.settings.widget.SettingSearchItemView
+        android:id="@+id/input"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:drawableStart="@drawable/ic_search_api_material"
+        android:drawablePadding="4dp"
+        android:text="@string/search_settings"
+        android:textColor="@color/search_item_text_color"
+        android:textAppearance="?android:textAppearanceListItemSecondary"
+        android:background="@drawable/search_frame_background"
+        android:gravity="center_vertical"
+        android:singleLine="true" />
+</FrameLayout>

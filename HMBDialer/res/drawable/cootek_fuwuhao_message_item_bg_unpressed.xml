@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/white" />
+    <corners android:radius="@dimen/fuwuhao_message_item_bg_radius" />
+    <stroke
+        android:width="@dimen/fuwuhao_message_item_bg_border"
+        android:color="@color/grey_250" />
+
+</shape>

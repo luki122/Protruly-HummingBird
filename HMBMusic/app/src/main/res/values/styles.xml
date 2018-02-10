@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <style name="Theme.Music" parent="@com.hb:Theme.Hb.Material.Light"></style>
+
+    <style name="HB_SeekBar" parent="@android:style/Widget.Holo.Light.SeekBar">
+        <item name="android:progressDrawable">@drawable/seekbar_player_progressdrawable</item>
+        <item name="android:thumb">@drawable/hb_seekbar_thumb</item>
+        <item name="android:minHeight">2dp</item>
+        <item name="android:maxHeight">2dp</item>
+
+    </style>
+
+    <style name="Theme.PlayerActivity" parent="@com.hb:Theme.Hb.Material.Light">
+        <item name="android:seekBarStyle">@com.hb:style/Widget.Hb.Material.Light.SeekBar</item>
+        <item name="android:navigationBarColor">@color/color_navi_back</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+  <style name="HB_Voice_SeekBar" parent="@android:style/Widget.Holo.Light.SeekBar">
+        <item name="android:progressDrawable">@drawable/seekbar_voice_progressdrawable</item>
+        <item name="android:thumb">@drawable/hb_voice_seekbar_thumb</item>
+        <item name="android:minHeight">2dp</item>
+        <item name="android:maxHeight">2dp</item>
+
+    </style>
+    <style name="exit_animation">
+        <item name="android:windowExitAnimation">@anim/hb_playlist_out</item>
+    </style>
+    <!-- add by wxue 20170918 start -->
+    <style name="Theme.HBLockActivity" parent="Theme.AppCompat.Light">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="LockScreenSeekBar" parent="@android:style/Widget.Holo.Light.SeekBar">
+        <item name="android:progressDrawable">@drawable/hb_lockscreen_progressdrawable</item>
+        <item name="android:thumb">@drawable/hb_voice_seekbar_thumb</item>
+        <item name="android:minHeight">2dp</item>
+        <item name="android:maxHeight">2dp</item>
+    </style>
+    <!-- add by wxue 20170918 end -->
+
+</resources>

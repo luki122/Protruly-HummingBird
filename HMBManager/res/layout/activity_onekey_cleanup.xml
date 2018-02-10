@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/onekey_optimize_title" >
+
+    <PreferenceCategory android:key="preference_clean_details" >
+
+        <com.hmb.manager.onekeyclean.OneKeyCleanUpPreference android:key="preference_cleanup_ani" />
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:icon="@drawable/onekey_cacheclean"
+        android:key="preference_onekey_systemcache"
+        android:title="@string/onekey_systemcache_clean" >
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/onekey_storageclean"
+        android:key="preference_onekey_availmem"
+        android:title="@string/onekey_AvailInterMemory_clean" >
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/onekey_rubblishclean"
+        android:key="preference_onekey_sysrubblish"
+        android:title="@string/onekey_sysrubblish_clean" >
+    </PreferenceScreen>
+    
+     <PreferenceScreen
+        android:icon="@drawable/onekey_memoryclean"
+        android:key="preference_onekey_sysmemory"
+        android:title="@string/onekey_sysmemory_clean" >
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:icon="@drawable/qs_not_office"
+        android:key="preference_onekey_virtus"
+        android:title="@string/onekey_virtus_check" >
+    </PreferenceScreen>
+    
+    <PreferenceScreen
+        android:icon="@drawable/onekey_pwd"
+        android:key="preference_onekey_pwd"
+        android:title="@string/onekey_pwd_check" >
+    </PreferenceScreen>
+
+        <PreferenceCategory
+            android:key="result_hand_preference"
+            android:title="@string/result_hand_setting" >
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:key="result_optimized_preference"
+            android:title="@string/result_optimized" >
+        </PreferenceCategory>
+    </PreferenceScreen>

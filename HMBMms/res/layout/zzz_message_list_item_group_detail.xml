@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<!-- hummingbird add by tangyisen for  hb style 2017.3.28 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mmsapp="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/group_detail_list_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="11dp"
+    android:paddingStart="24dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/status_info_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingEnd="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|end" >
+        <TextView
+            android:id="@+id/contacts_name_view"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:layout_height="wrap_content"
+            android:textColor="#DE000000"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/date_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#8A000000"
+            android:layout_gravity="center_vertical"
+            android:textSize="14sp" />
+        <ImageView
+            android:id="@+id/sim_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/send_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="#3D000000"
+            android:layout_gravity="center_vertical"
+            android:textSize="12sp"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/failed_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="#FFDF5252"
+            android:layout_gravity="center_vertical"
+            android:textSize="12sp"
+            android:text="@string/message_item_sent_failed"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <TextView
+            android:id="@+id/detail_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:ellipsize="end"
+            android:layout_marginBottom="13dp"
+            android:layout_marginEnd="16dp"
+            android:textColor="#8A000000"
+            android:textSize="14sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#29000000"/>
+</LinearLayout>

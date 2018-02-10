@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:padding="@dimen/app_title_text_left">
+
+    <TextView
+        android:id="@+id/tv_mb"
+        style="?android:attr/textAppearanceListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/megabyte_short" />
+
+    <EditText
+        android:id="@+id/edt_dataplan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/tv_mb"
+        android:background="@android:color/transparent"
+        android:ems="8"
+        android:gravity="center_vertical|left"
+        android:hint="@string/hint_data_total"
+        android:inputType="number|numberDecimal"
+        android:maxLength="5"
+        android:maxLines="1"
+        android:textColor="@color/color_data_total_text"></EditText>
+
+    <View
+        android:id="@+id/lay_line"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_line_divider_height"
+        android:layout_alignLeft="@id/edt_dataplan"
+        android:layout_below="@id/edt_dataplan"
+        android:background="@color/color_item_line_divider"></View>
+
+</RelativeLayout>

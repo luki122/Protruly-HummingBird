@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<!-- Full screen view projects under the status bar and contains the background -->
+<com.android.launcher3.LauncherRootView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/launcher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.android.launcher3.dragndrop.DragLayer
+        android:id="@+id/drag_layer"
+        android:clipChildren="false"
+        android:importantForAccessibility="no"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- The workspace contains 5 screens of cells -->
+        <!-- DO NOT CHANGE THE ID -->
+
+        <com.android.launcher3.Workspace
+            android:id="@+id/workspace"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            launcher:pageIndicator="@+id/page_indicator"
+            launcher:pageIndicator_cube="@+id/page_indicator_cube"><!-- lijun add page_indicator_cube -->
+        </com.android.launcher3.Workspace>
+
+        <!-- lijun add for aline icons start -->
+        <com.android.launcher3.colors.ChameleonTextView
+            android:id="@+id/aline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/aline_button_margin_top"
+            android:textSize="16sp"
+            android:layout_gravity="top|center_horizontal"
+            launcher:dark_color="@color/aline_button_text_color_dark"
+            launcher:light_color="@color/aline_button_text_color_light"
+            android:text="@string/valcants_button_text"
+            android:visibility="gone"
+            />
+        <!-- lijun add for aline icons end -->
+
+        <!-- DO NOT CHANGE THE ID -->
+        <include layout="@layout/hotseat"
+            android:id="@+id/hotseat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            launcher:layout_ignoreInsets="true" />
+
+        <include layout="@layout/overview_panel"
+            android:id="@+id/overview_panel"
+            android:visibility="gone" />
+
+        <!-- Keep these behind the workspace so that they are not visible when
+             we go into AllApps -->
+
+        <include layout="@layout/page_indicator"
+            android:id="@+id/page_indicator" />
+        <!--lijun add start for cube pageindicator -->
+        <include layout="@layout/page_indicator_dots"
+            android:id="@+id/page_indicator_dots" />
+        <include
+            layout="@layout/page_indicator_cube"
+            android:id="@+id/page_indicator_cube"
+            android:visibility="invisible" />
+
+        <com.android.launcher3.pageindicators.PageIndicatorDiagitalImagview
+            android:id="@+id/page_indicator_digital"
+            android:visibility="gone"
+            android:layout_width="@dimen/pageIndicator_diagital_imagview_size"
+            android:layout_height="@dimen/pageIndicator_diagital_imagview_size"
+            android:clickable="false"
+            android:layout_gravity="center" />
+        <!-- lijun add end -->
+
+        <include
+            android:id="@+id/drop_target_bar"
+            layout="@layout/drop_target_bar_horz" />
+
+        <include
+            layout="@layout/qsb_container"
+            android:id="@+id/qsb_container" />
+
+        <include layout="@layout/widgets_view"
+            android:id="@+id/widgets_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+        <!-- lijun add for Widgets Container begin -->
+        <include layout="@layout/widgets_paged_view_for_underline_indicator"
+            android:id="@+id/widgets_paged_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:visibility="gone" />
+        <!-- lijun add for Widgets Container end -->
+
+        <include layout="@layout/all_apps"
+            android:id="@+id/apps_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            launcher:layout_ignoreInsets="true" />
+        <!--liuzuo add the background of workspace when opening folder begin  -->
+        <ImageView android:id="@+id/img_workspace_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/workspace_bg_color"
+            launcher:layout_ignoreInsets="true"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+        <!--liuzuo end -->
+        <!--liuzuo add  for addIcon begin  -->
+        <LinearLayout
+            android:id="@+id/folder_importmode_button_container"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/folder_import_button_height"
+            android:layout_gravity="center_horizontal|bottom"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/folder_import_button_container_marginBottom"
+            android:visibility="gone">
+            <Button
+                android:id="@+id/folder_importmode_button"
+                android:text="@string/folder_importmode_button"
+                android:textSize="@dimen/folder_import_button_textSize"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#ffffff"
+                android:maxLines="1"
+                android:layout_height="@dimen/folder_import_button_height"
+                android:layout_width="@dimen/folder_import_button_width"
+                android:background="@drawable/btn_import_bg"
+                style="?android:attr/borderlessButtonStyle"
+                />
+        </LinearLayout>
+        <!--liuzuo :add  for addIcon  end -->
+
+        <!-- lijun add for wallpaper -->
+        <com.android.launcher3.wallpaperpicker.WallpaperPagedViewContainer
+            android:id="@+id/wallpaper_picker"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/wallpaper_containterbar_height"
+            android:layout_gravity="center_horizontal|bottom"
+            android:visibility="gone"/>
+        <!--Icon Arrange-->
+        <com.android.launcher3.ArrangeNavigationBar
+            android:id="@+id/navigationbar"
+            android:scrollbars="horizontal"
+            android:scrollbarThumbHorizontal="@drawable/indicator_thumbnail"
+            android:scrollbarSize="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:gravity="center"
+            android:clipChildren="false"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:visibility="gone">
+            <com.android.launcher3.ArrangeNavLinearLayout
+                android:id="@+id/nav_linear"
+                android:animateLayoutChanges="true"
+                android:gravity="center"
+                android:clipChildren="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.android.launcher3.BubbleTextView
+                    style="@style/Icon"
+                    android:focusable="true"
+                    android:id="@+id/add_folder"
+                    android:text="@string/add_empty_folder"
+                    launcher:centerVertically="true"
+                    android:includeFontPadding="false"
+                    android:drawableTop="@drawable/ic_add_folder"/>
+            </com.android.launcher3.ArrangeNavLinearLayout>
+        </com.android.launcher3.ArrangeNavigationBar>
+        
+   <!-- cyl add for special effect start -->
+	    <include
+          android:id="@+id/specialeffect_container"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal|bottom"
+          layout="@layout/specialeffect_layout"
+          android:visibility="gone" />
+   <!--  cyl add for special effect  end -->
+   
+    </com.android.launcher3.dragndrop.DragLayer>
+
+    <!-- lijun add for theme changed -->
+    <com.android.launcher3.ThemeChangedLoadingView
+        android:id="@+id/theme_changed_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-50dp"
+        android:layout_marginBottom="-50dp"
+        android:background="@color/theme_loading_bg_color"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/theme_loading_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/loading"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/theme_loading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="75dp"
+            android:text="@string/theme_loding_text"
+            android:textColor="#ffffffff"
+            android:layout_gravity="center"/>
+
+    </com.android.launcher3.ThemeChangedLoadingView>
+
+</com.android.launcher3.LauncherRootView>

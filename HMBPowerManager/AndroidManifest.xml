@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.protruly.powermanager"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="170922002"
+    android:versionName="v1.0.1.0102.r">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.READ_HB_POWERMANAGER" />
+    <uses-permission android:name="android.permission.WRITE_HB_POWERMANAGER" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <permission
+        android:name="android.permission.READ_HB_POWERMANAGER"
+        android:label="@string/permission_access_powermanager"
+        android:protectionLevel="normal" />
+
+    <permission
+        android:name="android.permission.WRITE_HB_POWERMANAGER"
+        android:label="@string/permission_access_powermanager"
+        android:protectionLevel="normal" />
+
+    <application
+        android:persistent="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!--<activity-->
+            <!--android:name=".MainActivity"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:theme="@style/AppTheme">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!-- 省电管理 -->
+        <activity android:name=".powersave.PowerSaveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PreferenceActivityTheme">
+            <intent-filter>
+                <action android:name="hmb.powermanager.powersave" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 应用管理 -->
+        <activity android:name=".purebackground.activity.AppManagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PreferenceActivityTheme">
+            <intent-filter>
+                <action android:name="hmb.powermanager.appmanager" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 自启动管理 -->
+        <activity android:name=".purebackground.activity.AutoStartMgrActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <!-- 锁屏清理 -->
+        <activity android:name=".purebackground.activity.LockScreenCleanMgrActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <!-- 耗电排行 -->
+        <activity android:name=".powersave.fuelgauge.PowerUsageSummaryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <!-- 耗电详情 -->
+        <activity android:name=".powersave.fuelgauge.PowerUsageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <!-- 低电量模式 -->
+        <activity android:name=".powersave.lowpowermode.LowPowerModeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <!-- 对齐唤醒 -->
+        <activity android:name=".powersave.ForbitAlarmsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        
+
+        <receiver android:name=".BootReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".purebackground.receiver.PackageChangeReceiver"
+            android:exported="true">
+            <intent-filter android:priority="1000" >
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_CHANGED" />
+                <action android:name="android.intent.action.PACKAGE_DATA_CLEARED" />
+                <action android:name="android.intent.action.PACKAGE_FIRST_LAUNCH" />
+                <action android:name="android.intent.action.PACKAGE_FULLY_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.PACKAGE_RESTARTED" />
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.protruly.powermanager.ClearIconCacheReceiver">
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_THEME_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".powersave.PowerSaveService"
+            android:exported="true"/>
+
+        <service android:name=".powersave.lowpowermode.LowPowerSaveService"/>
+
+        <service android:name=".purebackground.service.MonitorService"/>
+
+        <service android:name=".purebackground.service.BGCleanService">
+            <intent-filter>
+                <action android:name="hmb.intent.action.BG_CLEAN" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".purebackground.service.IdleFreezeService">
+            <intent-filter>
+                <action android:name="hmb.intent.action.IDLE_FREEZE" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name=".purebackground.provider.AutoCleanAppProvider"
+            android:authorities="com.protruly.powermanager.purebackground.provider.AutoCleanAppProvider"
+            android:exported="true"
+            android:readPermission="android.permission.READ_HB_POWERMANAGER"
+            android:writePermission="android.permission.WRITE_HB_POWERMANAGER"/>
+
+        <provider
+            android:name=".purebackground.provider.AutoStartAppProvider"
+            android:authorities="com.protruly.powermanager.purebackground.provider.AutoStartAppProvider"
+            android:exported="true"
+            android:readPermission="android.permission.READ_HB_POWERMANAGER"
+            android:writePermission="android.permission.WRITE_HB_POWERMANAGER"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,8 @@
+该版本是origin/nougat-mr1.5-release的一个分支，创建时的版本hash值：74d3aa723c702c2e8e969f1f6071ca9e14e15d77
+
+1.项目创建遇到的一些问题以及解决方法：
+   若修改build.gradle中的applicationId,同时手机中有一个Launcher3,会遇到以下问题：
+   A.项目中AndroidManifest中创建的权限与手机中Launcher3的权限冲突，引起无法安装.
+    解决方法：去掉手机里的Launcher3或者去掉项目中冲突的;
+   B.项目中的LauncherProvider手机中的Launcher3中的LauncherProvider冲突.
+    解决方法：去掉手机里的Launcher3或者LauncherProviderauthorities；

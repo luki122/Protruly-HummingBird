@@ -1,0 +1,29 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <ImageView
+        android:id="@+id/theme_cover"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_theme_list_item_covert_height"
+        android:scaleType="fitXY"
+        android:background="@drawable/img_loading"
+        />
+    
+    <TextView 
+        android:id="@+id/theme_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.HomeListItemName"
+        android:layout_marginTop="@dimen/theme_list_item_name_margin_top"
+        android:visibility="gone"
+        />
+
+    
+    <TextView android:id="@+id/theme_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.HomeListItemPrice"
+        android:visibility="gone"
+        />
+
+</merge>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/hb_recommend_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@drawable/hb_playlist_item_clicked" >
+    </ListView>
+
+    <include
+        android:layout_gravity="bottom"
+        layout="@layout/listview_footer" />
+
+    <include
+        android:layout_gravity="center"
+        layout="@layout/hb_loading" />
+
+</FrameLayout>

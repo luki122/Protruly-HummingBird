@@ -1,0 +1,91 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.com.protruly.filemanager.globalsearch.GlobalSearchHistoryFragment">
+
+
+
+<LinearLayout
+    android:id="@+id/listview_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:text="@string/global_search_his_title"
+            android:paddingLeft="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="15dp"
+                android:layout_height="0.5dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#EEEEEE"/>
+        </LinearLayout>
+
+        <hb.widget.HbListView
+            android:id="@+id/listView"
+            android:layout_alignParentRight="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</LinearLayout>
+<!--
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEEEEE"></View>&ndash;&gt;-->
+
+
+    <!--<com.hb.internal.widget.ButtonBarLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_clear"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#F6F6F6"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/global_search_his_deleteall"
+       />
+
+    </com.hb.internal.widget.ButtonBarLayout>-->
+  <!--  <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:background="#EEEEEE"></View>-->
+
+
+
+<RelativeLayout
+    android:id="@+id/emptyview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/global_search_his_empty"/>
+</RelativeLayout>
+
+
+
+    </LinearLayout>
+

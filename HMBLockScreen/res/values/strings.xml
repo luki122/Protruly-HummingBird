@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lockscreen</string>
+    <string name="set">Please click to give me authority to use the lock screen function</string>
+    <string name="explanation">Can use when you give the authority to me</string>
+</resources>

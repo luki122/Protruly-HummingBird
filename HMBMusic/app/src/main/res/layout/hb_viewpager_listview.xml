@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/list_songs"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@drawable/player_line"
+        android:listSelector="@drawable/hb_player_listview_bg"
+        android:scrollbarThumbVertical="@drawable/mylist_scraoll_bg"
+        android:scrollbars="vertical" />
+
+    <ImageView
+        android:id="@+id/player_list_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/song_selected"
+        android:contentDescription="@null"
+        android:visibility="gone" />
+
+</FrameLayout>

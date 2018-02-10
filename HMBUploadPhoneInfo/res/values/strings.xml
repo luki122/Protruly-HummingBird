@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HMBCorrectService</string>
+    <string name="china_mobile">中国移动</string>
+    <string name="china_unicom">中国联通</string>
+    <string name="china_telecom">中国电信</string>
+    <string name="un_operator">其它</string>
+</resources>

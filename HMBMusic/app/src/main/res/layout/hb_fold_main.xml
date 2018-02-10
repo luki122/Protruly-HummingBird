@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/hb_title_contain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="11dp"
+        android:paddingTop="11dp" >
+
+        <Button
+            android:id="@+id/hb_ignore_button"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="@string/hb_is_ignored"
+            android:visibility="gone"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/hb_fold_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <!--  android:layout_marginRight="12dp" -->
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@drawable/hb_fold_line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <hb.widget.HbListView
+            android:id="@+id/hb_fold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/hb_fold_no_songs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/hb_no_songs"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/hb_no_ignore_fold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/hb_ignore_fold_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:src="@drawable/hb_no_ignore_bg" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hb_ignore_fold_bg"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="@string/hb_ignore_info"
+                android:textColor="#9e9e9e"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

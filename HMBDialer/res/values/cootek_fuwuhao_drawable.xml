@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="funcbar_bg">@drawable/cootek_fuwuhao_background_light_grey</drawable>
+    <drawable name="fuwuhao_listview_bg">@color/fuwuhao_bg_color</drawable>
+    <color name="publicnumber_item_cover_color">@color/black_transparency_150</color>
+    <drawable name="fuwuhao_divider_line">@color/grey_250</drawable>
+    <color name="fuwuhao_title_color">#333</color>
+    <color name="fuwuhao_description_color">@color/grey_550</color>
+    <color name="fuwuhao_sub_description_color">@color/grey_550</color>
+    <color name="fuwuhao_more_color">#333</color>
+</resources>

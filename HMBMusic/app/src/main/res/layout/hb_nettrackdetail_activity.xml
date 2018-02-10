@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/activity_base_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/hb_header_bg"
+        layout="@layout/hb_nettrackdetail_image" />
+
+    <!--
+         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical" >
+    -->
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <View
+            android:id="@+id/hb_status_bg"
+            android:layout_width="match_parent"
+            android:layout_height="21dip"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="21dip" >
+
+            <RelativeLayout
+                android:id="@+id/hb_backview_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="46dp"
+                android:clickable="true" >
+
+                <TextView
+                    android:id="@+id/hb_title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="36dp"
+                    android:singleLine="true"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/hb_custom_bar_title" />
+
+                <com.protruly.music.widget.BackView
+                    android:id="@+id/hb_backview"
+                    android:layout_width="@dimen/hb_custom_bar_width"
+                    android:layout_height="21dip"
+                    android:layout_alignLeft="@+id/hb_title_text"
+                    android:background="@drawable/hb_backview_clicked"
+                    android:clickable="false" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/hb_play_parent"
+                android:layout_width="52dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true" >
+
+                <ImageButton
+                    android:id="@+id/img_bt_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="14dp"
+                    android:src="@drawable/song_playing"
+                    android:background="@color/transparent"
+                    android:clickable="false" />
+                <!--  -->
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/hb_action_vdivider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/hb_actionbar_divider"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/hb_play_header"
+        android:layout_width="match_parent"
+        android:layout_height="45.3dp"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/hb_songlisttem_padding"
+        android:paddingRight="@dimen/hb_songlisttem_padding"
+        android:visibility="gone" >
+
+
+        <TextView
+            android:id="@+id/hb_recommend_play"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:drawablePadding="7dp"
+            android:drawableRight="@drawable/hb_album_btn_allplay"
+            android:gravity="center"
+            android:paddingRight="5.0dp"
+            android:text="@string/play_all"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/hb_recommand_songnumber"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:textColor="#7d7d7d"
+            android:textSize="@dimen/hb_songnumber_textsize" />
+    </LinearLayout>
+    <!-- </LinearLayout> -->
+
+    <include
+        android:id="@+id/hb_desc_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/hb_nettrack_desc"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/hb_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_actionbar" />
+
+</FrameLayout>

@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/choose"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="@color/ringtone_setto_list_div" />
+
+    <TextView
+        android:id="@+id/incallringtone"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFFFFFFF"
+        android:gravity="center"
+        android:text="@string/settoincallringtone"
+        android:textColor="@color/ringtone_setto_text"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="@color/ringtone_setto_list_div" />
+
+    <TextView
+        android:id="@+id/smsringtone"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFFFFFFF"
+        android:gravity="center"
+        android:text="@string/settosmsringtone"
+        android:textColor="@color/ringtone_setto_text"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="@color/ringtone_setto_list_div" />
+
+    <TextView
+        android:id="@+id/alarmringtone"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFFFFFFF"
+        android:gravity="center"
+        android:text="@string/settoalarmringtone"
+        android:textColor="@color/ringtone_setto_text"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="@color/ringtone_setto_list_div" />
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#FFFFFFFF"
+        android:gravity="center"
+        android:text="@string/confirm_cancel"
+        android:textColor="@color/gray_light"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1px"
+        android:background="@color/ringtone_setto_list_div" />
+
+</LinearLayout>

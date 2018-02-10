@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="switch_button_height">23dp</dimen>
+    <dimen name="switch_MinWidth">20dp</dimen>
+    <dimen name="switch_button_width">40dp</dimen>
+    <dimen name="switch_button_radius">2dp</dimen>
+    <dimen name="switch_button_baseline">1dp</dimen>
+    <dimen name="storage_space_baseline">10dp</dimen>
+    <dimen name="text_size14">14sp</dimen>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2008 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+        ViewPager for swiping between tabs.  We put StrequentContactListFragment,
+        DefaultContactBrowseListFragment and GroupBrowseListFragment at runtime.
+
+        (Adding them directly as the children of this view is not recommended.  ViewPager should
+        be treated like a ListView, which doesn't expect children to be added from the layout.)
+    -->
+    <hb.widget.toolbar.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/colorPrimary"
+        hb:layout_scrollFlags="scroll|enterAlways"
+        hb:title="@string/mediaplaybacklabel">
+
+    </hb.widget.toolbar.Toolbar>
+
+    <hb.widget.tab.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/my_toolbar" />
+
+    <com.protruly.music.widget.HBNoScrollViewPager
+        android:id="@+id/tab_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tab_layout"
+        android:layout_above="@+id/ll_bottom"/>
+    
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="#FFF4F4F4"
+        android:orientation="horizontal"
+        android:layout_height="24dp">
+
+        <TextView
+            android:id="@+id/tv_music_count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#4D000000"
+            android:textSize="10sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</RelativeLayout>
+
+

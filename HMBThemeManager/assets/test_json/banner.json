@@ -1,0 +1,21 @@
+{
+  "retCode": 0,
+  "body": {
+    "banner": [
+      {
+        "id":1,
+        "icon":"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496896203254&di=194aea4af2cf30d3c66bbc02d412b9b2&imgtype=0&src=http%3A%2F%2Fimg2.niutuku.com%2Fdesk%2F1207%2F1058%2Fntk121970.jpg",
+        "name":"青春版1",
+        "type":1,
+        "parameter":12
+      },
+      {
+        "id":1,
+        "icon": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497573842&di=36830488a651238b969c698070de616f&imgtype=jpg&er=1&src=http%3A%2F%2Fbbsatt.yineitong.com%2Fforum%2F2011%2F03%2F25%2F110325164993a2105258f0d314.jpg",
+        "name": "青春版2",
+        "type":1,
+        "parameter":13
+      }
+    ]
+  }
+}

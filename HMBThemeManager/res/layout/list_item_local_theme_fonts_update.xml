@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/theme_list_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_local_theme_fonts_item_height"
+            android:scaleType="centerCrop"
+            android:cropToPadding="true"
+            android:background="@drawable/image_border" />
+
+        <ImageView
+            android:id="@+id/theme_list_item_apply_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@com.hb:drawable/ic_toolbar_done"
+            android:tint="@android:color/white"
+            android:clickable="false"
+            android:focusable="false"
+            android:visibility="gone" />
+        <CheckBox
+            android:id="@+id/theme_list_item_edit_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" 
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false"
+            />
+        <com.hb.thememanager.views.RotateTextView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:text="@string/has_new_version"
+            android:layout_gravity="top|left"
+            android:gravity="top|left"
+            android:paddingTop="2dp"
+            android:paddingLeft="4dp"
+            android:textSize="8dp"
+            android:textColor="@android:color/white"
+            app:degree="-45"
+            app:degreeBackgroundColor="@color/rotate_text_background_for_update"
+            app:solidSize="36dp"
+        />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/theme_list_item_title"
+        style="@style/TextAppearance.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/local_theme_list_title_margin_top"
+        android:gravity="center" />
+
+</LinearLayout>

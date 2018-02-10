@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/baidulog"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/xiamilogo_bottom"
+                android:drawablePadding="6dp"
+                android:textColor="#6a6b6c"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <com.protruly.music.widget.HBTrackListVIew
+            android:id="@+id/recommend_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/baidulog"
+            android:divider="@drawable/line2"
+            android:footerDividersEnabled="false"
+            android:scrollbars="none" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/hb_song_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@drawable/song_selected"
+        android:divider="@drawable/line2"
+        android:headerDividersEnabled="false"
+        android:visibility="gone" />
+
+    <include
+        android:layout_gravity="center"
+        layout="@layout/hb_loading" />
+
+</FrameLayout>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- add by liyang begin -->
+    <string name="hb_commonly_contacts_header">Frequent contacts</string>
+    <string name="hb_other_contacts_header">Other contacts</string>
+    <string name="hb_all_contacts_header">All contacts</string>
+    <string name="hb_group_header">Group</string>
+    <string name="hb_ringtone">Ringtones</string>
+    <string name="hb_ringtone_default">Default ringTones</string>
+    <string name="hb_delete">Delete</string>
+    <string name="hb_delete_success">Successfully deleted</string>
+    <string name="hb_remove">Remove</string>
+    <string name="hb_contacts_share_title">Share</string>
+    <string name="hb_star_header_text">Star contacts</string>
+    <string name="menu_settings">Settings</string>
+    <string name="hb_ok">OK</string>
+    <string name="hb_remove_from_group">Remove from group</string>
+    <string name="hb_actionmode_selectall">Select all</string>
+    <string name="hb_actionmode_selectnone">Unselect all</string>
+    <string name="hb_cancel">Cancel</string>
+    <string name="hb_menu_addGroupMember">Add group members</string>
+    <string name="hb_menu_removeGroupMember">Removed</string>
+    <string name="hb_added">Added</string>
+    <string name="hb_useful_number">Yellow pages</string>
+    <string name="hb_call_logs">Call log</string>
+    <string name="hb_searchview_hint">Search contacts</string>
+    <string name="hb_goto_group_header">Group</string>
+    <string name="hb_starred_contacts_header">Collect</string>
+    <string name="hb_menu_export">Export contacts</string>
+    <string name="hb_menu_import">Import contacts</string>
+    <string name="hb_menu_export_to_sd">Export contacts</string>
+    <string name="hb_menu_import_from_sd">Import contacts</string>
+    <string name="import_from_sim1_menu">Import from SIM1</string>
+    <string name="import_from_sim2_menu">Import from SIM2</string>
+    <string name="export_to_sim1_menu">Export to SIM1</string>
+    <string name="export_to_sim2_menu">Export to SIM2</string>
+    <string name="hb_contact_import">Import</string>
+    <string name="hb_contact_export">Export</string>
+    <string name="search_shortcut_create_new_contact" msgid="1679917465521554093">"Create new contacts"</string>
+    <string name="search_shortcut_add_to_contact" msgid="4327842393369915751">"Add to existing contacts"</string>
+    <string name="hb_busyness_card_scan">"Business card scanning"</string>
+    <string name="hb_menu_view_contact">"View contacts"</string>
+    <string name="hb_menu_mark_number">"Mark number"</string>
+    <string name="hb_menu_edit_mark_number">"Edit mark"</string>
+    <string name="hb_menu_add_to_blacklist">"Add to blacklist"</string>
+    <string name="hb_business_card_unknow_title">"Job is unknown"</string>
+    <string name="hb_business_card_unknow_company">"Company is unknown"</string>
+    <string name="hb_close">"Close"</string>
+    <string name="hb_rename">"Rename"</string>
+    <string name="hb_delete_group">"Delete group"</string>
+    <string name="hb_business_card">"Business card"</string>
+    <string name="hb_group_family">"Family"</string>
+    <string name="hb_group_friend">"Friend"</string>
+    <string name="hb_group_colleague">"Colleague"</string>
+    <string name="hb_remove_group_member_message">"Are the selected contacts removed from the group?"</string>
+    <string name="hb_remove_group_member_title">"Remove group members"</string>
+    <string name="hb_delete_call_log_message">"Whether to delete this <xliff:g id="COUNT">%s</xliff:g> call logs?"</string>
+    <string name="hb_delete_call_log_title">"Delete call log"</string>
+    <string name="hb_contacts_count">"<xliff:g id="COUNT">%s</xliff:g> contacts"</string>
+    <string name="hb_search_contacts">"Search contacts"</string>
+    <string name="hb_auto_record_contacts">"Recording contact"</string>
+    <string name="hb_privacy_contacts">"Privacy contacts"</string>
+    <string name="hb_add_auto_record_contacts">"Add a recording contact"</string>
+    <string name="hb_add_privacy_contacts">"Add a privacy contact"</string>
+    <string name="hb_is_save_group_message">"Do you want to save a group?"</string>
+    <string name="hb_is_save_group_title">"Save group"</string>
+    <string name="hb_group_name_cannot_empty">"Group name can not be empty"</string>
+    <string name="hb_business_card_scan_fail">"Business card scanning failed"</string>
+    <string name="hb_business_card_scan_camera_activity_not_found">"Camera application not found"</string>
+    <string name="hb_import_sim_contacts_reading_simcontacts">"Camera application not found"</string>
+    <string name="hb_import_sim_contacts_query_result">"Found <xliff:g id="COUNT">%s</xliff:g> contacts,Import now?"</string>
+    <string name="hb_import_sim_contacts_no_contacts">No contact in SIM card</string>
+    <string name="hb_import_sim_contacts_doing">Importing Contacts in sim card</string>
+    <string name="hb_export_sim_contacts_doing">Contacts being exported to sim card</string>
+    <string name="hb_import_sim_contacts_doing_from_sd">Importing internal storage contacts </string>
+    <string name="hb_export_sim_contacts_doing_to_internal_storage">Exporting <xliff:g id="COUNT">%s</xliff:g> contacts to internal storage</string>
+    <string name="hb_export_sim_contacts_doing_to_sd">Exporting <xliff:g id="COUNT">%s</xliff:g> contacts to SD card</string>
+    <string name="hb_import_sim_contacts_result">"Imported <xliff:g id="COUNT">%s</xliff:g> Contacts"</string>
+    <string name="hb_import_sim_contacts_finished">"Import SIM Contacts Finished."</string>
+    <string name="hb_import_sim_contacts_zero">"SIM card has no contacts."</string>
+    <string name="hb_import_sim_contacts_result_with_cancel">"Canceled, Imported <xliff:g id="COUNT">%s</xliff:g> Contacts"</string>
+    <string name="hb_export_sim_contacts_result_with_cancel">"Canceled,Exported <xliff:g id="COUNT">%s</xliff:g> Contacts"</string>
+    <string name="hb_export_sim_contacts_result">"<xliff:g id="COUNT">%s</xliff:g> contacts successfully  exported"</string>
+    <string name="hb_import_sim_contacts_full">SIM card is full, fail to export contacts</string>
+    <string name="hb_import_sim_contacts_part_success">"Exported <xliff:g id="COUNT1">%s</xliff:g>Contacts, As SIM Card Full, The Remaining <xliff:g id="COUNT2">%s</xliff:g> Contacts Cannot Import"</string>
+    <string name="hb_export_sim_contacts_to_sd_confication_message">"Export As:<xliff:g id="COUNT">%s</xliff:g>"</string>
+    <string name="hb_cancel_msg">Canceled</string>
+    <string name="hb_import_from_sd_searching_vcard_title">Searching Vcard Files</string>
+    <string name="hb_import_from_sd_searching_vcard">Searching...</string>
+    <string name="hb_import_from_sd_found_vcard_dialog_message">"Found <xliff:g id="COUNT">%s</xliff:g> Contacts,Importing?"</string>
+    <string name="hb_import_canceling_title">Canceling</string>
+    <string name="hb_import_canceling_message">Canceling...</string>
+    <string name="hb_call_detail_title">Call Log Details</string>
+    <string name="hb_delete_contacts">Delete Contacts</string>
+    <string name="hb_deleting_contacts">Deleting Contacts</string>
+    <string name="hb_saving_contacts">Storing Contacts</string>
+    <string name="hb_search_shortcut_send_sms_message">"Send SMS"</string>
+    <string name="hb_menu_actionbar_selected_items">"Selected <xliff:g id="COUNT">%s</xliff:g>"</string>
+    <string name="hb_delete_one_contact">"Delete Contacts？"</string>
+    <string name="hb_delete_multi_contacts">"Deleted <xliff:g id="COUNT">%s</xliff:g> Contacts？"</string>
+    <string name="hb_delete_group_dialog_title">"Dissolve Group?"</string>
+    <string name="hb_delete_group_dialog_message">"The Members Will Not Deleted"</string>
+    <string name="hb_dissolved">"Dissolved"</string>
+    <string name="hb_search_contacts_empty">"No Matched Contacts"</string>
+    <string name="hb_contacts_empty">"No Contacts"</string>
+    <string name="hb_adding_auto_record_contacts">"Adding Record Contacts"</string>
+    <string name="hb_adding_privacy_contacts">"Adding Privacy Contacts"</string>
+    <string name="hb_choose_number">"Choose Number"</string>
+    <string name="hb_choose_contacts">"Choose Contacts"</string>
+    <string name="hb_search_contacts_hint">"Search Contacts、Numbers"</string>
+    <string name="hb_other_string">"Others"</string>
+    <string name="hb_import_sim_contacts_choose_first">"Please Select SIM Contacts To Import"</string>
+    <string name="hb_contact_no_name">"(No Name)"</string>
+    <string name="hb_add_group_member_finish_toast">"A Group Can Add 1000 Contacts At Most，You Have Added<xliff:g id="COUNT">%s</xliff:g>Contacts This Time,The Remaining<xliff:g id="COUNT1">%s</xliff:g>Contacts Cannot Add."</string>
+    <string name="hb_marked_by_you">" | Marked By You"</string>
+    <string name="hb_calllog_searchview_hint">Search Calllogs、Contacts</string>
+    <string name="record_settings_label">Call Logs Record</string>
+    <string name="hb_contact_setting">Settings</string>
+    <string name="hb_remove_record_contacts_prompt">"Remove Selected Record Contacts?"</string>
+    <string name="hb_add_privacy_contacts_from_exist_contact">"Add From Exist Contacts"</string>
+    <string name="hb_add_privacy_contacts_manual">"Add Manually"</string>
+    <string name="hb_remove_privacy_contacts_dialog_message2">At the same time delete this contact and communication content</string>
+    <string name="hb_remove_privacy_contacts_dialog_message">"Restore “<xliff:g id="GROUP_LABEL">%1$s</xliff:g>” To Normal Contacts?"</string>
+    <string name="hb_remove_privacy_contacts_dialog_title">Remove Privacy Contacts</string>
+    <string name="hb_privacy_contacts_empty">Add Privacy Contacts To Protected Your Privacy Communication.</string>
+    <string name="hb_privacy_calllogs">Privacy Call Logs</string>
+    <string name="private_notification_text">Notification Text</string>
+    <string name="private_notification_text_summary">New system message</string>
+    <string name="hb_confirm_import_vcard_message">Whether to import vCard files:<xliff:g id="NAME">%s</xliff:g>?</string>
+
+    <!-- add from 2017 -->
+    <string name="hb_dial_with_which">Dial with card<xliff:g id="CARD_ID">%1$s</xliff:g></string>
+    <string name="hb_send_message">Send message</string>
+    <string name="hb_add_star">Collect</string>
+    <string name="hb_remove_star">Cancel Favorites</string>
+    <string name="hb_copy_number">Copy number</string>
+    <string name="hb_delete_calllog">Delete records</string>
+    <string name="delete_multi">Delete in batches</string>
+    <string name="incomingString">Inbound</string>
+    <string name="outgoingString">Call out</string>
+    <string name="missedString">Missed</string>
+    <string name="rejectString">Reject</string>
+    <string name="have_added_star">Collected</string>
+    <string name="have_removed_star">Favorites cancelled</string>
+    <string name="hb_add_to_contact">Add as contacts</string>
+    <string name="hb_add_to_exist_contact">Add to existing contacts</string>
+    <string name="hb_name">Name</string>
+    <string name="hb_other">Other</string>
+    <string name="hb_done">Completed</string>
+    <string name="hb_select_contacts">Select contacts</string>
+    <string name="hb_quickdial">Quick dial</string>
+    <string name="hb_delete_number">Delete number</string>
+    <string name="hb_merge_contacts">Merge contacts</string>
+    <string name="hb_merge_contacts_subtitle">Merge contacts with same names</string>
+    <string name="hb_find_empty_contacts">No eligible contacts found</string>
+    <string name="hb_import_from_storage">Import from memory card</string>
+    <string name="hb_import_from_sim">Import from SIM card</string>
+    <string name="hb_searchview_contact_count_hint">Search <xliff:g id="COUNT">%s</xliff:g> contacts</string>
+    <string name="hb_contacts_label">contacts</string>
+    <string name="hb_quickdial_settings">Speed dial setting</string>
+    <string name="hb_contacts_management">Contact management</string>
+    <string name="hb_merge">Merge</string>
+    <string name="hb_highlight_color_string">#ff06c012</string>
+    <string name="date_the_day_before">"2 days ago"</string>
+    <string name="date_yesterday">"Yesterday"</string>
+    <string name="date_just_now">"Just"</string>
+    <string name="hb_add">"Add"</string>
+    <string name="hb_begin_vcard_import_message">Start to import, you can view the import progress in the notification column.</string>
+    <string name="hb_number_wrong_format">The number is in the wrong format</string>
+    <string name="exist_number">The number already exists</string>
+    <string name="add_to_black_over">Added to blacklist</string>
+    <string name="no_number">The number is empty</string>
+    <string name="hb_confirm_add_to_blacklist">Confirm to add <xliff:g id="NUMBER">%s</xliff:g> to blacklist?</string>
+    <string name="hb_remove_from_blacklist">Removed from blacklist and resumed interpecting history.</string>
+    <string name="hb_see_more">View more</string>
+    <string name="hb_rejected_call">Refuse to answer the phone</string>
+    <string name="hb_clearing_calllog">Clearing call log</string>
+    <string name="hb_cleared_calllog">Call log cleared</string>
+    <string name="hb_confirm_import_sim_contacts_message">Importing SIM contacts may spend 1-2 minutes, are you sure to import?</string>
+    <string name="hb_no_simcard_toast">Please insert SIM card.</string>
+    <string name="hb_airmode_mode_toast">Please close airmode first.</string>
+    <string name="hb_first_use_yellowpage_toast">The yellowpage will connect network and acquire your position, Agree?</string>
+    <string name="hb_agree">Agree</string>
+    <string name="hb_disagree">Disagree</string>
+    <string name="hb_donot_show_next_time">Do not show next time.</string>
+    <string name="hb_prompt">Prompt</string>
+    <string name="hb_rebuild_index_toast">Contacts is rebuilding index for settings change, Please wait for a moment.</string>
+    <string name="hb_querying">Querying</string>
+    <string name="hb_merge_not_found">No contacts to merge.</string>
+    <string name="hb_merge_finished">Merge done.</string>
+    <string name="hb_merging">Merging</string>
+    <string name="hb_merge_failed">Merge failed.</string>
+    <string name="hb_china_mobile">CMCC</string>
+    <string name="hb_china_unicom">CUCC</string>
+    <string name="hb_china_tele">CTCC</string>
+    <string name="hb_contacts_permission_denied">Contacts permission denied, the app may not work well.</string>
+    <string name="hb_phone_permission_denied">Phone permission denied, the app may not work well.</string>
+    <string name="hb_location_permission_denied">Location permission denied, the app may not work well.</string>
+    <string name="hb_storage_permission_denied">Storage permission denied, the app may not work well.</string>
+    <string name="hb_sms_permission_denied">SMS permission denied, the app may not work well.</string>
+    <string name="hb_camera_permission_denied">Camera permission denied, the app may not work well.</string>
+    <string name="hb_store_unavailable">Storage full</string>
+    <string name="hb_owner_number">Owner number:</string>
+    <string name="hb_call">Call</string>
+    <string name="hb_more">More</string>
+    <string name="hb_batch_operation">Batch operation</string>
+    <string name="hb_copy_done">It has been copied to the paste board.</string>
+    <string name="batch_delete_confirmation">The selected contacts will be deleted.</string>
+    <string name="batch_delete_multiple_accounts_confirmation">These contacts contains information from multiple accounts. Information from read-only accounts will be hidden in your contacts lists, not deleted.</string>
+    <string name="batch_delete_read_only_contact_confirmation">Information from read-only accounts will be hidden in your contacts lists, not deleted.</string>
+
+    <!-- add by liyang end -->
+
+
+    <!-- add by lmx begin -->
+    <string name="hb_call_fax_work">Fax</string>
+    <string name="birthdayLabelsGroup">Birthday</string>
+    <string name="anniversaryLabelsGroup">Anniversary</string>
+    <string name="addressLabelsGroup">Address</string>
+    <string name="hb_imLabelsGroup">"IM"</string>
+    <string name="hb_eventLabelsGroup">"Date"</string>
+    <string name="hb_emailLabelsGroup">"Email"</string>
+    <string name="hb_organizationLabelsGroup">"Organization"</string>
+    <string name="hb_phoneTypeMobile">Phone</string>
+    <string name="hb_phoneTypeHome">Home</string>
+    <string name="hb_phoneTypeWork">Work</string>
+    <string name="hb_phoneTypeFax">Fax</string>
+    <string name="hb_phoneTypeOther">Other</string>
+    <string name="hb_emailTypeHome">Home</string>
+    <string name="hb_emailTypeWork">Work</string>
+    <string name="hb_emailTypeOther">Other</string>
+    <string name="hb_postalTypeHome">Home</string>
+    <string name="hb_postalTypeWork">Work</string>
+    <string name="hb_postalTypeOther">Other</string>
+    <string name="hb_phoneNumber">Phone</string>
+    <string name="hb_recent_calls">Recents</string>
+    <!-- add by lmx end -->
+
+    <string name="permission_no_title">"No permission"</string>
+    <string name="permission_no_storage">To enable import or export function, \ nPlease open the storage space "permission in application management.</string>
+    <string name="permission_no_location">Please open "location permission" in application management.</string>
+    <string name="permission_no_calendar">Please open "calendar"permission in application management.</string>
+    <string name="permission_no_sms">Please open "SMS "permission in application management.</string>
+    <string name="permission_no_calllog">Please open "phone" permission in application management.</string>
+    <string name="permission_no_contacts">Please open "address book" permission in application management.</string>
+    <string name="no_music_activity">There is no Music app</string>
+    <string name="confirm_remove">Sure to remove this number from the blacklist?</string>
+    <string name="recover_black_phone">and resume interception records</string>
+    <string name="add_number_mark">Mark this number</string>
+    <string name="edit_number_mark">Modify number tag</string>
+    <string name="add_number_mark_menu">Mark this number</string>
+    <string name="add_to_black">"Add to blacklist"</string>
+    <string name="add_to_black_call">"Add to blacklist"</string>
+    <string name="remove_from_black">"Remove from blacklist"</string>
+    <string name="black_remove">Remove from blacklist</string>
+    <string name="reject_marks">" People mark"</string>
+    <string name="slide_delete_calllog_title">"Delete call log"</string>
+    <string name="slide_delete_calllog_message">Sure to delete all call logs for this number?</string>
+    <string name="reject_call_detail_title">Incoming call interception details</string>
+    <string name="hb_call_type_incoming">Inbound</string>
+    <string name="hb_call_type_outgoing">Call out</string>
+    <string name="hb_call_type_missed">Missed</string>
+
+</resources>

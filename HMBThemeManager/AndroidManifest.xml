@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hb.thememanager"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="170929002"
+    android:versionName="v1.0.1.0103.8" >
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.REMOVE_TASKS" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="com.android.launcher3.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- WallpaperManager.suggestDesiredDimensions() 必须需要加上此权限，才能匹配单屏壁纸和滑动壁纸 -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+
+    <application
+        android:name=".ThemeManagerApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:allowClearUserData="false"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LocalTheme.Light" >
+
+            <!--
+                 <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+            <intent-filter>
+                <action android:name="hummingbird.intent.action.THEME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.HomePage"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.HomePage" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.ThemePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LocalTheme.Light" >
+        </activity>
+        <activity
+            android:name="com.hb.thememanager.ui.fragment.themedetail.ThemePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.PreviewImageTranslucent" />
+        <activity
+            android:name="com.hb.thememanager.ui.fragment.themedetail.WallpaperPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.PreviewImageTranslucent.Wallpaper" />
+        <activity
+            android:name="com.hb.thememanager.ui.fragment.themedetail.LockScreenWallpaperPreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.PreviewImageTranslucent.Wallpaper" />
+        <activity
+            android:name="com.hb.thememanager.ui.SetDesktopWallpaperActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:icon="@drawable/desktop_wallpaper"
+            android:label="@string/title_wallpaper"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.Wallpaper.SetWallpaper" >
+            <intent-filter>
+                <action android:name="android.intent.action.ATTACH_DATA" />
+
+                <data android:mimeType="image/*" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.CategoryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage" >
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_CATEGORY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.DetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage.ThemePkgDetail"
+        >
+            <intent-filter>
+                <action android:name="com.hb.theme.HOME_THEME_ITEM_DETAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+        <activity
+            android:name=".ui.WallpaperDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.PreviewImageTranslucent.Wallpaper" >
+            <intent-filter>
+                <action android:name="com.hb.theme.WALLPAPER_DETAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+        <activity
+            android:name=".ui.RankActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage" >
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_RANK" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TopicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage" >
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_TOPIC" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.TopicDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage" >
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_TOPIC_DETAIL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.UserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage" >
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_USER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        
+        <activity
+            android:name=".ui.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage" >
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.ThemeCommentListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage.CommentList" >
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_SHOW_COMMENTS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+        <activity
+            android:name=".ui.AddCommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustResize"
+            android:theme="@style/Theme.ThemeManager.SecondPage.AddComment" >
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_ADD_COMMENTS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+	      <activity android:name="com.hb.thememanager.ui.FirstSetupThemeActivity"
+            android:screenOrientation="portrait"
+        >
+            <intent-filter>
+                <action android:name="com.hb.thememanager.ACTION_SETUP_THEME"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="com.hb.thememanager.ui.SetLockScreenWallpaperActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:icon="@drawable/lockscreen_wallpaper"
+            android:label="@string/title_lockscreen_wallpaper"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.Wallpaper.SetWallpaper" >
+            <intent-filter>
+                <action android:name="android.intent.action.ATTACH_DATA" />
+
+                <data android:mimeType="image/*" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.LoadMoreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage"
+        />
+
+        <activity android:name=".ui.CategoryDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage"
+        />
+
+
+        <activity android:name=".ui.fragment.ringtone.setTo"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.ringtone"
+        />
+        
+        <activity android:name=".ui.fragment.themelist.PurchaseActivity" 
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.SecondPage"
+            ></activity>
+                
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <!-- alipay sdk end -->
+        <!-- wechat sdk begin -->
+        <activity
+	    android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+	    android:exported="true"
+	    android:launchMode="singleTop"
+	    android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.Wallpaper.SetWallpaper" >
+        </activity>
+        <!-- wechat sdk end -->
+        
+        <!-- ===================== service ===================== -->
+        <service android:name="com.hb.thememanager.http.downloader.DownloadService" />
+        <service android:name="com.hb.thememanager.job.apply.ThemeApplyTask">
+        </service>
+        <service android:name="com.hb.thememanager.UpgradeService"
+        >
+            <intent-filter>
+                <action android:name="com.hb.thememanager.UPGRADE_THEME_SERVICE"/>
+            </intent-filter>
+
+        </service>
+
+        <service android:name=".CheckUserThemesService">
+            <intent-filter>
+                <action android:name="com.hb.thememanager.CHECK_USER_SERVICE"/>
+            </intent-filter>
+        </service>
+
+        <!-- ===================== receiver ===================== -->
+        <receiver android:name="com.hb.thememanager.receiver.ClearIconCacheReceiver" >
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_THEME_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.hb.thememanager.receiver.TimerReceiver">
+            <intent-filter>
+                <action android:name="com.hb.thememanager.ACTION_TIMER_TRY_THEME"/>
+                <action android:name="com.hb.thememanager.ACTION_CANCEL_TIMER_TRY_THEME"/>
+                <action android:name="com.hb.thememanager.start_timer"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.LoginOutReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="com.protruly.account.exit"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.UpdateUserInfoReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="com.protruly.account.updateinfo"/>
+            </intent-filter>
+        </receiver>        
+        <meta-data
+            android:name="com.hb.thememanager.job.ImageLoaderModule"
+            android:value="GlideModule" />
+
+    </application>
+
+</manifest>

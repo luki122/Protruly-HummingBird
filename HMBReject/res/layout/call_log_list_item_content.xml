@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/twoline_height"
+    android:minHeight="@dimen/twoline_height"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:orientation="vertical" >
+
+    <!-- style="@style/list_primary_text_style" -->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxEms="10"
+        android:singleLine="true"
+        android:layout_marginEnd="5dp"
+        android:textColor="@color/list_item_text_color"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/sim"
+        android:layout_width="8.67dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@id/title"
+        android:focusable="false"
+        android:src="@drawable/svg_dial_card1" />
+
+    <TextView
+        android:id="@+id/content"
+        style="@style/list_secondary_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/title"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="11dp"
+        android:paddingTop="2dp"
+        android:text="@string/app_name" />
+
+    <CheckBox
+        android:id="@+id/list_item_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="4dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/date"
+        style="@style/list_secondary_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom = "@id/title"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="12dp"
+        android:layout_toStartOf="@id/list_item_check_box" />
+
+    <TextView
+        android:id="@+id/area"
+        style="@style/list_secondary_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom = "@id/content"
+        android:layout_below="@id/date"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="5dp"
+        android:layout_toStartOf="@id/list_item_check_box" />
+
+</RelativeLayout>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- add by liyang begin -->
+    <string name="hb_commonly_contacts_header">常用聯系人</string>
+    <string name="hb_other_contacts_header">其它聯系人</string>
+    <string name="hb_all_contacts_header">全部聯系人</string>
+    <string name="hb_group_header">群組</string>
+    <string name="hb_ringtone">鈴聲</string>
+    <string name="hb_ringtone_default">默認鈴聲</string>
+    <string name="hb_delete">刪除</string>
+    <string name="hb_delete_success">刪除成功</string>
+    <string name="hb_remove">移除</string>
+    <string name="hb_contacts_share_title">分享</string>
+    <string name="hb_star_header_text">星標聯系人</string>
+    <string name="menu_settings">設置</string>
+    <string name="hb_ok">確定</string>
+    <string name="hb_remove_from_group">從群組移除</string>
+    <string name="hb_actionmode_selectall">全選</string>
+    <string name="hb_actionmode_selectnone">全不選</string>
+    <string name="hb_cancel">取消</string>
+    <string name="hb_menu_addGroupMember">添加組員</string>
+    <string name="hb_menu_removeGroupMember">已移除</string>
+    <string name="hb_added">已添加</string>
+    <string name="hb_useful_number">黃頁</string>
+    <string name="hb_call_logs">通話記錄</string>
+    <string name="hb_searchview_hint">搜索聯系人</string>
+    <string name="hb_goto_group_header">群組</string>
+    <string name="hb_starred_contacts_header">收藏</string>
+    <string name="hb_menu_export">導出聯系人</string>
+    <string name="hb_menu_import">導入聯系人</string>
+    <string name="hb_menu_export_to_sd">導出聯系人</string>
+    <string name="hb_menu_import_from_sd">導入聯系人</string>
+    <string name="import_from_sim1_menu">從SIM1中導入</string>
+    <string name="import_from_sim2_menu">從SIM2中導入</string>
+    <string name="export_to_sim1_menu">導出到SIM1</string>
+    <string name="export_to_sim2_menu">導出到SIM2</string>
+    <string name="hb_contact_import">導入</string>
+    <string name="hb_contact_export">導出</string>
+    <string name="search_shortcut_create_new_contact" msgid="1679917465521554093">"新建聯系人"</string>
+    <string name="search_shortcut_add_to_contact" msgid="4327842393369915751">"添加到已有聯系人"</string>
+    <string name="hb_busyness_card_scan">"名片掃描"</string>
+    <string name="hb_menu_view_contact">"查看聯系人"</string>
+    <string name="hb_menu_mark_number">"標記號碼"</string>
+    <string name="hb_menu_edit_mark_number">"修改標記"</string>
+    <string name="hb_menu_add_to_blacklist">"加入黑名單"</string>
+    <string name="hb_business_card_unknow_title">"職位不詳"</string>
+    <string name="hb_business_card_unknow_company">"公司不詳"</string>
+    <string name="hb_close">"關閉"</string>
+    <string name="hb_rename">"重命名"</string>
+    <string name="hb_delete_group">"刪除群組"</string>
+    <string name="hb_business_card">"名片"</string>
+    <string name="hb_group_family">"家人"</string>
+    <string name="hb_group_friend">"朋友"</string>
+    <string name="hb_group_colleague">"同事"</string>
+    <string name="hb_remove_group_member_message">"確定將所選聯系人從該群組移除?"</string>
+    <string name="hb_remove_group_member_title">"移除群組成員"</string>
+    <string name="hb_delete_call_log_message">"是否刪除這<xliff:g id="COUNT">%s</xliff:g>條通話記錄?"</string>
+    <string name="hb_delete_call_log_title">"刪除通話記錄"</string>
+    <string name="hb_contacts_count">"<xliff:g id="COUNT">%s</xliff:g>位聯系人"</string>
+    <string name="hb_search_contacts">"搜索聯系人"</string>
+    <string name="hb_auto_record_contacts">"錄音聯系人"</string>
+    <string name="hb_privacy_contacts">"隱私聯系人"</string>
+    <string name="hb_add_auto_record_contacts">"添加錄音聯系人"</string>
+    <string name="hb_add_privacy_contacts">"添加隱私聯系人"</string>
+    <string name="hb_is_save_group_message">"是否保存群組?"</string>
+    <string name="hb_is_save_group_title">"保存群組"</string>
+    <string name="hb_group_name_cannot_empty">"群組名稱不能為空"</string>
+    <string name="hb_business_card_scan_fail">"名片掃描失敗"</string>
+    <string name="hb_business_card_scan_camera_activity_not_found">"未找到相機應用"</string>
+    <string name="hb_import_sim_contacts_reading_simcontacts">"正在讀取SIM卡聯系人"</string>
+    <string name="hb_import_sim_contacts_query_result">"搜索到SIM卡中有<xliff:g id="COUNT">%s</xliff:g>位聯系人,是否導入?"</string>
+    <string name="hb_import_sim_contacts_no_contacts">該SIM卡上無聯系人</string>
+    <string name="hb_import_sim_contacts_doing">正在導入SIM卡聯系人</string>
+    <string name="hb_export_sim_contacts_doing">正在導出聯系人至sim卡</string>
+    <string name="hb_import_sim_contacts_doing_from_sd">正在導入內部存儲聯系人</string>
+    <string name="hb_export_sim_contacts_doing_to_internal_storage">正在導出<xliff:g id="COUNT">%s</xliff:g>聯系人至內部存儲</string>
+    <string name="hb_export_sim_contacts_doing_to_sd">正在導出<xliff:g id="COUNT">%s</xliff:g>聯系人至SD卡</string>
+    <string name="hb_import_sim_contacts_result">"已成功導入<xliff:g id="COUNT">%s</xliff:g>位聯系人"</string>
+    <string name="hb_import_sim_contacts_finished">"導入SIM卡聯系人完成"</string>
+    <string name="hb_import_sim_contacts_zero">"該SIM卡上無聯系人"</string>
+    <string name="hb_import_sim_contacts_result_with_cancel">"已取消導入，本次已成功導入<xliff:g id="COUNT">%s</xliff:g>位聯系人"</string>
+    <string name="hb_export_sim_contacts_result_with_cancel">"已取消導出，本次已成功導出<xliff:g id="COUNT">%s</xliff:g>位聯系人"</string>
+    <string name="hb_export_sim_contacts_result">"已成功導出<xliff:g id="COUNT">%s</xliff:g>位聯系人"</string>
+    <string name="hb_import_sim_contacts_full">sim卡已滿,聯系人未能導出。</string>
+    <string name="hb_import_sim_contacts_part_success">"成功導出<xliff:g id="COUNT1">%s</xliff:g>位聯系人到sim卡，因sim卡已滿，余下<xliff:g id="COUNT2">%s</xliff:g>位聯系人未能導出。"</string>
+    <string name="hb_export_sim_contacts_to_sd_confication_message">"即將把所選聯系人導出為以下文件:<xliff:g id="COUNT">%s</xliff:g>"</string>
+    <string name="hb_cancel_msg">已取消</string>
+    <string name="hb_import_from_sd_searching_vcard_title">正在搜索vcard檔案</string>
+    <string name="hb_import_from_sd_searching_vcard">正在搜索，請等待…</string>
+    <string name="hb_import_from_sd_found_vcard_dialog_message">"已找到<xliff:g id="COUNT">%s</xliff:g>,是否導入?"</string>
+    <string name="hb_import_canceling_title">正在取消</string>
+    <string name="hb_import_canceling_message">正在取消，請稍後...</string>
+    <string name="hb_call_detail_title">通話記錄詳情</string>
+    <string name="hb_delete_contacts">刪除聯系人</string>
+    <string name="hb_deleting_contacts">正在刪除聯系人</string>
+    <string name="hb_saving_contacts">正在存儲聯系人</string>
+    <string name="hb_search_shortcut_send_sms_message">"發送短信"</string>
+    <string name="hb_menu_actionbar_selected_items">"已選擇<xliff:g id="COUNT">%s</xliff:g>項"</string>
+    <string name="hb_delete_one_contact">"確定要刪除此聯系人嗎？"</string>
+    <string name="hb_delete_multi_contacts">"確定要刪除這<xliff:g id="COUNT">%s</xliff:g>位聯系人嗎？"</string>
+    <string name="hb_delete_group_dialog_title">"確定要解散此群組嗎？"</string>
+    <string name="hb_delete_group_dialog_message">"群組內聯系人將不會被刪除。"</string>
+    <string name="hb_dissolved">"解散"</string>
+    <string name="hb_search_contacts_empty">"暫未找到對應聯系人"</string>
+    <string name="hb_contacts_empty">"暫無聯系人"</string>
+    <string name="hb_adding_auto_record_contacts">"正在添加錄音聯系人"</string>
+    <string name="hb_adding_privacy_contacts">"正在添加隱私聯系人"</string>
+    <string name="hb_choose_number">"請選擇號碼"</string>
+    <string name="hb_choose_contacts">"請選擇聯系人"</string>
+    <string name="hb_search_contacts_hint">"搜索聯系人、號碼"</string>
+    <string name="hb_other_string">"其它"</string>
+    <string name="hb_import_sim_contacts_choose_first">"請先選擇需要導入的SIM卡聯系人"</string>
+    <string name="hb_add_group_member_finish_toast">"群組最多只能包含1000個成員，本次只能添加<xliff:g id="COUNT">%s</xliff:g>位聯系人,余下的<xliff:g id="COUNT1">%s</xliff:g>位聯系人不能添加"</string>
+    <string name="hb_marked_by_you">" | 已被您標記"</string>
+    <string name="hb_calllog_searchview_hint">搜索通話記錄、聯系人</string>
+    <string name="record_settings_label">通話錄音</string>
+    <string name="hb_contact_setting">設置</string>
+    <string name="hb_remove_record_contacts_prompt">"確定移除選中的錄音聯系人?"</string>
+    <string name="hb_privacy_calllogs">"隱私通話記錄"</string>
+    <string name="hb_add_privacy_contacts_from_exist_contact">"從已有聯系人添加"</string>
+    <string name="hb_add_privacy_contacts_manual">"手動添加"</string>
+    <string name="hb_remove_privacy_contacts_dialog_message2">同時刪除此聯系人及通訊內容</string>
+    <string name="hb_remove_privacy_contacts_dialog_message">"確定將“<xliff:g id="GROUP_LABEL">%1$s</xliff:g>”及其隱私通信內容恢復為常規內容嗎？"</string>
+    <string name="hb_remove_privacy_contacts_dialog_title">移除隱私聯系人</string>
+    <string name="hb_privacy_contacts_empty">添加隱私聯系人，保護短信和通話</string>
+    <string name="hb_privacy_calllogs">隱私通話記錄</string>
+    <string name="private_notification_text">通知欄提示文字</string>
+    <string name="private_notification_text_summary">有新的系統消息</string>
+    <string name="hb_china_mobile">移動</string>
+    <string name="hb_china_unicom">聯通</string>
+    <string name="hb_china_tele">電信</string>
+    <string name="hb_contacts_permission_denied">您沒有授予使用您的通訊錄許可權，通訊錄功能可能無法正常使用</string>
+    <string name="hb_phone_permission_denied">您沒有授予撥打電話和管理通話許可權，電話功能可能無法正常使用</string>
+    <string name="hb_location_permission_denied">您沒有授予使用此設備的位置資訊許可權，某些功能可能無法正常使用</string>
+    <string name="hb_storage_permission_denied">您沒有授予使用此設備的存儲空間許可權，某些功能可能無法正常使用</string>
+    <string name="hb_sms_permission_denied">您沒有授予使用此設備的簡訊許可權，某些功能可能無法正常使用</string>
+    <string name="hb_camera_permission_denied">您沒有授予使用此設備的相機許可權，某些功能可能無法正常使用</string>
+
+    <!-- add from 2017 -->
+    <string name="hb_dial_with_which">用卡<xliff:g id="CARD_ID">%1$s</xliff:g>撥打</string>
+    <string name="hb_send_message">發送信息</string>
+    <string name="hb_add_star">收藏</string>
+    <string name="hb_remove_star">取消收藏</string>
+    <string name="hb_copy_number">復制號碼</string>
+    <string name="hb_delete_calllog">刪除記錄</string>
+    <string name="delete_multi">批量刪除</string>
+    <string name="incomingString">呼入</string>
+    <string name="outgoingString">呼出</string>
+    <string name="missedString">未接</string>
+    <string name="rejectString">拒接</string>
+    <string name="have_added_star">已收藏</string>
+    <string name="have_removed_star">已取消收藏</string>
+    <string name="hb_add_to_contact">加為聯系人</string>
+    <string name="hb_add_to_exist_contact">添加到已有聯系人</string>
+    <string name="hb_name">姓名</string>
+    <string name="hb_other">其它</string>
+    <string name="hb_done">完成</string>
+    <string name="hb_select_contacts">選擇聯系人</string>
+    <string name="hb_delete_number">刪除號碼</string>
+    <string name="hb_merge_contacts">合並聯系人</string>
+    <string name="hb_merge_contacts_subtitle">合並姓名相同的聯系人</string>
+    <string name="hb_find_empty_contacts">未找到符合條件的聯系人</string>
+    <string name="hb_import_from_storage">從儲存卡導入</string>
+    <string name="hb_import_from_sim">從SIM卡導入</string>
+    <string name="hb_searchview_contact_count_hint"><xliff:g id="COUNT">搜索%s</xliff:g>位聯系人</string>
+    <string name="hb_contacts_label">"通訊錄"</string>
+    <string name="hb_quickdial_settings">快速撥號設置</string>
+    <string name="hb_contacts_management">聯系人管理</string>
+    <string name="hb_merge">合並</string>
+    <string name="date_the_day_before">"前天"</string>
+    <string name="date_yesterday">"昨天"</string>
+    <string name="date_just_now">"剛剛"</string>
+    <string name="hb_add">"添加"</string>
+    <string name="hb_confirm_import_vcard_message">是否導入vCard文件:<xliff:g id="NAME">%s</xliff:g>?</string>
+    <string name="hb_begin_vcard_import_message">"開始導入,可在通知欄查看導入進度"</string>
+    <string name="hb_number_wrong_format">號碼格式不對</string>
+    <string name="exist_number">號碼已存在</string>
+    <string name="add_to_black_over">已加入黑名單</string>
+    <string name="no_number">號碼為空 </string>
+    <string name="hb_confirm_add_to_blacklist">確定將<xliff:g id="NUMBER">%s</xliff:g>加入黑名單?</string>
+    <string name="hb_remove_from_blacklist">已從黑名單移除並恢復攔截記錄</string>
+    <string name="hb_see_more">查看更多</string>
+    <string name="hb_rejected_call">拒接電話</string>
+    <string name="hb_clearing_calllog">正在清除通話記錄</string>
+    <string name="hb_cleared_calllog">已清除通話記錄</string>
+    <string name="hb_confirm_import_sim_contacts_message">導入SIM卡聯系人可能需要花費1-2分鐘，確認導入?</string>
+    <string name="hb_no_simcard_toast">請插入SIM卡</string>
+    <string name="hb_airmode_mode_toast">請先關閉飛行模式</string>
+    <string name="hb_first_use_yellowpage_toast">黃頁需要使用到如下許可權：\n1.在使用過程中產生的移動網絡或WLAN流量，具體流量資費請諮詢當地運營商；\n2.位置資訊；\n在用戶授權的情况下我方不承擔黃頁應用任何方面的任何責任，包括但不限於其效能，知識產權，安全，支持，服務，內容及收費等。</string>
+    <string name="hb_agree">同意</string>
+    <string name="hb_disagree">不同意</string>
+    <string name="hb_donot_show_next_time">不再提醒</string>
+    <string name="hb_prompt">提示</string>
+    <string name="hb_rebuild_index_toast">由於更改系統設置，聯系人正在重建索引，請稍候再操作</string>
+    <string name="hb_querying">正在查詢</string>
+    <string name="hb_merge_not_found">未找到需要合並的聯系人</string>
+    <string name="hb_merge_finished">合並完成</string>
+    <string name="hb_merging">正在合並</string>
+    <string name="hb_merge_failed">沒有合並項或合並失敗</string>
+    <string name="select_vcard_title">選擇 vCard 檔案</string>
+    <string name="hb_store_unavailable">存儲空間不足，無法匯出</string>
+    <string name="hb_owner_number">本機號碼：</string>
+    <string name="hb_call">呼叫</string>
+    <string name="hb_more">更多</string>
+    <string name="hb_batch_operation">批量操作</string>
+    <string name="hb_copy_done">已複製到粘貼板</string>
+    <string name="batch_delete_confirmation" msgid="2564172328268885394">"所選的聯絡人將被刪除。"</string>
+    <string name="batch_delete_multiple_accounts_confirmation" msgid="5189722181586680185">"這些聯絡人包含來自多個帳戶的資訊。您的聯絡人清單不會顯示唯讀帳戶的資訊 (系統不會刪除這些資訊)。"</string>
+    <string name="batch_delete_read_only_contact_confirmation" msgid="6614878716815412523">"您的聯絡人清單不會顯示唯讀帳戶的資訊 (系統不會刪除這些資訊)。"</string>
+
+    <!-- add by liyang end -->
+
+
+    <!-- add by lmx begin -->
+    <string name="hb_imLabelsGroup">"即時通訊"</string>
+    <string name="hb_eventLabelsGroup">"日期"</string>
+    <string name="hb_call_fax_work">傳真</string>
+    <string name="birthdayLabelsGroup">生日</string>
+    <string name="anniversaryLabelsGroup">紀念日</string>
+    <string name="addressLabelsGroup">地址</string>
+    <string name="hb_emailLabelsGroup">"郵箱"</string>
+    <string name="hb_organizationLabelsGroup">"公司和職位"</string>
+    <string name="hb_phoneTypeMobile">手機</string>
+    <string name="hb_phoneTypeHome">住宅</string>
+    <string name="hb_phoneTypeWork">公司</string>
+    <string name="hb_phoneTypeFax">傳真</string>
+    <string name="hb_phoneTypeOther">其他</string>
+    <string name="hb_emailTypeHome">個人</string>
+    <string name="hb_emailTypeWork">公司</string>
+    <string name="hb_emailTypeOther">其他</string>
+    <string name="hb_postalTypeHome">家</string>
+    <string name="hb_postalTypeWork">公司</string>
+    <string name="hb_postalTypeOther">其他</string>
+    <string name="hb_quickdial">快速撥號</string>
+    <string name="hb_phoneNumber">電話</string>
+    <string name="hb_recent_calls">最近記錄</string>
+    <!-- add by lmx end -->
+
+    <string name="permission_no_title">"無權限"</string>
+    <string name="permission_no_storage">"要啟用導入或導出功能，\n請在應用管理中開啟“存儲空間”權限。"</string>
+    <string name="permission_no_location">"請在應用管理中開啟“位置信息”權限。"</string>
+    <string name="permission_no_calendar">"請在應用管理中開啟“日歷”權限。"</string>
+    <string name="permission_no_sms">"請在應用管理中開啟“短信”權限。"</string>
+    <string name="permission_no_calllog">"請在應用管理中開啟“電話”權限。"</string>
+    <string name="permission_no_contacts">"請在應用管理中開啟“通訊錄”權限。"</string>
+    <string name="no_music_activity">沒有找到音頻播放器</string>
+    <string name="confirm_remove">確定將此號碼移出黑名單嗎？</string>
+    <string name="recover_black_phone">同時恢復通話記錄和信息</string>
+    <string name="add_number_mark">標記此號碼為</string>
+    <string name="edit_number_mark">修改號碼標記</string>
+    <string name="add_number_mark_menu">標記此號碼</string>
+    <string name="add_to_black">"加入黑名單"</string>
+    <string name="add_to_black_call">"攔截此人來電"</string>
+    <string name="black_remove">移出黑名單</string>
+    <string name="reject_marks">"人標記"</string>
+    <string name="slide_delete_calllog_title">"刪除通話記錄"</string>
+    <string name="slide_delete_calllog_message">"確定要刪除此號碼所有通話記錄嗎？"</string>
+    <string name="reject_call_detail_title">來電攔截詳情</string>
+
+</resources>

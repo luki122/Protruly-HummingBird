@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<meta charset='UTF-8'>
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+
+<html>
+<head>
+    <title>浏览记录</title>
+    <style type="text/css">
+        body{
+        margin:0;
+        padding:0;
+        }
+        #container{
+        background:#ffffff;
+        }
+        .item{
+        height:60px;
+        padding:5px;
+        background:#ffffff;
+        border-bottom:1px solid lightgray;
+        display:-webkit-box;
+        -webkit-user-select:none;
+        }
+        .imgWrap{
+        margin-left:10px;
+        width:64px;
+        }
+        .logo{
+        border-radius:5px;
+        padding:2px;
+        height:55px;
+        width:55px;
+        }
+        .content_1{
+        -webkit-box-flex:1;
+        padding:10px;
+        margin-right:5px;
+        margin-left:3px;
+        }
+        .content_2{
+        -webkit-box-flex:1;
+        padding-top: 10px;
+        padding-left:8px;
+        margin-right:5px;
+        }
+        .name{
+        padding:5px
+        color: #000000;
+        font-size:15px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        width:100%;
+        }
+        .single_name{
+        margin-top:5px;
+        padding:5px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        width:100%;
+        }
+        .address{
+        padding:2px;
+        color: #727272;
+        font-size:12px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+        width:100%;
+        }
+
+        .resultsNone .resultsNoneImage
+        {
+        height: 203px;
+        width: 100%;
+        background-image: url('/error/nodata.png');
+        background-repeat:no-repeat;
+        background-position: center bottom;
+        margin-bottom: 35px;
+        }
+        .resultsNone .resultsNoneDescription
+        {
+        font-size: 18px;
+        color: #9d9d9d;
+        font-family: 黑体;
+        text-align: center;
+        margin-bottom: 10px;
+        }
+    </style>
+    <script src="res/js/zepto.v2.js"></script>
+    <script type="text/javascript" src="res/js/ctk.v1.js"></script>
+    <script type='text/javascript' src='res/js/util.v1.js'></script>
+    <script>
+
+        var handle = window.CTKJavaScriptHandler;
+        var browsinghistory = handle.getBrowsingHistory();
+        var myobj=eval(browsinghistory);
+        var size = myobj?myobj.length:0;
+
+        function refreshPage() { window.location.reload() }
+
+        function loadCSSPage(){
+            var body = $('#container');
+            var itemtemplate = $('.item');
+
+            $.each(myobj, function() {
+                var temp =  JSON.parse(this.data);
+                var id = temp.id;
+                var name = temp.name;
+                var logo = temp.logo;
+                var address = temp.address;
+                var number = temp.number;
+
+                var item = itemtemplate.clone();
+
+                var logoImg = item.find('.logo');
+                if(logo == null || logo == ""){
+                    logoImg.attr("src","res/image/shoplogo_default.png");
+                } else {
+                    var enableNetworkAccess = window.CTKJavaScriptHandler && window.CTKJavaScriptHandler.enableNetworkAccess();
+                    var _src;
+                    if(logo.indexOf("http") == 0 ){
+                        if(logo.indexOf("shop_logo") > 0){
+                            _src = 'shop_logo/YELLOWPAGE_' + logo.replace(/(.*\/shop_logo\/)/,'');
+                        }else{
+                            _src = 'nativelogo_cache/' + logo;
+                        }
+                    } else {
+                        _src = logo;
+                    }
+                    logoImg.on('error', function() {
+                        var _src_2 = 'nativelogo_cache/' + logo.replace(/(.*\/shop_logo\/)/,'');
+                        logoImg.on('error',function(){
+                            if(enableNetworkAccess){
+                                logoImg.attr("src",logo);
+                            }
+                            else{
+                                logoImg.attr("src","res/image/shoplogo_default.png");
+                            }
+                        });
+                        logoImg.attr("src", _src_2);
+                    });
+                    logoImg.attr("src",_src);
+                }
+
+                if(address==null || address==""){
+                    item.find('.name').parent().css("display","none");
+                    item.find('.single_name').text(name);
+                } else {
+                    item.find('.single_name').parent().css("display","none");
+                    item.find('.name').text(name);
+                    item.find('.address').text(address);
+                }
+
+                item.css('display','');
+
+                item.bind("click", function() {
+                        if(!isNaN(id)){
+                            Utils.storage_set_item('detail_info', JSON.stringify({
+                                    'phone_name': name,
+                                    'phone_number': number,
+                                    'shop_id': id,
+                                    'shop_logo': logo,
+                                    'address': address
+                            }));
+                            window.location.href = "detail_offline.html#footPrint";
+                        } else {
+                            var browseresult = {"id":id,"name":name,"address":address,"logo":logo,"number":number};
+                            browseresult = JSON.stringify(browseresult);
+                            handle.setBrowsingHistory(browseresult);
+                            //window.location.href = id;
+                            Utils.redirect_link(id, '大众点评网');
+                        }
+                });
+                item.bind('touchstart',function(){
+                    item.css("backgroundColor","#e0e0e0");
+                });
+
+                item.bind('touchmove',function(event){
+                    item.css("backgroundColor","");
+                });
+
+                item.bind('touchend',function(){
+                    item.css("backgroundColor","");
+                });
+
+                item.appendTo(body);
+            });
+        }
+
+        var clearAll = function(){
+            $('.item').remove();
+            $('.resultsNone').css('display','');
+            handle.removeBrowsingImage();
+        }
+
+        $(document).ready(function(){
+            if(size == 0){
+                clearAll();
+            } else {
+                loadCSSPage();
+            }
+        });
+    </script>
+</head>
+<body>
+
+<div id="container">
+    <div class="item" style="display:none">
+        <div class="imgWrap">
+            <img class="logo">
+        </div>
+        <div class="content_1">
+            <div class="name"></div>
+            <div class="address"></div>
+        </div>
+        <div class="content_2">
+            <div class="single_name"></div>
+        </div>
+    </div>
+
+    <div class='resultsNone' style="display:none;" id='m_results_none'>
+        <div class='resultsNoneImage'></div>
+        <div class='resultsNoneDescription'>您还没有历史记录!</div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/control_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7000" >
+
+    <TextView
+        android:id="@+id/noEffectsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:fadingEdge="horizontal"
+        android:gravity="center"
+        android:text="@string/no_effects"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/sound_control_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#ffff"
+        android:clickable="true"
+        android:orientation="vertical" >
+
+        <GridView
+            android:id="@+id/sound_control"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:horizontalSpacing="27dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:padding="19dp"
+            android:verticalSpacing="27dp" />
+
+        <View
+            android:id="@+id/effect_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/line2" />
+
+        <RelativeLayout
+            android:id="@+id/effect_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="21dp"
+            android:paddingLeft="48dp"
+            android:paddingRight="48dp"
+            android:paddingTop="21dp" >
+
+            <TextView
+                android:id="@+id/noise_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/hb_noise_down"
+                android:textColor="#111111"
+                android:textSize="18sp" />
+
+            <hb.widget.Hbwitch
+                android:id="@+id/hb_noise_reduction_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/noise_text"
+                android:clickable="true" />
+
+            <hb.widget.Hbwitch
+                android:id="@+id/hb_hifi_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/hifi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@id/hb_hifi_switch"
+                android:text="@string/hb_hifi"
+                android:textColor="#111111"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/effect_line2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@drawable/line2" />
+
+        <RelativeLayout
+            android:id="@+id/hb_headset_select_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:paddingLeft="19dp"
+            android:paddingRight="18dp"
+            android:paddingTop="16dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/hb_match_sound"
+                android:textColor="#111111"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/hb_headset_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="12dp"
+                android:drawableRight="@drawable/hb_more"
+                android:text="@string/hb_null"
+                android:textColor="@color/hb_headset_select_button"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

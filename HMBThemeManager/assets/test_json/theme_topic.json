@@ -1,0 +1,43 @@
+{
+  	"retCode": "0",
+     "body": {
+	      "pageNum": 0,
+	 	  "special": [
+	 	  		{
+					"id": 12,
+					"name": "简约",
+					"icon": "http://pic2.ooopic.com/13/58/87/63bOOOPICb3_1024.jpg",
+					"sdate": "2017-07-26",
+					"edate": "2017-07-28"
+	 	  		},
+	 	  		{
+					"id": 12,
+					"name": "简约",
+					"icon": "http://pic.qiantucdn.com/58pic/17/70/72/02U58PICKVg_1024.jpg",
+					"sdate": "2017-07-26",
+					"edate": "2017-07-28"
+	 	  		},
+	 	  		{
+					"id": 12,
+					"name": "简约",
+					"icon": "http://pic.qiantucdn.com/58pic/17/52/79/86v58PICrMH_1024.jpg",
+					"sdate": "2017-07-26",
+					"edate": "2017-07-28"
+	 	  		},
+	 	  		{
+					"id": 12,
+					"name": "简约",
+					"icon": "http://pic.58pic.com/58pic/16/35/17/47C58PICZ84_1024.jpg",
+					"sdate": "2017-07-26",
+					"edate": "2017-07-28"
+	 	  		},
+	 	  		{
+					"id": 12,
+					"name": "简约",
+					"icon": "http://pic.qiantucdn.com/58pic/17/70/72/02U58PICKVg_1024.jpg",
+					"sdate": "2017-07-26",
+					"edate": "2017-07-28"
+	 	  		},
+	 	  ]
+	 }
+}

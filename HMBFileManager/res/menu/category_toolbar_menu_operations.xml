@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+        <!-- android:icon="@drawable/mst_albumpage_more" -->
+        <!-- @com.mst:drawable/ic_menu_moreoverflow_material -->
+        <item android:id="@+id/action_sort"
+            android:title="@string/category_sort"
+            android:icon="@drawable/sort"
+            android:showAsAction="always">
+                <menu>
+                        <group>
+                                <item android:id="@+id/category_sort_by_name"
+                                    android:title="@string/category_sort_by_name"
+                                    android:showAsAction="always"/>
+                                <item android:id="@+id/category_sort_by_time"
+                                    android:title="@string/category_sort_by_time"
+                                    android:showAsAction="always"/>
+                                <item android:id="@+id/category_sort_by_size_asc"
+                                    android:title="@string/category_sort_by_size_asc"
+                                    android:showAsAction="always"/>
+                                <item android:id="@+id/category_sort_by_size_dsc"
+                                    android:title="@string/category_sort_by_size_dsc"
+                                    android:showAsAction="always"/>
+                        </group>
+                </menu>
+        </item>
+
+</menu>

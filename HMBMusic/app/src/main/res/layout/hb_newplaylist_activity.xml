@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f9f9f9"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/hb_addsong_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        layout="@layout/hb_add_playlist_songs_item" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@drawable/line2" />
+
+    <include
+        android:id="@+id/hb_addartist_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/hb_add_playlist_songs_item" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@drawable/line2" />
+
+    <include
+        android:id="@+id/hb_addfold_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/hb_add_playlist_songs_item" />
+
+</LinearLayout>

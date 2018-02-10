@@ -1,0 +1,11 @@
+{
+  "retCode": 0,
+  "body": {
+    "score": 9.5,
+    "star1": 10,
+    "star2": 30,
+    "star3": 60,
+    "star4": 70,
+    "star5": 90
+  }
+}

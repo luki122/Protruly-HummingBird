@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+<style type="text/css">
+	html,body{
+		margin:0;padding:0;
+	}
+	html {
+	    font-size: 10px;
+	}
+
+	@media (min-width: 480px) {
+	    html {
+	        font-size: 15px;
+	    }
+	}
+
+	@media (min-width: 421px) and (max-width: 479px) {
+	    html {
+	        font-size: 12px;
+	    }
+	}
+
+	@media (max-width: 420px) {
+	    html {
+	        font-size: 10px;
+	    }
+	}
+	.menu{
+	  position:fixed;
+	  width:calc(8rem - 1px);
+	  height:100%;
+	  background:#fff;
+	  overflow-y:auto;
+	  padding-right:1px;
+	  box-shadow: inset -1px 0 0 #c8c8c8;
+	}
+	.menu .menu-item:last-child{
+	  border-bottom:none;
+	}
+	.menu-item{
+	  line-height: 5rem;
+	  font-size: 1.2rem;
+	  text-align: center;
+	  color:#848484;
+	  background:#fafafa;
+	  border-bottom:1px solid #ffffff;
+	  position:relative;
+	  display:block;
+	}
+	.menu .selected{
+	  color:#46bef5;
+	}
+	.menu .selected::after{
+	  content:'';
+	  width:2px;
+	  position:absolute;
+	  left:100%;
+	  height:100%;
+	  margin-left:-1px;
+	  background:#46bef5;
+	  z-index:1000;
+	}
+</style>
+</head>
+<body>
+	<div id="menu" class="menu"></div>
+</body>
+<script type='text/javascript' src='res/js/zepto.v2.js'></script>
+<script type='text/javascript'>
+var fastclick_exist=true;(function(d){d.fn.fastClick=function(j,i){return this.each(function(){b(d(this),j,i)})};var c="ontouchstart" in window;var h=c?"touchstart":"mousedown";var g=c?"touchmove":"mousemove";var e=c?"touchend":"mouseup";var f="touchcancel";var a=d("body");var b=function(m,s,j){var o,n;var p=function(){m.off(e,r);setTimeout(function(){m.removeClass("active")},200);a.off(g,i).off(f)};var q=function(){var t=m.attr("custom_event");if(!t){return}var u=Utils.collect_scenario_params_common(139,"custom_event");u.module=t.split(" ")[0];u.event=t;Utils.append_scenario_node(JSON.stringify(u))};var r=function(t){t.preventDefault();t.stopPropagation();p();q();s.call(this,t)};var i=function(t){if(c){var u=t.originalEvent;if(!u){u=t.touches}if(Math.abs(u[0].clientX-o)>2||Math.abs(u[0].clientY-n)>2){p()}}else{p()}};var k=function(t){p()};var l=function(t){t.stopPropagation();if(!j){m.off(e)}m.on(e,r);m.addClass("active");a.on(g,i);a.on(f,k);if(c){var u=t.originalEvent;if(!u){u=t.touches}o=u[0].clientX;n=u[0].clientY}};m.on(h,l)}})(Zepto);</script>
+<script>
+	var menu = $('#menu');
+	var menuItemHeight,bodyHeight;
+	var scrollToTarget = function(targetId){
+		obj = $('#menu-' + targetId);
+		if(select(obj)){
+	        var top = obj.offset().top;
+			var scrollTop = menu.scrollTop();
+	        if(top < 0){
+	            menu.scrollTop(scrollTop + top);
+	        }else if(top + menuItemHeight >= bodyHeight){
+	            menu.scrollTop(top + menuItemHeight - bodyHeight + scrollTop);
+	        }
+        }
+	}
+	var select = function(obj){
+        if(!obj.hasClass('selected')){
+            $('.selected').removeClass('selected');
+            obj.addClass('selected');
+            return true;
+        }
+    };
+	menu.fastClick(function(e){
+        var obj = $(e.target);
+        if(select(obj)){
+	        var targetId = $(obj.attr('data'));
+	        top.postMessage({
+	        	status: 'scroll',
+	        	target: targetId
+	        },'*');
+        }
+    });
+
+	var init = function(element){
+		menu.append($(top.document).find(element));
+    	var menuItem = menu.find('.menu-item');
+    	firstItem = menuItem.first();
+    	select(firstItem);
+    	menuItemHeight = firstItem.height();
+    	bodyHeight = menu.height();
+
+    	var length = menuItem.length;
+    	if(length>=11){
+    		menuItem.height((bodyHeight-10)/11);
+    	}
+	}
+
+    window.addEventListener('message', function(event) {
+    	var element = event.data.target;
+		if(!element){
+			return;
+		}
+    	if(event.data.status == 'init') {//初始化菜单栏并选中第一项,初始化菜单项和页面高度变量
+        	init(element);
+    	}
+	    else if(event.data.status == 'scroll') {//菜单栏滚动到指定位置
+            scrollToTarget(element);
+	    }
+	});
+</script>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RecordListActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <hb.view.menu.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            hb:menu="@menu/edit_bottom_navigation_menu"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone" />
+
+            <view
+            class="cn.com.protruly.soundrecorder.recordlist.CustomView$MyListView"
+            android:id="@+id/recordlistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_menu" />
+
+
+</RelativeLayout>

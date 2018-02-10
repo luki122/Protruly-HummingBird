@@ -1,0 +1,32 @@
+{
+  "retCode": 0,
+  "body": {
+    "id": "ZT122112",
+    "name": "Pure",
+    "version": "1.0",
+    "isCharge": 1,
+    "price": 1,
+    "score": "9.4",
+    "downloadCount": 10,
+    "downloadUrl": "http://192.168.16.39/files/Gold",
+    "size": 1236523,
+    "updateTime": "2017-07-28",
+    "updateContent": "2017-07-28",
+    "putawayStatus": 1,
+    "description": "description description description description description description description",
+    "designer": 12,
+    "designerNickname": "alexluo",
+    "romVersion": [
+      "v1.0",
+      "v1.1"
+    ],
+    "screenshots": {
+      "normal": [
+        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502272032633&di=a80257efadd78897d3001d95b851ef47&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201504%2F10%2F144046rw6bwb96wbek36v6.png"
+      ],
+      "small": [
+        "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1502272032633&di=a80257efadd78897d3001d95b851ef47&imgtype=0&src=http%3A%2F%2Fattach.bbs.miui.com%2Fforum%2F201504%2F10%2F144046rw6bwb96wbek36v6.png"
+      ]
+    }
+  }
+}

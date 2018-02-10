@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="messagePopuWindowmore">
+        <item >11111</item>
+        <item >22222</item>
+        <item >33333</item>
+        <item >44444</item>
+        <item >55555</item>
+        <item >66666t</item>
+    </string-array>
+</resources>

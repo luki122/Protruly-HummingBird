@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/artistitem_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:paddingBottom="@dimen/hb_artistitem_title_margintop"
+    android:paddingLeft="@dimen/hb_songlisttem_padding" >
+
+    <TextView
+        android:id="@+id/artist_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/hb_artistitem_title_marginbottom"
+        android:layout_marginRight="@dimen/hb_artistitem_title_marginright"
+        android:layout_marginTop="@dimen/hb_artistitem_title_margintop"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="#ff000000"
+        android:textSize="@dimen/hb_artistitem_title_textsize" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/artist_name"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/hb_artistitem_title_marginright"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/album_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxWidth="@dimen/hb_artistitem_album_textmaxwidth"
+            android:singleLine="true"
+            android:textColor="@color/hb_item_song_size"
+            android:textSize="@dimen/hb_artistitem_album_textsize" />
+    </LinearLayout>
+
+</RelativeLayout>

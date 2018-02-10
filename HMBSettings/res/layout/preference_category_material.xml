@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+<!--    <include layout="@*com.hb:layout/preference_category_material" />-->
+    <include layout="@layout/preference_category_material_hb" />
+</merge>
+

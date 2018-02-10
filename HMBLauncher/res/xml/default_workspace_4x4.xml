@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<favorites xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher3">
+    <appwidget
+        launcher:className="com.android.launcher3.appwidget.LauncherClock"
+        launcher:packageName="com.android.dlauncher"
+        launcher:screen="0"
+        launcher:spanX="4"
+        launcher:spanY="2"
+        launcher:x="0"
+        launcher:y="0">
+    </appwidget>
+    <!-- Hotseat -->
+    <include launcher:workspace="@xml/dw_phone_hotseat"/>
+
+    <!-- Bottom row -->
+    <favorite launcher:className="com.moji.mjweather.LauncherActivity"
+              launcher:packageName="com.moji.daling" launcher:screen="0"
+              launcher:x="0" launcher:y="3"/>
+    <favorite launcher:className="com.android.calendar.AllInOneActivity"
+              launcher:packageName="com.android.calendar" launcher:screen="0"
+              launcher:x="1" launcher:y="3"/>
+    <favorite launcher:className="com.android.deskclock.DeskClock"
+              launcher:packageName="com.android.deskclock" launcher:screen="0"
+              launcher:x="2" launcher:y="3"/>
+    <favorite launcher:className="com.android.calculator2.Calculator"
+              launcher:packageName="com.android.calculator2" launcher:screen="0"
+              launcher:x="3" launcher:y="3"/>
+    <favorite launcher:className="com.android.settings.Settings"
+              launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="0"
+              launcher:y="4"/>
+    <favorite launcher:className="cn.com.protruly.vrbrowser.SplashActivity"
+              launcher:packageName="com.protruly.gallery3d.app" launcher:screen="0"
+              launcher:x="1" launcher:y="4"/>
+    <favorite launcher:className="com.hb.thememanager.ui.MainActivity"
+              launcher:packageName="com.hb.thememanager" launcher:screen="0"
+              launcher:x="2" launcher:y="4"/>
+    <favorite launcher:className="com.tencent.mtt.SplashActivity"
+              launcher:packageName="com.android.browser" launcher:screen="0" launcher:x="2"
+              launcher:y="4"/>
+    <favorite launcher:className="com.hb.lockscreenapp.MainActivity"
+              launcher:packageName="com.hb.lockscreenapp" launcher:screen="0"
+              launcher:x="3" launcher:y="4"/>
+    <favorite launcher:className="com.android.documentsui.LauncherActivity"
+              launcher:packageName="com.android.documentsui" launcher:screen="1"
+              launcher:x="0" launcher:y="0"/>
+    <favorite launcher:className="cn.com.protruly.filemanager.CategoryActivity"
+              launcher:packageName="cn.com.protruly.filemanager" launcher:screen="1"
+              launcher:x="2" launcher:y="0"/>
+    <favorite launcher:className="com.tuniu.app.ui.homepage.LaunchActivity"
+              launcher:packageName="com.tuniu.app.ui" launcher:screen="1"
+              launcher:x="0" launcher:y="1"/>
+    <favorite launcher:className="com.hmb.calculator2.HMBCalculator"
+              launcher:packageName="com.hmb.calculator2" launcher:screen="1"
+              launcher:x="1" launcher:y="1"/>
+    <favorite launcher:className="com.wingtech.compass.CompassActivity"
+              launcher:packageName="com.wingtech.compass" launcher:screen="1"
+              launcher:x="2" launcher:y="1"/>
+    <folder
+        launcher:screen="1"
+        launcher:title="@string/default_folder"
+        launcher:x="1"
+        launcher:y="0"
+    >
+
+        <favorite launcher:className="com.bql.p2n.xunbao.module2.ui.MainLaunchAct"
+                  launcher:packageName="com.bql.p2n.xunbao" launcher:screen="3"
+                  launcher:x="0" launcher:y="1"/>
+        <favorite launcher:className="com.zhilianbao.leyaogo.ui.activity.SplashActivity"
+                  launcher:packageName="com.zhilianbao.leyaogo"
+                  launcher:screen="3" launcher:x="1" launcher:y="1"/>
+        <favorite launcher:className="com.bql.esshopping.activity.SplashActivity"
+                  launcher:packageName="com.bql.esshopping" launcher:screen="3"
+                  launcher:x="2" launcher:y="1"/>
+        <favorite launcher:className="com.darling.dljysh.MainActivity"
+                  launcher:packageName="com.darling.dljysh" launcher:screen="3"
+                  launcher:x="3" launcher:y="1"/>
+        <favorite launcher:className="com.douwong.xdel.activity.SplashActivity"
+                  launcher:packageName="com.douwong.xdel" launcher:screen="3"
+                  launcher:x="0" launcher:y="2"/>
+
+    </folder>
+    <folder
+        launcher:screen="1"
+        launcher:title="@string/other_folder"
+        launcher:x="3"
+        launcher:y="0"
+    >
+        <favorite launcher:className="com.wt.music.MusicBrowserActivity"
+                  launcher:packageName="com.wt.music" launcher:screen="1"
+                  launcher:x="1" launcher:y="3"/>
+        <favorite launcher:className="com.iflytek.inputmethod.LauncherActivity"
+                  launcher:packageName="com.iflytek.inputmethod" launcher:screen="1"
+                  launcher:x="2" launcher:y="3"/>
+        <favorite launcher:className="com.protruly.gallery3d.app.video.BQLMovieActivity"
+                  launcher:packageName="com.protruly.gallery3d.app"
+                  launcher:screen="1" launcher:x="3" launcher:y="3"/>
+        <favorite launcher:className="com.android.quicksearchbox.SearchActivity"
+                  launcher:packageName="com.android.quicksearchbox" launcher:screen="1"
+                  launcher:x="0" launcher:y="4"/>
+        <favorite launcher:className="com.mediatek.factorymode.FactoryModeActivity"
+                  launcher:packageName="com.asus.atd.smmitest"
+                  launcher:screen="1" launcher:x="1" launcher:y="4"/>
+        <favorite launcher:className="com.wt.soundrecorder.SoundRecorder"
+                  launcher:packageName="com.wt.soundrecorder" launcher:screen="1"
+                  launcher:x="2" launcher:y="4"/>
+        <favorite launcher:className="com.android.email.activity.Welcome"
+                  launcher:packageName="com.android.email" launcher:screen="1"
+                  launcher:x="3" launcher:y="4"/>
+        <favorite launcher:className="com.nfc.scanner.TagViewer"
+                  launcher:packageName="com.nfc.scanner" launcher:screen="2" launcher:x="1"
+                  launcher:y="0"/>
+        <favorite launcher:className="com.nxp.taginfolite.activities.MainView"
+                  launcher:packageName="com.nxp.taginfolite" launcher:screen="2"
+                  launcher:x="2" launcher:y="0"/>
+        <favorite launcher:className="com.oma.drm.demo.MainActivity"
+                  launcher:packageName="com.oma.drm.demo" launcher:screen="2"
+                  launcher:x="3" launcher:y="0"/>
+        <favorite launcher:className="com.qti.snapdragon.qdcm_mobile.QdcmMobileMainv2"
+                  launcher:packageName="com.qti.snapdragon.qdcm_mobile"
+                  launcher:screen="2" launcher:x="1" launcher:y="1"/>
+        <favorite launcher:className="com.qualcomm.qti.carrierconfigure.ConfigurationActivity"
+                  launcher:packageName="com.qualcomm.qti.carrierconfigure"
+                  launcher:screen="2" launcher:x="2" launcher:y="1"/>
+        <favorite launcher:className="com.qualcomm.qti.securemsm.mdtp.MdtpDemo.MainUserActivity"
+                  launcher:packageName="com.qualcomm.qti.securemsm.mdtp.MdtpDemo"
+                  launcher:screen="2" launcher:x="3" launcher:y="1"/>
+        <favorite launcher:className="com.qualcomm.qti.sensors.ui.qsensortest.TabControl"
+                  launcher:packageName="com.qualcomm.qti.sensors.qsensortest"
+                  launcher:screen="2" launcher:x="0" launcher:y="2"/>
+        <favorite launcher:className="com.quicinc.cne.settings.CneSettings"
+                  launcher:packageName="com.quicinc.cne.settings" launcher:screen="2"
+                  launcher:x="1" launcher:y="2"/>
+        <favorite launcher:className="com.quicinc.wipoweragent.WipowerAgentActivity"
+                  launcher:packageName="com.quicinc.wipoweragent"
+                  launcher:screen="2" launcher:x="2" launcher:y="2"/>
+        <favorite launcher:className="com.tencent.qqlive.ona.activity.WelcomeActivity"
+                  launcher:packageName="com.tencent.qqlive"
+                  launcher:screen="2" launcher:x="3" launcher:y="2"/>
+        <favorite launcher:className="com.wdstechnology.android.kryten.demo.LauncherActivity"
+                  launcher:packageName="com.wdstechnology.android.kryten.demo"
+                  launcher:screen="2" launcher:x="0" launcher:y="3"/>
+        <favorite launcher:className="com.wingtech.note.list.NotesListActivity"
+                  launcher:packageName="com.wingtech.note" launcher:screen="2"
+                  launcher:x="1" launcher:y="3"/>
+        <favorite launcher:className="com.wingtech.runintest.RunInTestActivity"
+                  launcher:packageName="com.wingtech.runintest" launcher:screen="2"
+                  launcher:x="2" launcher:y="3"/>
+        <favorite launcher:className="com.wt.fmradio.FMRadio" launcher:packageName="com.wt.fmradio"
+                  launcher:screen="2" launcher:x="3" launcher:y="3"/>
+        <favorite launcher:className="org.chromium.webview_shell.WebViewBrowserActivity"
+                  launcher:packageName="org.chromium.webview_shell"
+                  launcher:screen="2" launcher:x="0" launcher:y="4"/>
+        <favorite launcher:className="org.codeaurora.bluetooth.hidtestapp.HidTestApp"
+                  launcher:packageName="org.codeaurora.bluetooth.hidtestapp"
+                  launcher:screen="2" launcher:x="1" launcher:y="4"/>
+        <favorite launcher:className="com.android.backup.TsMainBackActivity"
+                  launcher:packageName="com.android.backup" launcher:screen="2"
+                  launcher:x="2" launcher:y="4"/>
+    </folder>
+</favorites>

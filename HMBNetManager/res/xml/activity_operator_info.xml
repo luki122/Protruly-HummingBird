@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="lay_sim_info" >
+        <com.hb.netmanage.view.DataplanPreference android:key="sim_province"/>
+        <com.hb.netmanage.view.DataplanPreference android:key="sim_city"/>
+        <com.hb.netmanage.view.DataplanPreference android:key="sim_operator"/>
+        <com.hb.netmanage.view.DataplanPreference android:key="sim_dataplan_type"/>
+    </PreferenceCategory>
+</PreferenceScreen>

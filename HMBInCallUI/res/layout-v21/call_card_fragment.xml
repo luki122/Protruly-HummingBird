@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (C) 2014 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true" >
+
+    <!--
+         The main content of the CallCard is either one or two "call info"
+         blocks, depending on whether one or two lines are in use.
+
+         The call_info blocks are stacked vertically inside a CallCard (LinearLayout),
+         each with layout_weight="1".  If only one line is in use (i.e. the
+         common case) then the 2nd call info will be GONE and thus the 1st one
+         will expand to fill the full height of the CallCard.
+    -->
+
+
+    <!-- Primary "call card" block, for the foreground call. -->
+
+    <LinearLayout
+        android:id="@+id/primary_call_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:elevation="0dp"
+        android:orientation="vertical" >
+
+        <include layout="@layout/primary_call_info" />
+
+        <TextView
+            android:id="@+id/connectionServiceMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="6dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/videoCallFragment"
+        android:name="com.android.incallui.VideoCallFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top|center_horizontal"
+        android:background="@android:color/white"
+        android:contentDescription="@string/contactPhoto"
+        android:gravity="top|center_horizontal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_no_image_automirrored" />
+
+    <!-- Progress spinner, useful for indicating pending operations such as upgrade to video. -->
+
+    <FrameLayout
+        android:id="@+id/progressSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/primary_call_info_container"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#63000000"
+        android:visibility="gone" >
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@android:style/Widget.Material.ProgressBar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+    </FrameLayout>
+
+    <!-- Secondary "Call info" block, for the background ("on hold") call. -->
+
+    <include layout="@layout/secondary_call_info" />
+
+    <fragment
+        android:id="@+id/callButtonFragment"
+        android:name="com.android.incallui.CallButtonFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/primary_call_info_container" />
+
+    <!-- Placeholder for various fragments that are added dynamically underneath the caller info. -->
+
+
+    <!--
+          <FrameLayout
+        android:id="@+id/answer_and_dialpad_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/primary_call_info_container"
+        android:layout_gravity="bottom|center_horizontal"
+        android:elevation="@dimen/dialpad_elevation" />
+    -->
+
+    <FrameLayout
+        android:id="@+id/dialpad_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|center_horizontal"
+        android:elevation="1dp"/>
+
+    <FrameLayout
+        android:id="@+id/answer_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/primary_call_info_container"
+        android:layout_gravity="bottom|center_horizontal" 
+        android:elevation="2dp"/>
+
+    <FrameLayout
+        android:id="@+id/floating_end_call_action_button_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/end_call_margin_bottom" >
+
+        <ImageButton
+            android:id="@+id/floating_end_call_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/end_call_hb"
+            android:contentDescription="@string/onscreenEndCallText"
+            android:scaleType="center" />
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:focusable="true"
+        android:text="@string/hb_search_lyric_name"
+        android:textColor="#878787"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/hb_search_songs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ellipsize="end"
+        android:inputType="text"
+        android:singleLine="true" 
+        android:paddingLeft="7dp"
+        android:paddingBottom="3dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/hb_search_lyric_artist"
+        android:textColor="#878787"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/hb_search_artist"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp"
+        android:ellipsize="end"
+        android:inputType="text"
+        android:singleLine="true" 
+        android:paddingLeft="7dp"
+        android:paddingBottom="3dp"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="11dp" 
+        android:visibility="gone">
+
+        <hb.widget.HbCheckBox
+            android:id="@+id/hb_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:layout_toRightOf="@id/hb_check"
+            android:text="@string/hb_modify_id3_info"
+            android:textColor="#8c8c8c"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/no_network_view_large"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        android:text="@string/no_network_in_large_view"
+        />
+    <Button
+        android:id="@+id/btn_setup_network"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/click_to_refresh"
+        android:textColor="@com.hb:color/material_green_light"
+        android:background="@drawable/btn_background_green"
+        android:minWidth="96dp"
+    />
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/btn_allplay" android:state_enabled="true" android:state_selected="true"/>
+    <item android:drawable="@drawable/btn_allplay_focus" android:state_enabled="true" android:state_pressed="true"/>
+    <item android:drawable="@drawable/btn_allplay_disable" android:state_enabled="false" android:state_selected="false"/>
+    <item android:drawable="@drawable/btn_allplay"/>
+
+</selector>

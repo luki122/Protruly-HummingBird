@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hb.widget.FloatingActionButton
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:id="@+id/floating_action_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center_horizontal"
+    android:layout_marginBottom="@dimen/floating_button_margin_bottom"
+    android:background="@color/floating_button_background_color"
+    hb:centerImage="@drawable/ic_floating_button_add"
+    hb:size="normal" />

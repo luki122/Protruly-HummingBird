@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calendar_bg_color"
+    android:orientation="vertical" >
+
+    <View
+        style="@style/HorizontalDividerStyle"
+        android:layout_marginTop="5dp" />
+
+    <hb.widget.HbListView
+        android:id="@+id/month_agenda_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/login_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.hb.thememanager.utils.CircleImageView
+            android:id="@+id/user_icon"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/user_page_user_icon_margintop"
+            android:src="@drawable/user_icon" />
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:text="@string/text_user_login"
+            android:textColor="@color/topic_item_text_color"
+            android:textSize="@dimen/topic_detail_page_bannerdes_content_size" />
+
+        <TextView
+            android:id="@+id/user_phone_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/text_user_login"
+            android:textColor="@color/gray"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="18dp"
+        layout="@layout/list_item_my_assets" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/user_page_more_divider_color" />
+
+    <TextView
+        android:id="@+id/purchase_record"
+        style="@style/TextAppearance.UserPage"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:onClick="more"
+        android:text="@string/text_purchase_record" />
+
+    <View
+        android:layout_width="344dp"
+        android:layout_height="@dimen/user_page_more_divider_height"
+        android:layout_gravity="end"
+        android:background="@color/user_page_setting_item_divider_color" />
+
+    <TextView
+        android:id="@+id/user_feedback"
+        style="@style/TextAppearance.UserPage"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:onClick="more"
+        android:text="@string/text_user_feedback" />
+
+    <View
+        android:layout_width="344dp"
+        android:layout_height="@dimen/user_page_more_divider_height"
+        android:layout_gravity="end"
+        android:background="@color/user_page_setting_item_divider_color" />
+
+    <TextView
+        android:id="@+id/settings"
+        style="@style/TextAppearance.UserPage"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:onClick="more"
+        android:text="@string/action_settings" />
+
+    <View
+        android:layout_width="344dp"
+        android:layout_height="@dimen/user_page_more_divider_height"
+        android:layout_gravity="end"
+        android:background="@color/user_page_setting_item_divider_color" />
+
+</LinearLayout>

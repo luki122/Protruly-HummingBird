@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" >
+
+        <ImageView
+            android:id="@+id/hb_icon_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/hb_online_new_album" />
+
+        <TextView
+            android:id="@+id/hb_icon_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/hb_icon_flag"
+            android:text="@string/hb_online_new_album"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/hb_more_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawablePadding="4dp"
+            android:drawableRight="@drawable/hb_more"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/hb_more"
+            android:textColor="@color/hb_more_button_clicked"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/id_grid_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="@dimen/hb_online_margintop">
+
+        <com.protruly.music.widget.HBMusicGridView
+            android:id="@+id/hb_mian_grid_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"           
+            android:columnWidth="@dimen/hb_gridview_width_low"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="auto_fit"
+            android:scrollbars="none" />
+        <View 
+            android:id="@+id/id_line1"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="#e6e6e6"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone"/>
+        <View 
+            android:id="@+id/id_line2"
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:background="#e6e6e6"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/id_music_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.protruly.music.widget.TimeShowView
+            android:id="@+id/hb_mian_list_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@drawable/line2"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@drawable/line2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/xiamilogo_bottom"
+            android:drawablePadding="6dp"
+            android:gravity="center"
+            android:textColor="#6a6b6c"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</LinearLayout>

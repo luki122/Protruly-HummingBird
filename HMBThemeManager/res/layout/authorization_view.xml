@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@*android:id/message"
+        style="@com.hb:style/TextAppearance.Hb.Material.Subhead"
+        android:lineSpacingExtra="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/authorization_msg"
+    />
+
+    <CheckBox
+        android:id="@*android:id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/authorization_no_tips"
+    />
+</LinearLayout>

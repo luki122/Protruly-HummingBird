@@ -1,0 +1,20 @@
+{
+  "status": "1",
+  "data":{
+    "tabs": [
+      {
+        "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496896203254&di=194aea4af2cf30d3c66bbc02d412b9b2&imgtype=0&src=http%3A%2F%2Fimg2.niutuku.com%2Fdesk%2F1207%2F1058%2Fntk121970.jpg",
+        "title": "付费"
+      },
+      {
+        "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1497573842&di=36830488a651238b969c698070de616f&imgtype=jpg&er=1&src=http%3A%2F%2Fbbsatt.yineitong.com%2Fforum%2F2011%2F03%2F25%2F110325164993a2105258f0d314.jpg",
+        "title": "免费"
+      },
+      {
+        "url": "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1496979169045&di=18866e84365dc9e75df249e99905f4e9&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fwallpaper%2F1311%2F07%2Fc0%2F28400145_1383792880356_800x600.jpg",
+        "title": "新品"
+      }
+    ]
+  }
+
+}

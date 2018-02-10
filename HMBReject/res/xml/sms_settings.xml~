@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceScreen
+        android:defaultValue="true"
+        android:key="sms"
+        android:title="@string/settings_intelligent_reject_title" >
+        <intent android:action="android.intent.action.contacts.HbContactImportExportActivity" />
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:defaultValue="true"
+        android:key="call"
+        android:title="@string/settings_call_reject_title" >
+        <intent android:action="android.intent.action.contacts.HbContactImportExportActivity" />
+    </PreferenceScreen>
+
+    <com.hb.interception.activity.CountAndNarrowPreference
+        android:key="black_list"
+        android:summary=""
+        android:title="@string/black_manage"
+        android:widgetLayout="@layout/count_narrow_preference_view" />
+
+    <com.hb.interception.activity.CountAndNarrowPreference
+        android:key="white_list"
+        android:summary=""
+        android:title="@string/white_list"
+        android:widgetLayout="@layout/count_narrow_preference_view" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="notification"
+        android:summary=""
+        android:title="@string/reject_notification" />
+
+</PreferenceScreen>
