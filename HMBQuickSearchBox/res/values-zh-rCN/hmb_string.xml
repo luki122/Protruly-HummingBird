@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tap_history">搜索记录</string>
+    <string name="tap_expand">展开</string>
+    <string name="tap_shrink">收起</string>
+    <string name="list_view_foot_text">网页搜索</string>
+    <string name="search_go_text">搜索</string>
+    <string name="clear_history_text">清除全部记录</string>
+
+    <string name="corpus_label_global_new">应用、通讯录、文件……</string>
+
+    <string name="hot_search">热门搜索</string>
+    <string name="hot_search_refresh">刷新</string>
+    <string name="webview_loaderror_text">数据加载失败</string>
+    <string name="webview_loaderror_reload_text">请检查网络后，点击重新加载</string>
+</resources>

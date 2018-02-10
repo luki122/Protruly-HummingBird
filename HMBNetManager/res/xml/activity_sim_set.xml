@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:key="lay_warn">
+        <PreferenceScreen
+            android:key="data_operator"
+            android:title="@string/operator_set"></PreferenceScreen>
+        <PreferenceScreen
+            android:key="data_plan_set"
+            android:title="@string/dataplan_set"></PreferenceScreen>
+        <SwitchPreference
+            android:key="data_plan_warn"
+            android:title="@string/data_pass_warning" />
+
+        <com.hb.netmanage.view.WarnDataPreference android:key="data_plan_warn_value">
+
+        </com.hb.netmanage.view.WarnDataPreference>
+    </PreferenceCategory>
+    <!--<PreferenceCategory android:key="lay_orient_app" >-->
+    <!--</PreferenceCategory>-->
+    <!--<PreferenceCategory android:key="lay_data_correct">-->
+        <PreferenceScreen
+            android:key="orient_app"
+            android:summary="@string/data_orient_info"
+            android:title="@string/data_orient_app"></PreferenceScreen>
+        <SwitchPreference
+            android:key="data_auto"
+            android:summaryOff="@string/data_auto_info"
+            android:summaryOn="@string/data_auto_info"
+            android:title="@string/data_correct_auto" />
+        <PreferenceScreen
+            android:key="data_clean"
+            android:title="@string/data_clean"></PreferenceScreen>
+    <!--</PreferenceCategory>-->
+
+</PreferenceScreen>

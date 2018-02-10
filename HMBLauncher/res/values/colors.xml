@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/* //device/apps/common/assets/res/any/colors.xml
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<resources>
+    <!-- The color tints to apply to the text and drag view when hovering
+         over the delete target or the info target -->
+    <color name="delete_target_hover_tint">#FFC1C1C1</color>
+    <color name="uninstall_target_hover_tint">#FFF0592B</color>
+
+    <color name="focused_background">#80c6c5c5</color>
+
+    <color name="workspace_icon_text_color">#FFF</color>
+
+    <color name="workspace_edge_effect_color">#FFFFFFFF</color>
+    <color name="folder_edge_effect_color">#FF757575</color>
+    <color name="page_indicator_dot_color">#80FFFFFF</color>
+    <color name="page_indicator_dot_color_active">#FFFFFFFF</color>
+
+    <color name="quantum_panel_text_color">#FFF</color>
+    <color name="quantum_panel_bg_color">#FFF5F5F5</color>
+
+    <color name="outline_color">#FFFFFFFF</color>
+    <color name="all_apps_divider_color">#1E000000</color>
+    <color name="all_apps_caret_color">#FFFFFFFF</color>
+    <color name="all_apps_caret_shadow_color">#22000000</color>
+    <color name="all_apps_container_color">#FFF2F2F2</color>
+    <color name="all_apps_navbar_color">#28000000</color>
+
+    <color name="spring_loaded_panel_color">#26ffffff</color><!-- lijun modify 40FFFFFF to 26ffffff-->
+    <color name="spring_loaded_highlighted_panel_border_color">#FFF</color>
+
+    <!-- Widgets view -->
+    <color name="widgets_view_section_text_color">#FFFFFF</color>
+    <color name="widgets_view_item_text_color">#ffffffff</color>
+    <color name="launcher_clock_text_color_black">#BF000000</color>
+    <color name="launcher_clock_text_color_white">#FFFFFF</color>
+    <color name="launcher_clock_text_aa_color_white">#B4FFFFFF</color>
+    <color name="launcher_clock_text_aa_color_black">#B4000000</color>
+
+    <!-- Used as a fallback since colorSecondary doesn't exist pre-API 25 -->
+    <color name="fallback_secondary_color">#FF37474F</color>
+
+    <!-- lijun add for pageIndicatorCube -->
+    <color name="celllayout_frame_nail_background_color_light">#80ffffff</color>
+    <color name="celllayout_frame_nail_background_color_dark">#26000000</color>
+    <color name="celllayout_frame_nail_background_color_translate">#00000000</color>
+    <color name="celllayout_frame_nail_background_color_target">#ff3dc66e</color>
+    <color name="celllayout_frame_nail_background_color_normal_outline_dark">#26000000</color>
+    <color name="celllayout_frame_nail_background_color_normal_outline_light">#66ffffff</color>
+
+    <!-- liuzuo add for folder -->
+    <color name="workspace_bg_color">#B2000000</color>
+
+    <!-- lijun add for aline button -->
+    <color name="aline_button_bg_color_light_normal">#ffffffff</color>
+    <color name="aline_button_bg_color_light_pressed">#ff999999</color>
+    <color name="aline_button_bg_color_dark_normal">#ff000000</color>
+    <color name="aline_button_bg_color_dark_pressed">#ff999999</color>
+
+    <color name="addscreen_color_normal">#00000000</color>
+    <color name="addscreen_color_pressed">#22ffffff</color><!-- lijun add for addscreen pressed-->
+
+    <!-- lijun add for colorchange -->
+    <color name="page_indicator_dot_light_color">#804c4c4c  </color>
+    <color name="page_indicator_dot_light_color_active">#ff4c4c4c</color>
+
+    <!-- liuzuo Add for dynamic      -->
+    <color name="dym_calender_date_text_color">#4a4a4a</color>
+    <color name="dym_calender_week_text_color">#fa4856</color>
+    <color name="dym_weather_text_color">#ffffff</color>
+
+    <!-- lijun add for theme loading -->
+    <color name="theme_loading_bg_color">#ee000000</color>
+</resources>

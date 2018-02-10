@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2011 Google Inc.
+All Rights Reserved. -->
+<resources>
+    <dimen name="message_item_margin">100dp</dimen>
+
+    <dimen name="tab_elevation">0dp</dimen>
+    
+    <!-- tangyisen -->
+    <dimen name="message_send_progress_circle_diameter">5dp</dimen>
+    <dimen name="message_send_progress_circle_interval">4dp</dimen>
+    <dimen name="message_send_progress_circle_margin_right">18dp</dimen>
+
+    <dimen name="conversation_list_title_max_width">202dp</dimen>
+    <dimen name="conversation_list_summary_max_width">278dp</dimen>
+    <dimen name="conversation_list_summary_max_width_edit_mode">248dp</dimen>
+
+    <!-- tangyisen 16-13=3dp -->
+    <dimen name="compose_message_listview_divider_height">3dp</dimen>
+    <dimen name="compose_message_title_textsize">6sp</dimen>
+    <dimen name="compose_message_attachment_margin_start">66dp</dimen>
+    <dimen name="compose_message_attachment_height">135dp</dimen>
+    <dimen name="compose_message_body_text_linespace">5dp</dimen>
+    <dimen name="compose_message_edit_vertical_offset">1dp</dimen>
+
+    <dimen name="zzz_floating_action_button_margin_right">10dp</dimen>
+    <dimen name="zzz_floating_action_button_margin_bottom">10dp</dimen>
+    <dimen name="compose_message_title_size">15dp</dimen>
+
+    <dimen name="compose_message_video_width">200dp</dimen>
+    <dimen name="compose_message_video_height">120dp</dimen>
+
+    <dimen name="list_item_text_margin">16dp</dimen>
+    <dimen name="list_item_date_margin_top">13dp</dimen>
+    <dimen name="list_item_title_margin_top">11dp</dimen>
+    <dimen name="list_item_summary_margin_bottom">13dp</dimen>
+    <dimen name="list_item_summary_margin_left">24dp</dimen>
+    <dimen name="compose_message_listview_footerview_height">40dp</dimen>
+
+    <dimen name="zzz_list_padding_top_or_bottom">5dp</dimen>
+    
+    <!-- tangyisen add -->
+    <dimen name="message_item_text_padding_start">21dp</dimen>
+    <dimen name="message_item_text_padding_end">17dp</dimen>
+    <dimen name="message_item_text_padding_top">13dp</dimen>
+    <dimen name="message_item_text_padding_bottom">13dp</dimen>
+    <dimen name="message_item_text_max_width">264dp</dimen>
+    <dimen name="message_item_text_margin">9dp</dimen>
+    <dimen name="compose_message_bottom_panel">63dp</dimen>
+    <!-- tangyisen message_item_text_max_width - 17 - 21 -->
+    <dimen name="stretchy_item_text_max_width">226dp</dimen>
+    <dimen name="input_text_height_min">61dp</dimen>
+    <dimen name="input_text_height_max">156dip</dimen>
+    <dimen name="flowlayout_margin">4dp</dimen>
+    <dimen name="flowlayout_padding">2dp</dimen>
+    
+    <!-- tangyisen hb -->
+    <dimen name="message_list_item_divider_height">24dp</dimen>
+    <dimen name="recommend_contacts_item_width">80dp</dimen>
+    <dimen name="recommend_contacts_item_height">32dp</dimen>
+    <dimen name="recommend_contacts_item_margin">8dp</dimen>
+    <dimen name="recommend_contacts_item_padding">6dp</dimen>
+    <dimen name="recommend_contacts_item_textsize">14sp</dimen>
+    
+    <dimen name="recipients_editor_item_margin">6dp</dimen>
+    <dimen name="recipients_editor_item_height">28dp</dimen>
+    <dimen name="mms_image_attachment_size">96dp</dimen>
+    <dimen name="mms_default_attachment_size">128dp</dimen>
+    <dimen name="recipients_editor_margin_start">12dp</dimen>
+    <dimen name="recipients_editor_margin_top">10dp</dimen>
+    <dimen name="recipients_editor_min_width">15dp</dimen>
+    <dimen name="recipients_editor_max_width">246dp</dimen>
+    <dimen name="recipients_editor_popupwindow_vertical_offset">1dp</dimen>
+   <dimen name="more_recipients_margin_start">12dp</dimen>
+   <dimen name="more_recipients_margin_end">16dp</dimen>
+   <dimen name="mms_detail_text_max_height">392dp</dimen>
+   <dimen name="mms_detail_scroll_padding_top">36dp</dimen>
+   <dimen name="mms_detail_scroll_padding_bottom">56dp</dimen>
+   <dimen name="swap_list_popup_bottom">17dp</dimen>
+
+    <!--lichao add in 2017-04-05 begin-->
+    <dimen name="conv_list_checkbox_width">24dip</dimen>
+    <dimen name="conv_list_checkbox_margin_left">20dip</dimen>
+    <dimen name="conv_list_checkbox_margin_right">4dip</dimen>
+
+    <dimen name="conv_list_unread_width">8dip</dimen>
+    <dimen name="conv_list_unread_margin_left">9dip</dimen>
+    <dimen name="conv_list_unread_margin_right">7dip</dimen>
+    <dimen name="conv_list_unread_margin_top">8dip</dimen>
+
+    <dimen name="conv_list_date_margin_top">13dip</dimen>
+
+    <dimen name="conv_list_from_margin_right">16dip</dimen>
+    <dimen name="conv_list_from_margin_top">11dip</dimen>
+
+    <dimen name="conv_list_black_margin_left">3dip</dimen>
+    <dimen name="conv_list_black_textsize">12sp</dimen>
+
+    <dimen name="conv_list_sim_width">12dip</dimen>
+    <dimen name="conv_list_sim_margin_left">4dip</dimen>
+    <dimen name="conv_list_top_width">12dip</dimen>
+    <dimen name="conv_list_sim_stub_margin_left">8dip</dimen>
+    <dimen name="conv_list_sim_stub_margin_top">7dip</dimen>
+
+    <dimen name="conv_list_subject_margin_left">24dip</dimen>
+    <dimen name="conv_list_subject_margin_bottom">13dp</dimen>
+
+    <dimen name="conv_list_item_left_padding">24dip</dimen>
+    <dimen name="conv_list_item_right_padding">16dip</dimen>
+    <!--lichao add in 2017-04-05 end-->
+
+    <!--lichao add in 2017-04-10 begin-->
+    <dimen name="conv_list_title_textsize">16sp</dimen>
+    <dimen name="conv_list_date_textsize">14sp</dimen>
+    <dimen name="conv_list_summary_textsize">14sp</dimen>
+    <dimen name="conv_list_summary_line_spacing">5dip</dimen>
+    <!--lichao add in 2017-04-10 end-->
+
+    <dimen name="search_list_date_margin_start">16dip</dimen>
+    <dimen name="search_list_sim_margin_start">4dip</dimen>
+    <dimen name="msg_layout_margin_top">5dip</dimen>
+    <dimen name="msg_layout_margin_bottom">11dip</dimen>
+    <dimen name="msg_title_layout_margin_top">4dip</dimen>
+    <dimen name="msg_title_layout_margin_bottom">4dip</dimen>
+    <dimen name="msg_content_layout_margin_top">6dip</dimen>
+    <dimen name="msg_content_layout_margin_bottom">6dip</dimen>
+    <dimen name="thread_layout_margin_top">9dip</dimen>
+    <dimen name="thread_layout_margin_bottom">9dip</dimen>
+    <dimen name="thread_number_margin_top">2dip</dimen>
+    <dimen name="thread_name_margin_top">0dip</dimen>
+    <dimen name="thread_count_margin_bottom">2dip</dimen>
+
+    <dimen name="search_item_thread_number_width">100dip</dimen>
+    <dimen name="search_item_thread_name_width">220dip</dimen>
+    <dimen name="search_item_thread_name_margin_end">5dip</dimen>
+
+    <dimen name="pre_search_view_hight">28dip</dimen>
+    <dimen name="pre_search_view_margin_left">8dip</dimen>
+    <dimen name="pre_search_view_margin_top">7dip</dimen>
+    <dimen name="pre_search_view_margin_right">8dip</dimen>
+    <dimen name="pre_search_view_margin_bottom">7dip</dimen>
+</resources>

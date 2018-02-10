@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="@dimen/conv_list_item_left_padding"
+    android:insetRight="@dimen/conv_list_item_right_padding"
+    android:drawable="@color/divider_line_gray">
+</inset>

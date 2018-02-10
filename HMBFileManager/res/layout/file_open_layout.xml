@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginStart="0.0dip"
+        android:layout_marginTop="16.0dip"
+        android:layout_marginBottom="8.0dip">
+        <LinearLayout android:id="@+id/file_document"
+            style="@style/FileOpenStyle">
+            <TextView android:text="@string/open_type_selection_text"
+                android:drawableTop="@drawable/category_icon_document"
+                style="@style/FileOpenTextStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/file_music"
+            style="@style/FileOpenStyle">
+            <TextView android:text="@string/open_type_selection_audio"
+                android:drawableTop="@drawable/category_icon_music"
+                style="@style/FileOpenTextStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/file_video"
+            style="@style/FileOpenStyle">
+            <TextView android:text="@string/open_type_selection_video"
+                android:drawableTop="@drawable/category_icon_video"
+                style="@style/FileOpenTextStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/file_picture"
+            style="@style/FileOpenStyle">
+            <TextView android:text="@string/open_type_selection_image"
+                android:drawableTop="@drawable/category_icon_picture"
+                style="@style/FileOpenTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical" >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/theme_detail_preview_img_margin_bottom" 
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:id="@+id/theme_pkg_detail_preview_scroller"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/theme_detail_preview_img_height" 
+                    android:orientation="horizontal"
+                    />
+            </HorizontalScrollView>
+
+            
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:orientation="vertical" >
+            
+            <TextView
+                android:id="@+id/theme_detail_designer"
+                style="@style/TextAppearance.ThemeManager.ThemeDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                 style="@style/TextAppearance.ThemeManager.ThemeDescription"
+                android:id="@+id/theme_detail_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/theme_detail_description"
+                style="@style/TextAppearance.ThemeManager.ThemeDescription"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.hb.thememanager.views.ThemePreviewDonwloadButton
+        style="@style/TextAppearance.ThemeManager.DetailPageOptionButton"
+        android:id="@+id/theme_detail_option_btn"
+        android:layout_width="wrap_content"
+        android:minWidth="@dimen/theme_detail_preview_option_btn_width"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/theme_detail_preview_option_btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/theme_detail_preview_option_btn_margin_bottom" 
+        android:background="@drawable/btn_wallpaper_apply_background"
+        android:foreground="@android:color/transparent"
+        />
+
+</RelativeLayout>

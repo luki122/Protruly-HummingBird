@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="hmb_download_title">下载</string>
+    <string name="hmb_downloading">"正在下载 ( <xliff:g id="DOWNING_COUNT">%1$d</xliff:g> ) "</string>
+    <string name="hmb_downloaded">"已下载 ( <xliff:g id="DOWN_COUNT">%1$d</xliff:g> ) "</string>
+    <string name="hmb_select_all">全选</string>
+    <string name="hmb_unselect_all">取消全选</string>
+    <string name="hmb_download_all">全部开始</string>
+    <string name="hmb_download_pause_all">全部暂停</string>
+    <string name="hmb_download_sort">排序</string>
+    <string name="hmb_sort_name">按名称排序</string>
+    <string name="hmb_sort_time">按时间排序</string>
+    <string name="hmb_sort_big_small">由大到小排序</string>
+    <string name="hmb_sort_small_big">由小到大排序</string>
+    <string name="hmb_documentui">原生下载应用</string>
+    <string name="hmb_delete">删除</string>
+    <string name="hmb_deleted">已删除</string>
+    <string name="hmb_ymd">yyyy年M月d日</string>
+    <string name="hmb_md">M月d日</string>
+    <string name="hmb_weekday">E</string>
+    <string name="hmb_yesterday">昨天</string>
+    <string name="hmb_before_yesterday">前天</string>
+    <string name="hmb_morning">上午 <xliff:g id="DOWNLOAD_TIME">%1$s</xliff:g></string>
+    <string name="hmb_afternoon">下午 <xliff:g id="DOWNLOAD_TIME">%1$s</xliff:g></string>
+    <string name="hmb_just">刚刚</string>
+    <string name="hmb_hm_12">h:mm</string>
+    <string name="hmb_hm_24">H:mm</string>
+    <string name="hmb_dialog_title">提示</string>
+    <string name="hmb_delete_doc_msg">是否要删除记录?</string>
+    <string name="hmb_delete_doc_hint">同时删除已下载文件</string>
+    <string name="hmb_ok">确定</string>
+    <string name="hmb_cancel">取消</string>
+    <string name="hmb_file_not_exist">文件不存在，是否重新下载？</string>
+    <string name="hmb_waiting_download">等待下载</string>
+    <string name="hmb_waiting_for_network">等待网络</string>
+    <string name="hmb_waiting_for_wifi">等待wifi</string>
+    <string name="hmb_no_network_connection">当前无网络连接，请连接到网络后重试</string>
+    <string name="hmb_mobile_download">当前为数据网络，请确认是否继续？</string>
+    <string name="hmb_download_continue">继续下载</string>
+    <string name="hmb_waiting_wifi">等待wifi</string>
+    <string name="empty">"无任何文件"</string>
+    <string name="toast_no_application">"无法打开文件"</string>
+    <string name="hmb_file_unsupport_accept_ranges">该文件来源不支持断点续传，请不要中止此下载任务。</string>
+    <string name="hmb_restart_download">"重新下载"</string>
+    <string name="hmb_selected_file_count">"已选择 <xliff:g id="SELECTED_COUNT">%1$d</xliff:g> 项"</string>
+    <string name="hmb_down_url_error">"下载地址错误！"</string>
+</resources>

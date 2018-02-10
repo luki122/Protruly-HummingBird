@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:fitsSystemWindows="true">
+
+    <hb.widget.toolbar.Toolbar
+        android:id="@+id/add_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="?android:attr/colorPrimary"
+        android:elevation="1dp"
+        android:focusable="false">
+
+        <LinearLayout
+            android:id="@+id/lay_all_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:background="@drawable/transparent_ripple"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/lay_data_total_margin_right">
+
+
+            <TextView
+                android:id="@+id/tv_all_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/data_total_margin_right"
+                android:gravity="center"
+                android:text="@string/all_select"
+                android:textColor="@color/color_range_title"
+                android:textSize="@dimen/tv_data_type_size" />
+
+        </LinearLayout>
+    </hb.widget.toolbar.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/lay_action"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:background="@drawable/my_ripple"
+            android:textColor="@color/color_range_title"
+            android:textSize="@dimen/btn_add_text_size" />
+
+        <View
+            android:layout_width="1px"
+            android:background="@color/color_item_line_divider"
+            android:layout_height="20dp"></View>
+
+        <TextView
+            android:id="@+id/tv_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/sure"
+            android:background="@drawable/my_ripple"
+            android:textColor="@color/color_range_title"
+            android:textSize="@dimen/btn_add_text_size" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        style="?android:attr/progressBarStyleLarge"
+        android:focusable="false"
+        android:visibility="visible" />
+
+    <hb.widget.recycleview.RecyclerView
+        android:id="@+id/recycler_add_orient_app"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lay_action"
+        android:layout_below="@id/add_toolbar"
+        android:listSelector="@drawable/my_ripple"
+        android:orientation="vertical"
+        hb:reverseLayout="false" />
+</RelativeLayout>

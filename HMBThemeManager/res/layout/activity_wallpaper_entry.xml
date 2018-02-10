@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mst="http://schemas.android.com/apk/res/com.mst"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical" >
+
+    <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/wallpaper_entry_parent_padding"
+    android:orientation="horizontal" >
+    
+	    <FrameLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/wallpaper_entry_height"
+	        android:layout_weight="1"
+	        android:orientation="vertical" >
+	
+	        <ImageView
+	            android:id="@+id/desktop_wallpaper_entry"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent" 
+	            android:scaleType="centerCrop"
+	            />
+	
+	        <TextView
+	            android:textAppearance="@style/TextAppearance.WallpaperEntryTitle"
+	            android:layout_width="match_parent"
+	            android:layout_height="@dimen/wallpaper_entry_title_height"
+	            android:text="@string/desktop_wallpaper_entry_title"
+	            android:layout_gravity="bottom"
+	            android:background="@com.hb:color/material_green_light"
+	            android:gravity="center" />
+	    </FrameLayout>
+	
+	    <Space
+	        android:layout_width="@dimen/wallpaper_entry_item_space"
+	        android:layout_height="@dimen/wallpaper_entry_height" />
+	
+	    <FrameLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/wallpaper_entry_height"
+	        android:layout_weight="1"
+	        android:orientation="vertical" >
+	
+	        <ImageView
+	            android:id="@+id/lockscreen_wallpaper_entry"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent" 
+	            android:scaleType="centerCrop"
+	            />
+	
+	        <TextView
+	            android:textAppearance="@style/TextAppearance.WallpaperEntryTitle"
+	            android:layout_width="match_parent"
+	            android:layout_height="@dimen/wallpaper_entry_title_height"
+	            android:text="@string/lockscreen_wallpaper_entry_title"
+	             android:layout_gravity="bottom"
+	            android:background="@com.hb:color/material_green_light"
+	            android:gravity="center" />
+	    </FrameLayout>
+	    
+	</LinearLayout>
+	
+    <View
+         android:layout_width="344dp"
+         android:layout_height="0.7dp" 
+         android:layout_marginTop="12dp"
+         android:layout_gravity="end"
+         android:background="#29000000"
+        />
+
+    <TextView
+        android:textAppearance="@style/TextAppearance.WallpaperEntryTitle"
+        android:id="@+id/vr_lockscreen_wallpaper_entry"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallpaper_apply_btn_margin_bottom"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingEnd="20dp"
+        android:drawableEnd="@drawable/ic_arrow_next"
+        android:text="@string/vr_wallpaper_entry_title"
+        android:textColor="#DE000000"
+        android:textSize="16sp" />
+    
+    <View 
+         android:layout_width="344dp"
+         android:layout_height="0.7dp" 
+         android:layout_gravity="end"
+         android:background="#29000000"
+        />
+    
+</LinearLayout>

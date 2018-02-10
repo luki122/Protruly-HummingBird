@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2008 The Android Open Source Project
+     Copyright (c) 2012-2013, The Linux Foundation. All rights reserved.
+
+     Not a Contribution.
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:phone="http://schemas.android.com/apk/res/com.android.phone"
+    android:title="@string/phone_accounts_settings_header" >
+
+    <PreferenceCategory
+        android:key="basic_category"
+        android:persistent="false"
+        android:title="@string/basic_settings" >
+        <PreferenceScreen
+            android:key="contact_setting"
+            android:persistent="false"
+            android:title="@string/contact_xxport_title" >
+            <intent android:action="android.intent.action.contacts.HbContactImportExportActivity" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="black_setting"
+            android:persistent="false"
+            android:title="@string/black_title" >
+            <intent android:action="com.hb.black.list" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="reject_sms_setting"
+            android:persistent="false"
+            android:title="@string/reject_sms_title" >
+            <intent android:action="android.telecom.action.SHOW_RESPOND_VIA_SMS_SETTINGS" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="speed_setting"
+            android:persistent="false"
+            android:title="@string/speed_dial_title" >
+            <intent android:action="com.android.dialer.settings.HbQuickDialSettingsActivity" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="call_setting"
+            android:persistent="false"
+            android:title="@string/wifi_more" >
+            <intent android:action="com.hb.settings.HbPhoneSettings" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="call_category"
+        android:persistent="false"
+        android:title="@string/call_settings" >
+        <SwitchPreference
+            android:defaultValue="@bool/def_power_hangup"
+            android:key="power_hangup_switch"
+            android:persistent="false"
+            android:title="@string/power_hangup_title" />
+        <SwitchPreference
+            android:defaultValue="@bool/def_vibrate_active"
+            android:key="vibrate_active_switch"
+            android:summary="@string/vibrate_active_summary"
+            android:persistent="false"
+            android:title="@string/vibrate_active_title" />
+        <SwitchPreference
+            android:defaultValue="@bool/def_flash_ringing"
+            android:summary="@string/flash_ringing_summary"
+            android:key="flash_ringing_switch"
+            android:persistent="false"
+            android:title="@string/flash_ringing_title" />
+        <SwitchPreference
+            android:defaultValue="@bool/def_smart_ringer"
+            android:key="smart_ringer_switch"
+            android:persistent="false"
+            android:title="@string/smart_ringer_title" />
+        <SwitchPreference
+            android:defaultValue="@bool/def_overturn_to_mute"
+            android:key="overturn_to_mute"
+            android:persistent="false"
+            android:title="@string/overturn_to_mute_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

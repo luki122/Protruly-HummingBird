@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="timer_green_text_color">#ff06c012</color>
+    <color name="timer_red_text_color">#ffff4546</color>
+    <color name="timer_gray_text_color">#ff878787</color>
+    <color name="timer_gray_unable_text_color">#559b9b9b</color>
+
+    <color name="timer_divider_color">#29000000</color>
+
+    <color name="timer_cricle_gray">#ffc0c0c0</color>
+    <color name="timer_cricle_red">#fff29507</color>
+    <color name="timer_cricle_text_color">#ff191919</color>
+    <color name="timer_cricle_second_text_color">#ff6f6f6f</color>
+
+    <color name="timer_selector_text_color">#ff06c012</color>
+    <color name="timer_second_text_color">#33000000</color>
+    <color name="timer_notif_text_color">#b3ffffff</color>
+    <color name="timer_finish_text_color">#3E4649</color>
+</resources>

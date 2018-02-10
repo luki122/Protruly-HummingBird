@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <hb.view.menu.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:maxHeight="50dp"
+        hb:menu="@menu/hb_bottom_menu_ok" />
+
+    <hb.widget.HbListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation_view"
+        android:background="@color/contact_main_background"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:fastScrollEnabled="false"
+        android:paddingBottom="@dimen/hb_list_padding_top_or_bottom"
+        android:paddingTop="@dimen/hb_list_padding_top_or_bottom"
+        android:scrollbars="none" />
+
+    <TextView
+        android:id="@+id/mSearchZero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:minHeight="24dp"
+        android:paddingTop="83dip"
+        android:textColor="@color/hb_no_contacts_text_color"
+        android:textSize="@dimen/hb_no_contacts_text_size"
+        android:visibility="gone" />
+
+    <hb.widget.HbIndexBar
+        android:id="@+id/index_bar"
+        android:layout_width="@dimen/index_bar_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/index_bar_margin_bottom"
+        android:layout_marginRight="@dimen/index_bar_margin_right"
+        android:layout_marginTop="@dimen/index_bar_margin_top"
+        android:visibility="visible"
+        hb:balloonLeft="@dimen/index_bar_balloon_left"
+        hb:balloonTop="@dimen/index_bar_balloon_top" />
+
+</RelativeLayout>

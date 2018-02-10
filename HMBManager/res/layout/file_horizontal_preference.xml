@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/preference_layout_height">
+
+    <ImageView
+        android:id="@+id/fileIcon"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginRight="@dimen/padding_large"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/fileName"
+        android:textColor="@color/list_text_color"
+        android:textSize="@dimen/qscanner_detail_item_text_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fileIcon"
+        android:layout_marginRight="@dimen/padding_small"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginTop="@dimen/preference_title_margin_top"
+        android:layout_alignParentTop="true"
+        android:ellipsize="marquee"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/fileSize"
+        android:textColor="@color/list_num_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fileIcon"
+        android:layout_marginRight="@dimen/padding_small"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/preference_summary_margin_bottom"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_middle"
+        android:ellipsize="marquee"
+        android:textSize="@dimen/qscanner_detail_summary_text_size"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/filePath"
+        android:textColor="@color/list_num_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/fileSize"
+        android:layout_marginRight="@dimen/file_info_margin_right"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/preference_summary_margin_bottom"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_middle"
+        android:textSize="@dimen/qscanner_detail_summary_text_size"
+        android:ellipsize="middle"
+        android:maxLines="1" />
+
+    <TextView
+        android:id="@+id/text_delete"
+        android:textSize="@dimen/item_number_size"
+        android:textColor="@color/delete_file_text_color"
+        android:text="@string/safety_recommend_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/button_margin_right"/>
+
+</RelativeLayout>

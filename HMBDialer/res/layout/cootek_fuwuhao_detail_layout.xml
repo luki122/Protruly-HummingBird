@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/todo_activity_bg"
+    android:orientation="vertical">
+
+    <!-- Controller Frame -->
+
+    <!--<com.cootek.smartdialer.assist.slideframework.FuncBarSecondaryView-->
+    <!--android:id="@+id/funcbar_secondary"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/funcbar_height"/>-->
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="54dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/funcbar_bg"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/bottom_custom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/bottomLayout"
+        android:background="@drawable/listitem_divider_fg" />
+
+    <com.cootek.smartdialer.publicnumber.ServiceAccountPinnedHeaderListView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_above="@id/divider"
+        android:background="#f0f0f0"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/transparent"
+        android:listSelector="#00000000" />
+
+    <LinearLayout
+        android:id="@+id/emptyContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/divider"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/emptyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/contact_list_empty_content"
+            android:textColor="#999"
+            android:textSize="@dimen/fuwuhao_basic_text_size_6" />
+    </LinearLayout>
+</RelativeLayout>

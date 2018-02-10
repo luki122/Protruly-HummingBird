@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- permission -->
+    <string name="request_permissions_message">Calendar requires calendar, contacts, storage and phone permissions. Go setup?</string>
+    <string name="request_permissions_ok">Go</string>
+    <string name="grant_permissions_message">Calendar requires calendar, contacts, storage, phone and network permissions. Are you Agree?</string>
+    <string name="grant_permissions_ok">Agree</string>
+    <string name="calendar_permission_dinied">Calendar permission is denied. Please grant the calendar permission on "Settings->Apps->Calendar->Permissions".</string>
+
+    <!-- toast -->
+    <string name="time_out_of_range">Time is out of range</string>
+
+    <!-- agenda -->
+    <string name="show_older_agendas">Click to view events before <xliff:g id="OLDEST_SEARCH_RANGE">%1$s</xliff:g></string>
+    <string name="show_newer_agendas">Click to view events after <xliff:g id="NEWEST_SEARCH_RANGE">%1$s</xliff:g></string>
+    <string name="agenda_date_weekday"><xliff:g id="date">%1$s</xliff:g>, <xliff:g id="date">%2$s</xliff:g></string>
+    <string name="agenda_date_weekday_today"><xliff:g id="date">%1$s</xliff:g>, <xliff:g id="date">%2$s</xliff:g>, TODAY</string>
+    <string name="agenda_date_weekday_yesterday"><xliff:g id="date">%1$s</xliff:g>, <xliff:g id="date">%2$s</xliff:g>, YESTERDAY</string>
+    <string name="agenda_date_weekday_tomorrow"><xliff:g id="date">%1$s</xliff:g>, <xliff:g id="date">%2$s</xliff:g>, TOMORROW</string>
+
+    <!-- labels -->
+    <string name="label_none">None</string>
+    <string name="label_title">Label</string>
+    <string name="label_custom">Custom</string>
+    <string name="label_custom_title">Custom Label</string>
+
+    <!-- event info -->
+    <string name="event_info">Event Info</string>
+    <string name="event_info_edit">Edit</string>
+    <string name="event_begin_label">Begin:</string>
+    <string name="event_end_label">End:</string>
+    <string name="event_reminder_label">Reminder:</string>
+    <string name="event_repeat_label">Repeat:</string>
+    <string name="event_label">Label:</string>
+    <string name="event_no_reminder">None</string>
+
+    <!-- delete event -->
+    <string name="delete_recurring_event">This is a recurring event, do deleting will delete all events about to.</string>
+    <string name="delete">Delete</string>
+
+    <!-- month agenda -->
+    <string name="have_no_event">No Event</string>
+
+    <!-- event edit -->
+    <string name="create_event">Create Event</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="event_created">Event created</string>
+    <string name="event_saved">Event saved</string>
+    <string name="edit_repeat_event">This is a recurring event, do editting will change all events about to.</string>
+    <string name="edit_repeat_event_ok">I Know</string>
+    <string name="event_edit_hint_title">Event Title</string>
+    <string name="event_edit_cancel">Exit</string>
+    <string name="event_edit_cancel_info">Discard the changes and exit?</string>
+    <string name="event_edit_save_no_title">Enter a Event title</string>
+
+    <string name="event_repeat">Cycle</string>
+    <string name="event_no_repeat">Does not repeat</string>
+    <string name="event_daily">Daily</string>
+    <string name="event_every_weekday">Every weekday</string>
+    <string name="event_weekly">Weekly</string>
+    <string name="event_weekly_on_day">Weekly (<xliff:g id="DAYS_OF_WEEK">%s</xliff:g>)</string>
+    <string name="event_monthly">Monthly</string>
+    <string name="event_monthly_on_day_count">Monthly (the <xliff:g id="ORDINAL_NUMBER">%1$s</xliff:g> <xliff:g id="DAY_OF_WEEK">%2$s</xliff:g>)</string>
+    <string name="event_yearly">Yearly</string>
+
+    <!-- calendar setting -->
+    <string name="week_start_day">Week starts on</string>
+    <string name="reminder_settings">Reminder Settings</string>
+    <string name="events_reminder">Remind In Advance</string>
+    <string name="reminder_ringtone">Reminder Ringtone</string>
+    <string name="ringtone_none">None</string>
+    <string name="ringtone_default">Default</string>
+    <string name="ringtone_default_none">Default ringtone (none)</string>
+
+    <!-- holiday, festival and lunar -->
+    <string name="legal_holiday">休</string>
+    <string name="legal_workday">班</string>
+
+    <string name="foreign_mother_day" translatable="false">母亲节</string>
+    <string name="foreign_father_day" translatable="false">父亲节</string>
+    <string name="foreign_thanksgiving_day" translatable="false">感恩节</string>
+
+    <string name="lunar_fest_laba" translatable="false">腊八节</string>
+    <string name="lunar_fest_xiaonian" translatable="false">小年</string>
+    <string name="lunar_fest_chuxi" translatable="false">除夕</string>
+
+    <string name="lunar_fest_chunjie" translatable="false">春节</string>
+    <string name="lunar_fest_duanwu" translatable="false">端午节</string>
+    <string name="lunar_fest_zhongqiu" translatable="false">中秋节</string>
+    <string name="lunar_fest_yuandan" translatable="false">元旦</string>
+    <string name="lunar_fest_laodong" translatable="false">劳动节</string>
+    <string name="lunar_fest_guoqing" translatable="false">国庆节</string>
+    <string name="lunar_fest_yuanxiao" translatable="false">元宵节</string>
+    <string name="lunar_fest_qixi" translatable="false">七夕</string>
+    <string name="lunar_fest_chongyang" translatable="false">重阳节</string>
+    <string name="lunar_fest_qingnian" translatable="false">青年节</string>
+    <string name="lunar_fest_qingren" translatable="false">情人节</string>
+    <string name="lunar_fest_funv" translatable="false">妇女节</string>
+    <string name="lunar_fest_zhishu" translatable="false">植树节</string>
+    <string name="lunar_fest_yuren" translatable="false">愚人节</string>
+    <string name="lunar_fest_ertong" translatable="false">儿童节</string>
+    <string name="lunar_fest_jiandang" translatable="false">建党节</string>
+    <string name="lunar_fest_jianjun" translatable="false">建军节</string>
+    <string name="lunar_fest_jiaoshi" translatable="false">教师节</string>
+    <string name="lunar_fest_shengdan" translatable="false">圣诞节</string>
+
+    <!-- #lunar -->
+    <string name="lunar_date_formatter">yyyy年MM月dd日</string>
+    <string name="lunar_leap" translatable="false">闰</string>
+    <string name="lunar_tenth_day" translatable="false">初十</string>
+    <string name="lunar_twentieth_day" tanslatable="false">二十</string>
+    <string name="lunar_thirtieth_day" translatable="false">三十</string>
+    <string name="lunar_year" translatable="false">年</string>
+    <string name="lunar_month" translatable="false">月</string>
+    <string name="lunar_day" translatable="false">日</string>
+</resources>

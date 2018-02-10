@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:background="#FFF4F4F4" />
+
+    <RelativeLayout
+        android:id="@+id/clean_group_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:background="@color/white"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <LinearLayout
+            android:id="@+id/clean_title_layout"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:paddingLeft="10dp" >
+
+            <LinearLayout
+                android:id="@+id/clean_title_layout1"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/clean_group_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/list_text_color"
+                    android:textSize="17dp" />
+
+                <ImageView
+                    android:id="@+id/clean_point"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/right_arrow" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/clean_group_title_child"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/list_num_color"
+                android:textSize="@dimen/item_number_size" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/clean_group_size"
+            android:layout_width="97dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/clean_group_state"
+            android:gravity="right"
+            android:textColor="@color/list_num_color"
+            android:textSize="12dp" />
+
+        <CheckBox
+            android:id="@+id/clean_group_state"
+            android:theme="@style/AppTheme" android:focusable="false" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+</LinearLayout>

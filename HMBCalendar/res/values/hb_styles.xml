@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="HbCalendarTheme" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="android:endYear">2036</item>
+        <item name="android:startYear">1970</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="HbCalendarTheme.WithBackIcon" parent="HbCalendarTheme">
+        <item name="android:toolbarStyle">@style/ToolbarStyle</item>
+        <item name="com.hb:windowLayoutStyle">@style/WindowStyle.WithBackIcon</item>
+    </style>
+
+    <style name="ToolbarStyle" parent="com.hb:ToolbarStyle">
+        <item name="android:elevation">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+
+    <style name="WindowStyle.WithBackIcon" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+    </style>
+
+    <style name="CalendarToolbarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?android:attr/actionBarSize</item>
+        <item name="android:background">@color/toolbar_bg_color</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="CalendarToolbarContentStyle">
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:textSize">@dimen/toolbar_content_text_size</item>
+        <item name="android:textColor">@color/toolbar_title_color</item>
+    </style>
+
+    <style name="CalendarSingleLineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/list_single_line_height</item>
+        <item name="android:paddingStart">@dimen/list_item_padding</item>
+        <item name="android:paddingEnd">@dimen/list_item_padding</item>
+    </style>
+
+    <style name="CalendarSingleLineWithNoPaddingEndStyle" parent="CalendarSingleLineStyle">
+        <item name="android:paddingEnd">0dp</item>
+    </style>
+
+    <style name="CalendarLabelStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/calendar_title_text_color</item>
+    </style>
+
+    <style name="CalendarLabelWithPaddingStartStyle" parent="CalendarLabelStyle">
+        <item name="android:paddingStart">@dimen/calendar_label_padding_start</item>
+    </style>
+
+    <style name="CalendarContentStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:paddingEnd">@dimen/list_item_padding</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/calendar_title_text_color</item>
+    </style>
+
+    <style name="CalendarTitleStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/list_item_padding</item>
+        <item name="android:paddingEnd">@dimen/list_item_padding</item>
+        <item name="android:paddingTop">11dp</item>
+        <item name="android:paddingBottom">11dp</item>
+        <item name="android:minHeight">@dimen/list_single_line_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/calendar_title_text_color</item>
+    </style>
+
+    <style name="HorizontalDividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+    <style name="TextAppearance.Toolbar_Title">
+        <item name="android:textSize">@dimen/toolbar_title_text_size</item>
+        <item name="android:textColor">@color/toolbar_title_color</item>
+    </style>
+
+    <style name="TextAppearance.TextView_Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/calendar_title_text_color</item>
+    </style>
+
+    <style name="TextAppearance.TextView_Summary">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/calendar_summary_text_color</item>
+    </style>
+
+    <style name="TextAppearance.TextView_DayLabel">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/month_header_text_color</item>
+    </style>
+
+</resources>

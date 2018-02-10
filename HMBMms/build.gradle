@@ -1,0 +1,143 @@
+apply plugin: 'com.android.application'
+
+android {
+//    lintOptions {
+//        abortOnError false
+//    }
+    compileSdkVersion 23
+    buildToolsVersion '25.0.2'
+
+    defaultConfig {
+        applicationId "com.android.mms"
+        minSdkVersion 23
+        targetSdkVersion 23
+        versionCode 161226001
+        versionName "v6.0-1488180132"
+    }
+
+//    aaptOptions {
+//        additionalParameters '-S',
+//                '/home/lichao/work/aeon6797_6c_m/Mms_AS/HMBMms/res',
+//                '-S',
+//                '/home/lichao/work/aeon6797_6c_m/Mms_AS/HMBMms/ContactsCommon/res',
+//                '-S',
+//                '/home/lichao/work/aeon6797_6c_m/Mms_AS/HMBMms/ContactsCommon/res_ext',
+//                '-S',
+//                '/home/lichao/work/aeon6797_6c_m/Mms_AS/HMBMms/PhoneCommon/res',
+//                '-S',
+//                '/home/lichao/work/aeon6797_6c_m/Mms_AS/HMBMms/ex_chips/res',
+//                '--auto-add-overlay'
+//        noCompress 'foo', 'bar'
+//        ignoreAssetsPattern '!.svn:!.git:!.ds_store:!*.scc:.*:<dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~'
+//    }
+//
+//    aaptOptions {
+//        additionalParameters '-I',
+//                '/home/lichao/work/aeon6797_6c_m/out/target/common/obj/APPS/hb-framework-res_intermediates/package-export.apk'
+//    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs += ['src']
+            java.srcDirs += ['PhoneCommon/src']
+            java.srcDirs += ['ContactsCommon/ext']
+            java.srcDirs += ['ContactsCommon/src']
+            java.srcDirs += ['ext/src']
+            java.srcDirs += ['callback/src']
+            //java.srcDirs += ['ex_chips/src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            //error if like this: res.srcDirs = ['res', 'ex_chips/res', 'PhoneCommon/res']
+            res.srcDirs += ['res']
+            //res.srcDirs += ['ex_chips/res']
+            //Error:Error: Duplicate resources
+            //res.srcDirs += ['ContactsCommon/res']
+            //res.srcDirs += ['ContactsCommon/res_ext']
+            res.srcDirs += ['PhoneCommon/res']
+            assets.srcDirs = ['assets']
+        }
+        //androidTest.setRoot('tests')
+    }
+
+    buildTypes {
+        debug {
+            println("====== buildTypes.debug ======")
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            //signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    compile project(':ex_chips')
+    compile project(':ContactsCommon')
+    //compile project(':phoneCommon')
+    //prebuilt java libraries
+    //only for compile, not packaged to the final apk
+    //java libraries
+    provided fileTree(include: ['*.jar'], dir: 'libs')
+    /*
+                //add com.android.contacts.common.jar for import com.android.contacts.common.R
+                //provided files('libs/com.android.contacts.common.jar')
+                provided files('libs/ims-common.jar')
+                //add mediatek-common.jar for import com.mediatek.common.MPlugin
+                provided files('libs/mediatek-common.jar')
+                provided files('libs/mediatek-framework.jar')
+                provided files('libs/org.apache.http.legacy.boot.jar')
+                provided files('libs/telephony-common.jar')
+                provided files('libs/voip-common.jar')
+                //lichao add ext.jar for com.android.i18n.phonenumbers
+                provided files('libs_prebuilt/ext.jar')
+                provided files('libs_prebuilt/framework.jar')
+                provided files('libs_prebuilt/hummingbird1.0.jar')
+                */
+    //java static libraries
+    //compile and will be added to the final apk
+    compile fileTree(include: ['*.jar'], dir: 'libs_static')
+    /*
+                //static java libraries
+                compile files('libs_static/android-common.jar')
+                compile files('libs_static/android-common-chips.jar')
+                compile files('libs_static/android-support-v4.jar')
+                compile files('libs_static/android-support-v13.jar')
+                compile files('libs_static/com.android.services.telephony.common.jar')
+                compile files('libs_static/com.android.vcard.jar')
+                //compile files('libs_static/com.mediatek.mms.callback.jar')
+                //compile files('libs_static/com.mediatek.mms.ext.jar')
+                compile files('libs_static/guava.jar')
+                compile files('libs_static/jsr305.jar')
+                //compile files('libs_static/libchips.jar')
+                compile files('libs_static/libphonenumber.jar')
+                */
+}
+
+//lichao add preBuild in 2017-03-20 begin
+//before add preBuild
+//<orderEntry type="jdk" jdkName="Android API 23 Platform (1)" jdkType="Android SDK" />
+//after first modiry, this will lead cannot find SDK location
+//<orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK"/>
+preBuild {
+    doLast {
+        def imlFile = file(project.name + ".iml")
+        println 'Change ' + project.name + '.iml order'
+        try {
+            def parsedXml = (new XmlParser()).parse(imlFile)
+            def jdkNode = parsedXml.component[1].orderEntry.find { it.'@type' == 'jdk' }
+            parsedXml.component[1].remove(jdkNode)
+            //lichao modify  Platform to  Platform (1) in 2017-03-20
+            //def sdkString = "Android API " + android.compileSdkVersion.substring("android-".length()) + " Platform (1)"
+            def sdkString = "Android API " + android.compileSdkVersion.substring("android-".length()) + " Platform (1)"
+            new Node(parsedXml.component[1], 'orderEntry', ['type': 'jdk', 'jdkName': sdkString, 'jdkType': 'Android SDK'])
+            groovy.xml.XmlUtil.serialize(parsedXml, new FileOutputStream(imlFile))
+        } catch (FileNotFoundException e) {
+            // nop, iml not found
+        }
+    }
+}
+//lichao add preBuild in 2017-03-20 end

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/fuwuhao_bg_color"
+    android:orientation="vertical">
+
+    <!-- Controller Frame -->
+
+    <!--<com.cootek.smartdialer.assist.slideframework.FuncBarSecondaryView-->
+    <!--android:id="@+id/funcbar_secondary"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/funcbar_height"-->
+    <!--sf:funcbarTitleText="@string/contact_list_header_srcaccount_section_title"/>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+
+        >
+
+        <ListView
+            android:id="@+id/servicelist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="1dip" />
+
+        <LinearLayout
+            android:id="@+id/lineEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/cootek_fuwuhao_blank" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/yellowpage_fuwuhao_empty"
+                android:textColor="#666"
+                android:textSize="@dimen/fuwuhao_basic_text_size_4"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:singleLine="false"
+                android:text="@string/yellowpage_fuwuhao_empty_2"
+                android:textColor="#999"
+                android:textSize="@dimen/fuwuhao_basic_text_size_6"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </FrameLayout>
+</RelativeLayout>

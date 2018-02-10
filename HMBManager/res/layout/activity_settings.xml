@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/app_setting" >
+
+    <PreferenceCategory android:key="module_parent"
+        android:title="@string/app_module_setting">
+        <PreferenceScreen
+            android:key="preference_privacy"
+            android:title="@string/title_privacy_manager" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="preference_safety"
+            android:title="@string/safety_protection" >
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:key="preference_usage"
+            android:title="@string/title_usage_manager" >
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:key="about_parent"
+        android:title="@string/app_about_setting">
+        <SwitchPreference
+            android:key="wlan_switch"
+            android:title="@string/app_setting_wlan_auto_update_db" >
+        </SwitchPreference>
+        <PreferenceScreen
+            android:key="preference_update_database"
+            android:title="@string/app_setting_update_database" >
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

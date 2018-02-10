@@ -1,0 +1,77 @@
+<resources>
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+    </style>
+
+    <style name="my_CheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <style name="MainTheme.Activity" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:hasBackIcon">false</item>
+        <item name="com.hb:title">@string/app_name</item>
+    </style>
+    
+    <style name="OneKey_Theme.Activity" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+    </style>
+  
+    <style name="Theme.Activity" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:windowLayoutStyle">@style/Style.Activity</item>
+        <item name="android:toolbarStyle">@style/Style.Activity.ToolbarStyle</item>
+        <item name="com.hb:actionPositiveText">@string/select_all</item>
+        <item name="com.hb:actionNagativeText">@com.hb:string/cancel</item>
+        <item name="com.hb:title">@string/bg_app_title</item>
+    </style>
+    
+   <style name="Rubblish_Theme.Activity" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:windowLayoutStyle">@style/Style.Activity</item>
+        <item name="android:toolbarStyle">@style/Rubblish_Style.Activity.ToolbarStyle</item>
+    </style>
+    
+      <style name="Cache_Theme.Activity" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="com.hb:windowLayoutStyle">@style/Style.Activity</item>
+        <item name="android:toolbarStyle">@style/Cache_Style.Activity.ToolbarStyle</item>
+        <item name="com.hb:actionPositiveText">@string/select_all</item>
+        <item name="com.hb:actionNagativeText">@com.hb:string/cancel</item>
+        <item name="com.hb:title">@string/app_cache_clean_title</item>
+    </style>
+
+    <style name="Style.Activity" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+    </style>
+
+    <style name="Style.Activity.ToolbarStyle" parent="com.hb:style/ToolbarStyle">
+        <item name="com.hb:title">@string/bg_app_title</item>
+    </style>
+    <style name="Rubblish_Style.Activity.ToolbarStyle" parent="com.hb:style/ToolbarStyle">
+        <item name="com.hb:title">@string/rubblish_clean_title</item>
+    </style>
+    <style name="Cache_Style.Activity.ToolbarStyle" parent="com.hb:style/ToolbarStyle">
+        <item name="com.hb:title">@string/app_cache_clean_title</item>
+    </style>
+    <style name="Menu.BottomNavigation.OverFlow" parent="android:Widget.PopupWindow">
+        <item name="android:popupBackground">@null</item>
+        <item name="android:popupElevation">0dp</item>
+    </style>
+
+    <style name="QScanner_Theme.Activity"  parent="@com.hb:style/Theme.Hb.Material.Light">
+         <item name="android:listDivider">@com.hb:drawable/list_divider_material_with_icon</item>
+    </style>
+
+</resources>

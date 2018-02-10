@@ -1,0 +1,149 @@
+/*
+ * Copyright (C) 2014 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.android.systemui.qs.tiles;
+
+import android.content.Intent;
+import android.provider.Settings;
+
+import com.android.internal.logging.MetricsLogger;
+import com.android.systemui.R;
+import com.android.systemui.qs.QSTile;
+import com.android.systemui.qs.QSTile.ResourceIcon;
+import com.android.systemui.statusbar.policy.KeyguardMonitor;
+import com.android.systemui.statusbar.policy.LocationController;
+import com.android.systemui.statusbar.policy.LocationController.LocationSettingsChangeCallback;
+
+/** Quick settings tile: Location **/
+public class LocationTile extends QSTile<QSTile.BooleanState> {
+
+	/**hb tangjun mod begin*/
+	/*
+    private final AnimationIcon mEnable =
+            new AnimationIcon(R.drawable.ic_signal_location_enable_animation);
+    private final AnimationIcon mDisable =
+            new AnimationIcon(R.drawable.ic_signal_location_disable_animation);
+            */
+	/**hb tangjun mod end*/
+
+    private final LocationController mController;
+    private final KeyguardMonitor mKeyguard;
+    private final Callback mCallback = new Callback();
+
+    public LocationTile(Host host) {
+        super(host);
+        mController = host.getLocationController();
+        mKeyguard = host.getKeyguardMonitor();
+    }
+
+    @Override
+    protected BooleanState newTileState() {
+        return new BooleanState();
+    }
+
+    @Override
+    public void setListening(boolean listening) {
+        if (listening) {
+            mController.addSettingsChangedCallback(mCallback);
+            mKeyguard.addCallback(mCallback);
+        } else {
+            mController.removeSettingsChangedCallback(mCallback);
+            mKeyguard.removeCallback(mCallback);
+        }
+    }
+
+    @Override
+    protected void handleClick() {
+        final boolean wasEnabled = (Boolean) mState.value;
+        MetricsLogger.action(mContext, getMetricsCategory(), !wasEnabled);
+        mController.setLocationEnabled(!wasEnabled);
+        /**hb tangjun mod begin*/
+        /*
+        mEnable.setAllowAnimation(true);
+        mDisable.setAllowAnimation(true);
+        */
+        /**hb tangjun mod end*/
+    }
+    
+    /**hb tangjun add begin*/
+    @Override
+    public void handleLongClick() {
+    	 Intent intent =  new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);  
+    	 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+    	 mHost.startActivityDismissingKeyguard(intent);
+    }
+    /**hb tangjun add end*/
+
+    @Override
+    protected void handleUpdateState(BooleanState state, Object arg) {
+        final boolean locationEnabled =  mController.isLocationEnabled();
+
+        // Work around for bug 15916487: don't show location tile on top of lock screen. After the
+        // bug is fixed, this should be reverted to only hiding it on secure lock screens:
+        // state.visible = !(mKeyguard.isSecure() && mKeyguard.isShowing());
+        /**hb tangjun mod begin*/
+        //state.visible = !mKeyguard.isShowing();
+        state.visible = true;
+        /**hb tangjun mod end*/
+        state.value = locationEnabled;
+        if (locationEnabled) {
+        	/**hb tangjun mod begin*/
+            //state.icon = mEnable;
+        	state.icon = ResourceIcon.get(R.drawable.hb_location_on);
+            state.color = mContext.getResources().getColor(R.color.qs_title_color_on);
+        	/**hb tangjun mod end*/
+            state.label = mContext.getString(R.string.quick_settings_location_label);
+            state.contentDescription = mContext.getString(
+                    R.string.accessibility_quick_settings_location_on);
+        } else {
+        	/**hb tangjun mod begin*/
+            //state.icon = mDisable;
+            state.icon = ResourceIcon.get(R.drawable.hb_location_off);
+            state.color = mContext.getResources().getColor(R.color.qs_title_color_off);
+            /**hb tangjun mod end*/
+            state.label = mContext.getString(R.string.quick_settings_location_label);
+            state.contentDescription = mContext.getString(
+                    R.string.accessibility_quick_settings_location_off);
+        }
+    }
+
+    @Override
+    public int getMetricsCategory() {
+        return MetricsLogger.QS_LOCATION;
+    }
+
+    @Override
+    protected String composeChangeAnnouncement() {
+        if (mState.value) {
+            return mContext.getString(R.string.accessibility_quick_settings_location_changed_on);
+        } else {
+            return mContext.getString(R.string.accessibility_quick_settings_location_changed_off);
+        }
+    }
+
+    private final class Callback implements LocationSettingsChangeCallback,
+            KeyguardMonitor.Callback {
+        @Override
+        public void onLocationSettingsChanged(boolean enabled) {
+            refreshState();
+        }
+
+        @Override
+        public void onKeyguardChanged() {
+            refreshState();
+        }
+    };
+}

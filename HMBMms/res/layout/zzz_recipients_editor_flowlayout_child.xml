@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- the layout_** will unused,it will set in code 
+tangyisen add -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recipient_editor_item"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/recipients_editor_item_height"
+    android:background="@drawable/zzz_recipients_editor_item_background"
+    android:orientation="horizontal" >
+    <!-- 当文字太长，会将iamgeview消失，先设置maxwidht，后面在看怎么办，例如用Relativelayout -->
+     <!-- android:layout_marginTop="3.5dp"
+        android:layout_marginBottom="4.5dp" -->
+    <TextView
+        android:id="@+id/recipient_editor_item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="225dp"
+        android:layout_marginStart="6dp"
+        android:textSize="14sp"
+        android:textColor="#FFFFFFFF"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:layout_gravity="center_vertical" />
+    <ImageView
+        android:id="@+id/recipient_editor_item_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="6dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/zzz_ic_message_recipient_chlid_close"/>
+</LinearLayout>

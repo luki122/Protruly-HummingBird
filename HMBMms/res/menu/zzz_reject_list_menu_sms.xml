@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- ic_mesage -->
+    <item
+        android:id="@+id/showSms"
+        android:title="@string/show_sms_title"
+        android:icon="@com.hb:drawable/ic_revolve_left">
+    </item>
+    <item
+        android:id="@+id/delSms"
+        android:title="@string/delete_sms_title"
+        android:icon="@com.hb:drawable/ic_delete">
+    </item>
+
+</menu>

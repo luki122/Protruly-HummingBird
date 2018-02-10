@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mediatek.keyguard.PowerOffAlarm.PowerOffAlarmViewEx
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:dc="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/power_off_alarm_view_ex"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center_horizontal"
+	android:contentDescription="@string/keyguard_accessibility_alarm_unlock"
+	>
+
+	<com.mediatek.keyguard.Clock.MediatekDigitalClock
+		android:id="@+id/digitalClock"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginLeft="28dp"
+		android:baselineAligned="false"
+		>
+		<com.mediatek.keyguard.PowerOffAlarm.MediatekZeroTopPaddingTextView
+			android:id="@+id/timeDisplayHours"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:paddingRight="@dimen/time_margin_right"
+			android:singleLine="true"
+			android:ellipsize="none"
+			style="@style/big_thin"
+            android:textSize="68sp"
+            android:textColor="@color/power_off_alarm_color_text"
+			/>
+		<com.mediatek.keyguard.PowerOffAlarm.MediatekZeroTopPaddingTextView
+			android:id="@+id/timeDisplayMinutes"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			style="@style/big_thin"
+			android:singleLine="true"
+			android:ellipsize="none"
+            android:textSize="68sp"
+            android:textColor="@color/power_off_alarm_color_text"
+			/>
+		<com.mediatek.keyguard.PowerOffAlarm.MediatekZeroTopPaddingTextView
+			android:id="@+id/am_pm"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			style="@style/label"
+			android:singleLine="true"
+			android:ellipsize="none"
+            android:textSize="15sp"
+            android:textColor="@color/power_off_alarm_color_text"
+			/>
+	</com.mediatek.keyguard.Clock.MediatekDigitalClock>
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/digitalClock"
+        android:layout_marginLeft="28dp"
+		android:singleLine="true"
+		android:ellipsize="none"
+		android:textStyle="normal"
+        android:textSize="15sp"
+        android:textColor="@color/power_off_alarm_color_text"
+        />
+
+    <TextView
+        android:id="@+id/alertTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="246dp"
+		android:singleLine="true"
+		android:ellipsize="end"
+		style="@style/header_not_caps"
+		android:textStyle="normal"
+        android:textSize="32sp"
+        android:textColor="@color/power_off_alarm_color_text"
+		android:paddingLeft="@dimen/label_margin_big"
+		android:paddingBottom="@dimen/label_margin_small"
+        />
+
+    <RelativeLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alertTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        >
+
+        <Button
+            android:id="@+id/btn_alert_snooze"
+            android:layout_width="152dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/power_off_alarm_btn_bg"
+			android:singleLine="true"
+			android:ellipsize="none"
+			style="@style/big_thin"
+            android:textSize="20sp"
+            android:textColor="@color/power_off_alarm_color_text"
+            android:text="@string/power_off_alarm_btn_delay" />
+
+        <Button
+            android:id="@+id/btn_alert_dismiss_pwron"
+            android:layout_width="152dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/power_off_alarm_btn_bg"
+			android:singleLine="true"
+			android:ellipsize="none"
+			style="@style/big_thin"
+            android:textSize="20sp"
+            android:textColor="@color/power_off_alarm_color_text"
+            android:text="@string/power_off_alarm_btn_pwron" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/text_alert_dismiss_pwroff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+		android:singleLine="true"
+		android:ellipsize="none"
+		style="@style/big_thin"
+        android:textSize="14sp"
+        android:textColor="@color/power_off_alarm_color_text"
+        android:text="@string/power_off_alarm_text_pwroff"
+        />
+</com.mediatek.keyguard.PowerOffAlarm.PowerOffAlarmViewEx>

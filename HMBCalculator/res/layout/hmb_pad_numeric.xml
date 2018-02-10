@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="4"
+    android:rowCount="5">
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_clear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_clear"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_clear" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_po_and_ne"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_po_and_ne"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_po_and_ne" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_del"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_del"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_del" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_div"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_div"
+        custom:drawLine="left|top|right"
+        custom:imageSrc="@drawable/ic_div"
+        custom:isHighlight="true" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/digit_7"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_digit_7"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_7" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/digit_8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_digit_8"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_8" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/digit_9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_digit_9"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_9" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_mul"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_mul"
+        custom:drawLine="left|top|right"
+        custom:imageSrc="@drawable/ic_mul"
+        custom:isHighlight="true" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/digit_4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_digit_4"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_4" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/digit_5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_digit_5"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_5" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/digit_6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_digit_6"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_6" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_sub"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_sub"
+        custom:drawLine="left|top|right"
+        custom:imageSrc="@drawable/ic_sub_port"
+        custom:isHighlight="true" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/digit_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_digit_1"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_1" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/digit_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_digit_2"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_2" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/digit_3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_digit_3"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_3" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_add"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_add"
+        custom:drawLine="left|top|right"
+        custom:imageSrc="@drawable/ic_add"
+        custom:isHighlight="true" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/digit_0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnSpan="2"
+        android:layout_columnWeight="2"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_digit_0"
+        custom:drawLine="left|top|bottom"
+        custom:imageSrc="@drawable/ic_0"
+        custom:showLeft="true" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_point"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_point"
+        custom:drawLine="left|top|bottom"
+        custom:imageSrc="@drawable/ic_point" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_eq"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_eq"
+        custom:drawLine="all"
+        custom:imageSrc="@drawable/ic_eq"
+        custom:isHighlight="true" />
+
+</GridLayout>

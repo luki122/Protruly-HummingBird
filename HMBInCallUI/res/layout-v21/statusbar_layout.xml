@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 360 86 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_container"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/hb_statusbar_height"
+    android:background="#E6339d60" >
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:singleLine="true"
+        android:textColor="#FFFFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16.7dp"
+        android:gravity="center"
+        android:maxWidth="150dp"
+        android:singleLine="true"
+        android:text="@string/return_to_incall"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/sim_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/time"
+        android:src="@drawable/sim_icon_1"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2011 The Android Open Source Project Licensed under the
+    Apache License, Version 2.0 (the "License"); you may not use this file
+    except in compliance with the License. You may obtain a copy of the
+    License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by
+    applicable law or agreed to in writing, software distributed under the
+    License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+    CONDITIONS OF ANY KIND, either express or implied. See the License for
+    the specific language governing permissions and limitations under the
+    License.
+-->
+<resources
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- configuration for max sms message count -->
+    <integer name="max_sms_message_count">-1</integer>
+    <bool name="isTablet">false</bool>
+    <bool name="isWVGAScreen">false</bool>
+    <!-- configuration for filtering illegal character in address -->
+    <bool name="config_filter_char_address">true</bool>
+
+    <!-- configuration for retry immediately when send MMS failed -->
+    <bool name="config_retry_immediately">false</bool>
+
+    <!-- configuration for reconnect data call immediately -->
+    <bool name="config_reconnect">false</bool>
+
+    <!-- configuration for prompt dialog for wap push link -->
+    <bool name="config_wap_push">false</bool>
+
+    <!-- configuration for show two call button in conversation -->
+    <bool name="config_two_call_button">false</bool>
+
+    <!-- configuration for cancel mms -->
+    <bool name="config_mms_cancelable">false</bool>
+
+    <!-- configuration for max slide num -->
+    <integer name="max_slide_num">10</integer>
+    <!-- configuration for limit count -->
+    <integer name="limit_count">0</integer>
+    <!-- configuration for slide text limit size -->
+    <integer name="slide_text_limit_size">0</integer>
+
+    <!-- configuration for max sms message count -->
+    <!-- <integer name="max_sms_message_count">-1</integer>-->
+    <!-- configuration for add vCard to MMS -->
+    <bool name="config_vcard">false</bool>
+
+    <!-- configuration for forwarding conversaction -->
+    <bool name="config_forwardconv">false</bool>
+    <!-- configuration for showing messages by mailbox -->
+    <bool name="config_mailbox_enable">false</bool>
+    <!-- configuration for display two send buttons -->
+    <bool name="config_btnstyle">true</bool>
+    <!-- configuration for enter key as send -->
+    <bool name="config_enter_key_as_send">true</bool>
+
+    <!-- configuration for max sms to mms text size -->
+    <integer name="config_max_smstomms">0</integer>
+    <!-- configuration for prefer SMS save location -->
+    <bool name="config_savelocation">false</bool>
+    <!-- configuration for sms priority -->
+    <bool name="support_sms_priority">false</bool>
+
+    <!-- configuration for low memory notification -->
+    <bool name="config_detect_low_memory">false</bool>
+
+    <bool name="config_manual_resend">false</bool>
+    <bool name="config_retry_always">false</bool>
+    <bool name="config_classify_search">false</bool>
+
+    <bool name="config_sms_validity">true</bool>
+
+    <integer name="wap_push_address_index">1</integer>
+
+    <!-- configuration for display add attachment icon always, lichao modify to true in 2016-08-20 -->
+    <bool name="config_show_attach_icon_always">true</bool>
+
+    <!-- configuration for retry scheme of sent failed message -->
+    <integer-array name="retry_scheme">
+        <item>0</item>
+        <item>60000</item>
+        <item>300000</item>
+        <item>600000</item>
+        <item>1800000</item>
+    </integer-array>
+
+    <!-- configuration for error toast during retry -->
+    <bool name="config_mms_retry_toast">true</bool>
+
+    <!-- configuration for ignoring CDMA SMS attributes during international roaming -->
+    <bool name="config_ignore_sms_attributes">false</bool>
+    <!-- configuration for display sent time in CT mode -->
+    <bool name="config_display_sent_time">false</bool>
+</resources>

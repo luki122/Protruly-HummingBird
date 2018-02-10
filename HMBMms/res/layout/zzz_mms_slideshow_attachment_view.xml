@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2006-2008 Esmertec AG.
+ * Copyright (C) 2006-2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<com.android.mms.ui.SlideshowAttachmentView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mmsapp="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/slideshow_attachment_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <FrameLayout
+        android:id="@+id/attachment_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right">
+        <FrameLayout
+            android:id="@+id/attachment_view_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginStart="9dp"
+            android:background="@drawable/zzz_mms_attachment_view_background">
+            <com.android.mms.ui.ZzzCircleImageView
+                android:id="@+id/slideshow_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                mmsapp:radius="2dp"
+                mmsapp:type="image" />
+            <ImageView
+                android:id="@+id/view_slide_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                />
+            <ImageView
+                android:id="@+id/play_slideshow_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/zzz_ic_message_attachment_edit_video"
+                android:layout_gravity="center" />
+        </FrameLayout>
+        <ImageView
+            android:id="@+id/remove_slideshow_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/zzz_ic_message_attachment_edit_close"
+            android:contentDescription="@null" />
+    </FrameLayout>
+    <TextView android:id="@+id/media_size_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#61000000"
+        android:textSize="10sp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="2dp"/>
+</com.android.mms.ui.SlideshowAttachmentView>

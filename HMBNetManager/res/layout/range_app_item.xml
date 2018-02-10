@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lay_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/my_ripple"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart">
+    <!--android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"-->
+
+
+    <hb.widget.CycleImageView
+        android:id="@+id/imv_logo"
+        android:layout_width="@dimen/item_logo_width"
+        android:layout_height="@dimen/item_logo_height"
+        android:layout_centerVertical="true"
+        android:src="@drawable/app_default"
+        android:scaleType="centerInside" />
+
+    <LinearLayout
+        android:id="@+id/lay_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+
+        <!--android:background="@drawable/btn_white_bg_selector"-->
+        <Button
+            android:id="@+id/btn_remove"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/ck_on"
+            android:focusable="false"
+            android:visibility="gone" />
+
+        <hb.widget.Switch
+            android:id="@+id/togglebtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@null"
+            android:visibility="gone" />
+        <!--android:layout_width="@dimen/btn_switch_width"-->
+        <!--android:layout_height="@dimen/btn_switch_height"-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/lay_app_logo_margin_left"
+        android:layout_marginRight="@dimen/lay_app_logo_margin_left"
+        android:layout_toLeftOf="@id/lay_right"
+        android:layout_toRightOf="@id/imv_logo"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textAppearance="?android:attr/textAppearanceListItem" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_app_sim1"
+                style="?android:attr/textAppearanceListItemSecondary"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="1" />
+
+            <TextView
+                android:id="@+id/tv_app_sim2"
+                style="?android:attr/textAppearanceListItemSecondary"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/range_item_sub_margin_left"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="1" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_data"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bar_height"
+            android:layout_marginTop="@dimen/bar_margin_top"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lay_line"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/item_line_divider_height"
+        android:layout_alignLeft="@id/linearLayout1"
+        android:background="@color/color_item_line_divider"></View>
+</RelativeLayout>

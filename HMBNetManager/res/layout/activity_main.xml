@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hb.netmanage.activity.MainActivity">
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+
+    <hb.widget.ViewPager
+        android:id="@+id/view_pager_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_pager_height"
+        android:layout_marginLeft="@dimen/lay_sim_padding_left"
+        android:layout_marginRight="@dimen/lay_sim_padding_right"></hb.widget.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/lay_imv_index"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/view_pager_main"
+
+        android:gravity="center_horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/imv_index_01"
+            android:layout_width="@dimen/imv_sim_index_width"
+            android:layout_height="@dimen/imv_sim_index_height"
+            android:src="@drawable/index_rect_corner_selector" />
+
+        <ImageView
+            android:id="@+id/imv_index_02"
+            android:layout_width="@dimen/imv_sim_index_width"
+            android:layout_height="@dimen/imv_sim_index_height"
+            android:layout_marginLeft="@dimen/imv_sim_index_margin_left"
+            android:src="@drawable/index_rect_corner" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/lay_net_control"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/net_control_height"
+        android:layout_below="@id/lay_imv_index"
+        android:layout_margin="10dp"
+        android:background="@drawable/my_ripple">
+
+        <ImageView
+            android:id="@+id/imv_net_contorl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/main_net_control_padding_left"
+            android:scaleType="center"
+            android:src="@drawable/net_control" />
+
+        <ImageView
+            android:id="@+id/imv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/main_net_control_padding_right"
+            android:scaleType="center"
+            android:src="@com.hb:drawable/ic_next_page" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/net_control_item_margin_left"
+            android:layout_toLeftOf="@id/imv_next"
+            android:layout_toRightOf="@id/imv_net_contorl"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_content"
+                style="?android:attr/textAppearanceListItemSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/net_control" />
+
+            <TextView
+                android:id="@+id/tv_subcontent"
+                style="?android:attr/textAppearanceListItemSecondary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/net_control_subinfo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/main_net_control_padding_left"
+            android:layout_marginRight="@dimen/main_net_control_padding_left"
+            android:background="@color/color_item_line"></LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

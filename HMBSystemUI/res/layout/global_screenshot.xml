@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2011 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<com.dui.systemui.statusbar.HbScreenShotContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--modify by chenhl start-->
+    <ImageView android:id="@+id/global_screenshot_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="#cc000000"
+        android:visibility="gone" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="48dp">
+        <ImageView android:id="@+id/global_screenshot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#ffffffff"
+            android:scaleType="fitXY"
+            android:padding="1dp"
+            android:visibility="gone"
+            android:adjustViewBounds="true" />
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/hb_bottombar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#ffffffff"
+        android:layout_gravity="bottom"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/hb_id_share"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/hb_ic_share"
+            android:text="@string/hb_share"
+            android:textColor="#de000000"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:background="@drawable/hb_long_shot_btn_bg"
+            />
+        <Button
+            android:id="@+id/hb_id_edit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/hb_ic_edit"
+            android:text="@string/hb_edit"
+            android:textColor="#de000000"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:background="@drawable/hb_long_shot_btn_bg"/>
+        <Button
+            android:id="@+id/hb_id_long_shot"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/hb_ic_screenshots"
+            android:text="@string/hb_long_shot"
+            android:textColor="#de000000"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:background="@drawable/hb_long_shot_btn_bg"/>
+        <Button
+            android:id="@+id/hb_id_delete"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:drawableTop="@drawable/hb_ic_delete"
+            android:text="@string/hb_delete"
+            android:textColor="#de000000"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:paddingTop="6dp"
+            android:visibility="gone"
+            android:background="@drawable/hb_long_shot_btn_bg"/>
+    </LinearLayout>
+    <View
+        android:id="@+id/hb_id_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#29000000"
+        android:layout_gravity="bottom"/>
+    <FrameLayout
+        android:id="@+id/hb_id_long_shot_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginBottom="48dp">
+        <com.dui.systemui.statusbar.image.LongImageView
+            android:id="@+id/hb_id_long_shot_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        <TextView
+            android:id="@+id/hb_id_long_shot_tips"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:text="@string/hb_long_shot_tips"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="#cc000000"
+            android:lines="1"
+            android:ellipsize="end"
+            android:gravity="center"/>
+    </FrameLayout>
+    <ImageView android:id="@+id/global_screenshot_flash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@android:color/white"
+        android:visibility="gone" />
+    <!--modify by chenhl end-->
+</com.dui.systemui.statusbar.HbScreenShotContainer>

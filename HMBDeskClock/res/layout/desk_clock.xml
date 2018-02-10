@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <hb.widget.tab.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="65dp">
+        </hb.widget.tab.TabLayout>
+
+        <com.android.deskclock.AlarmViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.android.deskclock.AlarmViewPager>
+    </LinearLayout>
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/desk_clock_pager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+    <hb.widget.toolbar.Toolbar
+        android:id="@+id/alarm_list_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/title_left_button"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:text="@string/alarm_setting_cancel"
+                android:textSize="16sp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:textColor="@color/actionmode_btn_color"/>
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alarm_has_selected_num"
+                android:textSize="18sp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/lay_text_normal"/>
+            <TextView
+                android:id="@+id/title_right_button"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:text="@string/alarm_selected_all"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="@color/actionmode_btn_color"/>
+        </RelativeLayout>
+    </hb.widget.toolbar.Toolbar>
+    
+    <TextView
+        android:id="@+id/delete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_gravity="bottom"
+        android:textSize="16dp"
+        android:text="@string/alarm_delete"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@color/white"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start|center_vertical"
+            android:visibility="invisible"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/left_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="center"
+                android:contentDescription="@null" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/fab"
+                style="@style/FabStyle"
+                android:layout_width="@dimen/footer_button_size"
+                android:layout_height="@dimen/footer_button_size"
+                android:layout_margin="@dimen/footer_button_layout_margin"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/floating_action_button"
+                android:scaleType="center"
+                android:contentDescription="@null" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:visibility="invisible"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/right_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="center"
+                android:contentDescription="@null" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

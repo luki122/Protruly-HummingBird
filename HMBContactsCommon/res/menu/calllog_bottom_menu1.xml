@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/hb_dial_with_which"
+        android:title="@string/hb_dial_with_which" />
+    <item
+        android:id="@+id/hb_send_message"
+        android:title="@string/hb_send_message" />
+    
+    <item
+        android:id="@+id/hb_add_star"
+        android:title="@string/hb_add_star" />
+    
+    <item
+        android:id="@+id/hb_copy_number"
+        android:title="@string/hb_copy_number" />
+    
+    <item
+        android:id="@+id/hb_delete_calllog"
+        android:title="@string/hb_delete_calllog" />
+    
+    <item
+        android:id="@+id/delete_multi"
+        android:title="@string/delete_multi" />
+
+</menu>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/primary_action_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart" >
+
+    <QuickContactBadge
+        android:id="@+id/quick_contact_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/number"
+        android:layout_width="@dimen/hb_calllog_content_width"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@android:id/button1"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceListItemSecondary" />
+
+    <RelativeLayout
+        android:id="@+id/item_more"
+        android:layout_width="@dimen/hb_calllog_more_icon_layout_width"
+        android:layout_height="@dimen/hb_calllog_more_icon_layout_height"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless" >
+
+        <ImageView
+            android:id="@+id/primary_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="?android:attr/listPreferredItemPaddingEnd"
+            android:background="@drawable/hb_call_detail_icon" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/devider"
+        style="@style/hb_listview_devider_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="@dimen/contact_listview_header_padding_left" />
+
+</RelativeLayout>

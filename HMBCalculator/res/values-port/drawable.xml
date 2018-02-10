@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2014 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <drawable name="ic_clear">@drawable/ic_clear_port</drawable>
+    <drawable name="ic_po_and_ne">@drawable/ic_po_and_ne_port</drawable>
+    <drawable name="ic_del">@drawable/ic_del_port</drawable>
+    <drawable name="ic_div">@drawable/ic_div_port</drawable>
+    <drawable name="ic_mul">@drawable/ic_mul_port</drawable>
+    <drawable name="ic_sub">@drawable/ic_sub_port</drawable>
+    <drawable name="ic_add">@drawable/ic_add_port</drawable>
+    <drawable name="ic_eq">@drawable/ic_eq_port</drawable>
+
+    <drawable name="ic_1">@drawable/ic_1_port</drawable>
+    <drawable name="ic_2">@drawable/ic_2_port</drawable>
+    <drawable name="ic_3">@drawable/ic_3_port</drawable>
+    <drawable name="ic_4">@drawable/ic_4_port</drawable>
+    <drawable name="ic_5">@drawable/ic_5_port</drawable>
+    <drawable name="ic_6">@drawable/ic_6_port</drawable>
+    <drawable name="ic_7">@drawable/ic_7_port</drawable>
+    <drawable name="ic_8">@drawable/ic_8_port</drawable>
+    <drawable name="ic_9">@drawable/ic_9_port</drawable>
+    <drawable name="ic_0">@drawable/ic_0_port</drawable>
+    <drawable name="ic_point">@drawable/ic_point_port</drawable>
+
+</resources>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TableLayout android:orientation="vertical"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="2">
+
+        <TableRow>
+            <TextView
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:id="@+id/tv_name_tip"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:text="@string/file_info_name"
+                style="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/tv_name_info"
+                android:layout_column="1"
+                android:paddingTop="5.0dip"
+                android:layout_marginStart="3dp"
+                style="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:id="@+id/tv_size_tip"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:text="@string/file_info_size"
+                style="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/tv_size_info"
+                android:layout_column="1"
+                android:paddingTop="5.0dip"
+                android:layout_marginStart="3dp"
+                android:text="@string/loading_tip"
+                style="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:id="@+id/tv_media_attribute_tip"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:text="@string/file_info_duration"
+                style="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/tv_media_attribute_info"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:layout_marginStart="3dp"
+                android:text="@string/loading_tip"
+                style="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:id="@+id/file_info_modified"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:text="@string/file_info_modified"
+                style="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/tv_modify_info"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:layout_marginStart="3dp"
+                style="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:id="@+id/folder_num_info"
+                android:text="@string/folder_num_info"
+                style="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/tv_folder_num_info"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:layout_marginStart="3dp"
+                android:text="@string/loading_tip"
+                style="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:id="@+id/file_num_info"
+                android:text="@string/file_num_info"
+                style="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/tv_file_num_info"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:layout_marginStart="3dp"
+                android:text="@string/loading_tip"
+                style="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:id="@+id/total_size_info"
+                android:text="@string/total_size_info"
+                style="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:id="@+id/tv_total_size_info"
+                android:paddingTop="5.0dip"
+                android:layout_column="1"
+                android:layout_marginStart="3dp"
+                android:text="@string/loading_tip"
+                style="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:ellipsize="marquee"
+                android:gravity="start"
+                android:paddingTop="5.0dip"
+                android:id="@+id/tv_location_tip"
+                android:layout_column="1"
+                android:text="@string/file_info_location"
+                style="?android:attr/textAppearanceSmall" />
+            <TextView
+                android:paddingTop="5.0dip"
+                android:id="@+id/tv_location_info"
+                android:layout_column="1"
+                android:layout_marginStart="3dp"
+                style="?android:attr/textAppearanceSmall" />
+        </TableRow>
+
+    </TableLayout>
+</ScrollView>

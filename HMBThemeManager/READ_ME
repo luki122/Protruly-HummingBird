@@ -1,0 +1,17 @@
+										主题商店
+	一、主题商店功能
+		1、字体替换、包括本地字体替换和在线字体替换
+		2、壁纸替换，包括本地壁纸和在线壁纸
+				2.1、桌面壁纸
+				2.2、锁屏壁纸
+		3、铃声，包括本地铃声和在线铃声
+		4、主题包，包括系统内置主题包和在线主题包。
+	二、主题存放方式
+		1、字体
+			1.1、系统自带字体存放在system/fonts/
+			1.2、系统内置未使用的字体房子system/hummingbird/theme/fonts/
+		2、壁纸
+			2.1、系统内置桌面壁纸放在system/hummingbird/theme/wallpaper/desktop/
+			2.2、系统内置锁屏壁纸放在system/hummingbird/theme/wallpaper/lockscreen/
+			2.3、用户导入的壁纸放在sdcard/humming/wallpaper/desktop/
+			2.4、锁屏壁纸应用路径在data/hummingbird/theme/wallpaper/lockscreen/

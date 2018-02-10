@@ -1,0 +1,21 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/power_setting">
+
+    <PreferenceCategory android:key="header_parent">
+        <com.protruly.powermanager.powersave.PowerSettingHeaderPreference
+            android:key="preference_available_power" />
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:key="preference_power_detail"
+        android:title="@string/power_usage_detail"
+        android:icon="@drawable/battery_detail">
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="preference_power_mode"
+        android:title="@string/low_power_mode"
+        android:icon="@drawable/low_power_mode">
+    </PreferenceScreen>
+
+</PreferenceScreen>

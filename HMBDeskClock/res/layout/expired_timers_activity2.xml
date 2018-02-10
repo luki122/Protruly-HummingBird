@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/expired_timers_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/alarm_dim_bg">
+
+    <TextView
+        android:id="@+id/time_hour_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="55.3dp"
+        android:textColor="@color/alarm_dim_text"
+        android:textSize="68sp" />
+
+    <TextView
+        android:id="@+id/time_date_weekday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="144dp"
+        android:textColor="@color/alarm_dim_text"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="241dp"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:text="@string/timer_end" />
+
+    <TextView
+        android:id="@+id/timer_finish"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="288dp"
+        android:background="@drawable/bg_finish_timer_normal"
+        android:gravity="center"
+        android:textColor="@color/timer_finish_text_color"
+        android:textSize="20sp"
+        android:text="@string/timer_stop" />
+</FrameLayout>

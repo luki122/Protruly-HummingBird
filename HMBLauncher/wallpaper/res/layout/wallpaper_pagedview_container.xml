@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/wallpaper_containterbar_height">
+
+    <com.android.launcher3.pageindicators.PageIndicatorUnderline
+        android:id="@+id/wallpaper_pageindicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallpaper_indicator_height"
+        android:layout_gravity="bottom"
+        android:animateLayoutChanges="true" />
+
+    <com.android.launcher3.wallpaperpicker.WallpaperPagedView
+        android:id="@+id/wallpaper_pagedview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallpaper_thumbnail_height"
+        android:layout_gravity="top"
+        launcher:pageIndicator="@id/wallpaper_pageindicator" />
+</merge>

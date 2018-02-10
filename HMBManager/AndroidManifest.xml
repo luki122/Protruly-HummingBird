@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hmb.manager"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="170928001"
+    android:versionName="v1.0.1.0103.5" >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="23" />
+
+    <!-- 必填权限 --> 
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" />   
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+
+    <!-- 系统优化 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REAL_GET_TASKS" />
+	<uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
+    
+    <!-- 防火墙 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+	<uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+	<uses-permission android:name="android.permission.FORCE_STOP_PACKAGES"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <application
+        android:allowBackup="true"
+        android:persistent="true"
+        android:icon="@drawable/ic_launcher"
+        android:name=".HMBManagerApplication"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity" android:screenOrientation="portrait"  android:theme="@style/MainTheme.Activity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <!-- 安全防护 -->
+        <activity android:name=".qscaner.QScannerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/QScanner_Theme.Activity">
+        </activity>
+        <activity android:name=".qscaner.QScannerSettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".qscaner.QScannerDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+
+        <service android:name=".update.UpdateService" />
+
+        <service android:name=".tms.TmsService">
+            <intent-filter>
+                <action android:name="android.intent.action.TMSService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        
+        <service android:name=".tms.CspService">
+            <intent-filter>
+                <action android:name="android.intent.action.CspService" />
+                <action android:name="android.intent.action.KillCspService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        
+        <service android:name=".autocheck.AutoCheckService" />
+        <service android:name=".qscaner.QScannerService"/>
+
+        <!-- 必须定义一个继承自TMSService的Service -->
+        <service android:name=".tms.TmsSecureService" />
+
+        <!-- 必须定义一个继承自TMSBootReceiver的BroadcastReceiver，并定义捕获开机事件 -->
+        <receiver android:name=".tms.TmsBootReceiver" >
+            <intent-filter android:priority="2147483647" >
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".BootReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".update.UpdateReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.hmb.manager.ClearIconCacheReceiver">
+            <intent-filter>
+                <action android:name="com.hb.theme.ACTION_THEME_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="com.hmb.manager.netmanager.SimStateReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.SIM_STATE_CHANGED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="com.hmb.manager.rubbishclean.CleanSpeedActivity"
+             android:screenOrientation="portrait"
+             android:theme="@style/QScanner_Theme.Activity"/>
+        <activity android:name="com.hmb.manager.rubbishclean.BackGroundAppActivity" android:screenOrientation="portrait" android:theme="@style/Theme.Activity"/>
+        <activity android:name="com.hmb.manager.rubbishclean.RubbishCleanActivity" android:screenOrientation="portrait" android:theme="@style/Rubblish_Theme.Activity"/>
+        <activity android:name="com.hmb.manager.rubbishclean.CacheCleanActivity" android:screenOrientation="portrait"  android:theme="@style/Cache_Theme.Activity"/>
+        <activity android:name="com.hmb.manager.onekeyclean.OneKeyCleanUpActivity" android:screenOrientation="portrait"  android:theme="@style/OneKey_Theme.Activity"/>
+
+        <provider
+            android:name=".qscaner.provider.QScannerRiskProvider"
+            android:authorities="com.hmb.manager.qscaner.provider.QScannerRiskProvider"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- the layout_** will unused,it will set in code 
+tangyisen add -->
+<!-- android:padding="@dimen/recommend_contacts_item_padding" -->
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/recommend_contacts_item_width"
+    android:layout_height="@dimen/message_list_item_divider_height"
+    android:paddingStart="@dimen/recommend_contacts_item_padding"
+    android:paddingEnd="@dimen/recommend_contacts_item_padding"
+    android:layout_marginTop="@dimen/recommend_contacts_item_margin"
+    android:layout_marginStart="@dimen/recommend_contacts_item_margin"
+    android:textSize="@dimen/recommend_contacts_item_textsize"
+    android:textColor="@color/recommend_contacts_item_text_color"
+    android:singleLine="true"
+    android:gravity="center"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/zzz_recommend_item_enable_background" />

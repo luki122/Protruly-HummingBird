@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <PreferenceCategory
+        android:key="my_set"
+        android:title="@string/my_set" />
+
+    <cn.protruly.spiderman.settingpreferences.SelfdefinedSwitchPreference
+        android:key="mobile_log"
+        android:title="MobileLog" />
+
+    <cn.protruly.spiderman.settingpreferences.SelfdefinedSwitchPreference
+        android:key="modem_log"
+        android:title="ModemLog" />
+
+    <cn.protruly.spiderman.settingpreferences.SelfdefinedSwitchPreference
+        android:key="power_log"
+        android:title="PowerLog" />
+
+    <cn.protruly.spiderman.settingpreferences.SelfdefinedSwitchPreference
+        android:key="network_log"
+        android:title="NetworkLog" />
+
+    <PreferenceCategory
+        android:key="my_storage"
+        android:title="@string/mystorage">
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

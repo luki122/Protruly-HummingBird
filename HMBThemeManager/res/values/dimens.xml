@@ -1,0 +1,76 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="local_theme_list_padding_top">20dp</dimen>
+    <dimen name="local_theme_list_padding_left">20dp</dimen>
+    <dimen name="local_theme_list_padding_right">20dp</dimen>
+    <dimen name="local_theme_list_item_height">271dp</dimen>
+    <dimen name="local_theme_list_title_margin_top">8dp</dimen>
+    <dimen name="theme_detail_padding_both_side">20dp</dimen>
+    <dimen name="theme_detail_padding_top">23dp</dimen>
+    <!-- Theme detail images -->
+    <dimen name="theme_detail_preview_img_height">400dp</dimen>
+    <dimen name="theme_detail_preview_img_margin_bottom">16dp</dimen>
+    <dimen name="theme_detail_preview_img_width">225dp</dimen>
+    <dimen name="theme_detail_preview_img_margin_left">16dp</dimen>
+    <!-- Theme detail option button -->
+    <dimen name="theme_detail_preview_option_btn_width">114dp</dimen>
+    <dimen name="theme_detail_preview_option_btn_height">36dp</dimen>
+    <dimen name="theme_detail_preview_option_btn_margin_bottom">12dp</dimen>
+    <dimen name="local_theme_action_menu_height">48dp</dimen>
+    <dimen name="wallpaper_entry_height">256dp</dimen>
+    <dimen name="wallpaper_entry_parent_padding">24dp</dimen>
+    <dimen name="wallpaper_entry_item_space">24dp</dimen>
+    <dimen name="wallpaper_list_item_space_h">8dp</dimen>
+    <dimen name="size_local_wallpaper_item_height">185dp</dimen>
+    <dimen name="size_local_wallpaper_item_width">104dp</dimen>
+    <dimen name="size_vr_wallpaper_item_height">104dp</dimen>
+    <dimen name="vr_wallpaper_list_item_space_h">16dp</dimen>
+	<dimen name="size_local_theme_pkg_item_height">185dp</dimen>
+    <dimen name="size_image_item_default_width">52dp</dimen>
+    <dimen name="size_image_item_default_height">92.5dp</dimen>
+    <!-- Time Widget -->
+    <dimen name="time_widget_date_margin_top">10dp</dimen>
+
+    <!-- OptionButton -->
+    <dimen name="wallpaper_preview_option_btn_margin_bottom">75dp</dimen>
+    <!-- Wallpaper preview icons -->
+    <dimen name="wallpaper_preview_index_margin_top">16dp</dimen>
+    <dimen name="wallpaper_preview_bottom_icon_margin_top">60dp</dimen>
+    
+    <dimen name="navigation_bar_height">44dp</dimen>
+    <dimen name="wallpaper_crop_bottom_controls_height">92dp</dimen>
+    <dimen name="toolbar_height_with_transparent_statusbar">48dp</dimen>
+	<dimen name="wallpaper_preview_time_widget_margintop">50dp</dimen>
+	<dimen name="wallpaper_preview_time_widget_marginleft">24dp</dimen>
+	<dimen name="bottom_text_spacing_digital">0dp</dimen>
+	<dimen name="time_widget_clock_font_size">64sp</dimen>
+	<dimen name="widget_label_font_size">20sp</dimen>
+
+	<dimen name="wallpaper_entry_title_height">36dp</dimen>
+	<dimen name="wallpaper_list_title_bar_height">28dp</dimen>
+	<dimen name="wallpaper_list_padding">16dp</dimen>
+	<dimen name="wallpaper_grid_margin_top">16dp</dimen>
+	<dimen name="wallpaper_list_fab_margin">10dp</dimen>
+	<dimen name="wallpaper_list_applied_margin">8dp</dimen>
+	<dimen name="wallpaper_preview_icon_size">53.75dp</dimen>
+	<dimen name="wallpaper_preview_icon_spacing_h">33dp</dimen>
+	<dimen name="wallpaper_apply_btn_width">144dp</dimen>
+	<dimen name="wallpaper_apply_btn_height">36dp</dimen>
+	<dimen name="wallpaper_apply_btn_margin_bottom">56dp</dimen>
+
+    <!-- First Setup page -->
+    <dimen name="first_setup_page_paddingtop">66dp</dimen>
+    <dimen name="first_setup_page_title_margin_bottom">13dp</dimen>
+    <dimen name="first_setup_page_scroller_height">352dp</dimen>
+    <dimen name="first_setup_theme_name_margin_top">6dp</dimen>
+    <dimen name="first_setup_theme_name_margin_bottom">58dp</dimen>
+    <dimen name="first_setup_page_item_width">222dp</dimen>
+    <dimen name="first_setup_page_apply_btn_height">56dp</dimen>
+    <dimen name="first_setup_page_item_margin">24dp</dimen>
+    <dimen name="first_setup_page_margin_left">87dp</dimen>
+    <dimen name="first_setup_page_margin_right">50dp</dimen>
+
+</resources>

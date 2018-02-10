@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <hb.view.menu.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:maxHeight="50dp"
+        hb:menu="@menu/hb_bottom_menu_merge"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/mlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation_view"
+        android:divider="@null"
+        android:paddingBottom="@dimen/hb_list_padding_top_or_bottom"
+        android:paddingTop="@dimen/hb_list_padding_top_or_bottom" />
+
+    <LinearLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ImageView
+            android:id="@+id/emptyListViewImage"
+            android:layout_width="@dimen/hb_unavailable_image_size"
+            android:layout_height="@dimen/hb_unavailable_image_size"
+            android:layout_marginTop="@dimen/hb_no_items_image_margin_top"
+            android:src="@drawable/hb_no_items" />
+
+        <TextView
+            android:id="@+id/contact_list_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/hb_no_items_text_margin_top"
+            android:gravity="center_horizontal"
+            android:textColor="@color/hb_no_items_text_color"
+            android:textSize="@dimen/hb_no_items_text_size" />
+    </LinearLayout>
+
+</RelativeLayout>

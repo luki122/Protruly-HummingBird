@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp">
+
+    <ImageView
+        android:id="@+id/wallpaper_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter" />
+
+    <ImageView
+        android:id="@+id/wallpaper_icon"
+        android:layout_width="@dimen/wallpaper_tile_icon_size"
+        android:layout_height="@dimen/wallpaper_tile_icon_size"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/wallpaper_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/wallpapar_round_conner_radius"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:padding="4dp"
+        android:textSize="12dp"
+        android:background="@color/wallpaper_picker_translucent_gray"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:layout_width="@dimen/wallpaper_tile_status_size"
+        android:layout_height="@dimen/wallpaper_tile_status_size"
+        android:layout_gravity="right|bottom"
+        android:src="@drawable/tile_status" />
+</FrameLayout>

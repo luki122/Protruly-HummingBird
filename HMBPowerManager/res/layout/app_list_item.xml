@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/listview_height">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/length_40dp"
+        android:layout_height="@dimen/length_40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/padding_large"
+        android:layout_marginRight="@dimen/padding_large"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/icon"
+        android:layout_toLeftOf="@+id/appSwitch"
+        android:layout_marginRight="@dimen/length_4dp"
+        android:layout_centerVertical="true"
+        android:ellipsize="marquee"
+        android:textColor="@color/list_title_text"
+        android:textSize="@dimen/list_title_size"
+        android:maxLines="1" />
+
+    <hb.widget.Switch
+        android:id="@+id/appSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/length_40dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line_color"
+        android:layout_marginLeft="@dimen/length_72dp"
+        android:layout_marginRight="@dimen/length_24dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+--><!--
+listPreferredItemHeight = 64dip
+android:minHeight="?android:attr/listPreferredItemHeightLarge"
+android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/conv_list_notifi_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+
+    <!--<TextView
+        android:id="@+id/notifi_item_unread_view"
+        android:layout_width="@dimen/conv_list_unread_width"
+        android:layout_height="@dimen/conv_list_unread_width"
+        android:layout_marginStart="@dimen/conv_list_unread_margin_left"
+        android:layout_marginTop="@dimen/conv_list_unread_margin_top"
+        android:gravity="center"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/notifi_item_right_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dip"
+        android:src="@drawable/ic_message_next"
+        />
+
+    <TextView
+        android:id="@+id/notifi_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/conv_list_from_margin_right"
+        android:layout_marginStart="@dimen/conv_list_unread_margin_right"
+        android:layout_marginTop="@dimen/conv_list_from_margin_top"
+        android:layout_toEndOf="@+id/notifi_item_unread_view"
+        android:layout_toStartOf="@id/notifi_item_right_arrow"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:text="@string/notification_messages"
+        android:textColor="@color/conv_from_textview_color"
+        android:textSize="@dimen/conv_list_title_textsize"
+        />
+
+    <TextView
+        android:id="@+id/notifi_item_summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notifi_item_title"
+        android:layout_marginBottom="@dimen/conv_list_subject_margin_bottom"
+        android:layout_marginStart="@dimen/conv_list_unread_margin_right"
+        android:layout_toEndOf="@+id/notifi_item_unread_view"
+        android:layout_toStartOf="@id/notifi_item_right_arrow"
+        android:ellipsize="end"
+        android:gravity="start"
+        android:maxLines="1"
+        android:text="@string/notification_messages_summary"
+        android:textColor="@color/conv_contents_textview_color"
+        android:textSize="@dimen/conv_list_summary_textsize"
+        />-->
+</RelativeLayout>

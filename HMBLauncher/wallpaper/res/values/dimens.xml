@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="wallpaper_thumbnail_width">77dp</dimen>
+    <dimen name="wallpaper_thumbnail_height">78dp</dimen>
+    <dimen name="wallpaper_indicator_height">3dp</dimen>
+    <dimen name="wallpaper_tile_icon_size">32dp</dimen>
+    <dimen name="wallpaper_tile_status_size">17.3dp</dimen>
+    <dimen name="wallpapar_round_conner_radius">3dp</dimen>
+</resources>

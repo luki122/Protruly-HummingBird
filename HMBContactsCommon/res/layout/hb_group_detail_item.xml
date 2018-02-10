@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hb.widget.SliderView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:id="@+id/slider_view1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    hb:handleEventInParent="true"
+    hb:layout="@com.hb:layout/list_item_1_line_multiple_choice" 
+    android:textColor="@color/hb_list_main_text_color" />

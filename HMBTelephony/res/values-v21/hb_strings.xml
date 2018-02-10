@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" xmlns:tools="http://schemas.android.com/tools">
+
+  
+    <string name="contact_xxport_title">Contact management</string>
+    <string name="contact_xxport_summary">Import and export mobile phone contacts</string>
+
+    <string name="black_title">Blacklist</string>
+
+    <string name="reject_sms_title">Refused to receive SMS</string>
+    <string name="reject_sms_summary">Reject SMS when editing incoming calls</string>
+   
+    <string name="power_hangup_title">Hangup By Power Key</string>
+    <string name="power_hangup_summary">Refuse or hang up calls by pressing power buttons</string>
+    
+    <string name="vibrate_active_title">Vibration warning for answering</string>
+    <string name="vibrate_active_summary">Vibration warning of the phone when the subscriber dialed gets through</string>
+
+    <string name="flash_ringing_title">Incoming call flash</string>
+    <string name="flash_ringing_summary">Flashlight flash to warn when there is incoming call under lock screen state</string>
+
+    <string name="smart_ringer_title">Ringtons fading down when picking up phones</string>
+    <string name="smart_ringer_summary">Ringtons fading down when picking up phones for a incoming call under lock screen state</string>
+    
+    <string name="overturn_to_mute_title">Mute When Overturn</string>
+
+  <string name="call_waiting_title">Call Waiting</string>
+
+  <string name="call_forward_title">Call Forward</string>
+
+  <string name="speed_dial_title">Speed Dial</string>
+
+    <string name="sub_1">SIM card 1</string>
+    <string name="sub_2">SIM card 2</string>
+    
+    <string name="basic_settings">Basic Settings</string>
+    
+    <string name="sim_switch_title">SIM card enabled</string>
+    <string name="edit_sim_name_title">Edit the SIM card name</string>
+    <string name="edit_sim_number_title">Edit the SIM card number</string>
+    <string name="enable_sim">Enable</string>
+    
+    <string name="hb_sim_setting_title">Double card and mobile network</string>
+    <string name="sims_list">SIM card management</string>
+    
+   <string name="default_call_slot">Default Call</string>
+   <string name="default_sms_slot">Default SMS</string>
+   <string name="default_data_slot">Default Cellular data</string>
+   
+   <string name="mobile_data_title">Mobile data</string>
+   <string name="data_roaming_title">Data roaming</string>
+   
+   <string name="hb_enhanced_4g_lte_mode_title">VoLTE</string>
+   <string name="hb_enhanced_4g_lte_mode_summary">Use LTE services to improve voice and other communications (recommended)</string>
+   <string name="hb_calls_title">Default call</string>
+   <string name="hb_cellular_data_title">Default cellular data</string>
+   <string name="data_dialog_title">Cellular data</string>
+   <string name="data_dialog_message">Insert the SIM card, whether to open the network?</string>
+   <string name="stk_title">STK</string>
+   <string name="empty_sim">Can not be Empty</string>
+       
+</resources>

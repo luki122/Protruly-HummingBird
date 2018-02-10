@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginTop="@dimen/fakestatusbar_heigh"
+    android:layout_marginBottom="@dimen/margin_bottom">
+    <cn.com.protruly.filemanager.CloudViewPager
+        android:id="@+id/main_viewpager"
+        android:persistentDrawingCache="animation"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:flipInterval="30"/>
+</LinearLayout>

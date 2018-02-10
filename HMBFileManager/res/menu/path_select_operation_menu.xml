@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+    <!--android:icon="@com.hb:drawable/ic_delete" -->
+    <item
+        android:id="@+id/category_sort"
+        android:title="@string/category_sort"
+        android:showAsAction="always">
+        <menu>
+            <group>
+                <item android:id="@+id/category_sort_by_name"
+                    android:title="@string/category_sort_by_name"
+                    android:showAsAction="always"/>
+                <item android:id="@+id/category_sort_by_time"
+                    android:title="@string/category_sort_by_time"
+                    android:showAsAction="always"/>
+                <item android:id="@+id/category_sort_by_size_asc"
+                    android:title="@string/category_sort_by_size_asc"
+                    android:showAsAction="always"/>
+                <item android:id="@+id/category_sort_by_size_dsc"
+                    android:title="@string/category_sort_by_size_dsc"
+                    android:showAsAction="always"/>
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/create_new_folder"
+        android:title="@string/action_menu_create_new_folder"
+        android:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_menu_paste"
+        android:title="@string/action_menu_paste"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/action_menu_unzip"
+        android:title="@string/action_menu_unzip"
+        android:showAsAction="always"/>
+</menu>

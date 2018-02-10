@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/sort_name"
+        android:title="@string/hmb_sort_name"/>
+    <item android:id="@+id/sort_time"
+        android:title="@string/hmb_sort_time"/>
+    <item android:id="@+id/sort_size_big_small"
+        android:title="@string/hmb_sort_big_small"/>
+    <item android:id="@+id/sort_size_small_big"
+        android:title="@string/hmb_sort_small_big"/>
+</menu>

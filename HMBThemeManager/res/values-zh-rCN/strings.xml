@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (C) 2014 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">主题中心</string>
+    <string name="action_settings">设置</string>
+    <string name="local_theme">主题</string>
+    <string name="delete">删除</string>
+    <string name="theme_detail_designer">作者:<xliff:g id="designer">%1$s</xliff:g></string>
+    <string name="theme_detail_size">大小:<xliff:g id="size">%1$s</xliff:g></string>
+    <string name="theme_detail_description">简介:<xliff:g id="description">%1$s</xliff:g></string>
+    <string name="download_state_apply">应用</string>
+    <string name="msg_apply_theme">正在应用主题......</string>
+    <string name="statu_apply_theme_failed">主题应用失败</string>
+	<string name="msg_select_theme_applied">当前主题已应用</string>
+	<string name="default_theme_name">黑金传奇</string>
+	<string name="default_theme_description">简约大气，轻薄不累赘</string>
+	<string name="default_theme_designer">保千里</string>
+	    <!-- msg for load local theme -->
+    <string name="msg_load_theme_fail">主题加载失败</string>
+    <string name="msg_load_theme_exists">主题已存在</string>
+    <string name="msg_load_theme_error">主题包解析出错，请检查主题包结构</string>
+    
+    <!-- Wallpaper String -->
+     <string name="title_wallpaper">桌面壁纸</string>
+     <string name="title_lockscreen_wallpaper">锁屏壁纸</string>
+     <string name="desktop_wallpaper_entry_title">桌面</string>
+    <string name="lockscreen_wallpaper_entry_title">锁屏</string>
+    <string name="vr_wallpaper_entry_title">VR壁纸</string>
+    
+    <!-- Theme type Title -->
+    <string name="theme_wallpaper_title">壁纸</string>
+    <string name="set_wallpaper_title">壁纸裁剪</string>
+    <string name="wallpaper_crop_done">选择</string>
+        <!-- Setting Wallpaper -->
+    <string name="image_loading">正在加载壁纸...</string>
+    <string name="image_too_small">所选的图片分辨率低，不适合设置为壁纸</string>
+    <string name="image_load_failed">壁纸加载失败</string>
+     <string name="wallpaper_set_success">壁纸设置成功</string>
+    <string name="wallpaper_set_failed">设置失败，可能是壁纸已损坏</string>
+    <string name="wallpaper_setting">正在设置壁纸...</string>
+    <string name="set_wallpaper_dialog_title">壁纸</string>
+    <string name="msg_select_wallpaper_applied">当前壁纸已应用</string>
+    <string name="msg_apply_wallpaper_fail">壁纸设置失败</string>
+    <!-- wallpaper list title -->
+    <string name="wallpaper_list_title_desk">桌面壁纸</string>
+    <string name="wallpaper_list_title_lockscreen">锁屏壁纸</string>
+    <string name="skip">跳过</string>
+    <string name="setup_success_title">恭喜，设置完成</string>
+    <string name="setup_apply_theme">开始使用</string>
+    <string name="select_all">全选</string>
+    <string name="unselect_all">不全选</string>
+    <string name="cancel">取消</string>
+    <string name="select_number">已选<xliff:g id="count">%1$s</xliff:g>项</string>
+    <string name="delete_wallpaper_title">删除壁纸</string>
+    <string name="delete_wallpaper_msg">确定要删除选定壁纸吗</string>
+</resources>

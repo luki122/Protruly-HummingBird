@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <hb.widget.toolbar.Toolbar
+        style="@style/CalendarToolbarStyle">
+
+        <TextView
+            android:id="@+id/back_view"
+            style="@style/CalendarToolbarContentStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingStart="@dimen/list_item_padding"
+            android:paddingEnd="@dimen/list_item_padding"
+            android:drawableStart="@drawable/hb_toolbar_back_icon"
+            android:drawablePadding="12dp"
+            android:text="@string/label_title" />
+    </hb.widget.toolbar.Toolbar>
+
+    <hb.widget.HbListView
+        android:id="@+id/label_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

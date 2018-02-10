@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (c) 2009, The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0 
+ *
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an "AS IS" BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License.
+ */
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- hb add by tangjun begin -->
+    <string name="pull_up_test">上拉测试</string>
+    <string name="pull_down_test">下拉测试</string>
+    <string name="quick_settings_mobiledata_mode_label">数据连接</string>   
+    <string name="quick_settings_rotation_non_auto_label">旋转屏幕</string>   
+    <string name="accessibility_quick_settings_mute_on">静音模式打开.</string>
+    <string name="accessibility_quick_settings_mute_off">静音模式关闭.</string>
+    <string name="accessibility_quick_settings_mute_changed_on">静音模式已打开.</string>
+    <string name="accessibility_quick_settings_mute_changed_off">静音模式已关闭.</string>
+    <string name="accessibility_quick_settings_screenshot">截图</string>
+    <string name="hb_airplane_mode_label">飞行模式</string>
+    <string name="clear_all_text">快速清理</string>
+    <string name="memory_info" ><xliff:g id="REMAIN_MEM">%s</xliff:g>可用 | <xliff:g id="TOTAL_MEM">%s</xliff:g></string>
+    <string name="memory_free" >成功释放 <xliff:g id="REMAIN_MEM">%s</xliff:g> 内存</string>
+    <string name="clean_to_best">已清理至最佳状态</string>
+    <string name="do_not_open_flashlight">电池电量过低，请充电后再使用手电筒</string>
+    <string name="mobiledata_in_airplanemode">飞行模式无法连接移动网络</string>
+    <!-- hb add by tangjun end -->
+    <!-- add by chenhl start -->
+    <string name="dui_notify_title">来自<xliff:g id="tile">%s</xliff:g></string>
+    <string name="dui_notify_number">的<xliff:g id="tile">%d</xliff:g>条通知</string>
+    <string name="dui_notify_over_tips">点击展开查看</string>
+    <string name="dui_notify_over_name">其他通知</string>
+    <string name="dui_notification">通知</string>
+    <string name="dui_notify_manager">通知管理</string>
+    <string name="dui_notify_clear">清除</string>
+    <string name="dui_search">输入你想搜索的内容</string>
+    <string name="hb_notification_and_statusbar">通知和状态栏</string>
+    <string name="hb_long_shot">长截屏</string>
+    <string name="hb_long_shot_tips">正在滚动截屏，点击滚动区域可完成截屏</string>
+    <string name="hb_long_shot_ok">正在保存屏幕截图</string>
+    <string name="hb_share">分享</string>
+    <string name="hb_edit">编辑</string>
+    <string name="hb_delete">删除</string>
+    <string name="hb_cancel">取消</string>
+    <string name="hb_delete_info_dialog">是否需要删除截图？</string>
+    <string name="hb_shot_over">已截屏至最大长度</string>
+    <!-- add by chenhl end -->
+    <!-- add by wxue start -->
+    <string name="hb_zen_mode_forever_dnd">直到您关闭“静音”模式</string>
+    <!-- add by wxue end -->
+</resources>

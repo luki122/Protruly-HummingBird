@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">锁屏</string>
+    <string name="set">请点击授权激活使用一键锁屏</string>
+    <string name="explanation">授权激活后才能一键锁屏</string>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<style name="PermissionLightTheme" parent="@com.hb:style/Theme.Hb.Material.Light"></style>
+
+    <style name="PermissionControlPageTheme" parent="@com.hb:style/Theme.Hb.Material.Light">
+        &lt;!&ndash;<item name="com.hb:hasBackIcon">false</>
+        <item name="com.hb:windowHasToolbar">true</item>&ndash;&gt;
+        <item name="android:toolbarStyle">@style/ToolbarStyle</item>
+    </style>
+
+    <style name="ToolbarStyle" parent="com.hb:ToolbarStyle">
+        &lt;!&ndash;<item name="com.hb:titleTextAppearance">@style/TextAppearance.Widget.Toolbar</item>
+        <item name="com.hb:subtitleTextAppearance">@style/TextAppearance.Widget.Toolbar.SubTitle</item>&ndash;&gt;
+        <item name="android:minHeight">?android:attr/actionBarSize</item>
+        <item name="com.hb:titleMargins">4dp</item>
+        <item name="com.hb:maxButtonHeight">56dp</item>
+        <item name="com.hb:buttonGravity">top</item>
+        <item name="com.hb:navigationButtonStyle">@android:style/Widget.Toolbar.Button.Navigation</item>
+        <item name="com.hb:collapseIcon">?android:attr/homeAsUpIndicator</item>
+        <item name="com.hb:contentInsetStart">16dp</item>
+        &lt;!&ndash;<item name="com.hb:android:elevation">4dp</item>&ndash;&gt;
+    </style>-->
+
+    <style name="MainPageTheme" parent="@com.hb:style/Theme.Hb.Material.Light">
+    </style>
+
+    <style name="AppTheme" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="android:toolbarStyle">@style/ToolbarStyle</item>
+        <item name="com.hb:windowLayoutStyle">@style/WindowLayoutStyle</item>
+    </style>
+
+    <style name="WindowLayoutStyle" parent="com.hb:WindowStyle.Light">
+        <item name="com.hb:hasBackIcon">true</item>
+    </style>
+
+    <style name="ToolbarStyle" parent="com.hb:style/ToolbarStyle.ShowBottomDivider.Grey">
+        <item name="com.hb:title">@string/app_name</item>
+    </style>
+
+</resources>

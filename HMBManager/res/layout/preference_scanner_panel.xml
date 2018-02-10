@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.hmb.manager.widget.HMBProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="@dimen/hmbprogressbar_width"
+        android:layout_height="@dimen/hmbprogressbar_width"
+        android:layout_marginTop="@dimen/scanner_progressbar_margin_top"
+        android:layout_marginBottom="@dimen/scanner_progressbar_margin_bottom"
+        android:layout_centerInParent="true"
+        app:hpb_primary_color="@color/safety_hpb_primary"
+        app:hpb_bg_color="@color/safety_hpb_bg"
+        app:hpb_title_color="@color/super_text_color"
+        app:hpb_title_size="60"
+        app:hpb_summary_color="@color/clean_nofitication_color"
+        app:hpb_summary_size="35"
+        app:hpb_show_number_text="false">
+    </com.hmb.manager.widget.HMBProgressBar>
+
+    <TextView
+        android:id="@+id/tv_scanDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/tiny_text_size"
+        android:textColor="@color/list_text_color"
+        android:layout_marginBottom="@dimen/scanner_detail_margin_bottom"
+        android:layout_marginLeft="@dimen/scanner_detail_margin_left"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+</RelativeLayout>

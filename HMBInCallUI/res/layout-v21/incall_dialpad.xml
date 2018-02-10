@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+
+<!-- Dialpad in the Phone app. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialpad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal" >
+
+        <Space style="@style/DialpadSpaceStyle" />
+
+        <include layout="@layout/dialpad_key_one" />
+
+        <include
+            android:id="@+id/two"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <include
+            android:id="@+id/three"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <Space style="@style/DialpadSpaceStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal" >
+
+        <Space style="@style/DialpadSpaceStyle" />
+
+        <include
+            android:id="@+id/four"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <include
+            android:id="@+id/five"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <include
+            android:id="@+id/six"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <Space style="@style/DialpadSpaceStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal" >
+
+        <Space style="@style/DialpadSpaceStyle" />
+
+        <include
+            android:id="@+id/seven"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <include
+            android:id="@+id/eight"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <include
+            android:id="@+id/nine"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <Space style="@style/DialpadSpaceStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal" >
+
+        <Space style="@style/DialpadSpaceStyle" />
+
+        <include layout="@layout/dialpad_key_star" />
+
+        <include layout="@layout/dialpad_key_zero" />
+
+        <include layout="@layout/dialpad_key_pound" />
+
+        <Space style="@style/DialpadSpaceStyle" />
+    </LinearLayout>
+
+    <!--  <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" /> -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/end_call_margin_bottom"
+        android:layout_height="80dp">
+
+        <RelativeLayout
+            android:id="@+id/hb_fold_dialpad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="44dp"
+            android:padding="15dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hb_dialpad_fold"
+                android:state_enabled="false" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/floating_end_call_action_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+
+            <ImageButton
+                android:id="@+id/floating_end_call_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/end_call_hb"
+                android:contentDescription="@string/onscreenEndCallText"
+                android:scaleType="center" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</LinearLayout>

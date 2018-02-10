@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+   android:orientation="vertical"
+   android:layout_width="fill_parent"
+   android:layout_height="fill_parent" android:minHeight="300.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<include
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    layout="@layout/category_grid_layout" />
+<TextView
+    android:layout_width="fill_parent"
+    android:layout_height="22.0dp"
+    android:background="@drawable/home_separator"
+    android:text="@string/category_path_title"
+    android:textSize="11sp"
+    android:textColor="#858585"
+    android:paddingStart="16.0dip"
+    android:paddingLeft="16dip"
+    android:gravity="center_vertical"/>
+<hb.widget.HbListView
+    android:id="@+id/storage_path_list"
+    android:visibility="visible"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:cacheColorHint="@android:color/transparent"
+    android:fastScrollEnabled="false" />
+<TextView
+    android:id="@+id/line"
+    android:layout_width="match_parent"
+    android:layout_height="0.1dp"
+    android:background="#dddddd"
+    android:visibility="gone"/>
+<TextView
+    android:id="@+id/category_history_lable"
+    android:layout_width="fill_parent"
+    android:layout_height="22.0dip"
+    android:background="@drawable/home_separator"
+    android:text="@string/category_history"
+    android:textSize="11sp"
+    android:textColor="#858585"
+    android:paddingStart="16.0dip"
+    android:paddingLeft="16dip"
+    android:gravity="center_vertical"
+    android:visibility="gone"/>
+<hb.widget.HbListView
+    android:id="@+id/home_history_list"
+    android:visibility="visible"
+    android:layout_width="fill_parent"
+    android:divider="@null"
+    android:layout_height="wrap_content"
+    android:cacheColorHint="@android:color/transparent"
+    android:fastScrollEnabled="false" />
+<Button
+    android:id="@+id/more_category_history"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:text="@string/load_more"
+    android:background="#ffffff"
+    android:textSize="11sp"
+    android:textColor="#858585"
+    android:gravity="center_horizontal|center_vertical"
+    android:visibility="gone"/>
+</LinearLayout>

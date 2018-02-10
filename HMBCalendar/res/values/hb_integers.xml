@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="month_week_view_height">54</integer>
+    <integer name="month_day_tap_radius">20</integer>
+    <integer name="month_day_event_tag_radius">2</integer>
+    <integer name="month_day_event_tag_top_padding">48</integer>
+    <integer name="month_day_number_top_padding">21</integer>
+    <integer name="month_day_text_top_padding">33</integer>
+    <integer name="month_day_highlight_text_padding">3</integer>
+    <integer name="month_day_text_size">16</integer>
+    <integer name="month_day_other_text_size">8</integer>
+</resources>

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/calculator_pad_height"
+    android:columnCount="4"
+    android:rowCount="5">
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_sin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_sin"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_sin" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_cos"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_cos"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_cos" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_tan"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_tan"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_tan" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_log"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_log"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_log" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_1x"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_1x"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_1x" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_x2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_x2"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_x2" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_x3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_x3"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_x3" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_xy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_xy"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_xy" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_abs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_abs"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_abs" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_factorial"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_factorial"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_factorial" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_sqrt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_sqrt"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_sqrt" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_sqrt_xy"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_sqrt_xy"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_sqrt_xy" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_pi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_pi"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_pi" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_e"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_e"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_e" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_ex"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_ex"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_ex" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_ln"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_ln"
+        custom:drawLine="left|top"
+        custom:imageSrc="@drawable/ic_ln" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_lparen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_lparen"
+        custom:drawLine="left|top|bottom"
+        custom:imageSrc="@drawable/ic_lparen" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_rparen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_rparen"
+        custom:drawLine="left|top|bottom"
+        custom:imageSrc="@drawable/ic_rparen" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_percent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_percent"
+        custom:drawLine="left|top|bottom"
+        custom:imageSrc="@drawable/ic_percent" />
+
+    <com.hmb.calculator2.HMBCalculatorPadButton
+        android:id="@+id/op_ee"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:onClick="onButtonClick"
+        android:tag="@string/tag_ee"
+        custom:drawLine="left|top|bottom"
+        custom:imageSrc="@drawable/ic_ee" />
+
+</GridLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <color name="preview_navigation_bar_background">#26000000</color>
+    <color name="empty_directory_hint">#6c6c6c</color>
+    <color name="toolbar_title_color_in_preview">#dbffffff</color>
+    <color name="preview_action_bar_background">#33000000</color>
+    <color name="wallpaper_list_title_bg">#FFF4F4F4</color>
+    <color name="wallpaper_preview_ic_name_color">#b3ffffff</color>
+    <color name="item_selected_mask_color">#33000000</color>
+</resources>

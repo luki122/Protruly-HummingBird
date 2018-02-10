@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <hb.widget.toolbar.Toolbar
+        android:id="@+id/alarm_list_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/title_left_button"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:text="@string/alarm_setting_cancel"
+                android:textSize="16sp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:textColor="@color/actionmode_btn_color"/>
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alarm_has_selected_num"
+                android:textSize="18sp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/lay_text_normal"/>
+            <TextView
+                android:id="@+id/title_right_button"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:text="@string/alarm_selected_all"
+                android:textSize="16sp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:textColor="@color/actionmode_btn_color"/>
+        </RelativeLayout>
+    </hb.widget.toolbar.Toolbar>
+
+    <TextView
+        android:id="@+id/delete_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:textSize="16dp"
+        android:text="@string/time_picker_set"
+        android:gravity="center"
+        android:background="@color/white"/>
+    <ListView
+        android:id="@+id/alarms_list"
+        android:layout_below="@id/alarm_list_toolbar"
+        android:layout_above="@id/delete_btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/button_footer_height"
+        android:clipToPadding="false"
+        android:descendantFocusability="beforeDescendants"/>
+</RelativeLayout>

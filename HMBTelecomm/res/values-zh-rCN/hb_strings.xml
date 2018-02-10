@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">  
+    <string name="not_empty_value">内容不能为空</string>
+    <string name="hb_respond_via_sms_canned_response_1">稍后给你电话。</string>
+    <string name="hb_respond_via_sms_canned_response_2">现在无法接听，请问有事吗？</string>
+    <string name="hb_respond_via_sms_canned_response_3">现在无法接听，请稍后打给我。</string>
+    <string name="max_chars">字数已达上限</string>
+    <string name="need_save_content">是否保存已编辑内容？</string>
+    <string name="notification_delete_missedCall_message">删除</string>
+    <string name="notification_show_missedCall_message">详情</string>
+    <string name="save_sms">保存</string>
+    <string name="cancel">取消</string>
+    <string name="editing_respond_sms">编辑拒接短信</string>
+    <string name="save_respond_sms_complete">保存完毕</string>
+</resources>

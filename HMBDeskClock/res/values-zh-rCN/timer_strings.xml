@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="hour_string">"时"</string>
+    <string name="minute_string">"分"</string>
+    <string name="second_string">"秒"</string>
+
+    <string name="timer_close">关闭</string>
+    <string name="timer_end">计时结束</string>
+    <string name="timer_in_use">正在计时</string>
+    <string name="timer_time_up">计时结束！</string>
+    <string name="timer_time_out">错过的计时器！</string>
+
+    <!-- Timer notification: how long from now until timer goes off. -->
+    <string name="timer_notifications_less_min">"还剩不到 1 分钟"</string>
+    <string name="timer_notifications_hours">"<xliff:g id="REMAINING"> %3$s</xliff:g> <xliff:g id="HOURS">%1$s</xliff:g>"</string>
+    <string name="timer_notifications_minutes">"<xliff:g id="REMAINING"> %3$s</xliff:g> <xliff:g id="MINUTES">%2$s</xliff:g>"</string>
+    <string name="timer_notifications_hours_minutes">"还剩 <xliff:g id="HOURS">%1$s</xliff:g> <xliff:g id="MINUTES">%2$s</xliff:g>"</string>
+
+    <!--
+        Verb inflection to use for single time units remaining
+        Ex. "1 minute remaining"
+    -->
+    <string name="timer_remaining_single">"还剩"</string>
+    <!--
+        Verb inflection to use for multiple time units remaining
+        Ex. "2 minutes remaining"
+    -->
+    <string name="timer_remaining_multiple">"还剩"</string>
+
+    <!-- Title of default ringtone played when a timer expires. -->
+    <string name="default_timer_ringtone_title">"计时结束"</string>
+
+    <!-- Title of silent ringtone played when a timer expires. -->
+    <string name="silent_timer_ringtone_title">"静音"</string>
+
+    <!-- Describes the purpose of the button to stop all currently firing timers. [CHAR LIMIT=25] -->
+    <string name="timer_stop_all">"停止所有计时器"</string>
+    <!-- Accessibility announcement when a timer is canceled. -->
+    <string name="timer_canceled">"已取消计时器"</string>
+    <!--
+        Notification content shown when multiple timers have completed and have no more time
+        remaining. Arg is the number of timers. [CHAR LIMIT=25]
+    -->
+    <string name="timer_multi_times_up">"<xliff:g id="NUM_TIMERS">%d</xliff:g> 个计时器已到期"</string>
+    <!-- Describes the purpose of the notification button to pause the timer. [CHAR LIMIT=15] -->
+    <string name="timer_pause">"暂停"</string>
+    <string name="timer_resume">"继续"</string>
+    <!-- Describes the purpose of the notification button to reset all running timers. [CHAR LIMIT=31] -->
+    <string name="timer_reset_all">"重置所有计时器"</string>
+
+    <!-- Describes the service that processes actions originating from timer notifications. -->
+    <string name="timer_service_desc">"处理可通过计时器通知执行的操作。"</string>
+
+    <!-- Notification title when timer is paused. [CHAR LIMIT=25] -->
+    <string name="timer_paused">"计时器已暂停"</string>
+
+    <!-- String that represents that the user attempted to control a timer with a voice action when
+    no timers are defined.
+    [CHAR LIMIT=NONE]
+    -->
+    <string name="no_timers_exist">"没有任何计时器"</string>
+
+    <!-- String that represents that the user attempted to control a timer with a voice action when
+    more than one timer is defined.
+    [CHAR LIMIT=NONE]
+    -->
+    <string name="too_many_timers_exist">"有多个计时器存在"</string>
+
+    <!-- String that represents that the user attempted to control a timer with a voice action but
+    the timer could not be located.
+    [CHAR LIMIT=NONE]
+    -->
+    <string name="timer_does_not_exist">"已移除计时器。"</string>
+</resources>

@@ -1,0 +1,62 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.0'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.protobuf'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode Integer.valueOf("170428001")
+        versionName "v1.0.1.0101.a"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    productFlavors {
+        aosp {
+            applicationId 'com.android.QuickSearchBox'
+        }
+    }
+    sourceSets {
+        main {
+			res.srcDirs = ['res']
+            java.srcDirs = ['src','benchmarks/src','ext/src']
+            manifest.srcFile "AndroidManifest.xml"
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+
+

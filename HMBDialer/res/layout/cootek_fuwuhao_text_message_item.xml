@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/fuwuhao_text_message_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="3dp"
+        android:gravity="center"
+        android:textColor="@color/grey_550"
+        android:textSize="@dimen/fuwuhao_basic_text_size_6" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/fuwuhao_colon_string"
+        android:textColor="@color/grey_550" />
+
+    <TextView
+        android:id="@+id/fuwuhao_text_message_item_value"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="3dp"
+        android:gravity="center"
+        android:textColor="@color/grey_550"
+        android:textSize="@dimen/fuwuhao_basic_text_size_6" />
+</LinearLayout>

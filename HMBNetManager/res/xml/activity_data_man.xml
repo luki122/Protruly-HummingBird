@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="lay_used" >
+        <com.hb.netmanage.view.DataplanPreference android:key="common_data_used" />
+        <com.hb.netmanage.view.DataplanPreference android:key="free_data_used" />
+    </PreferenceCategory>
+</PreferenceScreen>

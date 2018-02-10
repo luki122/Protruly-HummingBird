@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:layout_margin="16dp"
+    android:layout_marginLeft="10dp"
+    android:background="@drawable/cootek_voip_c2c_input_bg"
+    android:baselineAligned="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/invite"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/transparent"
+        android:cursorVisible="true"
+        android:hint="@string/voip_c2c_invite_hint"
+        android:inputType="number"
+        android:padding="10dp"
+        android:textColor="@color/grey_800"
+        android:textColorHint="@color/grey_450"
+        android:textCursorDrawable="@null"
+        android:textSize="16dp"
+        tools:ignore="UnusedAttribute" />
+
+    <View
+        android:layout_width="2px"
+        android:layout_height="34dp"
+        android:layout_gravity="center_vertical"
+        android:background="#FFededed"
+        tools:ignore="PxUsage" />
+
+    <ImageButton
+        android:id="@+id/send"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/cootek_voip_confirm_dlg_cancel_bg"
+        android:scaleType="center"
+        android:src="@drawable/cootek_c2c_invite_arrow_icon" />
+
+</LinearLayout>

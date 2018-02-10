@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_circle="http://schemas.android.com/apk/res/com.hb.netmanage"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/main_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lay_sim_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/lay_total_data_margin_top"
+            android:orientation="horizontal">
+
+            <!-- android:background="@drawable/my_ripple" -->
+
+            <TextView
+                android:id="@+id/tv_sim_index"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sim1"
+                android:textColor="@color/color_app_title_text"
+                android:textSize="@dimen/tv_sim_index_text" />
+
+            <TextView
+                android:id="@+id/tv_sim_operator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/un_operator"
+                android:textColor="@color/color_app_title_text"
+                android:textSize="@dimen/tv_sim_index_text" />
+        </LinearLayout>
+
+        <com.hb.netmanage.view.CircleProgressView
+            android:id="@+id/view_circle_progress"
+            android:layout_width="@dimen/circle_progress_width"
+            android:layout_height="@dimen/circle_progress_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/circle_progress_margin_top"
+            android_circle:roundWidth="8dp"
+            android_circle:text1Size="24sp"
+            android_circle:text2Size="14sp">
+
+        </com.hb.netmanage.view.CircleProgressView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_data_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginTop="@dimen/lay_data_margin_top"
+        android:weightSum="3">
+        <!--android:layout_marginLeft="@dimen/lay_data_margin_left"-->
+        <!--android:layout_marginRight="@dimen/lay_data_margin_right"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/data_today_count"
+                android:textColor="@color/color_data_text"
+                android:textSize="@dimen/tv_info_tag_text" />
+
+            <TextView
+                android:id="@+id/tv_today_used_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/add"
+                android:textColor="@color/color_correct"
+                android:textSize="@dimen/tv_data_text" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/line_divider_width"
+            android:layout_height="@dimen/line_divider_height"
+
+            android:background="@color/color_line_divider" />
+
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_marginRight="5dp"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/month_use"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_data_text"
+                android:textSize="@dimen/tv_info_tag_text" />
+
+            <TextView
+                android:id="@+id/tv_month_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/add"
+                android:textColor="@color/color_correct"
+                android:textSize="@dimen/tv_data_text" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/line_divider_width"
+            android:layout_height="@dimen/line_divider_height"
+            android:layout_marginRight="5dp"
+            android:background="@color/color_line_divider" />
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/to_month_end_day"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/color_data_text"
+                android:textSize="@dimen/tv_info_tag_text" />
+
+            <TextView
+                android:id="@+id/tv_month_end_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/color_correct"
+                android:textSize="@dimen/tv_data_text" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <!--android:layout_marginBottom="@dimen/btn_correct_margin_top"-->
+    <Button
+        android:id="@+id/btn_correct"
+        android:layout_width="@dimen/btn_correct_width"
+        android:layout_height="@dimen/btn_correct_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/btn_correct_margin_top"
+        android:background="@drawable/btn_correct_unclick"
+        android:gravity="center"
+        android:text="@string/data_correct"
+        android:enabled="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_correct_text_size" />
+    <!--android:background="@drawable/btn_white_bg_selector"-->
+</LinearLayout>

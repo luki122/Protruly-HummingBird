@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2007-2008 Esmertec AG.
+ * Copyright (C) 2007-2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:key="pref_key_root">
+
+    <Preference
+        android:key="pref_key_sms_disabled"
+        android:persistent="false"
+        android:summary="@string/zzz_pref_summary_sms_disabled"
+        android:title="@string/pref_title_sms_disabled">
+        <intent
+            android:action="android.provider.Telephony.ACTION_CHANGE_DEFAULT"
+            android:targetPackage="com.android.settings">
+            <extra
+                android:name="package"
+                android:value="com.android.mms"/>
+        </intent>
+    </Preference>
+
+    <PreferenceCategory
+        android:key="pref_key_sms_mms_settings"
+        android:title="@string/pref_sms_mms_settings_title">
+        <!--<Preference
+            android:key="black_setting"
+            android:persistent="false"
+            android:title="@string/black_title" >
+            <intent android:action="com.hb.black.list" />
+        </Preference>-->
+        <Preference
+            android:key="pref_key_manage_sim_messages"
+            android:title="@string/pref_title_manage_sim_messages"/>
+        <Preference
+            android:key="pref_key_manage_sim_messages_slot1"
+            android:title="@string/pref_title_manage_sim_messages_slot1"/>
+        <Preference
+            android:key="pref_key_manage_sim_messages_slot2"
+            android:title="@string/pref_title_manage_sim_messages_slot2"/>
+
+        <Preference
+            android:key="pref_key_sms_service_center"
+            android:title="@string/sms_service_center"/>
+        <Preference
+            android:key="pref_key_sms_service_center_slot1"
+            android:title="@string/pref_sim1_smcs"/>
+        <Preference
+            android:key="pref_key_sms_service_center_slot2"
+            android:title="@string/pref_sim2_smcs"/>
+
+        <!--android:summary="@string/pref_summary_sms_mms_delivery_reports"-->
+        <SwitchPreference
+            android:defaultValue="@bool/def_sms_delivery_reports"
+            android:key="pref_key_sms_delivery_reports"
+            android:title="@string/pref_title_sms_mms_delivery_reports"/>
+
+        <SwitchPreference
+            android:defaultValue="@bool/def_wake_up_screen"
+            android:key="pref_key_wake_up_screen"
+            android:title="@string/pref_title_notification_wake_up_screen"/>
+    </PreferenceCategory>
+
+    <!--<PreferenceCategory
+        android:key="pref_key_sim_messages"
+        android:title="@string/pref_sim_messages_title">
+        <Preference
+            android:key="pref_key_manage_sim_messages"
+            android:title="@string/pref_title_manage_sim_messages"/>
+        <Preference
+            android:key="pref_key_manage_sim_messages_slot1"
+            android:title="@string/pref_title_manage_sim_messages_slot1"/>
+        <Preference
+            android:key="pref_key_manage_sim_messages_slot2"
+            android:title="@string/pref_title_manage_sim_messages_slot2"/>
+    </PreferenceCategory>-->
+
+    <!--<PreferenceCategory
+        android:key="pref_key_smsc"
+        android:title="@string/pref_smsc_title">
+        <Preference
+            android:key="pref_key_sms_service_center"
+            android:title="@string/sms_service_center"/>
+        <Preference
+            android:key="pref_key_sms_service_center_slot1"
+            android:title="@string/pref_sim1_smcs"/>
+        <Preference
+            android:key="pref_key_sms_service_center_slot2"
+            android:title="@string/pref_sim2_smcs"/>
+    </PreferenceCategory>-->
+
+    <PreferenceCategory
+        android:key="pref_key_mms_settings"
+        android:title="@string/pref_mms_settings_title">
+        <!--<SwitchPreference
+            android:defaultValue="true"
+            android:key="pref_key_mms_read_reports"
+            android:summary="@string/pref_summary_mms_read_reports"
+            android:title="@string/pref_title_mms_read_reports" />-->
+        <!--android:summary="@string/pref_summary_mms_auto_retrieval"-->
+        <SwitchPreference
+            android:key="pref_key_mms_auto_retrieval"
+            android:defaultValue="@bool/def_sms_auto_retrieval"
+            android:title="@string/pref_title_mms_auto_retrieval"/>
+        <!--android:summary="@string/pref_summary_mms_retrieval_during_roaming"-->
+        <SwitchPreference
+            android:key="pref_key_mms_retrieval_during_roaming"
+            android:dependency="pref_key_mms_auto_retrieval"
+            android:defaultValue="@bool/def_mms_roaming_auto_retrieval"
+            android:layout="?android:attr/preferenceLayoutChild"
+            android:title="@string/pref_title_mms_retrieval_during_roaming"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_key_cb_category"
+        android:title="@string/cell_broadcast_title">
+        <!--android:summary="@string/cell_broadcast_settings"-->
+        <Preference
+            android:key="pref_key_cell_broadcast"
+            android:persistent="false"
+            android:title="@string/cell_broadcast">
+        </Preference>
+        <!--android:summary="@string/cell_broadcast_settings"-->
+        <Preference
+            android:key="pref_key_cell_broadcast_slot1"
+            android:persistent="false"
+            android:title="@string/pref_sim1_cell_broadcast"/>
+        <!--android:summary="@string/cell_broadcast_settings"-->
+        <Preference
+            android:key="pref_key_cell_broadcast_slot2"
+            android:persistent="false"
+            android:title="@string/pref_sim2_cell_broadcast"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

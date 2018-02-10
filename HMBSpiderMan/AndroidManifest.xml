@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.protruly.spiderman"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="170816001"
+    android:versionName="v1.0.1.0101.s">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="cn.protruly.spiderman.MainActivity"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name">
+            <intent-filter>
+
+                <!-- <action android:name="android.intent.action.MAIN" /> -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name="cn.protruly.spiderman.uploadnotification.AcceptNotification"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.proturly.spiderman" />
+                <action android:name="cn.proturly.transmitlog" />
+                <action android:name="android.intent.action.PROTRULYBUGREPORT" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="cn.protruly.spiderman.uploadnotification.SwitchLogNotification"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+            <action android:name="android.provider.Telephony.SECRET_CODE" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:scheme="android_secret_code" android:host="789666"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="cn.protruly.spiderman.settingpreferences.LoginActivity"
+            android:label="@string/logpreferences"
+            android:theme="@style/AppTheme" />
+
+        <service
+            android:name="cn.protruly.spiderman.collectservice.CollectLogService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="cn.protruly.spiderman.transmitservice.TransmitLogService"
+            android:exported="true" />
+        <service
+            android:name="cn.protruly.spiderman.transmitservice.MonitoringLogService"
+            android:exported="true" />
+
+        <meta-data android:name="CLOUDDATA_APPKEY" android:value="cc652e7653ebdc37"></meta-data>
+    </application>
+
+</manifest>

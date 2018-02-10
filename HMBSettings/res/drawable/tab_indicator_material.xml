@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingMode="nest">
+    <item android:drawable="?android:selectableItemBackground"/>
+    <item android:gravity="bottom">
+        <shape
+            android:shape="rectangle"
+            android:tint="@color/tab_indicator_color">
+            <size android:height="2dp" />
+            <solid android:color="@com.hb:color/tab_indicator_material" />
+        </shape>
+    </item>
+    <item
+        android:bottom="2dp"
+        android:drawable="@android:color/transparent" />
+</layer-list>
+

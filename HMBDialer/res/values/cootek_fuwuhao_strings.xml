@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="publicnumber_contextmenu_delete">删除</string>
+    <string name="publicnumber_contextmenu_menu">菜单</string>
+    <!-- public number empty content -->
+    <!-- fuwuhao empty content -->
+    <string name="fuwuhao_more_string">查看详情</string>
+    <string name="yellowpage_fuwuhao_empty">暂无内容</string>
+    <string name="yellowpage_fuwuhao_empty_2">服务产生的消息会出现在这里</string>
+    <string name="fuwuhao">Subscription Accounts</string>
+    <string name="fuwuhao_order">订单</string>
+
+    <string name="contact_list_empty_content">暂无消息记录</string>
+    <string name="fuwuhao_empty_string"></string>
+    <string name="fuwuhao_one_string">1</string>
+    <string name="fuwuhao_i_string">i</string>
+    <string name="fuwuhao_colon_string">:</string>
+</resources>

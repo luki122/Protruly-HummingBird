@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*
+ * Copyright (C) 2008 Esmertec AG.
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+--><!--
+listPreferredItemHeight = 64dip
+android:minHeight="?android:attr/listPreferredItemHeightLarge"
+android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+-->
+<com.android.mms.ui.ConversationListItem xmlns:android="http://schemas.android.com/apk/res/android"
+                                         xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+                                         android:id="@+id/conv_list_item"
+                                         android:layout_width="match_parent"
+                                         android:layout_height="wrap_content"
+                                         android:descendantFocusability="blocksDescendants"
+                                         android:orientation="horizontal"
+                                         android:paddingEnd="?android:attr/listPreferredItemPaddingEnd">
+
+    <ViewStub
+        android:id="@+id/checkbox_stub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/conv_list_checkbox_margin_right"
+        android:layout="@layout/zzz_conversation_list_item_checkbox"/>
+
+    <TextView
+        android:id="@+id/conv_list_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/conv_list_date_margin_top"
+        android:layout_toStartOf="@id/checkbox_stub"
+        android:maxLines="1"
+        android:textColor="@color/conv_date_textview_color"
+        android:textSize="@dimen/conv_list_date_textsize"/>
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/conv_list_from_margin_right"
+        android:layout_marginTop="@dimen/conv_list_from_margin_top"
+        android:layout_toStartOf="@id/conv_list_date"
+        android:orientation="horizontal">
+
+        <ViewStub
+            android:id="@+id/conv_list_unread_stub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/conv_list_unread_margin_left"
+            android:layout_marginTop="@dimen/conv_list_unread_margin_top"
+            android:layout="@layout/zzz_conversation_list_item_unread"/>
+
+        <!--android:textAppearance="?android:attr/textAppearanceListItem"-->
+        <TextView
+            android:id="@+id/conv_list_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/conv_list_unread_margin_right"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
+            android:maxWidth="@dimen/conversation_list_title_max_width"
+            android:textColor="@color/conv_from_textview_color"
+            android:textSize="@dimen/conv_list_title_textsize"
+            />
+
+        <TextView
+            android:id="@+id/conv_list_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/conv_list_black_margin_left"
+            android:maxLines="1"
+            android:text="@string/mark_block_with_bracket"
+            android:textColor="@color/prefix_text_color_red"
+            android:textSize="@dimen/conv_list_black_textsize"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/conv_list_summary_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/title_layout"
+        android:layout_marginBottom="@dimen/conv_list_subject_margin_bottom"
+        android:layout_marginStart="@dimen/conv_list_subject_margin_left"
+        android:layout_toStartOf="@id/checkbox_stub"
+        android:orientation="horizontal">
+
+        <ViewStub
+            android:id="@+id/sim_top_icon_stub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/conv_list_sim_stub_margin_left"
+            android:layout_marginTop="@dimen/conv_list_sim_stub_margin_top"
+            android:layout="@layout/zzz_conversation_list_item_sim_top"/>
+        <!--
+        android:textAppearance="?android:attr/textAppearanceListItemSecondary"
+            android:maxLines="2"
+            android:maxWidth="@dimen/conversation_list_summary_max_width"
+        -->
+        <TextView
+            android:id="@+id/conv_list_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/sim_top_icon_stub"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:lineSpacingExtra="@dimen/conv_list_summary_line_spacing"
+            android:maxLines="2"
+            android:textColor="@color/conv_contents_textview_color"
+            android:textSize="@dimen/conv_list_summary_textsize"
+            />
+    </RelativeLayout>
+</com.android.mms.ui.ConversationListItem>

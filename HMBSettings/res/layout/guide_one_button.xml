@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/guide_button_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal">
+
+    <TextView
+        android:id="@+id/guide_switch_lock_type"
+        android:visibility="gone"
+        android:gravity="center_horizontal"
+        android:text="@string/guide_other_lock_type"
+        android:textColor="@drawable/guide_button_text_color"
+        android:textSize="@dimen/guide_text_size"
+        android:layout_marginBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Space
+        android:id="@+id/guide_more_space"
+        android:layout_width="match_parent"
+        android:layout_height="24dp" />
+
+<!--    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="?android:attr/dividerVertical" />-->
+
+    <Button
+        android:id="@+id/guide_positive_btn"
+        android:textColor="@drawable/guide_button_text_color"
+        android:textSize="@dimen/guide_btn_size"
+        android:background="?android:selectableItemBackground"
+        android:text="@string/lockpassword_continue_label"
+        android:layout_width="match_parent"
+        android:layout_height="?android:listPreferredItemHeightSmall" />
+
+<!--    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="?android:attr/dividerVertical" />-->
+
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- permission -->
+    <string name="request_permissions_message">日曆需要日曆、聯絡人、儲存和電話的許可權，去設定？</string>
+    <string name="request_permissions_ok">設定</string>
+    <string name="grant_permissions_message">日曆需要日曆、聯絡人、儲存、電話和網絡的許可權，是否同意？</string>
+    <string name="grant_permissions_ok">同意</string>
+    <string name="calendar_permission_dinied">日曆許可權未打開。請在“設定->應用程式->日曆->權限”中進行授權。</string>
+
+    <!-- toast -->
+    <string name="time_out_of_range">超出時間範圍</string>
+
+    <!-- agenda -->
+    <string name="show_older_agendas">點擊顯示<xliff:g id="OLDEST_SEARCH_RANGE">%1$s</xliff:g>之前的日程</string>
+    <string name="show_newer_agendas">點擊顯示<xliff:g id="NEWEST_SEARCH_RANGE">%1$s</xliff:g>之后的日程</string>
+    <string name="agenda_date_weekday"><xliff:g id="date">%1$s</xliff:g>  <xliff:g id="date">%2$s</xliff:g></string>
+    <string name="agenda_date_weekday_today"><xliff:g id="date">%1$s</xliff:g>  <xliff:g id="date">%2$s</xliff:g>  今天</string>
+    <string name="agenda_date_weekday_yesterday"><xliff:g id="date">%1$s</xliff:g>  <xliff:g id="date">%2$s</xliff:g>  昨天</string>
+    <string name="agenda_date_weekday_tomorrow"><xliff:g id="date">%1$s</xliff:g>  <xliff:g id="date">%2$s</xliff:g>  明天</string>
+
+    <!-- labels -->
+    <string name="label_none">無</string>
+    <string name="label_title">標籤</string>
+    <string name="label_custom">自定義</string>
+    <string name="label_custom_title">自定義標籤</string>
+
+    <!-- event info -->
+    <string name="event_info">日程詳情</string>
+    <string name="event_info_edit">編輯</string>
+    <string name="event_begin_label">開始時間：</string>
+    <string name="event_end_label">結束時間：</string>
+    <string name="event_reminder_label">提醒：</string>
+    <string name="event_repeat_label">重複：</string>
+    <string name="event_label">標籤：</string>
+    <string name="event_no_reminder">不提醒</string>
+
+    <!-- delete event -->
+    <string name="delete_recurring_event">該日程爲週期性日程，將刪除該週期所有日程。</string>
+    <string name="delete">刪除</string>
+
+    <!-- month agenda -->
+    <string name="have_no_event">無日程</string>
+
+    <!-- event edit -->
+    <string name="create_event">新建日程</string>
+    <string name="edit_event">編輯日程</string>
+    <string name="event_created">日程已創建</string>
+    <string name="event_saved">日程已保存</string>
+    <string name="edit_repeat_event">該日程爲週期性日程，修改將影響該週期所有日程。</string>
+    <string name="edit_repeat_event_ok">我知道了</string>
+    <string name="event_edit_hint_title">日程名稱</string>
+    <string name="event_edit_cancel">退出</string>
+    <string name="event_edit_cancel_info">捨棄已做更改並退出？</string>
+    <string name="event_edit_save_no_title">日程名稱不能爲空</string>
+
+    <string name="event_repeat">週期</string>
+    <string name="event_no_repeat">不重複</string>
+    <string name="event_daily">每天</string>
+    <string name="event_every_weekday">每個工作日</string>
+    <string name="event_weekly">每週</string>
+    <string name="event_weekly_on_day">"每週（<xliff:g id="DAYS_OF_WEEK">%s</xliff:g>）"</string>
+    <string name="event_monthly">每月</string>
+    <string name="event_monthly_on_day_count">"每月（<xliff:g id="ORDINAL_NUMBER">%1$s</xliff:g><xliff:g id="DAY_OF_WEEK">%2$s</xliff:g>）"</string>
+    <string name="event_yearly">每年</string>
+
+    <!-- calendar setting -->
+    <string name="week_start_day">每週起始日</string>
+    <string name="reminder_settings">提醒設置</string>
+    <string name="events_reminder">日程提醒時間</string>
+    <string name="reminder_ringtone">提醒鈴聲</string>
+    <string name="ringtone_none">無</string>
+    <string name="ringtone_default">默認</string>
+    <string name="ringtone_default_none">默認鈴聲（無）</string>
+
+</resources>

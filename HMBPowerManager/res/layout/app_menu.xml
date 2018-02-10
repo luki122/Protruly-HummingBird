@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tvMenu"
+        android:layout_marginRight="@dimen/length_20dp"
+        android:text="@string/app_menu_title_open"
+        android:textColor="@color/menu_text_color"
+        android:textSize="@dimen/list_title_size"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+</LinearLayout>

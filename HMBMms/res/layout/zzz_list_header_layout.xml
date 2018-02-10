@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+              android:id="@+id/list_header_group"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/white"
+              android:orientation="vertical">
+
+    <HbPreSearchView
+        android:id="@+id/list_pre_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pre_search_view_hight"
+        android:layout_marginBottom="@dimen/pre_search_view_margin_bottom"
+        android:layout_marginEnd="@dimen/pre_search_view_margin_right"
+        android:layout_marginStart="@dimen/pre_search_view_margin_left"
+        android:layout_marginTop="@dimen/pre_search_view_margin_top"
+        android:iconifiedByDefault="false"
+        android:inputType="text|textCapCharacters"
+        android:queryHint="@string/search_hint"
+        hb:layout_scrollFlags="scroll|enterAlways|snap"/>
+
+    <View
+        android:id="@+id/list_header_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/divider_line_gray"
+        android:gravity="start"
+        />
+
+    <include layout="@layout/zzz_list_header_load_layout"/>
+
+    <!--
+    <include layout="@layout/zzz_conversation_list_item_notification"/>
+
+    <View
+        android:id="@+id/list_header_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="@dimen/conv_list_item_left_padding"
+        android:background="@color/divider_line_gray"
+        android:gravity="start"
+        />
+        -->
+
+</LinearLayout>

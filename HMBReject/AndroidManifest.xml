@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hb.interception"
+    coreApp="true"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="170821001"
+    android:versionName="v1.0.1.0102.o" >
+
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" />
+  
+    <application
+        android:name=".InterceptionApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.hb.interception.activity.InterceptionActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Interception"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.hb.reject.main" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hb.interception.settings.Settings"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.Interception"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.hb.reject.setting" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.hb.interception.settings.SmsSettings"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.Interception"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.hb.reject.smssetting" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.hb.interception.settings.CallSettings"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.Interception"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="com.hb.reject.callsetting"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+       <provider android:name="com.hb.interception.settings.HbSettingProvider"
+	          android:authorities="com.hb.reject"
+	          android:multiprocess="false"
+	          android:exported="true" />
+        
+        <activity
+            android:name="com.hb.interception.activity.BlackList"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.Interception"
+            android:exported="true"
+            android:screenOrientation="portrait"
+>
+            <intent-filter>
+                <action android:name="com.hb.black.list" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name="com.hb.interception.activity.WhiteList"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.Interception"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.hb.white.list" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.hb.interception.activity.AddBlackManually"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/Theme.Interception"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.hb.black.add.manually" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hb.interception.activity.AddBlackByNumber"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.hb.add.black.by.calllog" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.hb.interception.activity.AddWhiteByNumber"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.hb.add.white.by.calllog" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.hb.interception.activity.MarkList"
+            android:theme="@style/Theme.Interception"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        <activity
+            android:name="com.hb.interception.activity.KeywordList"
+            android:theme="@style/Theme.Interception"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" >
+           <intent-filter>
+                <action android:name="com.hb.reject.keywords" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+       <activity
+            android:name="com.hb.interception.activity.MarkPickerActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" >
+                        <intent-filter>
+                <action android:name="com.hb.mark.pick" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+       <activity
+            android:name="com.hb.interception.activity.updateMarkActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:theme="@style/DialogActivityStyle"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+              <intent-filter>
+                <action android:name="com.hb.mark.intent.action.mark.number" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+          <activity
+            android:name="com.hb.interception.activity.ZzzComposeMessageDetailActivity"
+            android:configChanges="orientation|screenSize"  
+            android:screenOrientation="portrait" >
+              <intent-filter> 
+                <action android:name="com.hb.message_detail" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+                <!-- add by lgy -->
+        <service android:name="com.hb.interception.notification.ClearBlackCallsService" />
+        
+       <receiver android:name="com.hb.interception.notification.ManageReject$RejectBroadcastReceiver" 
+           android:exported="true">
+            <intent-filter>
+                <action android:name="com.hb.interception.ACTION_ADD_BLACK" />
+                <action android:name="com.hb.interception.ACTION_GOTO_REJECT" />
+                <action android:name="com.hb.interception.ACTION_NOTIFY_CALL" />
+                <action android:name="com.hb.interception.ACTION_NOTIFY_SMS" />
+                <action android:name="com.hb.interception.ACTION_NOTIFY_ADD_BLACK" />
+                 <action android:name="com.hb.interception.ACTION_GOTO_REJECT_SMS" />
+                  <action android:name="com.hb.interception.ACTION_GOTO_REJECT_CALL" />
+            </intent-filter>
+        </receiver>  
+    </application>
+
+</manifest>

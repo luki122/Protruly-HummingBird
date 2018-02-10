@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+ 
+    <Preference
+        android:key="preference_accounts"
+        android:title="@string/menu_contacts_filter" >
+    </Preference>
+    
+    <Preference
+        android:key="preference_contactio"
+        android:title="@string/hb_preference_contactio" >
+    </Preference>
+    
+    <Preference
+        android:key="preference_merge_contacts"
+        android:title="@string/hb_merge_contacts" >
+    </Preference>
+    
+
+
+</PreferenceScreen>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="22dp"
+        android:layout_height="22dp" android:gravity="center_vertical"
+    />
+
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  android:layout_marginLeft="20dp"
+        android:gravity="center_vertical|start"
+        android:textColor="@color/list_text_color"
+        android:layout_toRightOf="@+id/app_icon" 
+        android:ellipsize="marquee" android:layout_marginStart="@com.hb:dimen/list_item_text_margin"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall"
+        android:layout_toLeftOf="@+id/app_size" android:textSize="@dimen/item_text_size_small"
+       />
+
+    <TextView
+        android:id="@+id/app_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|start"
+        android:layout_toLeftOf="@+id/app_check_box"
+        android:textColor="@color/list_num_color" android:layout_marginRight="20dp"
+        android:textSize="@dimen/item_number_size"
+        android:ellipsize="marquee" android:layout_marginStart="@com.hb:dimen/list_item_text_margin"
+        android:textAppearance="?android:attr/textAppearanceListItemSmall" />
+
+    <CheckBox android:id="@+id/app_check_box" android:theme="@style/AppTheme"
+            android:layout_width="wrap_content" android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content" 
+            android:focusable="false" 
+            android:layout_alignParentRight="true"/>
+</RelativeLayout>
+

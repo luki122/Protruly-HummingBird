@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/conv_list_footer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="@dimen/conv_list_item_right_padding"
+    android:background="@android:color/white"
+    android:gravity="bottom|end"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/list_footer_count_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="42dip"
+        android:textColor="#7F2E2E2E"
+        android:textSize="14sp"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

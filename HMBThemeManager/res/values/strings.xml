@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+	<string name="confirm_ok">OK</string>
+    <string name="confirm_cancel">Cancel</string>
+    <string name="app_name">DUI Theme</string>
+    <string name="action_settings">Settings</string>
+    <string name="local_theme">Theme</string>
+    <string name="delete">Delete</string>
+    <string name="theme_detail_designer">Designer:<xliff:g id="designer">%1$s</xliff:g></string>
+    <string name="theme_detail_size">Size:<xliff:g id="size">%1$s</xliff:g></string>
+    <string name="theme_detail_description">Description:<xliff:g id="description">%1$s</xliff:g></string>
+	<string name="download_state_apply">Apply</string>
+	<string name="msg_apply_theme">Applying theme......</string>
+	<string name="statu_apply_theme_failed">Apply theme failed</string>
+	<string name="msg_select_theme_applied">Current Theme Was Applied</string>
+	<string name="default_theme_name">Gold legend</string>
+	<string name="default_theme_description">HummingBird theme</string>
+	<string name="default_theme_designer">Protruly</string>
+	
+	<string name="empty_directory_hint">Empty directory</string>
+    <string name="start_path_name">Device</string>
+    <string name="type_archive">Archive</string>
+    <string name="type_certificate">Certificate</string>
+    <string name="type_directory">Directory</string>
+    <string name="type_document">File</string>
+    <string name="type_drawing">Picture</string>
+    <string name="type_excel">Spreadsheet</string>
+    <string name="type_image">Image</string>
+    <string name="type_music">Music</string>
+    <string name="type_pdf">PDF document</string>
+    <string name="type_power_point">Presentation</string>
+    <string name="type_word">Document</string>
+    
+    <!-- msg for load local theme -->
+    <string name="msg_load_theme_fail">Load theme fail</string>
+    <string name="msg_load_theme_exists">Target theme was loaded</string>
+    <string name="msg_load_theme_error">Load theme error,please check file of this theme</string>
+    <!-- Wallpaper String -->
+    <string name="title_wallpaper">Desktop Wallpaper</string>
+    <string name="title_lockscreen_wallpaper">LockScreen Wallpaper</string>
+    <string name="desktop_wallpaper_entry_title">Desktop</string>
+    <string name="lockscreen_wallpaper_entry_title">LockScreen</string>
+    <string name="vr_wallpaper_entry_title">VR Wallpaper</string>
+    
+    <!-- Theme type Title -->
+    <string name="theme_wallpaper_title">Wallpaper</string>
+    <string name="set_wallpaper_title">Wallpaper Crop</string>
+    <string name="wallpaper_crop_done">Done</string>
+    <!-- Setting Wallpaper -->
+    <string name="image_loading">Loading picture...</string>
+    <string name="image_too_small">Sorry, the pixel of the selected picture is too low and not suitable to be set as a wallpaper.</string>
+    <string name="image_load_failed">Picture failed to load, please reselect a picture</string>
+     <string name="wallpaper_set_success">Successfully set. The wallpaper has been replaced.</string>
+    <string name="wallpaper_set_failed">Failed to set.The picture is missing or damaged.</string>
+    <string name="wallpaper_setting">Setting wallpaper...</string>
+    <string name="set_wallpaper_dialog_title">Wallpaper</string>
+    <string name="msg_select_wallpaper_applied">Current Wallpaper is applied</string>
+    <string name="msg_apply_wallpaper_fail">Apply Wallpaper fail</string>
+    <!-- wallpaper list title -->
+    <string name="wallpaper_list_title_desk">Desktop Wallpaper</string>
+    <string name="wallpaper_list_title_lockscreen">LockScreen Wallpaper</string>
+    <string name="skip">Skip</string>
+    <string name="setup_success_title">Congratulations,Setup Finished</string>
+    <string name="setup_apply_theme">Finish Setup</string>
+    <string name="select_all">Select All</string>
+    <string name="unselect_all">Unselect All</string>
+    <string name="cancel">Cancel</string>
+    <string name="select_number">Select<xliff:g id="count">%1$s</xliff:g></string>
+    <string name="delete_wallpaper_title">Delete Wallpaper</string>
+    <string name="delete_wallpaper_msg">Confirm to delete selected wallpapers</string>
+
+</resources>

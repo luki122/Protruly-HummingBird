@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/alexluo/alex/projects/sources/mtk6797/alps/out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar"/>
+	<classpathentry kind="lib" path="/home/alexluo/alex/projects/third_part_libs/glide-3.6.1.jar"/>
+	<classpathentry kind="lib" path="/home/alexluo/alex/projects/sources/mtk6797/alps/out/target/common/obj/JAVA_LIBRARIES/hb-framework-sdk_intermediates/classes.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

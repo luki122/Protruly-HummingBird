@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/qwer">
+
+        <hb.view.menu.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        hb:menu="@menu/edit_bottom_navigation_menu"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+
+        <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_menu">
+
+
+            <include  android:id="@id/file_list_area" android:visibility="gone" layout="@layout/list_globalsearch_layout" />
+            <include android:id="@id/empty_view" android:visibility="gone" layout="@layout/empty_view_layout" />
+            <include android:id="@id/loading_view" android:visibility="gone" layout="@layout/loading_view_layout" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+

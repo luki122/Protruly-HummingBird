@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2014 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <drawable name="ic_clear">@drawable/ic_clear_land</drawable>
+    <drawable name="ic_po_and_ne">@drawable/ic_po_and_ne_land</drawable>
+    <drawable name="ic_del">@drawable/ic_del_land</drawable>
+    <drawable name="ic_div">@drawable/ic_div_land</drawable>
+    <drawable name="ic_mul">@drawable/ic_mul_land</drawable>
+    <drawable name="ic_sub">@drawable/ic_sub_land</drawable>
+    <drawable name="ic_add">@drawable/ic_add_land</drawable>
+    <drawable name="ic_eq">@drawable/ic_eq_land</drawable>
+
+    <drawable name="ic_1">@drawable/ic_1_land</drawable>
+    <drawable name="ic_2">@drawable/ic_2_land</drawable>
+    <drawable name="ic_3">@drawable/ic_3_land</drawable>
+    <drawable name="ic_4">@drawable/ic_4_land</drawable>
+    <drawable name="ic_5">@drawable/ic_5_land</drawable>
+    <drawable name="ic_6">@drawable/ic_6_land</drawable>
+    <drawable name="ic_7">@drawable/ic_7_land</drawable>
+    <drawable name="ic_8">@drawable/ic_8_land</drawable>
+    <drawable name="ic_9">@drawable/ic_9_land</drawable>
+    <drawable name="ic_0">@drawable/ic_0_land</drawable>
+    <drawable name="ic_point">@drawable/ic_point_land</drawable>
+
+    <drawable name="ic_sin">@drawable/ic_sin_land</drawable>
+    <drawable name="ic_cos">@drawable/ic_cos_land</drawable>
+    <drawable name="ic_tan">@drawable/ic_tan_land</drawable>
+    <drawable name="ic_log">@drawable/ic_log_land</drawable>
+    <drawable name="ic_1x">@drawable/ic_1x_land</drawable>
+    <drawable name="ic_x2">@drawable/ic_x2_land</drawable>
+    <drawable name="ic_x3">@drawable/ic_x3_land</drawable>
+    <drawable name="ic_xy">@drawable/ic_xy_land</drawable>
+    <drawable name="ic_abs">@drawable/ic_abs_land</drawable>
+    <drawable name="ic_factorial">@drawable/ic_factorial_land</drawable>
+    <drawable name="ic_sqrt">@drawable/ic_sqrt_land</drawable>
+    <drawable name="ic_sqrt_xy">@drawable/ic_sqrt_xy_land</drawable>
+    <drawable name="ic_pi">@drawable/ic_pi_land</drawable>
+    <drawable name="ic_e">@drawable/ic_e_land</drawable>
+    <drawable name="ic_ex">@drawable/ic_ex_land</drawable>
+    <drawable name="ic_ln">@drawable/ic_ln_land</drawable>
+    <drawable name="ic_lparen">@drawable/ic_lparen_land</drawable>
+    <drawable name="ic_rparen">@drawable/ic_rparen_land</drawable>
+    <drawable name="ic_percent">@drawable/ic_percent_land</drawable>
+    <drawable name="ic_ee">@drawable/ic_ee_land</drawable>
+
+</resources>

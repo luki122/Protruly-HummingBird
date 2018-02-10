@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    tools:context="com.hb.thememanager.MainActivity" >
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/wallpaper_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wallpaper_list_title_bar_height"
+        android:layout_gravity="top"
+        android:background="@color/wallpaper_list_title_bg"
+        android:gravity="left|center_vertical"
+        android:paddingLeft="@dimen/wallpaper_list_padding"
+        android:textAppearance="@style/TextApprearance.WallpaperListTitle" />
+
+    <GridView
+        android:id="@+id/wallpaper_list_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/wallpaper_grid_margin_top"
+        android:horizontalSpacing="@dimen/wallpaper_list_item_space_h"
+        android:numColumns="3"
+        android:paddingLeft="@dimen/wallpaper_list_padding"
+        android:paddingRight="@dimen/wallpaper_list_padding"
+        android:verticalSpacing="@dimen/wallpaper_list_item_space_h" />
+
+    <hb.widget.FloatingActionButton
+        android:id="@+id/btn_add_wallpaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/wallpaper_list_fab_margin"
+        hb:size="normal" />
+
+
+</FrameLayout>
+    <hb.view.menu.bottomnavigation.BottomNavigationView
+        android:id="@+id/theme_list_action_menu"
+        android:layout_height="@dimen/local_theme_action_menu_height"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        hb:menu="@menu/local_theme_list_delete"
+        android:visibility="gone"
+    />
+</LinearLayout>

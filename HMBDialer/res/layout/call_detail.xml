@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2009 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myScrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/call_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/background_dialer_call_log"
+        android:orientation="vertical" >
+
+        <!-- Caller information "card" -->
+
+        <LinearLayout
+            android:id="@+id/caller_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_dialer_white"
+            android:baselineAligned="false"
+            android:focusable="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical" >
+
+                <QuickContactBadge
+                    android:id="@+id/quick_contact_photo"
+                    android:layout_width="@dimen/contact_photo_size"
+                    android:layout_height="@dimen/contact_photo_size"
+	        android:layout_marginTop="28.67dp"
+            android:layout_marginBottom="17.33dp"
+                    android:focusable="true" />
+
+                <TextView
+                    android:id="@+id/caller_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="monster-normal"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:textColor="@color/hb_list_main_text_color"
+                    android:textIsSelectable="true"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/caller_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:fontFamily="monster-normal"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:textColor="#66000000"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="16dp"
+                android:background="@color/hb_divider_line_color_light" />
+
+            <LinearLayout
+                android:id="@+id/caller_line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/caller_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="9dp"
+                        android:fontFamily="monster-normal"
+                        android:includeFontPadding="false"
+                        android:singleLine="false"
+                        android:textColor="@color/hb_list_main_text_color"
+                        android:textIsSelectable="false"
+                        android:textSize="16sp" />
+                    
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="7dp">
+
+                    <TextView
+                        android:id="@+id/caller_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        
+                        android:fontFamily="monster-normal"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:textColor="#66000000"
+                        android:textIsSelectable="false"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/phone_account_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="monster-normal"
+                        android:includeFontPadding="false"
+                        android:singleLine="true"
+                        android:textColor="#66000000"
+                        android:layout_marginStart="6dp"
+                        android:textIsSelectable="false"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/sms_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:contentDescription="@string/description_call_log_call_action"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_message_24dp"
+                    android:visibility="gone" />
+                <!-- android:background="?android:attr/selectableItemBackgroundBorderless" -->
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginStart="16dp"
+                android:background="@color/hb_divider_line_color_light" />
+
+            <TextView
+                android:id="@+id/call_title"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:background="#fff1f1f1"
+                android:gravity="center_vertical"
+                android:paddingStart="17dp"
+                android:singleLine="true"
+                android:text="@string/hb_recent_calls"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <!--
+      The list view is under everything.
+      It contains a first header element which is hidden under the controls UI.
+      When scrolling, the controls move up until the name bar hits the top.
+        -->
+
+
+        <!--
+             <com.android.contacts.common.hb.HbScrollListView
+            android:id="@+id/history"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp" />
+        -->
+        <ListView
+            android:id="@+id/history"
+            android:layout_width="match_parent"
+            android:layout_height="310dip"
+            android:divider="@null"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" />
+
+        <TextView
+            android:id="@+id/hb_see_more_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="@dimen/expanding_entry_card_button_padding_vertical"
+            android:paddingTop="@dimen/expanding_entry_card_button_padding_vertical"
+            android:text="@string/hb_see_more"
+            android:textColor="@color/hb_expanding_entry_card_button_text_color"
+            android:textSize="@dimen/vcs_search_panel_msg" />
+
+    </LinearLayout>
+
+</ScrollView>

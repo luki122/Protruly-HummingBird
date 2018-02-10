@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hb_divider_line_color_light">#1F000000</color>
+    <color name="main_color">#1F000000</color>
+    <color name="red">#FF0000</color>
+   
+</resources>

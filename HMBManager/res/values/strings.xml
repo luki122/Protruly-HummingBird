@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HMBManager</string>
+
+    <!-- setting -->
+    <string name="app_setting">Setting</string>
+    <string name="app_module_setting">Modules setting</string>
+    <string name="app_about_setting">About</string>
+    <string name="app_setting_update_database">Updating database</string>
+    <string name="app_setting_check_database">Testing database..</string>
+    <string name="app_setting_updating_database">Updating database...</string>
+    <string name="app_setting_update_no_network">Network not linked</string>
+    <string name="app_setting_update_no_network_tips">Link WLAN or data network</string>
+    <string name="app_setting_dialog_tips">Prompt</string>
+    <string name="app_setting_update_mobile_network_tips">Currently data network, whether to continue?</string>
+    <string name="app_setting_update_network_error">Network error</string>
+    <string name="app_setting_update_no_update">Latest version already</string>
+    <string name="app_setting_update_get_new_version">Discover new version</string>
+    <string name="app_setting_update_finished">Update completed</string>
+    <string name="app_setting_wlan_auto_update_db">WLAN automatically updates database</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Confirm</string>
+    <string name="app_setting_update_just">Just now</string>
+    <string name="app_setting_update_time_format">yyyy-MM-dd HH:mm:ss</string>
+
+    <!-- permission control -->
+    <!-- empty text for ListView -->
+    <!-- permission control -->
+
+    <!-- safety protection -->
+    <string name="safety_protection">Safety Protection</string>
+    <string name="safety_not_official">Malicious Application</string>
+    <string name="safety_pay_risks">Payment Risk</string>
+    <string name="safety_stealaccount_risks">Account Risk</string>
+    <string name="safety_viruses">Virus Trojan</string>
+    <string name="safety_other_risks">Other Risks</string>
+    <string name="safety_settings">Settings</string>
+    <string name="safety_scan_mode">Scan Mode</string>
+    <string name="safety_quick_scan_mode">Quick Scan</string>
+    <string name="safety_full_scan_mode">Full Scan</string>
+    <string name="safety_malicious_url_interception">Malicious URL Interception</string>
+    <string name="safety_scanning">Scanning</string>
+    <string name="safety_no_risk">Null</string>
+    <string name="safety_result_safe">Mobile Security</string>
+    <string name="safety_result_risk">Risks</string>
+    <string name="safety_risk_tips">Immediate treatment</string>
+
+    <string name="safety_quick_scanning">Quick Scan...</string>
+    <string name="safety_full_scanning">Full Scan...</string>
+
+    <string name="safety_not_official_app_summary">Unofficial application, file carries virus, security risk exists</string>
+    <string name="safety_pay_risks_app_summary">Payment risk exists</string>
+    <string name="safety_tealaccount_risks_app_summary">Being-hacked risk exists</string>
+    <string name="safety_viruses_app_summary">Probably carries virus</string>
+    <string name="safety_other_risks_app_summary">Security risk exists</string>
+
+    <string name="safety_not_official_file_summary">Unofficial application installation package, file carries virus, security risk exists</string>
+    <string name="safety_pay_risks_file_summary">Payment risk exists</string>
+    <string name="safety_tealaccount_risks_file_summary">Being-hacked risk exists</string>
+    <string name="safety_viruses_file_summary">Probably carries virus</string>
+    <string name="safety_other_risks_file_summary">Security risk exists</string>
+
+    <string name="safety_dialog_scan_mode_title">Scan Mode</string>
+    <string name="safety_dialog_scan_mode_message">Quick scan: scan key position, software \n already installed; Full scan: simultaneously scan malicious files and uninstalled applications, time-consuming</string>
+
+    <string name="safety_toast_delete_file_error">Delete failed</string>
+
+    <string name="safety_recommend_uninstall">Suggest Uninstall</string>
+    <string name="safety_recommend_delete">Suggest Deletion</string>
+
+
+    <string name="one_key_optimize">Optimize</string>
+    <string name="title_power_manager">Power Manager</string>
+    <string name="title_clean_optimize">Clean Speed</string>
+    <string name="title_usage_manager">Data usage</string>
+    <string name="title_privacy_manager">Privacy Manager</string>
+    <string name="title_app_manager">App Manager</string>
+    <string name="title_secure_protect">Secure Protect</string>
+    <string name="app_cache_clean_title">App Cache</string>
+    <string name="background_app_kill_title">Application</string>
+     <string name="bg_app_title">Application</string>  
+
+    <string name="clean_scanning">scanning:%s</string>
+    <string name="clean_size_notification">Clean</string>
+    <string name="default_size_suffix">KB</string>
+    <string name="sanning">Scanning</string>
+    <string name="select_all">Select All</string>
+    <string name="un_select_all">Select None</string>
+    <string name="app_force_stop">Force To Kill(%s)</string>
+    <string name="app_force_stop_null">Force Stop</string>
+    <string name="app_kill_notification">Prompt</string>
+     <string name="app_kill_message">Whether to force close app, please confirm whether to continue?</string>
+    <string name="kill_app_result">Memory clean %s</string>
+     <string name="bg_app_num_message">%s background software</string>
+    <string name="running_app_null_message">No operables</string>
+    <string name="rubblish_null_message">No operables</string>
+     <string name="clean_btn_message">Cleanup now</string>
+    <string name="clean_btn_size">Clean %s</string>
+    <string name="rubblish_clean_result">Rubblish Clean %s</string>
+    <string name="cache_clean_result">Cache Clean %s</string>
+    <string name="rubblish_clean_title">Rubblish</string>
+    <string name="uninstall_file_title">Uninstall File</string>
+    <string name="uninstalled_apk">Uninstall APK</string>
+    <string name="unuseful_apk">Unusefull APK</string>
+    <string name="clean_title_child">Usage not affected</string>
+     <string name="uninstall_apk_title_child">New version or uninstalled</string>
+     <string name="unuseful_apk_title_child">Old version or installed</string>
+    <string name="scanning_finish">Scanning finished</string>
+    <string name="scanning_start">Start scanning...</string>
+    <string name="rubblish_clean_message">Data recovery unachievable post cleaning, whether to continue?</string>
+    <string name="cache_data">App Cache</string>
+    <string name="data_data">App Data</string>
+    <string name="rubblish_unknow">Unknown rubblish</string>
+     <string name="apk_unknow_name">Unknown name</string>
+     <string name="default_size_counter">0.00</string>
+     <string name="mem_used">Used</string>
+     <string name="mem_can_clean">Clean-up</string>
+     <string name="onekey_systemcache_clean">System Cache CleanUp</string>
+     <string name="onekey_AvailInterMemory_clean">Phone Available Storage</string>
+     <string name="onekey_sysrubblish_clean">System Rubblish CleanUp</string>
+     <string name="onekey_sysmemory_clean">System Memory CleanUp</string>
+     <string name="onekey_pwd_check">Phone Password</string>
+     <string name="onekey_optimize_title">One Key Optimize</string>
+      <string name="intern_memory_enough">Adequate</string>
+     <string name="intern_memory_less">Insufficient</string>
+    <string name="result_hand_setting">Manual items</string>
+      <string name="result_optimized">Optimized items</string>
+      <string name="pwd_setting_title">Password setting</string>
+      <string name="pwd_setting_message">Immediate setting</string>
+      <string name="pwd_setting_opened">Opened</string>
+      <string name="phone_status_1">Very Good</string>
+      <string name="phone_status_2">Bad</string>
+      <string name="phone_status_3">Very Bad</string>
+      <string name="bar_scanning">Scanning...</string>
+      <string name="onekey_cleanspeed_ing">Optimizing...</string>
+      <string name="onekey_rubblish_cleaning">Rubblish Cleaning</string>
+      <string name="onekey_virtus_check">Safety Protection</string>
+      <string name="onekey_virtus_unscan_title">No safety detection</string>
+      <string name="onekey_virtus_unscan_message">%s Risks</string>
+      <string name="onekey_virtus_scanned">Scanned</string>
+      <string name="onekey_system_nocache">No System Cache</string>
+       <string name="onekey_system_norubblish">Cleaned</string>
+       <string name="onekey_app_nokilled">Optimized</string>
+      <string name="notification_text_autocheck">%s garbage detected，cleaning recommended!</string>
+      <string name="progress_dialog_loading">Loading...</string>
+</resources>

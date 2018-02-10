@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hb.thememanager"
+    android:sharedUserId="android.uid.system"
+    android:versionCode="170908001"
+    android:versionName="v1.0.1.0102.w" >
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.REMOVE_TASKS" />
+    <uses-permission android:name="android.permission.FORCE_STOP_PACKAGES" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <!-- WallpaperManager.suggestDesiredDimensions() 必须需要加上此权限，才能匹配单屏壁纸和滑动壁纸 -->
+    <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
+    <application
+        android:name=".ThemeManagerApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:persistent="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.hb.thememanager.main"
+            android:theme="@style/Theme.LocalTheme.Light" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="hummingbird.intent.action.THEME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name=".ui.ThemePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.LocalTheme.Light" >
+             <intent-filter>
+                 <action android:name="com.hb.thememanager.ACTION_THEME_PICKER"/>
+                 <category android:name="android.intent.category.DEFAULT" />
+             </intent-filter>
+        </activity>
+        
+         <activity android:name=".ui.FragmentSwitchActivity" android:theme="@style/Theme.LocalTheme.Light.ThemeList"
+            android:screenOrientation="portrait"
+             android:taskAffinity="com.hb.thememanager.main"
+             >
+         	<intent-filter>
+         	    <action android:name="android.intent.action.MAIN2" />
+         	    <category android:name="android.intent.category.DEFAULT" />
+         	</intent-filter>    
+             
+         </activity>
+         
+        <activity
+            android:name="com.hb.thememanager.ui.fragment.themedetail.ThemePreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.PreviewImageTranslucent" />
+        
+        <activity android:name="com.hb.thememanager.ui.fragment.themedetail.WallpaperPreviewActivity"
+            android:screenOrientation="portrait"
+             android:theme="@style/Theme.ThemeManager.PreviewImageTranslucent.Wallpaper"
+            />
+        <activity android:name="com.hb.thememanager.ui.fragment.themedetail.LockScreenWallpaperPreviewActivity"
+            android:screenOrientation="portrait"
+             android:theme="@style/Theme.ThemeManager.PreviewImageTranslucent.Wallpaper"
+            />
+        
+        <activity android:name="com.hb.thememanager.ui.SetDesktopWallpaperActivity"
+            android:label="@string/title_wallpaper"
+            android:icon="@drawable/desktop_wallpaper"
+             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.Wallpaper.SetWallpaper" >
+            <intent-filter>
+                <action android:name="android.intent.action.ATTACH_DATA" />
+                <data android:mimeType="image/*" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="com.hb.thememanager.ui.FirstSetupThemeActivity"
+            android:screenOrientation="portrait"
+        >
+            <intent-filter>
+                <action android:name="com.hb.thememanager.ACTION_SETUP_THEME"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name="com.hb.thememanager.ui.SetLockScreenWallpaperActivity"
+            android:label="@string/title_lockscreen_wallpaper"
+            android:icon="@drawable/lockscreen_wallpaper"
+             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ThemeManager.Wallpaper.SetWallpaper" >
+            <intent-filter>
+                <action android:name="android.intent.action.ATTACH_DATA" />
+                <data android:mimeType="image/*" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <service android:name="com.hb.thememanager.job.apply.ThemeApplyTask">
+        </service>
+
+        <meta-data
+            android:name="com.hb.thememanager.job.ImageLoaderModule"
+            android:value="GlideModule" />
+        
+    </application>
+
+</manifest>

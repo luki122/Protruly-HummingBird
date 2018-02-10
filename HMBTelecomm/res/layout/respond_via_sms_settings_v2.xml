@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#FFFFFFFF"
+    android:fitsSystemWindows="true"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/canned_response_pref_1"
+        style="@style/RespondSms"
+        android:text="@string/hb_respond_via_sms_canned_response_1"
+        android:hint="@string/hb_respond_via_sms_canned_response_1" />
+
+    <EditText
+        android:id="@+id/canned_response_pref_2"
+        style="@style/RespondSms"
+        android:text="@string/hb_respond_via_sms_canned_response_2"
+        android:hint="@string/hb_respond_via_sms_canned_response_2" />
+
+    <EditText
+        android:id="@+id/canned_response_pref_3"
+        style="@style/RespondSms"
+        android:text="@string/hb_respond_via_sms_canned_response_3"
+        android:hint="@string/hb_respond_via_sms_canned_response_3" />
+
+</LinearLayout>

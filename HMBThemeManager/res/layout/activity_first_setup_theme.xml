@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_pager_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/first_setup_page_paddingtop"
+    android:clipChildren="false"
+     >
+
+     <TextView
+         android:id="@android:id/text1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_centerHorizontal="true"
+         android:layout_alignParentTop="true"
+         android:textAppearance="@style/TextAppearance.SetupSuccessTitle"
+         android:text="@string/setup_success_title"
+         android:layout_marginBottom="@dimen/first_setup_page_title_margin_bottom"
+         android:gravity="center"
+     />
+
+
+     <com.hb.thememanager.views.CenterItemViewPager
+         android:id="@+id/setup_page_scroller"
+         android:layout_width="wrap_content"
+         android:layout_height="@dimen/first_setup_page_scroller_height"
+         android:layout_below="@android:id/text1"
+         android:clipChildren="false"
+         android:layout_marginRight="@dimen/first_setup_page_margin_right"
+         android:layout_marginLeft="@dimen/first_setup_page_margin_left"
+
+     />
+
+
+     <TextView
+         android:id="@android:id/text2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/setup_page_scroller"
+         android:textAppearance="@style/TextAppearance.SetupThemeName"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="@dimen/first_setup_theme_name_margin_top"
+     />
+
+     <Button
+         android:id="@android:id/text2"
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/first_setup_page_apply_btn_height"
+         android:textAppearance="@style/TextAppearance.SetupThemeName"
+         android:text="@string/setup_apply_theme"
+         android:background="?android:attr/selectableItemBackground"
+         android:textColor="@com.hb:color/material_green_light"
+         android:layout_alignParentBottom="true"
+         android:onClick="applyTheme"
+     />
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="month_day_number_top_padding">15</integer>
+
+</resources>

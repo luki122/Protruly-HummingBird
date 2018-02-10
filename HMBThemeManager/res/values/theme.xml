@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="com.hb:Theme.Hb.Material.Light">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="Theme.LocalTheme.Light" parent="AppTheme">
+        <item name="com.hb:windowLayoutStyle">@style/LocalThemeActivity.WindowToolbar</item>
+        <item name="android:toolbarStyle">@style/LocalThemeActivity.ToolbarStyle</item>
+        <item name="android:startWindowLayout">@layout/activity_starting</item>
+        <item name="com.hb:actionPositiveText">@string/select_all</item>
+        <item name="com.hb:actionNagativeText">@string/cancel</item>
+    </style>
+
+    <style name="Theme.ThemeManager.PreviewImageTranslucent" parent="com.hb:Theme.Hb.Material.Light">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/WindowNoAnimationStyle</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.ThemeManager.PreviewImageTranslucent.Wallpaper" parent="com.hb:Theme.Hb.Material.Light">
+        <item name="android:windowBackground">?android:attr/colorBackground</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+    
+    <style name="Theme.ThemeManager.Wallpaper.SetWallpaper"  parent="Theme.ThemeManager.PreviewImageTranslucent.Wallpaper">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.ThemeManager.Wallpaper.CropWallpaper" parent="@com.hb:style/Theme.Hb.Material.Light">
+        <item name="android:actionBarSize">@dimen/toolbar_height_with_transparent_statusbar</item>
+        <item name="com.hb:colorToolbarIcon">#ffffff</item>
+        <item name="android:toolbarStyle">@com.hb:style/ToolbarStyle</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@color/preview_action_bar_background</item>
+    </style>
+    <style name="Theme.LocalTheme.Light.ThemeList">
+       <item name="android:windowAnimationStyle">@style/ActivityAnimationThemeList</item>
+    </style>
+
+</resources>

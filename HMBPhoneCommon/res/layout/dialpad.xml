@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2006 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+
+<!-- Dialpad in the Phone app. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:id="@+id/dialpad"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/hb_dialpad_height"
+    android:clipChildren="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Space style="@style/DialpadSpaceStyle" />
+
+        <include layout="@layout/dialpad_key_one" />
+
+        <include
+            android:id="@+id/two"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <include
+            android:id="@+id/three"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <Space style="@style/DialpadSpaceStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Space style="@style/DialpadSpaceStyle" />
+
+        <include
+            android:id="@+id/four"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <include
+            android:id="@+id/five"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <include
+            android:id="@+id/six"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <Space style="@style/DialpadSpaceStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Space style="@style/DialpadSpaceStyle" />
+
+        <include
+            android:id="@+id/seven"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <include
+            android:id="@+id/eight"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <include
+            android:id="@+id/nine"
+            style="@style/DialpadKeyButtonStyle"
+            layout="@layout/dialpad_key" />
+
+        <Space style="@style/DialpadSpaceStyle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal" >
+
+        <Space style="@style/DialpadSpaceStyle" />
+
+        <include layout="@layout/dialpad_key_star" />
+
+        <include layout="@layout/dialpad_key_zero" />
+
+        <include layout="@layout/dialpad_key_pound" />
+
+        <Space style="@style/DialpadSpaceStyle" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8.67dp" >
+
+        <RelativeLayout
+            android:id="@+id/hb_fold_dialpad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="43.67dp"
+            android:background="@drawable/btn_dialpad_key"
+            android:padding="15dp" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hb_dialpad_fold_normal"
+                android:state_enabled="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dialpad_floating_action_button_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="149.67dp" >
+
+            <ImageButton
+                android:id="@+id/dialpad_floating_action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_dialpad_key"
+                android:src="@drawable/hb_dial_button_normal"
+                android:contentDescription="@string/description_dial_button" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dual_dial_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="104dp"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/dual_dial_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_dialpad_key"
+                android:src="@drawable/hb_dial_button1_normal"/>
+
+            <TextView
+                android:id="@+id/dual_dial_button_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="34dp"
+                android:layout_marginTop="18dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/dual_dial_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_dialpad_key"
+                android:layout_toRightOf="@id/dual_dial_button1"
+                android:src="@drawable/hb_dial_button2_normal" />
+
+            <TextView
+                android:id="@+id/dual_dial_button_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="106dp"
+                android:layout_marginTop="18dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40.67dp"
+            android:background="@drawable/btn_dialpad_key"
+            android:padding="15dp" >
+
+            <ImageView
+                android:id="@+id/deleteButtonImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hb_ic_dialpad_delete_normal"
+                android:state_enabled="false" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!--
+         <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialpad_bottom_key_height" />
+    -->
+
+</LinearLayout>

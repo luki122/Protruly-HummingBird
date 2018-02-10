@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/search_edit_frame"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+
+            android:orientation="horizontal"
+            android:background="@drawable/searchbar_query_bg"
+        >
+        <include layout="@layout/corpus_indicator" />
+
+        <com.android.quicksearchbox.ui.QueryTextView
+            android:id="@+id/search_src_text"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:paddingStart="8dip"
+            android:paddingEnd="8dip"
+            android:paddingTop="@dimen/query_edit_text_vertical_padding"
+            android:paddingBottom="@dimen/query_edit_text_vertical_padding"
+            android:gravity="center_vertical|start"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:inputType="text|textAutoComplete"
+            android:background="@drawable/textfield_search_empty"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/primary_text_light"
+            android:textColorHint="@color/search_hint"
+            android:imeOptions="actionGo|flagNoExtractUi"
+            android:drawableRight="@drawable/ic_clear_search"
+        /><!-- lijun add flagNoExtractUi -->
+        </LinearLayout>
+        <!--android:src="@drawable/search_go_btn_mirrored"-->
+        <TextView
+            android:id="@+id/search_go_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/search_go_text"
+            android:textColor="@color/search_go_text_color"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginLeft="16dp"
+            android:maxLines="1"
+            android:background="@android:color/transparent"
+        />
+
+        <ImageButton
+            android:id="@+id/search_voice_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_btn_speak_now"
+            android:layout_marginEnd="-4dip"
+        />
+
+</LinearLayout>

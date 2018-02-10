@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <hb.widget.HbListView
+        android:id="@+id/storage_path__select_list"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:fastScrollEnabled="false"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:id="@+id/file_path_area"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="31.0dip">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="16.0dip">
+            <include android:id="@+id/tv_storage_tip" layout="@layout/path_text_layout" />
+            <HorizontalScrollView
+                android:id="@+id/category_tip_view"
+                android:scrollbars="none"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:id="@+id/file_path_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent" />
+            </HorizontalScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/qwer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:id="@+id/bottom_menu_layout">
+        <hb.view.menu.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_menu"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            hb:menu="@menu/edit_bottom_navigation_menu"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"/>
+        <hb.view.menu.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_menu1"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            hb:menu="@menu/path_select_operation_menu"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_menu_layout">
+            <include android:id="@id/empty_view" android:visibility="gone" layout="@layout/empty_view_layout" />
+            <include android:id="@id/loading_view" android:visibility="gone" layout="@layout/loading_view_layout" />
+            <include android:id="@id/file_list_area" android:visibility="gone" layout="@layout/list_detail_layout" />
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

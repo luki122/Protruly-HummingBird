@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="divider_background_color">#07000000</color>
+    <color name="hb_fab_bg_dialbutton">#19A8AE</color>
+    <color name="floating_action_button_touch_tint">#80ffffff</color>
+</resources>

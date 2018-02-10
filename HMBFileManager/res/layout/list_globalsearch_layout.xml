@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <cn.com.protruly.filemanager.globalsearch.PinnedSectionListView
+        android:id="@+id/globalsearch_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:cacheColorHint="@android:color/transparent"
+        android:fastScrollEnabled="false"
+        android:headerDividersEnabled="true"
+        android:footerDividersEnabled="true" />        <!--android:divider="@null"-->
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+        <!-- android:icon="@drawable/mst_albumpage_more" -->
+        <!-- @com.mst:drawable/ic_menu_moreoverflow_material -->
+        <item android:id="@+id/action_main_page_search"
+            android:title="@string/operation_search"
+            android:icon="@com.hb:drawable/ic_search"
+            android:showAsAction="ifRoom" />
+
+</menu>

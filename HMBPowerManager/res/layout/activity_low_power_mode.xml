@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/img_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/battery_icon"
+        android:layout_marginTop="@dimen/length_25dp"
+        android:scaleType="fitXY"
+        android:layout_centerHorizontal="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_battery"
+        android:layout_marginTop="@dimen/length_25dp"
+        android:layout_above="@+id/btn_mode"
+        android:layout_marginBottom="@dimen/length_25dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/line_spacing_extra"
+            android:layout_marginLeft="@dimen/length_20dp"
+            android:layout_marginRight="@dimen/length_20dp"
+            android:text="@string/low_power_summary"
+            android:textSize="@dimen/small_text_size"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_mode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/length_50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/length_25dp"
+        android:layout_marginLeft="@dimen/length_70dp"
+        android:layout_marginRight="@dimen/length_70dp"
+        android:text="@string/enter_low_power_mode"
+        android:textSize="@dimen/big_button_text_size"
+        android:foreground="#00000000"
+        android:background="@drawable/low_power_mode_button"/>
+
+</RelativeLayout>

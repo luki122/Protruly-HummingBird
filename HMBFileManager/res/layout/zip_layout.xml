@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/uncompress_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:text="@string/uncompress"
+        android:layout_alignParentBottom="true"
+        style="@com.hb:style/Widget.Hb.Material.Button.Positive"
+        />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/uncompress_btn">
+
+        <hb.widget.HbListView
+            android:id="@+id/show_file_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <include android:id="@+id/loading_view" android:visibility="gone" layout="@layout/loading_view_layout" />
+        <include android:id="@+id/empty_view" android:visibility="gone" layout="@layout/empty_view_layout" />
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <hb.widget.tab.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="?android:attr/colorPrimary" >
+    </hb.widget.tab.TabLayout>
+
+    <com.hb.interception.activity.InterceptionViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:isScrollContainer="true"
+        android:animateLayoutChanges="true" >
+    </com.hb.interception.activity.InterceptionViewPager>
+
+    <hb.view.menu.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="50dp"
+        android:visibility="gone"
+        hb:menu="@menu/bottom_menu_mark" />
+
+</LinearLayout>

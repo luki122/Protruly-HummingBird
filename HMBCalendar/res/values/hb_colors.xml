@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toolbar_bg_color">#f8534b</color>
+    <color name="toolbar_title_color">#ffffff</color>
+
+    <color name="agenda_day_color">#f4f4f4</color>
+    <color name="horizontal_divider">#29000000</color>
+    <color name="delete_label_color">#ff06c012</color>
+
+    <color name="month_header_bg_color">#ffffff</color>
+    <color name="month_header_text_color">#de000000</color>
+    <color name="month_day_bg_color">#ffffff</color>
+    <color name="month_day_today_color">#f8534b</color>
+    <color name="month_day_tap_color">#f8534b</color>
+    <color name="month_day_event_tag_color">#f8534b</color>
+    <color name="month_day_number_color">#000000</color>
+    <color name="month_day_other_number_color">#e0e0e1</color>
+    <color name="month_day_extra_text_color">#80000000</color>
+    <color name="month_day_select_text_color">#ffffff</color>
+
+    <color name="calendar_bg_color">#ffffff</color>
+    <color name="calendar_title_text_color">#de000000</color>
+    <color name="calendar_summary_text_color">#8a000000</color>
+</resources>

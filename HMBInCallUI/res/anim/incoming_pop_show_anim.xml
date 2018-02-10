@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+  
+   <translate
+    android:duration="@integer/incoming_pop_animation_duration"
+    android:fromYDelta="-216"
+    android:toYDelta="0" /> 
+
+  <alpha
+    android:duration="@integer/incoming_pop_animation_duration"
+    android:fromAlpha="0.0"
+    android:toAlpha="1.0" />
+</set>

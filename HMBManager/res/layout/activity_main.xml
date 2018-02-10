@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg_color"
+    android:orientation="vertical" >
+
+<!--      <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" > -->
+
+            <LinearLayout
+                android:id="@+id/parent_progressbar_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/percent_view_layout"
+                    android:layout_width="@dimen/memory_chart_layout_width" 
+                    android:layout_height="@dimen/memory_chart_layout_height"
+                    android:layout_gravity="center" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical" >   
+
+                        <com.hmb.manager.widget.HMBProgressBar android:layout_marginTop="28dp" 
+                            android:id="@+id/progressBar"  android:layout_marginBottom="28dp"
+                            android:layout_width="@dimen/hmbprogressbar_width"
+                            android:layout_height="@dimen/hmbprogressbar_height"
+                            android:layout_centerInParent="true" > 
+                         </com.hmb.manager.widget.HMBProgressBar>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/parent_button_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/parent_progressbar_layout"
+                android:gravity="center" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <Button  android:paddingTop="10dp"
+                        android:id="@+id/oneKeyOpt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/onekey_button_selector"
+                        android:gravity="center_horizontal"
+                        android:text="@string/one_key_optimize" android:foreground="#00000000"
+                        android:textSize="@dimen/item_text_onekey_size" >
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/tab_layout_height"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="25dp" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/tab_layout_height"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/tab_3_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/tab_height"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/tab_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/tab_3_imageview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/tab_battery_manager" />
+
+                        <TextView
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tab_3_imageview"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5.0dip"
+                            android:text="@string/title_power_manager"
+                            android:textColor="@color/tab_text_color"
+                            android:textSize="@dimen/item_text_size_small" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/horizontal_line_1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:layout_above="@+id/tab_3_layout"
+                        android:background="@color/tab_devide_line_color"/>
+
+                    <RelativeLayout
+                        android:id="@+id/tab_1_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/tab_height"
+                        android:layout_above="@+id/horizontal_line_1"
+                        android:layout_gravity="center"
+                        android:background="@drawable/tab_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/tab_1_imageview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="5.0dip"
+                            android:src="@drawable/tab_clean_speed" />
+
+                        <TextView
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tab_1_imageview"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/title_clean_optimize"
+                            android:textColor="@color/tab_text_color"
+                            android:textSize="@dimen/item_text_size_small" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/vertical_line_view"
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/tab_devide_line_color"/>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/tab_layout_height"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/tab_4_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/tab_height"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/tab_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/tab_4_imageview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/tab_traffic_manager" />
+
+                        <TextView
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tab_4_imageview"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5.0dip"
+                            android:text="@string/title_usage_manager"
+                            android:textColor="@color/tab_text_color"
+                            android:textSize="@dimen/item_text_size_small" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/horizontal_line_2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:layout_above="@+id/tab_4_layout"
+                        android:background="@color/tab_devide_line_color"/>
+
+                    <RelativeLayout
+                        android:id="@+id/tab_2_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/tab_height"
+                        android:layout_above="@+id/horizontal_line_2"
+                        android:layout_gravity="center"
+                        android:background="@drawable/tab_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/tab_2_imageview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/tab_incall_manager" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tab_2_imageview"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5.0dip"
+                            android:text="@string/title_privacy_manager" 
+                            android:textColor="@color/tab_text_color"
+                            android:textSize="@dimen/item_text_size_small" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/vertical_line_view_1"
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/tab_devide_line_color"/>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/tab_layout_height"
+                    android:layout_weight="1.0"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:id="@+id/tab_6_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/tab_height"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/tab_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/tab_6_imageview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/tab_app_manager" />
+
+                        <TextView
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tab_6_imageview"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5.0dip"
+                            android:text="@string/title_app_manager"
+                            android:textColor="@color/tab_text_color"
+                            android:textSize="@dimen/item_text_size_small" />
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/horizontal_line_3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:layout_above="@+id/tab_6_layout"
+                        android:background="@color/tab_devide_line_color" />
+
+                    <RelativeLayout
+                        android:id="@+id/tab_5_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/tab_height"
+                        android:layout_above="@+id/horizontal_line_3"
+                        android:layout_gravity="center"
+                        android:background="@drawable/tab_selector"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:id="@+id/tab_5_imageview"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/tab_safety_protect" />
+
+                        <TextView
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tab_5_imageview"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5.0dip"
+                            android:text="@string/title_secure_protect"
+                            android:textColor="@color/tab_text_color"
+                            android:textSize="@dimen/item_text_size_small" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+<!--         </LinearLayout>
+    </LinearLayout> -->
+
+</RelativeLayout>

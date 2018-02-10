@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="10dp">
+    </LinearLayout>
+    <LinearLayout style="@style/CategoryHorizontalStyle">
+        <LinearLayout
+            android:id="@+id/category_picture"
+            android:background="@drawable/category_button_left"
+            style="@style/CategoryLeftButtonStyle">
+            <TextView
+                android:id="@+id/lable"
+                android:textSize="@dimen/category_text_size"
+                android:gravity="center"
+                android:text="@string/category_picture"
+                android:alpha="0.9"
+                android:drawableTop="@drawable/category_icon_picture"
+                android:drawablePadding="7.0dip"
+                style="@style/CategoryLeftButtonTextStyle" />
+            <TextView
+                android:id="@+id/picture_size_info"
+                style="@style/CategoryLeftLegendTextStyle" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/category_music"
+            android:background="@drawable/category_button_middle"
+            style="@style/CategoryMiddleButtonStyle">
+            <TextView
+                android:textSize="@dimen/category_text_size"
+                android:gravity="center"
+                android:text="@string/category_music"
+                android:alpha="0.9"
+                android:drawableTop="@drawable/category_icon_music"
+                android:drawablePadding="7.0dip"
+                style="@style/CategoryMiddleButtonTextStyle" />
+            <TextView android:id="@+id/music_size_info"
+                style="@style/CategoryMiddleLegendTextStyle" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/category_video"
+            android:background="@drawable/category_button_left"
+            style="@style/CategoryRightButtonStyle">
+            <TextView
+                android:textSize="@dimen/category_text_size"
+                android:gravity="center"
+                android:text="@string/category_video"
+                android:alpha="0.9"
+                android:drawableTop="@drawable/category_icon_video"
+                android:drawablePadding="7.0dip"
+                style="@style/CategoryRightButtonTextStyle" />
+            <TextView android:id="@+id/video_size_info"
+                style="@style/CategoryRightLegendTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/CategoryHorizontalStyle">
+        <LinearLayout android:id="@+id/category_document"
+            android:background="@drawable/category_button_left"
+            style="@style/CategoryLeftButtonStyle">
+            <TextView
+                android:textSize="@dimen/category_text_size"
+                android:gravity="center"
+                android:text="@string/category_document"
+                android:alpha="0.9"
+                android:drawableTop="@drawable/category_icon_document"
+                android:drawablePadding="7.0dip"
+                style="@style/CategoryLeftButtonTextStyle" />
+            <TextView
+                android:id="@+id/document_size_info"
+                style="@style/CategoryLeftLegendTextStyle" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/category_apk"
+            android:background="@drawable/category_button_middle"
+            style="@style/CategoryMiddleButtonStyle">
+            <TextView
+                android:textSize="@dimen/category_text_size"
+                android:gravity="center"
+                android:text="@string/category_apk"
+                android:alpha="0.9"
+                android:drawableTop="@drawable/category_icon_apk"
+                android:drawablePadding="7.0dip"
+                style="@style/CategoryMiddleButtonTextStyle" />
+            <TextView
+                android:id="@+id/apk_size_info"
+                style="@style/CategoryMiddleLegendTextStyle" />
+        </LinearLayout>
+        <LinearLayout android:id="@+id/category_zip"
+            android:background="@drawable/category_button_left"
+            style="@style/CategoryRightButtonStyle">
+            <TextView
+                android:textSize="@dimen/category_text_size"
+                android:gravity="center"
+                android:text="@string/category_zip"
+                android:alpha="0.9"
+                android:drawablePadding="7.0dip"
+                android:drawableTop="@drawable/category_icon_zip"
+                style="@style/CategoryRightButtonTextStyle" />
+            <TextView
+                android:id="@+id/zip_size_info"
+                style="@style/CategoryRightLegendTextStyle" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

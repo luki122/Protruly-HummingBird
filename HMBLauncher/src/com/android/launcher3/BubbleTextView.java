@@ -1,0 +1,999 @@
+/*
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.android.launcher3;
+
+import android.annotation.TargetApi;
+import android.content.Context;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.content.res.Resources.Theme;
+import android.content.res.TypedArray;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Rect;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.util.SparseArray;
+import android.util.TypedValue;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewConfiguration;
+import android.view.ViewDebug;
+import android.view.ViewParent;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.TextView;
+
+import com.android.launcher3.IconCache.IconLoadRequest;
+import com.android.launcher3.dynamicui.DynamicProvider;
+import com.android.launcher3.dynamicui.IDynamicIcon;
+import com.android.launcher3.folder.FolderIcon;
+import com.android.launcher3.folder.FolderPagedView;
+import com.android.launcher3.model.PackageItemInfo;
+
+import java.text.NumberFormat;
+import java.util.ArrayList;
+
+/**
+ * TextView that draws a bubble behind the text. We cannot use a LineBackgroundSpan
+ * because we want to make the bubble taller than the text and TextView's clip is
+ * too aggressive.
+ */
+public class BubbleTextView extends TextView
+        implements BaseRecyclerViewFastScrollBar.FastScrollFocusableView ,UninstallMode,UninstallRect,UninstallMode.UninstallAnimation {
+    private final String TAG = "BubbleTextView";
+    private static SparseArray<Theme> sPreloaderThemes = new SparseArray<Theme>(2);
+
+    // Dimensions in DP
+    private static final float AMBIENT_SHADOW_RADIUS = 2.5f;
+    private static final float KEY_SHADOW_RADIUS = 1f;
+    private static final float KEY_SHADOW_OFFSET = 0.5f;
+    private static final int AMBIENT_SHADOW_COLOR = 0x33000000;
+    private static final int KEY_SHADOW_COLOR = 0x66000000;
+
+    private static final int DISPLAY_WORKSPACE = 0;
+    private static final int DISPLAY_ALL_APPS = 1;
+    private static final int DISPLAY_FOLDER = 2;
+
+    private final Launcher mLauncher;
+    private Drawable mIcon;
+    private final boolean mCenterVertically;
+    private final Drawable mBackground;
+    private OnLongClickListener mOnLongClickListener;
+    private final CheckLongPressHelper mLongPressHelper;
+    private final HolographicOutlineHelper mOutlineHelper;
+    private final StylusEventHelper mStylusEventHelper;
+
+    private boolean mBackgroundSizeChanged;
+
+    private Bitmap mPressedBackground;
+
+    private float mSlop;
+
+    private final boolean mDeferShadowGenerationOnTouch;
+    private final boolean mCustomShadowsEnabled;
+    private final boolean mLayoutHorizontal;
+
+
+
+    private final int mIconSize;
+    @ViewDebug.ExportedProperty(category = "launcher")
+    private int mTextColor;
+
+    @ViewDebug.ExportedProperty(category = "launcher")
+    private boolean mStayPressed;
+    @ViewDebug.ExportedProperty(category = "launcher")
+    private boolean mIgnorePressedStateChange;
+    @ViewDebug.ExportedProperty(category = "launcher")
+    private boolean mDisableRelayout = false;
+//uninstallMode: add by liuzuo
+    private boolean isUninstallMode;
+    private Drawable mMarkDrawable;
+    private Rect mUninstallMarkRect;
+    private int mLastTouchX;
+    private int mLastTouchY;
+    private boolean isShakeAnimation;
+
+
+    //M:liuzuo add for addIcon begin
+    private boolean isChecked;
+    private Drawable mCheckDrawable;
+    //M:liuzuo add for addIcon end
+
+    //M:liuzuo add for dynamic begin
+    private IDynamicIcon mIDynamicIcon;
+    //M:liuzuo add for dynamic end
+    private IconLoadRequest mIconLoadRequest;
+
+    public BubbleTextView(Context context) {
+        this(context, null, 0);
+    }
+
+    public BubbleTextView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public BubbleTextView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+        mLauncher = Launcher.getLauncher(context);
+        DeviceProfile grid = mLauncher.getDeviceProfile();
+
+        TypedArray a = context.obtainStyledAttributes(attrs,
+                R.styleable.BubbleTextView, defStyle, 0);
+        mCustomShadowsEnabled = a.getBoolean(R.styleable.BubbleTextView_customShadows, true);
+        mLayoutHorizontal = a.getBoolean(R.styleable.BubbleTextView_layoutHorizontal, false);
+        mDeferShadowGenerationOnTouch =
+                a.getBoolean(R.styleable.BubbleTextView_deferShadowGeneration, false);
+
+        int display = a.getInteger(R.styleable.BubbleTextView_iconDisplay, DISPLAY_WORKSPACE);
+        int defaultIconSize = grid.iconSizePx;
+        if (display == DISPLAY_WORKSPACE) {
+            setTextSize(TypedValue.COMPLEX_UNIT_PX, grid.iconTextSizePx);
+        } else if (display == DISPLAY_ALL_APPS) {
+            setTextSize(TypedValue.COMPLEX_UNIT_PX, grid.allAppsIconTextSizePx);
+            setCompoundDrawablePadding(grid.allAppsIconDrawablePaddingPx);
+            defaultIconSize = grid.allAppsIconSizePx;
+        } else if (display == DISPLAY_FOLDER) {
+            setCompoundDrawablePadding(grid.folderChildDrawablePaddingPx);
+        }
+        mCenterVertically = a.getBoolean(R.styleable.BubbleTextView_centerVertically, false);
+
+        mIconSize = a.getDimensionPixelSize(R.styleable.BubbleTextView_iconSizeOverride,
+                defaultIconSize);
+        a.recycle();
+
+        if (mCustomShadowsEnabled) {
+            // Draw the background itself as the parent is drawn twice.
+            mBackground = getBackground();
+            setBackground(null);
+
+            // Set shadow layer as the larger shadow to that the textView does not clip the shadow.
+            float density = getResources().getDisplayMetrics().density;
+            setShadowLayer(density * AMBIENT_SHADOW_RADIUS, 0, 0, AMBIENT_SHADOW_COLOR);
+        } else {
+            mBackground = null;
+        }
+
+        mLongPressHelper = new CheckLongPressHelper(this);
+        mStylusEventHelper = new StylusEventHelper(new SimpleOnStylusPressListener(this), this);
+
+        mOutlineHelper = HolographicOutlineHelper.obtain(getContext());
+        setAccessibilityDelegate(mLauncher.getAccessibilityDelegate());
+    }
+
+    public void applyFromShortcutInfo(ShortcutInfo info, IconCache iconCache) {
+        applyFromShortcutInfo(info, iconCache, false);
+    }
+
+    public void applyFromShortcutInfo(ShortcutInfo info, IconCache iconCache,
+            boolean promiseStateChanged) {
+        applyIconAndLabelForDynamic(info.getIcon(iconCache), info);
+        setTag(info);
+        if (promiseStateChanged || info.isPromise()) {
+            applyState(promiseStateChanged);
+        }
+    }
+
+    public void applyFromApplicationInfo(AppInfo info) {
+        applyIconAndLabel(info.iconBitmap, info);
+
+        // We don't need to check the info since it's not a ShortcutInfo
+        super.setTag(info);
+
+        // Verify high res immediately
+        verifyHighRes();
+    }
+
+    public void applyFromPackageItemInfo(PackageItemInfo info) {
+        applyIconAndLabel(info.iconBitmap, info);
+        // We don't need to check the info since it's not a ShortcutInfo
+        super.setTag(info);
+
+        // Verify high res immediately
+        verifyHighRes();
+    }
+
+    private void applyIconAndLabel(Bitmap icon, ItemInfo info) {
+        FastBitmapDrawable iconDrawable = mLauncher.createIconDrawable(icon);
+        if (info.isDisabled()) {
+            iconDrawable.setState(FastBitmapDrawable.State.DISABLED);
+        }
+        setIcon(iconDrawable);
+        setText(info.title);
+        if (info.contentDescription != null) {
+            setContentDescription(info.isDisabled()
+                    ? getContext().getString(R.string.disabled_app_label, info.contentDescription)
+                    : info.contentDescription);
+        }
+    }
+    private void applyIconAndLabelForDynamic(Bitmap icon, ItemInfo info) {
+        FastBitmapDrawable iconDrawable = mLauncher.createIconDrawable(icon);
+        if (info.isDisabled()) {
+            iconDrawable.setState(FastBitmapDrawable.State.DISABLED);
+        }
+        //liuzuo add for dynamic icon begin
+        boolean isDynamicSuccess = false;
+        if(mIDynamicIcon==null){
+            mIDynamicIcon = DynamicProvider.getInstance(getContext()).createDynamicIcon(info);
+        }
+        if(mIDynamicIcon!=null){
+            isDynamicSuccess=mIDynamicIcon.init(getContext(),this, info);
+        }
+        if(mIDynamicIcon==null){
+                setIcon(iconDrawable);
+        }else {
+                if(getIcon()==null)
+                    setIcon(iconDrawable);
+        }
+
+        //liuzuo add for dynamic icon end
+
+        setText(info.title);
+        if (info.contentDescription != null) {
+            setContentDescription(info.isDisabled()
+                    ? getContext().getString(R.string.disabled_app_label, info.contentDescription)
+                    : info.contentDescription);
+        }
+    }
+
+    /**
+     * Used for measurement only, sets some dummy values on this view.
+     */
+    public void applyDummyInfo() {
+        ColorDrawable d = new ColorDrawable();
+        setIcon(mLauncher.resizeIconDrawable(d));
+        setText("");
+    }
+
+    /**
+     * Overrides the default long press timeout.
+     */
+    public void setLongPressTimeout(int longPressTimeout) {
+        mLongPressHelper.setLongPressTimeout(longPressTimeout);
+    }
+
+    @Override
+    protected boolean setFrame(int left, int top, int right, int bottom) {
+        if (getLeft() != left || getRight() != right || getTop() != top || getBottom() != bottom) {
+            mBackgroundSizeChanged = true;
+        }
+        return super.setFrame(left, top, right, bottom);
+    }
+
+    @Override
+    protected boolean verifyDrawable(Drawable who) {
+        return who == mBackground || super.verifyDrawable(who);
+    }
+
+    @Override
+    public void setTag(Object tag) {
+        if (tag != null) {
+            LauncherModel.checkItemInfo((ItemInfo) tag);
+        }
+        super.setTag(tag);
+    }
+
+    @Override
+    public void setPressed(boolean pressed) {
+        super.setPressed(pressed);
+
+        if (!mIgnorePressedStateChange) {
+            updateIconState();
+        }
+    }
+
+    /** Returns the icon for this view. */
+    public Drawable getIcon() {
+        return mIcon;
+    }
+
+    /** Returns whether the layout is horizontal. */
+    public boolean isLayoutHorizontal() {
+        return mLayoutHorizontal;
+    }
+
+    private void updateIconState() {
+        if (mIcon instanceof FastBitmapDrawable) {
+            FastBitmapDrawable d = (FastBitmapDrawable) mIcon;
+            if (getTag() instanceof ItemInfo
+                    && ((ItemInfo) getTag()).isDisabled()) {
+                d.animateState(FastBitmapDrawable.State.DISABLED);
+            } else if (isPressed() || mStayPressed) {
+                d.animateState(FastBitmapDrawable.State.PRESSED);
+            } else {
+                d.animateState(FastBitmapDrawable.State.NORMAL);
+            }
+        }
+    }
+
+    @Override
+    public void setOnLongClickListener(OnLongClickListener l) {
+        super.setOnLongClickListener(l);
+        mOnLongClickListener = l;
+    }
+
+    public OnLongClickListener getOnLongClickListener() {
+        return mOnLongClickListener;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        // Call the superclass onTouchEvent first, because sometimes it changes the state to
+        // isPressed() on an ACTION_UP
+        boolean result = super.onTouchEvent(event);
+
+        // Check for a stylus button press, if it occurs cancel any long press checks.
+        if (mStylusEventHelper.onMotionEvent(event)) {
+            mLongPressHelper.cancelLongPress();
+            result = true;
+        }
+
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                // So that the pressed outline is visible immediately on setStayPressed(),
+                // we pre-create it on ACTION_DOWN (it takes a small but perceptible amount of time
+                // to create it)
+                if (!mDeferShadowGenerationOnTouch && mPressedBackground == null) {
+                    mPressedBackground = mOutlineHelper.createMediumDropShadow(this);
+                }
+
+                // If we're in a stylus button press, don't check for long press.
+                if (!mStylusEventHelper.inStylusButtonPressed()) {
+                    mLongPressHelper.postCheckForLongPress();
+                }
+                break;
+            case MotionEvent.ACTION_CANCEL:
+            case MotionEvent.ACTION_UP:
+                // If we've touched down and up on an item, and it's still not "pressed", then
+                // destroy the pressed outline
+                if (!isPressed()) {
+                    mPressedBackground = null;
+                }
+
+                mLongPressHelper.cancelLongPress();
+		//UninstallMode add by liuzuo begin
+                mLastTouchX = (int) event.getX();
+                mLastTouchY = (int) event.getY();
+                 //UninstallMode add by liuzuo end
+                break;
+            case MotionEvent.ACTION_MOVE:
+                if (!Utilities.pointInView(this, event.getX(), event.getY(), mSlop)) {
+                    mLongPressHelper.cancelLongPress();
+                }
+                break;
+        }
+        return result;
+    }
+
+    void setStayPressed(boolean stayPressed) {
+        mStayPressed = stayPressed;
+        if (!stayPressed) {
+            HolographicOutlineHelper.obtain(getContext()).recycleShadowBitmap(mPressedBackground);
+            mPressedBackground = null;
+        } else {
+            if (mPressedBackground == null) {
+                mPressedBackground = mOutlineHelper.createMediumDropShadow(this);
+            }
+        }
+
+        // Only show the shadow effect when persistent pressed state is set.
+        ViewParent parent = getParent();
+        if (parent != null && parent.getParent() instanceof BubbleTextShadowHandler) {
+            ((BubbleTextShadowHandler) parent.getParent()).setPressedIcon(
+                    this, mPressedBackground);
+        }
+
+        updateIconState();
+    }
+
+    void clearPressedBackground() {
+        setPressed(false);
+        setStayPressed(false);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (super.onKeyDown(keyCode, event)) {
+            // Pre-create shadow so show immediately on click.
+            if (mPressedBackground == null) {
+                mPressedBackground = mOutlineHelper.createMediumDropShadow(this);
+            }
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        // Unlike touch events, keypress event propagate pressed state change immediately,
+        // without waiting for onClickHandler to execute. Disable pressed state changes here
+        // to avoid flickering.
+        mIgnorePressedStateChange = true;
+        boolean result = super.onKeyUp(keyCode, event);
+
+        mPressedBackground = null;
+        mIgnorePressedStateChange = false;
+        updateIconState();
+        return result;
+    }
+
+    @Override
+    public void draw(Canvas canvas) {
+        //Log.d(TAG,"draw");
+        if (!mCustomShadowsEnabled) {
+            super.draw(canvas);
+            drawUninstallDrawable(getUninstallDrawable(),canvas); //liuzuo add
+            drawCheckDrawable(getCheckDrawable(),canvas);//liuzuo : add for addIcon begin
+            return;
+        }
+//liuzuo : add for addIcon begin
+        final Drawable background = mBackground;
+        if (background != null) {
+            final int scrollX = getScrollX();
+            final int scrollY = getScrollY();
+
+            if (mBackgroundSizeChanged) {
+                background.setBounds(0, 0,  getRight() - getLeft(), getBottom() - getTop());
+                mBackgroundSizeChanged = false;
+            }
+
+            if ((scrollX | scrollY) == 0) {
+                background.draw(canvas);
+            } else {
+                canvas.translate(scrollX, scrollY);
+                background.draw(canvas);
+                canvas.translate(-scrollX, -scrollY);
+            }
+        }
+
+        // If text is transparent, don't draw any shadow
+        if (getCurrentTextColor() == getResources().getColor(android.R.color.transparent)) {
+            getPaint().clearShadowLayer();
+            super.draw(canvas);
+            drawUninstallDrawable(getUninstallDrawable(),canvas); //liuzuo add
+            drawCheckDrawable(getCheckDrawable(),canvas);//liuzuo : add for addIcon begin
+            return;
+        }
+
+        // We enhance the shadow by drawing the shadow twice
+//UninstallMode remove by liuzuo begin
+//        float density = getResources().getDisplayMetrics().density;
+//        getPaint().setShadowLayer(density * AMBIENT_SHADOW_RADIUS, 0, 0, AMBIENT_SHADOW_COLOR);
+//        super.draw(canvas);
+//        canvas.save(Canvas.CLIP_SAVE_FLAG);
+//        canvas.clipRect(getScrollX(), getScrollY() + getExtendedPaddingTop(),
+//                getScrollX() + getWidth(),
+//                getScrollY() + getHeight(), Region.Op.INTERSECT);
+//        getPaint().setShadowLayer(
+//                density * KEY_SHADOW_RADIUS, 0.0f, density * KEY_SHADOW_OFFSET, KEY_SHADOW_COLOR);
+//UninstallMode remove by liuzuo end
+        super.draw(canvas);
+        drawUninstallDrawable(getUninstallDrawable(),canvas); //liuzuo add
+        drawCheckDrawable(getCheckDrawable(),canvas);//liuzuo : add for addIcon begin
+//        canvas.restore();
+    }
+
+    @Override
+    protected void onAttachedToWindow() {
+        super.onAttachedToWindow();
+
+        if (mBackground != null) mBackground.setCallback(this);
+
+        if (mIcon instanceof PreloadIconDrawable) {
+            ((PreloadIconDrawable) mIcon).applyPreloaderTheme(getPreloaderTheme());
+        }
+        mSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
+        //liuzuo add for dynamic icon begin
+        if(mIDynamicIcon!=null){
+            mIDynamicIcon.updateDynamicIcon(false);
+        }
+        //liuzuo add for dynamic icon end
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        if (mCenterVertically) {
+            Paint.FontMetrics fm = getPaint().getFontMetrics();
+            int cellHeightPx = mIconSize + getCompoundDrawablePadding() +
+                    (int) Math.ceil(fm.bottom - fm.top);
+            int height = MeasureSpec.getSize(heightMeasureSpec);
+            setPadding(getPaddingLeft(), (height - cellHeightPx) / 2, getPaddingRight(),
+                    getPaddingBottom());
+        }
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+
+    @Override
+    protected void
+    onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        if (mBackground != null) mBackground.setCallback(null);
+        //liuzuo add for dynamic icon begin
+    /*    if(mIDynamicIcon!=null) {
+            mIDynamicIcon.clearDynamicIcon();
+        }*/
+        //liuzuo add for dynamic icon end
+    }
+
+    @Override
+    public void setTextColor(int color) {
+        mTextColor = color;
+        super.setTextColor(color);
+    }
+
+    @Override
+    public void setTextColor(ColorStateList colors) {
+        mTextColor = colors.getDefaultColor();
+        super.setTextColor(colors);
+    }
+
+    public void setTextVisibility(boolean visible) {
+        Resources res = getResources();
+        if (visible) {
+            super.setTextColor(mTextColor);
+        } else {
+            super.setTextColor(res.getColor(android.R.color.transparent));
+        }
+    }
+
+    @Override
+    public void cancelLongPress() {
+        super.cancelLongPress();
+
+        mLongPressHelper.cancelLongPress();
+    }
+
+    public void applyState(boolean promiseStateChanged) {
+        if (getTag() instanceof ShortcutInfo) {
+            ShortcutInfo info = (ShortcutInfo) getTag();
+            final boolean isPromise = info.isPromise();
+            final int progressLevel = isPromise ?
+                    ((info.hasStatusFlag(ShortcutInfo.FLAG_INSTALL_SESSION_ACTIVE) ?
+                            info.getInstallProgress() : 0)) : 100;
+
+            setContentDescription(progressLevel > 0 ?
+                getContext().getString(R.string.app_downloading_title, info.title,
+                        NumberFormat.getPercentInstance().format(progressLevel * 0.01)) :
+                    getContext().getString(R.string.app_waiting_download_title, info.title));
+
+            if (mIcon != null) {
+                final PreloadIconDrawable preloadDrawable;
+                if (mIcon instanceof PreloadIconDrawable) {
+                    preloadDrawable = (PreloadIconDrawable) mIcon;
+                } else {
+                    preloadDrawable = new PreloadIconDrawable(mIcon, getPreloaderTheme());
+                    setIcon(preloadDrawable);
+                }
+
+                preloadDrawable.setLevel(progressLevel);
+                if (promiseStateChanged) {
+                    preloadDrawable.maybePerformFinishedAnimation();
+                }
+            }
+        }
+    }
+
+    private Theme getPreloaderTheme() {
+        Object tag = getTag();
+        int style = ((tag != null) && (tag instanceof ShortcutInfo) &&
+                (((ShortcutInfo) tag).container >= 0)) ? R.style.PreloadIcon_Folder
+                        : R.style.PreloadIcon;
+        Theme theme = sPreloaderThemes.get(style);
+        if (theme == null) {
+            theme = getResources().newTheme();
+            theme.applyStyle(style, true);
+            sPreloaderThemes.put(style, theme);
+        }
+        return theme;
+    }
+
+    /**
+     * Sets the icon for this view based on the layout direction.
+     */
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+    public void setIcon(Drawable icon) {
+        mIcon = icon;
+        if (mIconSize != -1) {
+            mIcon.setBounds(0, 0, mIconSize, mIconSize);
+        }
+        applyCompoundDrawables(mIcon);
+    }
+
+    protected void applyCompoundDrawables(Drawable icon) {
+        if (mLayoutHorizontal) {
+            if (Utilities.ATLEAST_JB_MR1) {
+                setCompoundDrawablesRelative(icon, null, null, null);
+            } else {
+                setCompoundDrawables(icon, null, null, null);
+            }
+        } else {
+            setCompoundDrawables(null, icon, null, null);
+        }
+    }
+
+    @Override
+    public void requestLayout() {
+        if (!mDisableRelayout) {
+            super.requestLayout();
+        }
+    }
+
+    /**
+     * Applies the item info if it is same as what the view is pointing to currently.
+     */
+    public void reapplyItemInfo(final ItemInfo info) {
+        if (getTag() == info) {
+            FastBitmapDrawable.State prevState = FastBitmapDrawable.State.NORMAL;
+            if (mIcon instanceof FastBitmapDrawable) {
+                prevState = ((FastBitmapDrawable) mIcon).getCurrentState();
+            }
+            mIconLoadRequest = null;
+            mDisableRelayout = true;
+
+            if (info instanceof AppInfo) {
+                applyFromApplicationInfo((AppInfo) info);
+            } else if (info instanceof ShortcutInfo) {
+                applyFromShortcutInfo((ShortcutInfo) info,
+                        LauncherAppState.getInstance().getIconCache());
+                if ((info.rank < FolderIcon.NUM_ITEMS_IN_PREVIEW) && (info.container >= 0)) {
+                    View folderIcon =
+                            mLauncher.getWorkspace().getHomescreenIconByItemId(info.container);
+                    if (folderIcon != null) {
+                        folderIcon.invalidate();
+                    }
+                }
+            } else if (info instanceof PackageItemInfo) {
+                applyFromPackageItemInfo((PackageItemInfo) info);
+            }
+
+            // If we are reapplying over an old icon, then we should update the new icon to the same
+            // state as the old icon
+            if (mIcon instanceof FastBitmapDrawable) {
+                ((FastBitmapDrawable) mIcon).setState(prevState);
+            }
+
+            mDisableRelayout = false;
+        }
+    }
+
+    /**
+     * Verifies that the current icon is high-res otherwise posts a request to load the icon.
+     */
+    public void verifyHighRes() {
+        if (mIconLoadRequest != null) {
+            mIconLoadRequest.cancel();
+            mIconLoadRequest = null;
+        }
+        if (getTag() instanceof AppInfo) {
+            AppInfo info = (AppInfo) getTag();
+            if (info.usingLowResIcon) {
+                mIconLoadRequest = LauncherAppState.getInstance().getIconCache()
+                        .updateIconInBackground(BubbleTextView.this, info);
+            }
+        } else if (getTag() instanceof ShortcutInfo) {
+            ShortcutInfo info = (ShortcutInfo) getTag();
+            if (info.usingLowResIcon) {
+                mIconLoadRequest = LauncherAppState.getInstance().getIconCache()
+                        .updateIconInBackground(BubbleTextView.this, info);
+            }
+        } else if (getTag() instanceof PackageItemInfo) {
+            PackageItemInfo info = (PackageItemInfo) getTag();
+            if (info.usingLowResIcon) {
+                mIconLoadRequest = LauncherAppState.getInstance().getIconCache()
+                        .updateIconInBackground(BubbleTextView.this, info);
+            }
+        }
+    }
+
+    @Override
+    public void setFastScrollFocusState(final FastBitmapDrawable.State focusState, boolean animated) {
+        // We can only set the fast scroll focus state on a FastBitmapDrawable
+        if (!(mIcon instanceof FastBitmapDrawable)) {
+            return;
+        }
+
+        FastBitmapDrawable d = (FastBitmapDrawable) mIcon;
+        if (animated) {
+            FastBitmapDrawable.State prevState = d.getCurrentState();
+            if (d.animateState(focusState)) {
+                // If the state was updated, then update the view accordingly
+                animate().scaleX(focusState.viewScale)
+                        .scaleY(focusState.viewScale)
+                        .setStartDelay(getStartDelayForStateChange(prevState, focusState))
+                        .setDuration(d.getDurationForStateChange(prevState, focusState))
+                        .start();
+            }
+        } else {
+            if (d.setState(focusState)) {
+                // If the state was updated, then update the view accordingly
+                animate().cancel();
+                setScaleX(focusState.viewScale);
+                setScaleY(focusState.viewScale);
+            }
+        }
+    }
+
+    /**
+     * Returns true if the view can show custom shortcuts.
+     */
+    public boolean hasDeepShortcuts() {
+        return false/*!mLauncher.getShortcutIdsForItem((ItemInfo) getTag()).isEmpty()*/;
+    }
+
+    /**
+     * Returns the start delay when animating between certain {@link FastBitmapDrawable} states.
+     */
+    private static int getStartDelayForStateChange(final FastBitmapDrawable.State fromState,
+            final FastBitmapDrawable.State toState) {
+        switch (toState) {
+            case NORMAL:
+                switch (fromState) {
+                    case FAST_SCROLL_HIGHLIGHTED:
+                        return FastBitmapDrawable.FAST_SCROLL_INACTIVE_DURATION / 4;
+                }
+        }
+        return 0;
+    }
+    //uninstallMode: add by liuzuo begin
+    @Override
+    public void showUninstallApp() {
+        Log.d(TAG, isUninstallMode+"   showUninstallApp =" + (ItemInfo)getTag() + " isShakeAnimation= "+isShakeAnimation+"    isUninstallMode="+isUninstallMode);
+        if(!isUninstallMode && !isShakeAnimation){
+            invalidate();
+        }
+        if(!isShakeAnimation){
+        }
+        startShakeAnimation();
+        isUninstallMode =true;
+    }
+
+    @Override
+    public void hideUninstallApp() {
+        Log.d(TAG, isUninstallMode+"   hideUnins1tallApp =" + (ItemInfo)getTag());
+        if(isUninstallMode) {
+            invalidate();
+        }
+        stopShakeAnimation();
+        isUninstallMode = false;
+    }
+    private Drawable getUninstallDrawable() {
+         mMarkDrawable=null;
+        if (isUninstallMode&&getTag() instanceof ShortcutInfo ) {
+            ShortcutInfo info = (ShortcutInfo) getTag();
+            if(Utilities.isSystemApp(mLauncher, info.getIntent())&&info.itemType==0){
+                return null;
+            }
+            if(mMarkDrawable==null) {
+                final Resources res = getContext().getResources();
+                int width = mIconSize;
+                int widthOfmCheckDrawable;
+                Rect bounds=null;
+                if(mIcon!=null){
+                    bounds = mIcon.getBounds();
+                }
+                mMarkDrawable = res.getDrawable(R.drawable.ic_uninstall);
+               // float scale = res.getInteger(R.integer.config_workspaceNormalDragShrinkPercentage) / 100f;
+                widthOfmCheckDrawable = mMarkDrawable.getIntrinsicWidth();
+                int left =bounds==null? (int) (getWidth() - width) / 2  - 1:(int) (getWidth() - width) / 2  - 1-widthOfmCheckDrawable/2;
+               /* int top = getPaddingTop() + (widthOfmCheckDrawable/2 - width) / 2 - widthOfmCheckDrawable / 2 + 1;*/
+                float textSize=getTextSize();
+                int top ;
+                if(info.container == LauncherSettings.Favorites.CONTAINER_HOTSEAT){
+                    top = bounds==null?(int) ((getHeight()-width)/2.5f/**scale*/):bounds.top+widthOfmCheckDrawable/3;
+                    left =bounds==null? (int) (getWidth() - width) / 2  - 1:(int) (getWidth() - width) / 2  - 1-widthOfmCheckDrawable/2;
+                }else {
+                    top = bounds==null?(int) ((getHeight()-width)/4.5f/**scale*/):bounds.top;
+                }
+                top = top <= 0 ? 0 : top;
+                //left = bounds.left;
+                int right = left + widthOfmCheckDrawable;
+                int button = top + widthOfmCheckDrawable;
+                if (right > getWidth()) {
+                    left = getWidth() - widthOfmCheckDrawable;
+                    right = getWidth();
+                } else {
+
+                }
+                int offset = 10;
+                mUninstallMarkRect = new Rect(left-offset,top-offset,right+offset,button+offset);
+                mMarkDrawable.setBounds(left, top, right, button);
+            }
+            return mMarkDrawable;
+        }else {
+            return null;
+        }
+    }
+
+    private void drawUninstallDrawable(Drawable drawable, Canvas canvas) {
+        if (drawable != null) {
+
+            final int scrollX = getScrollX();
+            final int scrollY = getScrollY();
+
+            if (scrollX ==0 && scrollY==  0) {
+                drawable.draw(canvas);
+            } else {
+                canvas.save();
+                canvas.translate(scrollX, scrollY);
+                drawable.draw(canvas);
+                canvas.restore();
+            }
+        }
+    }
+
+    @Override
+    public Boolean isUninstallRect() {
+        if(mUninstallMarkRect==null){
+            return true;
+        }else if(mUninstallMarkRect.contains(mLastTouchX, mLastTouchY)){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean isShakeAnimation() {
+        return isShakeAnimation;
+    }
+
+    public void startShakeAnimation(){
+        if(getTag() instanceof FolderPagedView.FolderAddInfo||getVisibility()==INVISIBLE){
+            return;
+        }
+        Animation locateAnim = AnimationUtils.loadAnimation(mLauncher, R.anim.icon_shake_animation);
+        locateAnim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+                setLayerType(View.LAYER_TYPE_HARDWARE, null);
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                setLayerType(View.LAYER_TYPE_NONE, null);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        this.startAnimation(locateAnim);
+        isShakeAnimation = true;
+    }
+    public void stopShakeAnimation(){
+        this.clearAnimation();
+        isShakeAnimation = false;
+    }
+    //uninstallMode: add by liuzuo end
+    /**
+     * Interface to be implemented by the grand parent to allow click shadow effect.
+     */
+    public interface BubbleTextShadowHandler {
+        void setPressedIcon(BubbleTextView icon, Bitmap background);
+    }
+
+    //liuzuo : add for addIcon begin
+    public boolean isChecked() {
+        return isChecked;
+    }
+
+    public void setChecked(boolean checked) {
+        Log.d(TAG,"setChecked");
+        isChecked = checked;
+        invalidate();
+    }
+    private Drawable getCheckDrawable() {
+        if (isChecked) {
+            if(mCheckDrawable ==null) {
+                final Resources res = getContext().getResources();
+                int width = mIconSize;
+                int widthOfmCheckDrawable;
+                mCheckDrawable = res.getDrawable(R.drawable.ic_check);
+                float scale = 95/ 100f;
+                widthOfmCheckDrawable = mCheckDrawable.getIntrinsicWidth();
+                int left = (int) (((getWidth() - width) / 2 + width)*scale) - widthOfmCheckDrawable / 2 - 1;
+               /* int top = getPaddingTop() + (widthOfmCheckDrawable/2 - width) / 2 - widthOfmCheckDrawable / 2 + 1;*/
+                float textSize=getTextSize();
+                int top = (int) ((getHeight()-textSize-width)/4.5*scale);
+                top = top <= 0 ? 0 : top;
+                int right = left + widthOfmCheckDrawable;
+                int buttom = top + widthOfmCheckDrawable;
+                if (right > getWidth()) {
+                    left = getWidth() - widthOfmCheckDrawable;
+                    right = getWidth();
+                } else {
+
+                }
+
+                mCheckDrawable.setBounds(left, top, right, buttom);
+            }
+            return mCheckDrawable;
+        }else {
+
+            return null;
+        }
+    }
+
+    private void drawCheckDrawable(Drawable checkDrawable, Canvas canvas) {
+        if(checkDrawable!=null){
+
+            final int scrollX = getScrollX();
+            final int scrollY = getScrollY();
+
+            if ((scrollX | scrollY) == 0) {
+                checkDrawable.draw(canvas);
+            } else {
+                canvas.save();
+                canvas.translate(scrollX, scrollY);
+                checkDrawable.draw(canvas);
+                canvas.restore();
+            }
+        }
+    }
+    public int getIconSize() {
+        return mIconSize;
+    }
+    //M:liuzuo add the folderImportMode begin
+    public void updateFolderIcon() {
+        if(getTag() instanceof ShortcutInfo){
+            ShortcutInfo shortcutInfo = (ShortcutInfo) getTag();
+            Workspace workspace = mLauncher.getWorkspace();
+            if(shortcutInfo!=null&&shortcutInfo.rank<FolderIcon.NUM_ITEMS_IN_PREVIEW&&shortcutInfo.container>0&&workspace!=null){
+                final ArrayList<ShortcutAndWidgetContainer> childrenLayouts =
+                        workspace.getAllShortcutAndWidgetContainers();
+                int childCount ;
+                View view ;
+                Object tag ;
+                for (ShortcutAndWidgetContainer layout : childrenLayouts) {
+                    childCount = layout.getChildCount();
+                    for (int j = 0; j < childCount; j++) {
+                        view = layout.getChildAt(j);
+                        tag = view.getTag();
+                        if (tag instanceof FolderInfo) {
+                            FolderInfo folderInfo= (FolderInfo) tag;
+                            if(folderInfo.contents.contains(shortcutInfo)) {
+                                Log.d(TAG,"((FolderIcon) view).invalidate()");
+                                FolderIcon folderIcon = (FolderIcon) view;
+                                folderIcon.updateItemDrawingParams(false);
+                                folderIcon.invalidate();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    public boolean hasIDynamicIcon() {
+        return mIDynamicIcon!=null;
+    }
+    //liuzuo : add for addIcon end
+
+  // cyl add for hotseat icon center start
+  public void setUninstallModeFlag(){
+    if(!isUninstallMode && !isShakeAnimation){
+            invalidate();
+    }
+    isUninstallMode =true;
+  }
+ // cyl add for hotseat icon center end
+	
+}

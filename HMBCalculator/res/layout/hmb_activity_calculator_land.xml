@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:orientation="horizontal" >
+
+        <com.hmb.calculator2.CalculatorEditText
+            android:id="@+id/formula"
+            style="@style/DisplayEditTextStyle.HMBFormula"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text|textNoSuggestions"
+            android:textColor="@color/display_formula_text_color" />
+
+        <com.hmb.calculator2.CalculatorEditText
+            android:id="@+id/result"
+            style="@style/DisplayEditTextStyle.Result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/formula"
+            android:focusable="false"
+            android:visibility="gone"
+            android:inputType="none"
+            android:textColor="@color/display_result_text_color" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/calculator_pad_height"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <include layout="@layout/hmb_pad_advanced" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <include layout="@layout/hmb_pad_numeric" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

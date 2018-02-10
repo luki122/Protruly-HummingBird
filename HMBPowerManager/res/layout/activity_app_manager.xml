@@ -1,0 +1,27 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/app_manager">
+
+    <PreferenceCategory android:key="header_parent">
+        <com.protruly.powermanager.purebackground.activity.AppManagerHeaderPreference
+            android:key="preference_appmanager_header" />
+    </PreferenceCategory>
+
+    <PreferenceScreen
+        android:key="preference_auto_start"
+        android:title="@string/auto_start"
+        android:icon="@drawable/auto_start">
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="preference_lock_screen_clean"
+        android:title="@string/lock_screen_clean"
+        android:icon="@drawable/lock_screen_clean">
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="preference_permission_control"
+        android:title="@string/permission_control"
+        android:icon="@drawable/permission_control">
+    </PreferenceScreen>
+
+</PreferenceScreen>

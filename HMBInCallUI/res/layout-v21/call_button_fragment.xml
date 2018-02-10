@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2013 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+-->
+
+
+<!--
+     In-call onscreen touch UI elements, used on some platforms.
+
+     This layout is a fullscreen overlay, drawn on top of the
+     non-touch-sensitive parts of the in-call UI (i.e. the call card).
+
+     The top-level View here is a InCallTouchUi (FrameLayout) with 2 children:
+       (1) inCallControls: the widgets visible while a regular call (or calls) is in progress
+       (2) incomingCallWidget: the UI displayed while an incoming call is ringing
+     In usual cases, one of these is visible at any given moment.
+     One exception is when incomingCallWidget is fading-out. At that moment, we show
+     inCallControls beneath incomingCallWidget for smoother transition.
+-->
+
+
+<!-- Main cluster of onscreen buttons on the lower part of the screen. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomButtons"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/first_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp" 
+        android:layout_marginBottom="21.3dp" >
+
+        <FrameLayout
+            android:id="@+id/record_container"
+            android:layout_width="@dimen/in_call_button_width"
+            android:layout_height="@dimen/in_call_button_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/in_call_button_margin"
+            android:layout_marginRight="@dimen/in_call_button_margin" >
+
+            <TextView
+                android:id="@+id/record_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dip"
+                android:textColor="@color/record_button_text_color"
+                android:textSize="17sp" />
+
+            <com.hb.ui.InCallCompoundButton
+                android:id="@+id/recordButton"
+                style="@style/PhoneCompound"
+                hb:hb_image="@drawable/record_hb"
+                hb:hb_text="@string/record_button_off" />
+        </FrameLayout>
+
+        <com.hb.ui.InCallCompoundButton
+            android:id="@+id/muteButton"
+            style="@style/PhoneCompound"
+            android:layout_toLeftOf="@id/record_container"
+            hb:hb_image="@drawable/mute_hb"
+            hb:hb_text="@string/onscreenMuteText" />
+
+        <com.hb.ui.InCallImageButton
+            android:id="@+id/addContactButton"
+            style="@style/PhoneCompound"
+            android:layout_toRightOf="@id/record_container"
+            hb:hb_image="@drawable/add_contact_hb"
+            hb:hb_text="@string/add_contact_button_text" />
+
+        <com.hb.ui.InCallImageButton
+            android:id="@+id/mergeButton"
+            style="@style/PhoneCompound"
+            android:layout_toRightOf="@id/record_container"
+            android:visibility="gone"
+            hb:hb_image="@drawable/merge_call_hb"
+            hb:hb_text="@string/onscreenMergeCallsText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/second_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <com.hb.ui.InCallImageButton
+            android:id="@+id/dialpadButton"
+            style="@style/PhoneCompound"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/in_call_button_margin"
+            android:layout_marginRight="@dimen/in_call_button_margin"
+            hb:hb_image="@drawable/dtmf_dialpad_hb"
+            hb:hb_text="@string/onscreenShowDialpadText" />
+
+        <com.hb.ui.InCallCompoundButton
+            android:id="@+id/audioButton"
+            style="@style/PhoneCompound"
+            android:layout_toRightOf="@id/dialpadButton"
+            hb:hb_image="@drawable/btn_compound_audio_hb"
+            hb:hb_text="@string/audio_mode_speaker" />
+
+        <com.hb.ui.InCallCompoundButton
+            android:id="@+id/holdButton"
+            style="@style/PhoneCompound"
+            android:layout_toLeftOf="@id/dialpadButton"
+            android:visibility="gone"
+            hb:hb_image="@drawable/btn_compound_hold"
+            hb:hb_text="@string/onscreenHoldText_unselected" />
+
+        <com.hb.ui.InCallImageButton
+            android:id="@+id/addButton"
+            style="@style/PhoneCompound"
+            android:layout_toLeftOf="@id/dialpadButton"
+            hb:hb_image="@drawable/add_call_hb"
+            hb:hb_text="@string/onscreenAddCallText" />
+
+        <com.hb.ui.InCallImageButton
+            android:id="@+id/swapButton"
+            style="@style/PhoneCompound"
+            android:layout_toLeftOf="@id/dialpadButton"
+            android:visibility="gone"
+            hb:hb_image="@drawable/btn_swap_hb"
+            hb:hb_text="@string/onscreenSwapCallsText" />
+    </RelativeLayout>
+
+    <!-- M: ALPS01844813 callButtonContainer id is used for RCSe plugin -->
+
+    <LinearLayout
+        android:id="@+id/callButtonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <!-- "Change to video call" -->
+
+        <ImageButton
+            android:id="@+id/changeToVideoButton"
+            style="@style/InCallButton"
+            android:background="@drawable/btn_change_to_video"
+            android:contentDescription="@string/onscreenVideoCallText"
+            android:visibility="gone" />
+
+        <!-- "Switch camera" for video calls. -->
+
+        <ToggleButton
+            android:id="@+id/switchCameraButton"
+            style="@style/InCallCompoundButton"
+            android:background="@drawable/btn_compound_video_switch"
+            android:contentDescription="@string/onscreenSwitchCameraText"
+            android:visibility="gone" />
+
+        <!-- "Turn off camera" for video calls. -->
+
+        <ToggleButton
+            android:id="@+id/pauseVideoButton"
+            style="@style/InCallCompoundButton"
+            android:background="@drawable/btn_compound_video_off"
+            android:contentDescription="@string/onscreenPauseVideoText"
+            android:visibility="gone" />
+
+        <!-- "Add Call" -->
+
+        <ImageButton
+            android:id="@+id/overflowButton"
+            style="@style/InCallButton"
+            android:background="@drawable/btn_overflow"
+            android:contentDescription="@string/onscreenOverflowText"
+            android:visibility="gone" />
+
+        <!-- M: "Change to voice call" -->
+
+        <ImageButton
+            android:id="@+id/changeToVoiceButton"
+            style="@style/InCallButton"
+            android:background="@drawable/btn_change_to_video"
+            android:contentDescription="@string/onscreenChangeToVoiceText"
+            android:visibility="gone" />
+
+        <!-- M :"Hide Local preview" -->
+
+        <ToggleButton
+            android:id="@+id/hideOrShowLocalVideo"
+            style="@style/InCallCompoundButton"
+            android:contentDescription="@string/hideVideoPreview"
+            android:visibility="gone" />
+
+        <!-- "Manage conference button (Video Call) " -->
+
+        <ImageButton
+            android:id="@+id/manageVideoCallConferenceButton"
+            style="@style/InCallButton"
+            android:background="@drawable/ic_group_white_24dp"
+            android:contentDescription="@string/onscreenManageConferenceText"
+            android:visibility="gone" />
+
+        <!-- Mediatek add start -->
+        <!-- "Set ect button " -->
+
+        <ImageButton
+            android:id="@+id/setEctButton"
+            style="@style/InCallButton"
+            android:background="@drawable/mtk_btn_transfer"
+            android:contentDescription="@string/menu_ect"
+            android:visibility="gone" />
+
+        <!-- "Hangup all calls button " -->
+
+        <ImageButton
+            android:id="@+id/hangupAllCallsButton"
+            style="@style/InCallButton"
+            android:background="@drawable/mtk_btn_hangup_all"
+            android:contentDescription="@string/onscreenHangupAll"
+            android:visibility="gone" />
+
+        <!-- Hangup all hold calls button " -->
+
+        <ImageButton
+            android:id="@+id/hangupAllHoldCallsButton"
+            style="@style/InCallButton"
+            android:background="@drawable/mtk_btn_hangup_all_holding"
+            android:contentDescription="@string/onscreenHangupHolding"
+            android:visibility="gone" />
+
+        <!-- "Hangup active and answer waiting button " -->
+
+        <ImageButton
+            android:id="@+id/hangupActiveAndAnswerWaitingButton"
+            style="@style/InCallButton"
+            android:background="@drawable/mtk_btn_hangup_active_answer_waiting"
+            android:contentDescription="@string/onscreenHangupActiveAndAnswerWaiting"
+            android:visibility="gone" />
+
+        <!-- [Voice Record] start/stop voice record button -->
+
+        <ToggleButton
+            android:id="@+id/switch_voice_record"
+            style="@style/InCallButton"
+            android:background="@drawable/mtk_btn_compound_voice_record"
+            android:contentDescription="@string/start_record"
+            android:gravity="center"
+            android:visibility="gone" />
+        <!-- Mediatek add end -->
+
+    </LinearLayout>
+
+   <!--  <Space
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:layout_alignParentBottom="true" /> -->
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hb.widget.SliderView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:id="@+id/swipe_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    hb:handleEventInParent="true"
+    hb:layout="@layout/mark_list_item_content" >
+
+</hb.widget.SliderView>

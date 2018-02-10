@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+    <!-- 高度40 -->
+    <size android:height="@dimen/switch_button_height"
+        android:width="@dimen/switch_button_width"/>
+    <corners android:radius="@dimen/switch_button_radius"/>
+    <!-- 变化率 -->
+    <gradient
+        android:endColor="@color/colorBlue"
+        android:startColor="@color/colorBlue" />
+
+    <stroke android:width="@dimen/switch_button_baseline"
+        android:color="@color/colorBlue"/>
+
+</shape>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="hour_string">h</string>
+    <string name="minute_string">m</string>
+    <string name="second_string">s</string>
+
+    <string name="timer_close">Close</string>
+    <string name="timer_end">Timer\'s over</string>
+    <string name="timer_in_use">Timer\'s in use</string>
+    <string name="timer_time_up">Timer\'s over!</string>
+    <string name="timer_time_out">Timer\'s miss!</string>
+
+    <!-- Timer notification: how long from now until timer goes off. -->
+    <string name="timer_notifications_less_min">Less than a minute remaining</string>
+    <string name="timer_notifications_hours"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
+    <string name="timer_notifications_minutes"><xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g><xliff:g id="REMAINING" example="remaining"> %3$s</xliff:g></string>
+    <string name="timer_notifications_hours_minutes"><xliff:g id="HOURS" example="2 hours">%1$s</xliff:g> <xliff:g id="MINUTES" example="2 minutes">%2$s</xliff:g> remaining</string>
+
+    <!--
+        Verb inflection to use for single time units remaining
+        Ex. "1 minute remaining"
+    -->
+    <string name="timer_remaining_single">remaining</string>
+    <!--
+        Verb inflection to use for multiple time units remaining
+        Ex. "2 minutes remaining"
+    -->
+    <string name="timer_remaining_multiple">remaining</string>
+
+    <!-- Title of default ringtone played when a timer expires. -->
+    <string name="default_timer_ringtone_title">Timer Expired</string>
+
+    <!-- Title of silent ringtone played when a timer expires. -->
+    <string name="silent_timer_ringtone_title">Silent</string>
+
+    <!-- Describes the purpose of the button to stop all currently firing timers. [CHAR LIMIT=25] -->
+    <string name="timer_stop_all">Stop all timers</string>
+    <!-- Accessibility announcement when a timer is canceled. -->
+    <string name="timer_canceled">Timer canceled</string>
+    <!--
+        Notification content shown when multiple timers have completed and have no more time
+        remaining. Arg is the number of timers. [CHAR LIMIT=25]
+    -->
+    <string name="timer_multi_times_up"><xliff:g id="NUM_TIMERS" example="2">%d</xliff:g> timers expired</string>
+    <!-- Describes the purpose of the notification button to pause the timer. [CHAR LIMIT=15] -->
+    <string name="timer_pause">Pause</string>
+    <string name="timer_resume">Resume</string>
+    <!-- Describes the purpose of the notification button to reset all running timers. [CHAR LIMIT=31] -->
+    <string name="timer_reset_all">Reset all timers</string>
+
+    <!-- Describes the service that processes actions originating from timer notifications. -->
+    <string name="timer_service_desc">Processes actions from timer notifications.</string>
+
+    <!-- Notification title when timer is paused. [CHAR LIMIT=25] -->
+    <string name="timer_paused">Timer paused</string>
+
+    <!-- String that represents that the user attempted to control a timer with a voice action when
+    no timers are defined.
+    [CHAR LIMIT=NONE]
+    -->
+    <string name="no_timers_exist">No timers exist</string>
+
+    <!-- String that represents that the user attempted to control a timer with a voice action when
+    more than one timer is defined.
+    [CHAR LIMIT=NONE]
+    -->
+    <string name="too_many_timers_exist">More than one timer exists</string>
+
+    <!-- String that represents that the user attempted to control a timer with a voice action but
+    the timer could not be located.
+    [CHAR LIMIT=NONE]
+    -->
+    <string name="timer_does_not_exist">The timer has been removed.</string>
+</resources>

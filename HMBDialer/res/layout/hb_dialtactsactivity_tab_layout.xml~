@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hb="http://schemas.android.com/apk/res/com.hb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="0dp" >
+
+    <hb.widget.tab.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff646464"
+        hb:tabBackground="@android:color/transparent"
+        hb:tabIndicatorColor="#ff06c012"
+        hb:tabIndicatorHeight="4px"
+        hb:tabIndicatorWidth="13dp"
+        hb:tabPaddingBottom="5dp"
+        hb:tabPaddingEnd="21.5dp"
+        hb:tabPaddingStart="21.5dp"
+        hb:tabPaddingTop="0dp"
+        hb:tabSelectedTextColor="#ff06c012"
+        hb:tabTextAppearance="@com.hb:style/TextAppearance.Hb.Material.Subhead" >
+    </hb.widget.tab.TabLayout>
+
+</LinearLayout>

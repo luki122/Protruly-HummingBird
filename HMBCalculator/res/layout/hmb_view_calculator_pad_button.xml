@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/calculator_button_background">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/image_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="@dimen/calculator_pad_button_padding_left"
+        android:visibility="gone" />
+
+    <!--<TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/calculator_pad_button_padding_left"
+        android:paddingRight="@dimen/calculator_pad_button_padding_left"
+        style="@style/CalculatorPadButtonTextStyle"
+        android:visibility="gone" />-->
+
+    <View
+        android:id="@+id/line_left"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@color/calculator_pad_button_frame_color"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line_top"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="top"
+        android:background="@color/calculator_pad_button_frame_color"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line_right"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="@color/calculator_pad_button_frame_color"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_gravity="bottom"
+        android:background="@color/calculator_pad_button_frame_color"
+        android:visibility="gone" />
+
+</FrameLayout>
